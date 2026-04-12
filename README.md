@@ -34,15 +34,15 @@ mkdir -p data/book-raw
 
 ### 2. Add the book
 
-Drop the PDF into your project:
+Drop the epub (or PDF) into your project:
 
 ```bash
-cp ~/Downloads/the-path-to-longevity.pdf data/book-raw/
+cp ~/Downloads/the-path-to-longevity.epub data/book-raw/
 ```
 
-The skill reads the PDF directly, 20 pages at a time. No copy-pasting needed.
+The skill reads the epub directly (each chapter is an HTML file inside the zip).
 It scans the table of contents, identifies food chapters, extracts claims,
-and pulls references from the appendix.
+and pulls references from the bibliography. No copy-pasting needed.
 
 Plain text files (`data/book-raw/chapter-*.txt`) also work as a fallback.
 

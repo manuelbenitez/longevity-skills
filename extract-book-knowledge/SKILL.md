@@ -1,10 +1,10 @@
 ---
 name: extract-book-knowledge
-version: 0.2.0
+version: 0.3.0
 description: |
   Extract structured food/ingredient claims from "The Path to Longevity" by Luigi Fontana.
-  Reads the book as a PDF file, scans it in 20-page passes, extracts health claims,
-  mechanisms, consumption recommendations, ingredient relationships, and appendix references.
+  Reads the book as an epub (or PDF), scans all chapters, extracts health claims,
+  mechanisms, consumption recommendations, ingredient relationships, and bibliography references.
   Use when asked to "extract", "process book", "book claims", "scan book", or "parse ingredients".
 allowed-tools:
   - Bash
@@ -16,18 +16,19 @@ allowed-tools:
 
 # Extract Book Knowledge
 
-Scan the full book PDF and extract every food/ingredient claim into structured JSON.
+Scan the full book and extract every food/ingredient claim into structured JSON.
 
 ## Input
 
-A PDF file at `data/book-raw/the-path-to-longevity.pdf` (or any `.pdf` in `data/book-raw/`).
-The skill also accepts plain text files at `data/book-raw/chapter-{NN}.txt` as a fallback.
+An epub file at `data/book-raw/*.epub` in the current project directory.
+Also accepts PDF (`data/book-raw/*.pdf`) or plain text (`data/book-raw/chapter-*.txt`).
 
 ## Output
 
 - `data/book-extracts/ingredients-master.json` -- consolidated list of all ingredients found
-- `data/book-extracts/pages-{start}-{end}.json` -- per-pass extraction files
-- `data/book-extracts/references.json` -- extracted appendix/bibliography references
+- `data/book-extracts/chapter-{NN}.json` -- per-chapter extraction files
+- `data/book-extracts/references.json` -- extracted bibliography references
+- `data/book-extracts/_scan-plan.json` -- which chapters to process and why
 - All JSON files conform to the Book Extract Schema at `schemas/book-extract.schema.json`
 
 ## Usage
@@ -36,144 +37,175 @@ The skill also accepts plain text files at `data/book-raw/chapter-{NN}.txt` as a
 /extract-book-knowledge
 ```
 
-The skill auto-detects whether input is PDF or text files.
+The skill auto-detects the input format (epub, PDF, or text files).
 
 ## How It Works
 
-### Step 1: Detect input format
+### Step 1: Detect input and extract chapter list
 
 ```bash
+EPUB=$(find data/book-raw -name "*.epub" -type f 2>/dev/null | head -1)
 PDF=$(find data/book-raw -name "*.pdf" -type f 2>/dev/null | head -1)
 TXT_COUNT=$(find data/book-raw -name "*.txt" -type f 2>/dev/null | wc -l | tr -d ' ')
+echo "EPUB: ${EPUB:-none}"
 echo "PDF: ${PDF:-none}"
 echo "TXT files: $TXT_COUNT"
 ```
 
-If a PDF is found, use PDF mode. If only text files exist, use text mode (legacy).
-If neither exists, stop and tell the user: "No book input found. Place your PDF at
-data/book-raw/the-path-to-longevity.pdf"
+If nothing found, stop: "No book input found. Place your epub at data/book-raw/"
 
-### Step 2: Get page count (PDF mode)
+**For epub (preferred):** Extract the table of contents and chapter list:
 
 ```bash
-PAGES=$(python3 -c "
-import subprocess
-result = subprocess.run(['pdfinfo', '$PDF'], capture_output=True, text=True)
-for line in result.stdout.split('\n'):
-    if line.startswith('Pages:'):
-        print(line.split(':')[1].strip())
-        break
-" 2>/dev/null || echo "unknown")
-echo "Total pages: $PAGES"
+python3 << 'PYEOF'
+import zipfile, re, json, sys
+
+epub_path = sys.argv[1] if len(sys.argv) > 1 else "EPUB_PATH"
+epub = zipfile.ZipFile(epub_path)
+
+# List all content files
+html_files = sorted([f for f in epub.namelist() if f.endswith(('.xhtml', '.html', '.htm'))])
+for f in html_files:
+    size = epub.getinfo(f).file_size
+    print(f"{f} ({size} bytes)")
+PYEOF
 ```
 
-If pdfinfo is not available, estimate from file size or ask the user for the page count.
+An epub is a zip of HTML files. Each chapter is a separate .xhtml file.
+No page-based reading needed. Read chapters directly by filename.
 
-### Step 3: First pass -- Table of Contents scan
+### Step 2: Read the Table of Contents
 
-Read the first 10 pages of the PDF to find the table of contents:
+Extract the TOC from the epub to identify which chapters are about food/nutrition:
 
-```
-Read the PDF at data/book-raw/{filename}.pdf, pages 1-10
-```
+```bash
+python3 << 'PYEOF'
+import zipfile, re, sys
 
-From the TOC, identify:
-- Which chapters cover food, nutrition, and diet (these are the primary targets)
-- Where the appendix/references section starts
-- Total structure of the book
-
-Write a scan plan to `data/book-extracts/_scan-plan.json`:
-```json
-{
-  "total_pages": N,
-  "food_chapters": [
-    {"chapter": "title", "estimated_pages": "start-end"}
-  ],
-  "appendix_pages": "start-end",
-  "other_chapters": ["list of non-food chapters to skip or skim"]
-}
+epub = zipfile.ZipFile("EPUB_PATH")
+toc_raw = epub.read("OEBPS/toc.xhtml").decode("utf-8", errors="replace")
+clean = re.sub(r'<[^>]+>', '\n', toc_raw)
+lines = [l.strip() for l in clean.split('\n') if l.strip()]
+for line in lines:
+    print(line)
+PYEOF
 ```
 
-### Step 4: Extract food chapters (20 pages at a time)
+From the TOC, identify the food-focused chapters. For "The Path to Longevity," these are:
 
-For each food-related chapter identified in the scan plan:
+**Primary food chapters (process in full):**
+- Chapter 4: The Science of Healthy Nutrition
+- Chapter 5: Longevity Effects of Restricting Calories and Fasting
+- Chapter 7: Diet Quality Matters (protein, fat, carbs, fibre)
+- Chapter 8: The Mediterranean Diet
+- Chapter 9: Move to the Modern Healthy Longevity Diet (the food pyramid, vegetables, herbs, spices, grains, legumes, nuts, seeds, fruit, fish, olive oil, drinks)
+- Chapter 10: Foods to Eliminate or Drastically Reduce
 
-1. Read 20 pages of the PDF using: `Read tool with pages parameter (e.g., "15-34")`
-2. Extract every food/ingredient mention with:
-   - The specific health claim
-   - The biological mechanism (required, mark "unclear" if not stated)
-   - Study references cited (author, journal, year if available)
-   - Consumption recommendations (amount, frequency, preparation)
-   - Relationships to other ingredients (synergies, antagonisms)
-   - Page numbers where discussed
-3. Write the extraction to `data/book-extracts/pages-{start}-{end}.json`
-4. Move to the next 20-page window
+**Secondary chapters (skim for ingredient mentions):**
+- Chapter 2: Healthy Centenarians (Okinawa, Sardinia diets)
+- Chapter 6: Healthy Children (nutrition in pregnancy/breastfeeding)
+- Chapter 17: Preventative Action (alcohol, vitamin D)
 
-If a chapter spans a page boundary between passes, overlap by 2 pages to avoid
-missing content that crosses the break.
+**References:**
+- References/Bibliography section (chapter 32 in epub)
 
-### Step 5: Extract appendix/references
+Write the scan plan to `data/book-extracts/_scan-plan.json`.
 
-Read the appendix/bibliography section (identified in Step 3).
+### Step 3: Extract chapters one at a time
+
+For each food-focused chapter, read the HTML content from the epub and extract text:
+
+```bash
+python3 << 'PYEOF'
+import zipfile, re, sys
+
+epub = zipfile.ZipFile("EPUB_PATH")
+chapter_file = "OEBPS/chapterNN.xhtml"  # substitute actual filename
+
+raw = epub.read(chapter_file).decode("utf-8", errors="replace")
+# Strip HTML tags, keep paragraph breaks
+text = re.sub(r'</(p|h[1-6]|div|li)>', '\n\n', raw)
+text = re.sub(r'<[^>]+>', '', text)
+text = re.sub(r'&[a-z]+;', ' ', text)
+text = re.sub(r'\n{3,}', '\n\n', text).strip()
+print(text)
+PYEOF
+```
+
+Read the extracted text. For each chapter:
+
+1. Identify every food, ingredient, nutrient, or compound mentioned
+2. For each ingredient, extract:
+   - **Claims:** specific health claims with biological mechanisms
+   - **Study references:** author names, journal, year if cited inline
+   - **Consumption recommendations:** amounts, frequency, preparation methods
+   - **Relationships:** synergies, antagonisms, complements with other ingredients
+   - **Confidence level:** high/medium/low based on evidence quality
+3. Write to `data/book-extracts/chapter-{NN}.json` matching the Book Extract Schema
+
+### Step 4: Extract bibliography/references
+
+The references section is in `OEBPS/chapter32.xhtml` and `OEBPS/chapter32a.xhtml`.
+
 Extract all references into `data/book-extracts/references.json`:
 ```json
 {
   "references": [
     {
-      "id": "string (sequential or as numbered in book)",
+      "id": "string",
       "authors": "string",
       "title": "string",
       "journal": "string",
       "year": "number",
       "doi": "string (if available)",
-      "cited_on_pages": [N]
+      "chapter_cited_in": "string"
     }
   ]
 }
 ```
 
-### Step 6: Consolidate into master ingredient list
+### Step 5: Consolidate into master ingredient list
 
-After all passes are complete, read all `pages-*.json` files and consolidate:
+After all chapters are processed:
 
-1. Merge duplicate ingredients across passes (same ingredient mentioned in different chapters)
-2. Normalize ingredient names to slugs (e.g., "wild blueberries" and "blueberries" -> "blueberries")
-3. Link claims to their full references from `references.json`
-4. Write the consolidated list to `data/book-extracts/ingredients-master.json`
+1. Read all `chapter-*.json` files
+2. Merge duplicate ingredients across chapters (same ingredient in different chapters)
+3. Normalize names to slugs ("wild blueberries" and "blueberries" -> "blueberries")
+4. Cross-reference claims with full references from `references.json`
+5. Write `data/book-extracts/ingredients-master.json`
 
-The master file contains every ingredient with all its claims, references, and relationships
-in one place. This is the primary input for `/research-ingredient`.
+The master file is the primary input for `/research-ingredient`.
 
-### Step 7: Summary report
+### Step 6: Summary report
 
-Print a summary:
+Print:
 - Total ingredients found
 - Total health claims extracted
 - Chapters processed
-- Any ingredients with low-confidence claims that need manual review
+- Top 10 most-referenced ingredients
+- Ingredients with low-confidence claims needing manual review
 - Any ambiguous references that couldn't be resolved
 
 ## Quality Rubric
 
 Every health claim must include:
 - **(a)** A specific mechanism of action (not "is good for you" but "inhibits NF-kB pathway, reducing chronic inflammation")
-- **(b)** At least one citation: book page reference + study reference from appendix if available
+- **(b)** At least one citation: chapter reference + study from bibliography if available
 - **(c)** Dosage/quantity if the book specifies one
 - **(d)** A confidence level:
   - **high**: claim cites a specific study with clear mechanism
-  - **medium**: claim has a mechanism but no specific study cited, or study is observational
+  - **medium**: claim has mechanism but no specific study, or study is observational
   - **low**: book assertion without mechanism or study. Include the raw quote for manual review.
 
 ## Failure Modes
 
-- **PDF cannot be read**: Check file permissions. Try `python3 -c "open('data/book-raw/file.pdf','rb').read(100)"` to verify.
-- **No food content in a page range**: Write an empty ingredients array for that pass. Not an error.
-- **Page count unknown**: Process in 20-page passes starting from page 1 until Read returns empty.
-- **Appendix not found**: Skip Step 5, note in summary that references were not extracted.
-- **Ingredient name ambiguity**: During consolidation, flag near-matches for manual review (e.g., "berries" vs "blueberries" vs "wild blueberries").
+- **Epub cannot be read:** Check it's a valid zip. `python3 -c "import zipfile; zipfile.ZipFile('file.epub')"`
+- **Chapter has no food content:** Write empty ingredients array. Not an error.
+- **Ingredient name ambiguity:** Flag near-matches for manual review during consolidation.
+- **References section not found:** Skip Step 4, note in summary.
+- **DRM-encrypted epub:** The epub must be DRM-free. If content looks like binary garbage, the DRM hasn't been removed.
 
 ## Text File Fallback
 
-If no PDF is found but `data/book-raw/chapter-*.txt` files exist, process each text file
-as a standalone chapter. Skip Steps 2, 3, and 5 (no page count, no TOC scan, no appendix).
-Proceed directly to extraction and consolidation.
+If no epub or PDF found but `data/book-raw/chapter-*.txt` files exist, process each
+text file as a standalone chapter. Skip TOC scan and reference extraction.
