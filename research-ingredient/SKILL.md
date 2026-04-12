@@ -21,8 +21,10 @@ Enrich an ingredient profile by combining book-extracted claims with web researc
 
 ## Input
 
-An ingredient name (passed as argument). The skill reads book extract data from
-`data/book-extracts/*.json` to find claims about this ingredient.
+An ingredient name (passed as argument). The skill reads the master ingredient list from
+`data/book-extracts/ingredients-master.json` (output of /extract-book-knowledge) and
+the references file from `data/book-extracts/references.json` to find claims and
+study citations about this ingredient.
 
 ## Output
 
@@ -37,7 +39,7 @@ Schema at `schemas/ingredient.schema.json` in the longevity-skills repo.
 
 ## Research Protocol
 
-1. Read all book extract files, collect claims for this ingredient
+1. Read `data/book-extracts/ingredients-master.json`, find this ingredient's entry. Cross-reference with `data/book-extracts/references.json` for full study citations.
 2. Search Examine.com for the ingredient (1 web query)
 3. Search PubMed for "[ingredient] longevity OR healthspan" (1 web query)
 4. Search culinary sources for flavor/pairing info (1 web query)

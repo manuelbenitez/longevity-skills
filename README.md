@@ -32,20 +32,25 @@ mkdir my-longevity-wiki && cd my-longevity-wiki
 mkdir -p data/book-raw
 ```
 
-### 2. Add book chapters
+### 2. Add the book
 
-Copy or transcribe food-related chapters from the book into `data/book-raw/`:
+Drop the PDF into your project:
 
+```bash
+cp ~/Downloads/the-path-to-longevity.pdf data/book-raw/
 ```
-data/book-raw/chapter-07.txt
-data/book-raw/chapter-08.txt
-```
+
+The skill reads the PDF directly, 20 pages at a time. No copy-pasting needed.
+It scans the table of contents, identifies food chapters, extracts claims,
+and pulls references from the appendix.
+
+Plain text files (`data/book-raw/chapter-*.txt`) also work as a fallback.
 
 ### 3. Run the pipeline
 
 ```bash
 # In Claude Code, inside your content project:
-/extract-book-knowledge        # Process all chapters
+/extract-book-knowledge        # Scan full book PDF, extract all ingredients
 /research-ingredient turmeric  # Enrich one ingredient
 /generate-recipe turmeric black-pepper chickpeas  # Create a recipe
 /generate-wiki-entry turmeric  # Write the wiki article

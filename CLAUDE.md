@@ -40,7 +40,7 @@ content/wiki/*.md      content/recipes/*.md
 
 Skills write output relative to the current working directory:
 
-- `data/book-raw/` -- plain text chapter files (user provides these)
+- `data/book-raw/` -- book PDF or plain text chapter files (user provides these)
 - `data/book-extracts/` -- book extract JSON (output of /extract-book-knowledge)
 - `data/ingredients/` -- ingredient profile JSON (output of /research-ingredient)
 - `content/wiki/` -- wiki entry Markdown (output of /generate-wiki-entry)
