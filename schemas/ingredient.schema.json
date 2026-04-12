@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/longevity-skills/schemas/ingredient.schema.json",
+  "title": "Ingredient Profile",
+  "description": "Enriched ingredient profile combining book claims with web research and culinary data",
+  "type": "object",
+  "required": ["name", "slug", "book_claims", "research_status"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Display name of the ingredient"
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "URL-safe kebab-case identifier"
+    },
+    "book_claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["claim", "mechanism", "confidence"],
+        "properties": {
+          "claim": { "type": "string" },
+          "mechanism": { "type": "string" },
+          "study_ref": { "type": "string" },
+          "confidence": {
+            "type": "string",
+            "enum": ["high", "medium", "low"]
+          }
+        }
+      }
+    },
+    "supplementary_research": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source", "finding"],
+        "properties": {
+          "source": {
+            "type": "string",
+            "description": "PubMed, Examine, or other source name"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "finding": {
+            "type": "string"
+          },
+          "agrees_with_book": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "flavor_profile": {
+      "type": "object",
+      "properties": {
+        "taste": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "aroma": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "texture": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "culinary_category": {
+          "type": "string",
+          "description": "e.g. 'spice', 'leafy green', 'legume'"
+        }
+      }
+    },
+    "culinary_pairings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["ingredient"],
+        "properties": {
+          "ingredient": { "type": "string" },
+          "tradition": {
+            "type": "string",
+            "description": "Culinary tradition, e.g. 'Indian', 'Japanese'"
+          },
+          "source": {
+            "type": "string",
+            "description": "Chef name or cookbook"
+          }
+        }
+      }
+    },
+    "seasonality": {
+      "type": "string"
+    },
+    "nutrient_highlights": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["compound"],
+        "properties": {
+          "compound": { "type": "string" },
+          "amount_per_100g": { "type": "string" },
+          "bioavailability_notes": { "type": "string" }
+        }
+      }
+    },
+    "synergies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["target_ingredient", "type", "description"],
+        "properties": {
+          "target_ingredient": { "type": "string" },
+          "type": {
+            "type": "string",
+            "enum": ["synergy", "antagonism", "complement"]
+          },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "last_researched": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When web research was last fetched"
+    },
+    "research_status": {
+      "type": "string",
+      "enum": ["complete", "partial", "book-only"]
+    }
+  }
+}

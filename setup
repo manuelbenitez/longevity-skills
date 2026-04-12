@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+set -e
+
+REPO_DIR="$(cd "$(dirname "$0")" && pwd -P)"
+SKILLS_DIR="$HOME/.claude/skills"
+
+echo "longevity-skills setup"
+echo "======================"
+echo ""
+
+mkdir -p "$SKILLS_DIR"
+
+REPO_LINK="$SKILLS_DIR/longevity-skills"
+if [ ! -e "$REPO_LINK" ] || [ -L "$REPO_LINK" ]; then
+  ln -snf "$REPO_DIR" "$REPO_LINK"
+  echo "  linked: longevity-skills -> $REPO_DIR"
+fi
+
+linked=()
+for skill_dir in "$REPO_DIR"/*/; do
+  [ -f "$skill_dir/SKILL.md" ] || continue
+  skill_name="$(basename "$skill_dir")"
+  target="$SKILLS_DIR/$skill_name"
+
+  [ -L "$target" ] && rm -f "$target"
+
+  mkdir -p "$target"
+
+  [ -L "$target/SKILL.md" ] && rm "$target/SKILL.md"
+
+  ln -snf "$REPO_DIR/$skill_name/SKILL.md" "$target/SKILL.md"
+  linked+=("$skill_name")
+done
+
+for dir in "$SKILLS_DIR"/*/; do
+  [ -d "$dir" ] || continue
+  dir_name="$(basename "$dir")"
+  [ -L "$dir/SKILL.md" ] || continue
+  link_target="$(readlink "$dir/SKILL.md" 2>/dev/null || true)"
+  case "$link_target" in
+    "$REPO_DIR"*)
+      if [ ! -f "$REPO_DIR/$dir_name/SKILL.md" ]; then
+        rm -f "$dir/SKILL.md"
+        rmdir "$dir" 2>/dev/null || true
+        echo "  removed stale: $dir_name"
+      fi
+      ;;
+  esac
+done
+
+echo ""
+echo "longevity-skills v$(cat "$REPO_DIR/VERSION") ready!"
+echo ""
+echo "Available skills:"
+for s in "${linked[@]}"; do
+  echo "  /$s"
+done
+echo ""
+echo "Usage: open Claude Code in any project and type /<skill-name>"

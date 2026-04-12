@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/longevity-skills/schemas/book-extract.schema.json",
+  "title": "Book Extract",
+  "description": "Structured extraction of food/ingredient claims from a book chapter",
+  "type": "object",
+  "required": ["chapter", "page_range", "ingredients"],
+  "properties": {
+    "chapter": {
+      "type": "string",
+      "description": "Chapter title"
+    },
+    "page_range": {
+      "type": "string",
+      "description": "Page range covered, e.g. '45-72'"
+    },
+    "ingredients": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "slug", "claims"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Ingredient name as it appears in the book"
+          },
+          "slug": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+            "description": "URL-safe kebab-case identifier"
+          },
+          "page_refs": {
+            "type": "array",
+            "items": { "type": "integer" },
+            "description": "Page numbers where this ingredient is discussed"
+          },
+          "claims": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["claim", "mechanism", "confidence"],
+              "properties": {
+                "claim": {
+                  "type": "string",
+                  "description": "The specific health claim"
+                },
+                "mechanism": {
+                  "type": "string",
+                  "description": "Biological mechanism of action"
+                },
+                "study_ref": {
+                  "type": "string",
+                  "description": "Study cited in book, or 'book-assertion' if none"
+                },
+                "confidence": {
+                  "type": "string",
+                  "enum": ["high", "medium", "low"],
+                  "description": "Evidence quality: high (multiple studies), medium (one study or strong mechanism), low (book assertion without cited study)"
+                }
+              }
+            }
+          },
+          "consumption": {
+            "type": "object",
+            "properties": {
+              "amount": {
+                "type": "string",
+                "description": "Recommended amount, e.g. '1 cup daily'"
+              },
+              "frequency": {
+                "type": "string",
+                "description": "How often, e.g. 'daily', '3x/week'"
+              },
+              "preparation": {
+                "type": "string",
+                "description": "Recommended preparation method, e.g. 'cooked, not raw'"
+              },
+              "reasoning": {
+                "type": "string",
+                "description": "Why this amount/method is recommended"
+              }
+            }
+          },
+          "relationships": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["target_ingredient", "type", "description"],
+              "properties": {
+                "target_ingredient": {
+                  "type": "string",
+                  "description": "Name of the related ingredient (natural name, normalized post-extraction)"
+                },
+                "type": {
+                  "type": "string",
+                  "enum": ["synergy", "antagonism", "complement"]
+                },
+                "description": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
