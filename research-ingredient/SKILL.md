@@ -19,6 +19,16 @@ allowed-tools:
 
 Enrich an ingredient profile by combining book-extracted claims with web research.
 
+## Model Config
+
+```bash
+_MODEL=$(python3 -c "import json; d=json.load(open('.longevity-skills.json')); print(d['models'].get('research','sonnet'))" 2>/dev/null || echo "sonnet")
+echo "MODEL: $_MODEL (research)"
+```
+
+This skill runs on the main model. The `_MODEL` value is used if you spawn sub-agents
+for parallel ingredient enrichment. Default: sonnet.
+
 ## Input
 
 An ingredient name (passed as argument). The skill reads the master ingredient list from

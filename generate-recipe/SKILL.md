@@ -12,11 +12,25 @@ allowed-tools:
   - Write
   - Grep
   - Glob
+  - Agent
 ---
 
 # Generate Recipe
 
 Generate a chef-quality recipe that combines longevity ingredients with real culinary technique.
+
+## Model Config
+
+```bash
+_MODEL=$(python3 -c "import json; d=json.load(open('.longevity-skills.json')); print(d['models'].get('recipe','sonnet'))" 2>/dev/null || echo "sonnet")
+echo "MODEL: $_MODEL (recipe)"
+```
+
+Default: sonnet. Recipe generation requires culinary voice + science integration.
+Set to "haiku" in `.longevity-skills.json` to experiment with cheaper generation —
+review output quality carefully before publishing.
+
+**When generating the recipe, use the Agent tool with `model: "<value of _MODEL>"`.**
 
 ## Input
 
@@ -47,4 +61,44 @@ Markdown file at `content/recipes/{recipe-slug}.md` with YAML frontmatter.
 The skill checks that JSON profiles exist for all specified ingredients before proceeding.
 If a profile is missing, it errors with "Run /research-ingredient {name} first."
 
-<!-- TODO: Implement full skill logic — ingredient reading, synergy identification, recipe generation, frontmatter -->
+## Dispatch Pattern
+
+After reading all ingredient JSONs, pre-extract just the data the agent needs:
+
+```bash
+# Build a focused context file — don't dump the full profiles, extract the relevant fields
+python3 << 'PYEOF'
+import json, sys
+
+slugs = sys.argv[1:]
+context = {}
+for slug in slugs:
+    with open(f"data/ingredients/{slug}.json") as f:
+        d = json.load(f)
+    context[slug] = {
+        "name": d["name"],
+        "flavor_profile": d.get("flavor_profile", {}),
+        "culinary_pairings": d.get("culinary_pairings", []),
+        "synergies": d.get("synergies", []),
+        "book_claims": [c for c in d.get("book_claims", []) if c.get("confidence") in ("high", "medium")],
+        "consumption": d.get("consumption", {}),
+    }
+print(json.dumps(context, indent=2))
+PYEOF
+```
+
+Dispatch the recipe writing to a sub-agent:
+
+```
+Use the Agent tool with:
+  model: <value of _MODEL read from config>
+  prompt: "Generate a chef-quality recipe using these ingredients: [list].
+           Here is the focused ingredient context: [extracted context JSON].
+           Follow the recipe style guide: [style guide from above].
+           Include: ingredient synergies (scientific + flavor), technique steps with
+           explanations, 'what can go wrong' tips, prep/cook time, difficulty."
+```
+
+Write the sub-agent's output to `content/recipes/{recipe-slug}.md`.
+
+<!-- TODO: Add YAML frontmatter spec -->

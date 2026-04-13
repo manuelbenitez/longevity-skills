@@ -65,6 +65,37 @@ Book chapters (text) -> Extract -> Research -> Wiki entries
 
 Each skill reads from the previous skill's output directory. See `CLAUDE.md` for the full data flow diagram.
 
+## Model Configuration
+
+By default, skills use the cheapest model that can handle the task well:
+
+| Skill | Default model | Why |
+|-------|--------------|-----|
+| `/extract-book-knowledge` | sonnet | Needs to catch subtle mechanisms and apply quality rubric |
+| `/research-ingredient` | sonnet | Judges conflicting sources, spots `agrees_with_book` mismatches |
+| `/generate-wiki-entry` | haiku | Template-filling from structured JSON — Haiku is sufficient |
+| `/generate-recipe` | sonnet | Culinary voice + science integration benefits from a stronger model |
+
+To override, copy the example config into your content project and edit:
+
+```bash
+cp ~/.claude/skills/longevity-skills/.longevity-skills.json.example .longevity-skills.json
+```
+
+`.longevity-skills.json`:
+```json
+{
+  "models": {
+    "extraction": "sonnet",
+    "research": "sonnet",
+    "wiki": "haiku",
+    "recipe": "sonnet"
+  }
+}
+```
+
+The file is gitignored — it stays local to each project. Valid values: `sonnet`, `haiku`, `opus`.
+
 ## Examples
 
 The `examples/` directory contains realistic sample outputs for each skill, using turmeric as the reference ingredient.

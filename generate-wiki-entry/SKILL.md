@@ -12,11 +12,26 @@ allowed-tools:
   - Write
   - Grep
   - Glob
+  - Agent
 ---
 
 # Generate Wiki Entry
 
 Transform an ingredient profile into a readable, publishable wiki entry.
+
+## Model Config
+
+```bash
+_MODEL=$(python3 -c "import json; d=json.load(open('.longevity-skills.json')); print(d['models'].get('wiki','haiku'))" 2>/dev/null || echo "haiku")
+echo "MODEL: $_MODEL (wiki)"
+```
+
+Default: haiku. Content generation from structured JSON — template-filling work where
+Haiku is sufficient. Override to "sonnet" in `.longevity-skills.json` if output quality
+needs improvement.
+
+**When generating the wiki entry, use the Agent tool with `model: "<value of _MODEL>"`.**
+This dispatches the writing work to the configured model, not the orchestrating model.
 
 ## Input
 
@@ -40,4 +55,19 @@ Markdown file at `content/wiki/{ingredient-slug}.md` with YAML frontmatter for t
 4. **What to Pair It With** — Synergies and culinary pairings
 5. **The Science** — Detailed claims with citations
 
-<!-- TODO: Implement full skill logic — JSON reading, article generation, frontmatter, quality checks -->
+## Dispatch Pattern
+
+After reading the ingredient JSON, dispatch the article writing to a sub-agent:
+
+```
+Use the Agent tool with:
+  model: <value of _MODEL read from config>
+  prompt: "Write a wiki entry for [ingredient]. Here is the full ingredient profile:
+           [paste the JSON]. Follow this structure: [article structure above].
+           Quality bar: every health claim must include its mechanism of action and
+           at least one citation. Conversational but scientifically precise tone."
+```
+
+Write the sub-agent's output directly to `content/wiki/{ingredient-slug}.md`.
+
+<!-- TODO: Add YAML frontmatter spec, quality-check pass after generation -->

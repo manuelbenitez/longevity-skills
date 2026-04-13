@@ -18,6 +18,16 @@ allowed-tools:
 
 Scan the full book and extract every food/ingredient claim into structured JSON.
 
+## Model Config
+
+```bash
+_MODEL=$(python3 -c "import json; d=json.load(open('.longevity-skills.json')); print(d['models'].get('extraction','sonnet'))" 2>/dev/null || echo "sonnet")
+echo "MODEL: $_MODEL (extraction)"
+```
+
+This skill runs on the main model. The `_MODEL` value is used if you spawn sub-agents
+(e.g., parallel chapter processing). Default: sonnet.
+
 ## Input
 
 An epub file at `data/book-raw/*.epub` in the current project directory.

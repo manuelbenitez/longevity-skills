@@ -1,0 +1,9 @@
+{
+  "_comment": "Copy to .longevity-skills.json to override model selection per skill. Valid values: sonnet, haiku, opus.",
+  "models": {
+    "extraction": "sonnet",
+    "research": "sonnet",
+    "wiki": "haiku",
+    "recipe": "sonnet"
+  }
+}
