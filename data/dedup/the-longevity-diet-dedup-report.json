@@ -1,0 +1,1289 @@
+{
+  "book": "The Longevity Diet",
+  "author": "Valter Longo PhD",
+  "generated_at": "2026-04-17",
+  "wiki_ingredients_dir": "../my-longevity-wiki/data/ingredients/",
+  "summary": {
+    "total_extracted_leaves": 198,
+    "exact_matches": 31,
+    "fuzzy_matches": 7,
+    "new_ingredients": 160
+  },
+  "existing": [
+    {
+      "extracted_name": "alcohol",
+      "extracted_slug": "alcohol",
+      "wiki_slug": "red-wine",
+      "match_type": "exact",
+      "claims_count": 3,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "almonds",
+      "extracted_slug": "almonds",
+      "wiki_slug": "almonds",
+      "match_type": "exact",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "avocado",
+      "extracted_slug": "avocado",
+      "wiki_slug": "avocado",
+      "match_type": "exact",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "barley",
+      "extracted_slug": "barley",
+      "wiki_slug": "barley",
+      "match_type": "exact",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "brazil nuts",
+      "extracted_slug": "brazil-nuts",
+      "wiki_slug": "brazil-nuts",
+      "match_type": "exact",
+      "claims_count": 7,
+      "inherited_from": "nuts"
+    },
+    {
+      "extracted_name": "brown rice",
+      "extracted_slug": "brown-rice",
+      "wiki_slug": "brown-rice",
+      "match_type": "exact",
+      "claims_count": 5,
+      "inherited_from": "whole-grains"
+    },
+    {
+      "extracted_name": "buckwheat",
+      "extracted_slug": "buckwheat",
+      "wiki_slug": "buckwheat",
+      "match_type": "exact",
+      "claims_count": 5,
+      "inherited_from": "whole-grains"
+    },
+    {
+      "extracted_name": "capers",
+      "extracted_slug": "capers",
+      "wiki_slug": "capers",
+      "match_type": "exact",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "carrots",
+      "extracted_slug": "carrots",
+      "wiki_slug": "carrots",
+      "match_type": "exact",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "chickpeas",
+      "extracted_slug": "chickpeas",
+      "wiki_slug": "chickpeas",
+      "match_type": "exact",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "chickpeas",
+      "extracted_slug": "chickpeas",
+      "wiki_slug": "chickpeas",
+      "match_type": "exact",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "coffee",
+      "extracted_slug": "coffee",
+      "wiki_slug": "coffee",
+      "match_type": "exact",
+      "claims_count": 5,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "dark chocolate",
+      "extracted_slug": "dark-chocolate",
+      "wiki_slug": "dark-chocolate",
+      "match_type": "exact",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "dates",
+      "extracted_slug": "dates",
+      "wiki_slug": "dates",
+      "match_type": "exact",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "figs",
+      "extracted_slug": "figs",
+      "wiki_slug": "figs",
+      "match_type": "exact",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "fruit",
+      "extracted_slug": "fruit",
+      "wiki_slug": "fruit",
+      "match_type": "exact",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "garlic",
+      "extracted_slug": "garlic",
+      "wiki_slug": "garlic",
+      "match_type": "exact",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "green tea",
+      "extracted_slug": "green-tea",
+      "wiki_slug": "green-tea",
+      "match_type": "exact",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "lentils",
+      "extracted_slug": "lentils",
+      "wiki_slug": "lentils",
+      "match_type": "exact",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "oats",
+      "extracted_slug": "oats",
+      "wiki_slug": "oats",
+      "match_type": "exact",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "olive oil",
+      "extracted_slug": "olive-oil",
+      "wiki_slug": "extra-virgin-olive-oil",
+      "match_type": "exact",
+      "claims_count": 4,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "olive oil",
+      "extracted_slug": "olive-oil",
+      "wiki_slug": "extra-virgin-olive-oil",
+      "match_type": "exact",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "onion",
+      "extracted_slug": "onion",
+      "wiki_slug": "onion",
+      "match_type": "exact",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "pumpkin",
+      "extracted_slug": "pumpkin",
+      "wiki_slug": "pumpkin",
+      "match_type": "exact",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "rice",
+      "extracted_slug": "rice",
+      "wiki_slug": "brown-rice",
+      "match_type": "exact",
+      "claims_count": 3,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "rosemary",
+      "extracted_slug": "rosemary",
+      "wiki_slug": "rosemary",
+      "match_type": "exact",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "rye",
+      "extracted_slug": "rye",
+      "wiki_slug": "rye",
+      "match_type": "exact",
+      "claims_count": 5,
+      "inherited_from": "whole-grains"
+    },
+    {
+      "extracted_name": "soybeans",
+      "extracted_slug": "soybeans",
+      "wiki_slug": "soybeans",
+      "match_type": "exact",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "sweet potatoes",
+      "extracted_slug": "sweet-potatoes",
+      "wiki_slug": "sweet-potatoes",
+      "match_type": "exact",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "tomatoes",
+      "extracted_slug": "tomatoes",
+      "wiki_slug": "tomatoes",
+      "match_type": "exact",
+      "claims_count": 3,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "turmeric",
+      "extracted_slug": "turmeric",
+      "wiki_slug": "turmeric",
+      "match_type": "exact",
+      "claims_count": 2,
+      "inherited_from": null
+    }
+  ],
+  "fuzzy": [
+    {
+      "extracted_name": "fruit juice",
+      "extracted_slug": "fruit-juice",
+      "wiki_slug": "fruit",
+      "match_type": "fuzzy",
+      "match_reason": "substring: 'fruit juice' \u2194 'fruit'",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "barley coffee",
+      "extracted_slug": "barley-coffee",
+      "wiki_slug": "barley",
+      "match_type": "fuzzy",
+      "match_reason": "substring: 'barley coffee' \u2194 'barley'",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "kiwifruit",
+      "extracted_slug": "kiwifruit",
+      "wiki_slug": "fruit",
+      "match_type": "fuzzy",
+      "match_reason": "substring: 'kiwifruit' \u2194 'fruit'",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "sun-dried tomatoes",
+      "extracted_slug": "sun-dried-tomatoes",
+      "wiki_slug": "tomatoes",
+      "match_type": "fuzzy",
+      "match_reason": "substring: 'sun-dried tomatoes' \u2194 'tomatoes'",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "flaxseed",
+      "extracted_slug": "flaxseed",
+      "wiki_slug": "flaxseeds",
+      "match_type": "fuzzy",
+      "match_reason": "similarity 0.94: 'flaxseed' \u2194 'flaxseeds'",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "apple",
+      "extracted_slug": "apple",
+      "wiki_slug": "apples",
+      "match_type": "fuzzy",
+      "match_reason": "similarity 0.91: 'apple' \u2194 'apples'",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "sweet potato",
+      "extracted_slug": "sweet-potato",
+      "wiki_slug": "sweet-potatoes",
+      "match_type": "fuzzy",
+      "match_reason": "similarity 0.92: 'sweet potato' \u2194 'sweet-potatoes'",
+      "claims_count": 1,
+      "inherited_from": null
+    }
+  ],
+  "new": [
+    {
+      "extracted_name": "protein",
+      "extracted_slug": "protein",
+      "claims_count": 13,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "sugar",
+      "extracted_slug": "sugar",
+      "claims_count": 7,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "bell peppers",
+      "extracted_slug": "bell-peppers",
+      "claims_count": 6,
+      "inherited_from": "vegetables"
+    },
+    {
+      "extracted_name": "igf-1",
+      "extracted_slug": "igf-1",
+      "claims_count": 5,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "farro",
+      "extracted_slug": "farro",
+      "claims_count": 5,
+      "inherited_from": "whole-grains"
+    },
+    {
+      "extracted_name": "millet",
+      "extracted_slug": "millet",
+      "claims_count": 5,
+      "inherited_from": "whole-grains"
+    },
+    {
+      "extracted_name": "peas",
+      "extracted_slug": "peas",
+      "claims_count": 5,
+      "inherited_from": "legumes"
+    },
+    {
+      "extracted_name": "fava beans",
+      "extracted_slug": "fava-beans",
+      "claims_count": 5,
+      "inherited_from": "legumes"
+    },
+    {
+      "extracted_name": "omega-3 fatty acids",
+      "extracted_slug": "omega-3-fatty-acids",
+      "claims_count": 4,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "green peas",
+      "extracted_slug": "green-peas",
+      "claims_count": 3,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "saturated fats",
+      "extracted_slug": "saturated-fats",
+      "claims_count": 3,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "eggs",
+      "extracted_slug": "eggs",
+      "claims_count": 3,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "vitamin d",
+      "extracted_slug": "vitamin-d",
+      "claims_count": 3,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "red meat",
+      "extracted_slug": "red-meat",
+      "claims_count": 3,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "milk",
+      "extracted_slug": "milk",
+      "claims_count": 3,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "salmon",
+      "extracted_slug": "salmon",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "anchovies",
+      "extracted_slug": "anchovies",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "sardines",
+      "extracted_slug": "sardines",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "trout",
+      "extracted_slug": "trout",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "clams",
+      "extracted_slug": "clams",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "shrimp",
+      "extracted_slug": "shrimp",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "tuna",
+      "extracted_slug": "tuna",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "mackerel",
+      "extracted_slug": "mackerel",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "halibut",
+      "extracted_slug": "halibut",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "broccoli",
+      "extracted_slug": "broccoli",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "olives",
+      "extracted_slug": "olives",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "saturated fats",
+      "extracted_slug": "saturated-fats",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "feta cheese",
+      "extracted_slug": "feta-cheese",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "vitamin e",
+      "extracted_slug": "vitamin-e",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "vitamin a",
+      "extracted_slug": "vitamin-a",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "pasta",
+      "extracted_slug": "pasta",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "bread",
+      "extracted_slug": "bread",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "kale",
+      "extracted_slug": "kale",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "quinoa",
+      "extracted_slug": "quinoa",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "healthy fats",
+      "extracted_slug": "healthy-fats",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "cholesterol",
+      "extracted_slug": "cholesterol",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "insulin",
+      "extracted_slug": "insulin",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "multivitamin",
+      "extracted_slug": "multivitamin",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "calories",
+      "extracted_slug": "calories",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "stem cells",
+      "extracted_slug": "stem-cells",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "vitamin c",
+      "extracted_slug": "vitamin-c",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "goat's milk yogurt",
+      "extracted_slug": "goat-s-milk-yogurt",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "seaweed",
+      "extracted_slug": "seaweed",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "cabbage",
+      "extracted_slug": "cabbage",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "asparagus",
+      "extracted_slug": "asparagus",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "beans",
+      "extracted_slug": "beans",
+      "claims_count": 2,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "cod",
+      "extracted_slug": "cod",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "sea bream",
+      "extracted_slug": "sea-bream",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "omega-6 fatty acids",
+      "extracted_slug": "omega-6-fatty-acids",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "pecorino cheese",
+      "extracted_slug": "pecorino-cheese",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "goat's milk yogurt",
+      "extracted_slug": "goat-s-milk-yogurt",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "magnesium",
+      "extracted_slug": "magnesium",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "calcium",
+      "extracted_slug": "calcium",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "potassium",
+      "extracted_slug": "potassium",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "vitamin k",
+      "extracted_slug": "vitamin-k",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "zinc",
+      "extracted_slug": "zinc",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "iron",
+      "extracted_slug": "iron",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "vitamin b12",
+      "extracted_slug": "vitamin-b12",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "multivitamin",
+      "extracted_slug": "multivitamin",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "leucine",
+      "extracted_slug": "leucine",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "white meat",
+      "extracted_slug": "white-meat",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "gluten",
+      "extracted_slug": "gluten",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "minestrone",
+      "extracted_slug": "minestrone",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "ketone bodies",
+      "extracted_slug": "ketone-bodies",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "igfbp1",
+      "extracted_slug": "igfbp1",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "abdominal fat",
+      "extracted_slug": "abdominal-fat",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "desserts",
+      "extracted_slug": "desserts",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "glycerol",
+      "extracted_slug": "glycerol",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "mitochondria",
+      "extracted_slug": "mitochondria",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "blood pressure",
+      "extracted_slug": "blood-pressure",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "b vitamins",
+      "extracted_slug": "b-vitamins",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "coconut oil",
+      "extracted_slug": "coconut-oil",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "salt",
+      "extracted_slug": "salt",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "vegetable broth",
+      "extracted_slug": "vegetable-broth",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "linseed oil",
+      "extracted_slug": "linseed-oil",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "potatoes",
+      "extracted_slug": "potatoes",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "blood glucose",
+      "extracted_slug": "blood-glucose",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "c-reactive protein",
+      "extracted_slug": "c-reactive-protein",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "almond milk",
+      "extracted_slug": "almond-milk",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "hazelnut milk",
+      "extracted_slug": "hazelnut-milk",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "coconut milk",
+      "extracted_slug": "coconut-milk",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "whole-wheat focaccia",
+      "extracted_slug": "whole-wheat-focaccia",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "blueberry jam",
+      "extracted_slug": "blueberry-jam",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "spinach",
+      "extracted_slug": "spinach",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "raisins",
+      "extracted_slug": "raisins",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "spelt crackers",
+      "extracted_slug": "spelt-crackers",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "black beans",
+      "extracted_slug": "black-beans",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "parmesan cheese",
+      "extracted_slug": "parmesan-cheese",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "black tea",
+      "extracted_slug": "black-tea",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "lemon",
+      "extracted_slug": "lemon",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "cereal",
+      "extracted_slug": "cereal",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "wild rice",
+      "extracted_slug": "wild-rice",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "basil",
+      "extracted_slug": "basil",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "chicory",
+      "extracted_slug": "chicory",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "spelt",
+      "extracted_slug": "spelt",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "zucchini",
+      "extracted_slug": "zucchini",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "swiss chard",
+      "extracted_slug": "swiss-chard",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "garbanzo bean flour",
+      "extracted_slug": "garbanzo-bean-flour",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "potato",
+      "extracted_slug": "potato",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "pineapple",
+      "extracted_slug": "pineapple",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "honey",
+      "extracted_slug": "honey",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "banana",
+      "extracted_slug": "banana",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "escarole",
+      "extracted_slug": "escarole",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "octopus",
+      "extracted_slug": "octopus",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "eggplant",
+      "extracted_slug": "eggplant",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "rye crackers",
+      "extracted_slug": "rye-crackers",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "navy beans",
+      "extracted_slug": "navy-beans",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "peppers",
+      "extracted_slug": "peppers",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "pecans",
+      "extracted_slug": "pecans",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "artichokes",
+      "extracted_slug": "artichokes",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "mussels",
+      "extracted_slug": "mussels",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "white cooking wine",
+      "extracted_slug": "white-cooking-wine",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "lettuce",
+      "extracted_slug": "lettuce",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "fennel",
+      "extracted_slug": "fennel",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "saffron",
+      "extracted_slug": "saffron",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "pesto",
+      "extracted_slug": "pesto",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "celery",
+      "extracted_slug": "celery",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "pistachios",
+      "extracted_slug": "pistachios",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "apricots",
+      "extracted_slug": "apricots",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "cherries",
+      "extracted_slug": "cherries",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "grapes",
+      "extracted_slug": "grapes",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "walnut bread",
+      "extracted_slug": "walnut-bread",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "kidney beans",
+      "extracted_slug": "kidney-beans",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "wheat germ",
+      "extracted_slug": "wheat-germ",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "orange",
+      "extracted_slug": "orange",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "papaya",
+      "extracted_slug": "papaya",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "cantaloupe",
+      "extracted_slug": "cantaloupe",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "lobster",
+      "extracted_slug": "lobster",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "pinto beans",
+      "extracted_slug": "pinto-beans",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "red beans",
+      "extracted_slug": "red-beans",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "oysters",
+      "extracted_slug": "oysters",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "roe",
+      "extracted_slug": "roe",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "crab",
+      "extracted_slug": "crab",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "herring",
+      "extracted_slug": "herring",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "cod liver oil",
+      "extracted_slug": "cod-liver-oil",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "tilapia",
+      "extracted_slug": "tilapia",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "rice milk",
+      "extracted_slug": "rice-milk",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "mango",
+      "extracted_slug": "mango",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "pollock",
+      "extracted_slug": "pollock",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "scallops",
+      "extracted_slug": "scallops",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "snapper",
+      "extracted_slug": "snapper",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "sole",
+      "extracted_slug": "sole",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "canola oil",
+      "extracted_slug": "canola-oil",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "walnut oil",
+      "extracted_slug": "walnut-oil",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "soybean oil",
+      "extracted_slug": "soybean-oil",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "cashews",
+      "extracted_slug": "cashews",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "corn",
+      "extracted_slug": "corn",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "brussels sprouts",
+      "extracted_slug": "brussels-sprouts",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "cauliflower",
+      "extracted_slug": "cauliflower",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "yogurt",
+      "extracted_slug": "yogurt",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "corn oil",
+      "extracted_slug": "corn-oil",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "nutritional yeast",
+      "extracted_slug": "nutritional-yeast",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "edamame",
+      "extracted_slug": "edamame",
+      "claims_count": 1,
+      "inherited_from": null
+    },
+    {
+      "extracted_name": "spinach with raisins",
+      "extracted_slug": "spinach-with-raisins",
+      "claims_count": 1,
+      "inherited_from": "pine-nuts"
+    },
+    {
+      "extracted_name": "shiitake",
+      "extracted_slug": "shiitake",
+      "claims_count": 1,
+      "inherited_from": "mushrooms"
+    },
+    {
+      "extracted_name": "maitake",
+      "extracted_slug": "maitake",
+      "claims_count": 1,
+      "inherited_from": "mushrooms"
+    },
+    {
+      "extracted_name": "oyster mushrooms",
+      "extracted_slug": "oyster-mushrooms",
+      "claims_count": 1,
+      "inherited_from": "mushrooms"
+    },
+    {
+      "extracted_name": "reishi",
+      "extracted_slug": "reishi",
+      "claims_count": 1,
+      "inherited_from": "mushrooms"
+    },
+    {
+      "extracted_name": "portobello",
+      "extracted_slug": "portobello",
+      "claims_count": 1,
+      "inherited_from": "mushrooms"
+    },
+    {
+      "extracted_name": "cremini",
+      "extracted_slug": "cremini",
+      "claims_count": 1,
+      "inherited_from": "mushrooms"
+    }
+  ]
+}

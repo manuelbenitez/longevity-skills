@@ -1,0 +1,98 @@
+{
+  "name": "blueberry jam",
+  "slug": "blueberry-jam",
+  "category": "fruit",
+  "aliases": [],
+  "book_claims": [
+    {
+      "claim": "No-sugar-added jam used as a breakfast spread in the Longevity Diet.",
+      "mechanism": null,
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "Journal of Agricultural and Food Chemistry, 2010 (PMID 20481471)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20481471/",
+      "finding": "Blueberry anthocyanins retain 60-80% of antioxidant activity after jam processing; no-added-sugar preparations preserve polyphenol content significantly better.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Nutrition Research, 2013 (PMID 23684438)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23684438/",
+      "finding": "Regular blueberry consumption improves endothelial function and reduces oxidative stress markers; effects maintained in processed forms when sugar content is low.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": [
+      "sweet",
+      "tart",
+      "fruity"
+    ],
+    "aroma": [
+      "floral",
+      "berry"
+    ],
+    "texture": [
+      "smooth spread",
+      "slightly gel-like"
+    ],
+    "culinary_category": "fruit preserve / spread"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "whole-grain bread",
+      "tradition": "Longevity Diet breakfast",
+      "source": "The Longevity Diet"
+    },
+    {
+      "ingredient": "goat's milk yogurt",
+      "tradition": "Mediterranean breakfast bowl",
+      "source": "traditional"
+    },
+    {
+      "ingredient": "walnuts",
+      "tradition": "Breakfast spread with nuts",
+      "source": "traditional"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Anthocyanins",
+      "amount_per_100g": "~80-150mg",
+      "bioavailability_notes": "Partially absorbed in small intestine; remainder metabolized by gut microbiota into bioactive phenolic acids"
+    },
+    {
+      "compound": "Pectin",
+      "amount_per_100g": "~0.5-1g",
+      "bioavailability_notes": "Soluble fiber that gels at low pH; prebiotic effect in colon, feeds Bifidobacterium"
+    },
+    {
+      "compound": "Vitamin C",
+      "amount_per_100g": "~5-10mg",
+      "bioavailability_notes": "Heat-labile; reduced in jam processing but residual amounts still present"
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "goat's milk yogurt",
+      "type": "synergy",
+      "description": "Anthocyanins feed yogurt's probiotic bacteria; lactic acid from yogurt enhances anthocyanin stability"
+    },
+    {
+      "target_ingredient": "walnuts",
+      "type": "synergy",
+      "description": "Ellagitannins in walnuts and anthocyanins act synergistically on NF-kB inflammatory pathway"
+    },
+    {
+      "target_ingredient": "whole-wheat focaccia",
+      "type": "complement",
+      "description": "Pectin in jam slows starch absorption, moderating postprandial glucose"
+    }
+  ],
+  "last_updated": "2026-04-18T08:08:05Z",
+  "last_researched": "2026-04-18T08:08:05Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

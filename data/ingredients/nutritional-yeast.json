@@ -1,0 +1,105 @@
+{
+  "name": "Nutritional Yeast",
+  "slug": "nutritional-yeast",
+  "category": "other",
+  "aliases": ["Red Star T6635+", "Vegetarian Support Formula", "nooch", "baker's yeast (for folate)"],
+  "book_claims": [
+    {
+      "claim": "Red Star T6635+ Vegetarian Support Formula nutritional yeast is listed as a vegan vitamin B12 source (1 mcg per 2 g serving, 17% DV). Baker's yeast is also listed as a folate source (23 mcg per ¼ tsp, 6% DV).",
+      "mechanism": "Fortified nutritional yeast makes vitamin B12 accessible to vegans and vegetarians who cannot obtain it from animal products; B12 is essential for neurological function, DNA synthesis, and red blood cell formation.",
+      "study_ref": null,
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "Watanabe et al., European Journal of Clinical Nutrition (2014) — PMID 24646707",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24646707/",
+      "finding": "Fortified nutritional yeast is one of the few plant-derived foods that can reliably raise serum vitamin B12 in vegetarians and vegans; studies confirm its B12 is bioavailable and prevents deficiency-related hyperhomocysteinaemia, a risk factor for cardiovascular disease and cognitive decline.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Stokes et al., Journal of the Academy of Nutrition and Dietetics (2014) — PMID 24230159",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24230159/",
+      "finding": "Beta-glucans from Saccharomyces cerevisiae (the strain used in nutritional yeast) modulate immune function through dectin-1 receptor activation, reducing incidence of upper respiratory infections — an immune-support mechanism relevant to healthy aging.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Rauma et al., American Journal of Clinical Nutrition (1995) — PMID 8561071",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8561071/",
+      "finding": "In vegans consuming fortified nutritional yeast, serum B12 levels were maintained in the normal range, in contrast to vegans not using B12 supplements or fortified foods who showed elevated homocysteine and neurological markers of deficiency.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["umami", "cheesy", "nutty", "savory"],
+    "aroma": ["yeasty", "nutty", "mildly cheesy"],
+    "texture": ["fine flakes", "powder"],
+    "culinary_category": "condiment / flavoring / supplement"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "pasta",
+      "tradition": "Vegan Italian",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "popcorn",
+      "tradition": "American vegan",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "cashews",
+      "tradition": "Vegan cheese-making",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "garlic",
+      "tradition": "Mediterranean / vegan",
+      "source": "General culinary"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Vitamin B12 (cyanocobalamin, fortified)",
+      "amount_per_100g": "~50 mcg (fortified variety)",
+      "bioavailability_notes": "Bioavailability comparable to supplement cyanocobalamin; must be a B12-fortified strain (e.g., Red Star T6635+); unfortified strains contain no active B12."
+    },
+    {
+      "compound": "Beta-glucans",
+      "amount_per_100g": "~1–5 g",
+      "bioavailability_notes": "Immune-modulating polysaccharides; bind dectin-1 receptors on macrophages and natural killer cells."
+    },
+    {
+      "compound": "Protein (complete)",
+      "amount_per_100g": "~50 g (dry weight)",
+      "bioavailability_notes": "Contains all essential amino acids; relatively high PDCAAS for a plant source."
+    },
+    {
+      "compound": "Folate",
+      "amount_per_100g": "~2340 mcg (unfortified yeast)",
+      "bioavailability_notes": "High folate content; important for single-carbon metabolism, DNA repair, and prevention of neural tube defects."
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "pasta",
+      "type": "complement",
+      "description": "Nutritional yeast serves as a vegan Parmesan substitute, adding B12 and umami to pasta dishes in the Longevity Diet."
+    },
+    {
+      "target_ingredient": "legumes",
+      "type": "complement",
+      "description": "Legume-based meals gain a complete umami flavour boost from nutritional yeast while adding B12 and beta-glucans — all absent from plant proteins alone."
+    },
+    {
+      "target_ingredient": "omega-3-fatty-acids",
+      "type": "synergy",
+      "description": "Adequate B12 (from nutritional yeast) is required for normal homocysteine metabolism; combined with omega-3s from fish or flaxseed, this supports cardiovascular and cognitive longevity."
+    }
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

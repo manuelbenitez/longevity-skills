@@ -1,0 +1,85 @@
+{
+  "name": "Salt",
+  "slug": "salt",
+  "category": "other",
+  "aliases": ["sodium chloride", "sodium", "sea salt", "table salt", "high-salt diet"],
+  "book_claims": [
+    {
+      "claim": "High salt consumption is believed to contribute to autoimmune diseases, possibly by promoting the activation of pro-inflammatory T cells. The Longevity Diet recommends avoiding a high-salt diet, particularly for those at risk of autoimmune conditions.",
+      "mechanism": "Excess sodium promotes differentiation of pro-inflammatory T helper 17 (Th17) cells, which are central culprits in many autoimmune diseases, potentially through activation of serum glucocorticoid kinase 1 (SGK1).",
+      "study_ref": null,
+      "confidence": "medium"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "Kleinewietfeld et al., Nature (2013) — PMID 23467095",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23467095/",
+      "finding": "High-salt conditions dramatically accelerate induction of pathogenic Th17 cells via SGK1 upregulation; mice on high-salt diet developed more severe experimental autoimmune encephalomyelitis — directly supporting the book's mechanism claim.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "He et al., British Medical Journal (2013) — PMID 23467025",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23467025/",
+      "finding": "Meta-analysis of prospective cohort studies found that higher dietary sodium intake is associated with increased risk of cardiovascular events and all-cause mortality, with a dose-response relationship, supporting restriction for longevity.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Wilck et al., Nature (2017) — PMID 29143409",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29143409/",
+      "finding": "High-salt diet reduces gut microbiome diversity (particularly Lactobacillus species), disrupts intestinal immune homeostasis, and worsens hypertension — establishing a gut-immune axis through which excess salt accelerates systemic aging.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["salty", "mineral", "flavor-enhancing"],
+    "aroma": ["neutral", "faintly mineral (sea salt)"],
+    "texture": ["crystalline granules", "flaky (fleur de sel)"],
+    "culinary_category": "seasoning / mineral"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "herbs",
+      "tradition": "Universal",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "extra-virgin olive oil",
+      "tradition": "Mediterranean",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "lemon",
+      "tradition": "Mediterranean",
+      "source": "General culinary"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Sodium",
+      "amount_per_100g": "~38,750 mg",
+      "bioavailability_notes": "Near-complete absorption in the gut; excess sodium is renally excreted but long-term high intake elevates blood pressure and drives Th17-mediated inflammation. WHO recommends <2,000 mg sodium/day (<5 g salt/day)."
+    },
+    {
+      "compound": "Iodine (iodized salt only)",
+      "amount_per_100g": "~7,600 mcg (iodized)",
+      "bioavailability_notes": "Iodized table salt is a primary iodine source in many populations; essential for thyroid hormone synthesis and metabolic regulation. Sea salt typically has negligible iodine."
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "potassium-rich-foods",
+      "type": "antagonism",
+      "description": "High sodium intake antagonizes potassium's blood pressure-lowering effects; pairing salt moderation with potassium-rich foods (legumes, leafy greens) partially offsets cardiovascular risk."
+    },
+    {
+      "target_ingredient": "herbs",
+      "type": "complement",
+      "description": "Using herbs and spices as primary flavor enhancers reduces reliance on salt while adding bioactive polyphenols — a practical strategy the Longevity Diet implicitly promotes."
+    }
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

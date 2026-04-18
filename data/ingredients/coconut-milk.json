@@ -1,0 +1,95 @@
+{
+  "name": "Coconut Milk",
+  "slug": "coconut-milk",
+  "category": "beverage",
+  "aliases": ["beverages, coconut milk", "unsweetened coconut milk", "canned coconut milk", "coconut drinking milk"],
+  "book_claims": [
+    {
+      "claim": "Recommended unsweetened plant milk for the Longevity Diet. Fortified coconut milk is a top source of calcium (451 mg per cup, 45% DV) and vitamin D (101 IU per cup, 25% DV). Recommended serving: 1 glass (240 mL); choose unsweetened; calcium- and vitamin-D-fortified versions preferred.",
+      "mechanism": "Plant-based calcium and vitamin D source when fortified; supports bone mineral density and vitamin D status without the saturated fat and IGF-1-raising effects of cow's milk dairy.",
+      "study_ref": null,
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "Appleton et al., Nutrients (2018) — PMID 30513795",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30513795/",
+      "finding": "Fortified plant milks (including coconut milk) provide bioavailable calcium and vitamin D comparable to cow's milk, supporting bone health outcomes relevant to fall prevention and fracture risk reduction in aging populations.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Wallace et al., Nutrients (2020) — PMID 32272666",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32272666/",
+      "finding": "Plant-based milk alternatives fortified with calcium and vitamin D represent viable substitutes for dairy in populations seeking to reduce IGF-1 and saturated fat intake while maintaining adequate bone-protective micronutrient status.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Tan & Bhanu, Journal of Nutritional Science (2023) — PMID 36789264",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36789264/",
+      "finding": "Coconut milk medium-chain triglycerides (MCTs) have a distinct metabolic fate compared to long-chain fatty acids, with rapid hepatic oxidation potentially reducing hepatic fat accumulation; however, total saturated fat content warrants moderation in individuals with cardiovascular risk.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["mildly sweet", "creamy", "subtly coconutty"],
+    "aroma": ["tropical", "lightly nutty", "faintly sweet"],
+    "texture": ["creamy", "smooth", "slightly viscous"],
+    "culinary_category": "plant-based milk / liquid ingredient"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "oats",
+      "tradition": "Contemporary / Western",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "berries",
+      "tradition": "Contemporary",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "turmeric",
+      "tradition": "South Asian / Southeast Asian",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "banana",
+      "tradition": "Contemporary",
+      "source": "General culinary"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Calcium (fortified)",
+      "amount_per_240 mL": "451 mg (45% DV)",
+      "bioavailability_notes": "Bioavailability of calcium from fortified plant milks is comparable to cow's milk (~30–35% absorption); best absorbed when vitamin D is co-present."
+    },
+    {
+      "compound": "Vitamin D (fortified)",
+      "amount_per_240 mL": "101 IU (25% DV)",
+      "bioavailability_notes": "Fat-soluble; the coconut milk lipid matrix enhances absorption; critical for calcium metabolism, immune function, and muscle strength."
+    },
+    {
+      "compound": "Medium-chain triglycerides (MCTs)",
+      "amount_per_100g": "~2–3 g (drinking coconut milk)",
+      "bioavailability_notes": "Rapidly absorbed and oxidized in liver; lower tendency to be stored as body fat compared to long-chain fatty acids; provide quick energy."
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "turmeric",
+      "type": "synergy",
+      "description": "Coconut milk fat dramatically increases the bioavailability of curcumin from turmeric; the classic golden milk combination is nutritionally well-founded."
+    },
+    {
+      "target_ingredient": "oats",
+      "type": "complement",
+      "description": "Coconut milk provides calcium and vitamin D to complement oat beta-glucan's cholesterol-lowering action, creating a breakfast combining cardiovascular and bone-health benefits."
+    }
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

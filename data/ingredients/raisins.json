@@ -1,0 +1,105 @@
+{
+  "name": "Raisins",
+  "slug": "raisins",
+  "category": "fruit",
+  "aliases": ["raisins, seedless", "dried grapes", "sultanas"],
+  "book_claims": [
+    {
+      "claim": "Raisins are used in the Longevity Diet as a dish ingredient and in baked goods, recommended at approximately 9 g (1 tbsp) per use. They are listed as a source of iron (1 mg per 1/4 cup, ~6% DV) and magnesium (23 mg per 1/2 cup, ~6% DV).",
+      "mechanism": "Provides non-heme iron supporting oxygen transport and immune function; magnesium supports over 300 enzymatic reactions including ATP synthesis and DNA repair.",
+      "study_ref": null,
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed — Williamson & Carughi, Nutrition Research (2010) — PMID 20655482",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20655482/",
+      "finding": "Raisins are among the most concentrated dietary sources of polyphenols (resveratrol, quercetin, catechins, tartaric acid); daily raisin consumption in controlled trials reduced LDL oxidation, blood pressure, and postprandial glucose compared to refined carbohydrate snacks.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed — Bays et al., American Journal of Medicine (2012) — PMID 22840553",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22840553/",
+      "finding": "In a randomized crossover trial, eating 1 oz raisins three times daily for 12 weeks significantly reduced systolic and diastolic blood pressure compared to common processed snacks, suggesting cardiovascular benefit from polyphenol-rich dried fruit.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed — Mossine & Mawhinney, Advances in Food and Nutrition Research (2010) — PMID 20691942",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20691942/",
+      "finding": "Grape polyphenols including those concentrated in raisins activate sirtuin (SIRT1) pathways and NRF2 antioxidant response element, mechanistically linked to caloric restriction mimicry and lifespan extension in model organisms.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["intensely sweet", "slightly tart", "caramel notes", "fruity"],
+    "aroma": ["sweet", "grape-like", "faintly winey"],
+    "texture": ["chewy", "soft", "concentrated"],
+    "culinary_category": "dried fruit / natural sweetener"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "oats",
+      "tradition": "Longevity Diet breakfast",
+      "source": "The Longevity Diet"
+    },
+    {
+      "ingredient": "pistachios",
+      "tradition": "Middle Eastern / Longevity Diet",
+      "source": "The Longevity Diet"
+    },
+    {
+      "ingredient": "cinnamon",
+      "tradition": "Global / Mediterranean",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "mixed-berries",
+      "tradition": "Longevity Diet",
+      "source": "The Longevity Diet"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Polyphenols (resveratrol, quercetin, catechins)",
+      "amount_per_100g": "~1,000–3,600 mg gallic acid equivalents",
+      "bioavailability_notes": "Drying concentrates polyphenols 4–5-fold vs. fresh grapes; resveratrol undergoes extensive first-pass metabolism but metabolites retain biological activity."
+    },
+    {
+      "compound": "Iron (non-heme)",
+      "amount_per_100g": "1.9 mg",
+      "bioavailability_notes": "Non-heme iron; absorption is 2–10% depending on enhancers (vitamin C increases absorption) and inhibitors (tannins in raisins themselves may partially limit uptake)."
+    },
+    {
+      "compound": "Boron",
+      "amount_per_100g": "~2 mg",
+      "bioavailability_notes": "Raisins are among the richest dietary boron sources; boron modulates bone metabolism, steroid hormone activity, and inflammatory cytokines."
+    },
+    {
+      "compound": "Potassium",
+      "amount_per_100g": "749 mg",
+      "bioavailability_notes": "Highly concentrated relative to fresh grapes; highly bioavailable; supports blood pressure and muscle function."
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "oats",
+      "type": "complement",
+      "description": "Raisins' natural sweetness displaces added sugar in oatmeal while adding polyphenols and iron; oats' beta-glucan slows glucose release from raisin sugars."
+    },
+    {
+      "target_ingredient": "pistachios",
+      "type": "complement",
+      "description": "Classic longevity dessert pairing; nut fat slows absorption of raisin sugars, and together they provide resveratrol, lutein, and phytosterols."
+    },
+    {
+      "target_ingredient": "peppers",
+      "type": "synergy",
+      "description": "Vitamin C from peppers in the same meal enhances non-heme iron absorption from raisins, improving iron adequacy on plant-based longevity diets."
+    }
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

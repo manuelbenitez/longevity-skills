@@ -1,0 +1,96 @@
+{
+  "name": "Calcium",
+  "slug": "calcium",
+  "category": "nutrient",
+  "aliases": ["Ca", "dietary calcium"],
+  "book_claims": [
+    {
+      "claim": "50-90% of US adults are deficient in calcium; it is essential for bone mineral density alongside vitamin D.",
+      "mechanism": "Calcium is the primary structural component of bone and teeth (hydroxyapatite); also required for muscle contraction, nerve signal transmission, and blood clotting cascades.",
+      "study_ref": null,
+      "confidence": "high"
+    },
+    {
+      "claim": "Calcium should be obtained from vegetables, legumes, and small fish (e.g., canned sardines with bones), with periodic multivitamin use every 2-3 days as a fallback.",
+      "mechanism": "Whole-food sources provide better bioavailability due to accompanying cofactors; small fish and legumes deliver calcium without the saturated fat of dairy.",
+      "study_ref": null,
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "Bischoff-Ferrari et al., JAMA (2005) — PMID 15870411",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15870411/",
+      "finding": "Higher vitamin D and calcium intake combined reduced hip fracture risk by up to 26% in adults over 65; calcium alone showed minimal benefit without adequate vitamin D, confirming the critical synergy emphasized in the Longevity Diet.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Bolland et al., BMJ (2010) — PMID 20671013",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20671013/",
+      "finding": "Meta-analysis of 11 RCTs found that calcium supplements (without vitamin D) were associated with a 30% increased risk of myocardial infarction, cautioning against isolated high-dose calcium supplementation and supporting the book's preference for dietary sources.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Tai et al., Current Osteoporosis Reports (2015) — PMID 25990339",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25990339/",
+      "finding": "Dietary calcium from plant sources (legumes, leafy greens, fortified foods) is associated with improved bone mineral density without the cardiovascular risks of high-dose calcium supplements, supporting whole-food calcium strategies for healthy aging.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": [],
+    "aroma": [],
+    "texture": [],
+    "culinary_category": "micronutrient"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "vitamin-d",
+      "tradition": "Nutritional combination",
+      "source": "The Longevity Diet"
+    },
+    {
+      "ingredient": "sardines",
+      "tradition": "Mediterranean",
+      "source": "The Longevity Diet"
+    },
+    {
+      "ingredient": "black-beans",
+      "tradition": "Mediterranean / Longevity Diet",
+      "source": "The Longevity Diet"
+    },
+    {
+      "ingredient": "kale",
+      "tradition": "Global",
+      "source": "General nutrition"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Calcium (elemental)",
+      "amount_per_100g": "Varies by food source; canned sardines with bones ~382 mg, kale ~254 mg, cooked black beans ~27 mg",
+      "bioavailability_notes": "Bioavailability ranges from ~5% (spinach, high oxalate) to ~32% (milk) to ~60% (kale, low oxalate); fractional absorption increases when intake is low."
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "vitamin-d",
+      "type": "synergy",
+      "description": "Vitamin D (as calcitriol) directly upregulates intestinal calcium transport proteins (TRPV6, calbindin-D9k), increasing calcium absorption by 30-80%; both are required for bone mineral density maintenance."
+    },
+    {
+      "target_ingredient": "magnesium",
+      "type": "synergy",
+      "description": "Magnesium is required for parathyroid hormone function; deficiency impairs the body's ability to regulate calcium metabolism and mobilize calcium appropriately."
+    },
+    {
+      "target_ingredient": "vitamin-k2",
+      "type": "complement",
+      "description": "Vitamin K2 activates osteocalcin and matrix GLA protein, directing calcium to bones rather than arteries, reducing the cardiovascular risk associated with high calcium intake."
+    }
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

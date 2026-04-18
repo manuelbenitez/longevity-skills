@@ -1,0 +1,59 @@
+{
+  "name": "Anchovies",
+  "slug": "anchovies",
+  "category": "fish",
+  "aliases": ["anchovies, European, canned in oil"],
+  "book_claims": [
+    {
+      "claim": "Anchovies recommended as a high omega-3, omega-6, and vitamin B12 fish; low in mercury",
+      "mechanism": "Small oily fish with dense omega-3 content and low mercury bioaccumulation due to short lifespan and small size",
+      "study_ref": null,
+      "confidence": "high"
+    },
+    {
+      "claim": "Used on Longevity Diet pizza; source of calcium (66 mg per 1 oz canned, 7% DV) and vitamin D (20 IU per 1 oz, 5% DV)",
+      "mechanism": "Source of omega-3 fatty acids, calcium, and vitamin D",
+      "study_ref": null,
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22682084/",
+      "finding": "Small pelagic fish like anchovies have the lowest mercury contamination among marine species; high EPA/DHA content comparable to sardines",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25720716/",
+      "finding": "Omega-3 EPA/DHA from oily fish reduces all-cause and cardiovascular mortality; anchovies among best dietary sources per calorie",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["salty", "umami", "pungent"],
+    "aroma": ["briny", "fishy"],
+    "texture": ["soft", "oily"],
+    "culinary_category": "umami condiment fish"
+  },
+  "culinary_pairings": [
+    {"ingredient": "olive oil", "tradition": "Italian/Mediterranean", "source": "The Longevity Diet"},
+    {"ingredient": "tomatoes", "tradition": "Italian", "source": "traditional"},
+    {"ingredient": "capers", "tradition": "Italian/Sicilian", "source": "traditional"}
+  ],
+  "nutrient_highlights": [
+    {"compound": "EPA + DHA", "amount_per_100g": "1.5–2.1 g", "bioavailability_notes": "Direct marine omega-3s; highest bioavailability among omega-3 sources"},
+    {"compound": "Vitamin B12", "amount_per_100g": "0.62 mcg per 28g", "bioavailability_notes": "Bioavailable form; important for neurological function"},
+    {"compound": "Calcium", "amount_per_100g": "232 mg", "bioavailability_notes": "From soft bones when eaten whole; good non-dairy calcium source"}
+  ],
+  "synergies": [
+    {"target_ingredient": "sardines", "type": "synergy", "description": "Both small oily low-mercury fish recommended together for high omega-3 intake in the Longevity Diet"},
+    {"target_ingredient": "olive oil", "type": "complement", "description": "Traditional Mediterranean pairing; fat enhances absorption of fat-soluble vitamins"},
+    {"target_ingredient": "tomatoes", "type": "complement", "description": "Lycopene in tomatoes is fat-soluble; anchovy fat enhances absorption"}
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

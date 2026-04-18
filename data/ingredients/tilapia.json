@@ -1,0 +1,53 @@
+{
+  "name": "Tilapia",
+  "slug": "tilapia",
+  "category": "fish",
+  "aliases": ["Nile tilapia"],
+  "book_claims": [
+    {
+      "claim": "Listed as a source of vitamin D (144 IU per fillet raw, 36% DV) and omega-3 (0.1 g EPA/DHA per 75 g cooked)",
+      "mechanism": "White fish providing modest vitamin D and omega-3",
+      "study_ref": null,
+      "confidence": "medium"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18496749/",
+      "finding": "Tilapia has a high omega-6 to omega-3 ratio (11:1); consumption without balancing with high omega-3 fish may promote rather than reduce inflammation",
+      "agrees_with_book": false
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25267243/",
+      "finding": "Tilapia provides complete lean protein and vitamin D; low mercury makes it safe but low EPA/DHA means it should not replace oily fish as the primary fish source",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["mild", "neutral", "slightly sweet"],
+    "aroma": ["mild", "neutral"],
+    "texture": ["flaky", "lean", "tender"],
+    "culinary_category": "white fish"
+  },
+  "culinary_pairings": [
+    {"ingredient": "lemon", "tradition": "American/global", "source": "traditional"},
+    {"ingredient": "olive oil", "tradition": "Mediterranean", "source": "traditional"},
+    {"ingredient": "vegetables", "tradition": "global", "source": "The Longevity Diet"}
+  ],
+  "nutrient_highlights": [
+    {"compound": "Complete protein", "amount_per_100g": "26 g", "bioavailability_notes": "Lean protein; all essential amino acids; lower calorie density than oily fish"},
+    {"compound": "Vitamin D", "amount_per_100g": "170 IU (raw fillet)", "bioavailability_notes": "Useful dietary vitamin D source; fat-soluble, enhanced with dietary fat"},
+    {"compound": "EPA + DHA", "amount_per_100g": "0.13 g", "bioavailability_notes": "Very low omega-3; compensate with sardines or anchovies in the same meal plan week"}
+  ],
+  "synergies": [
+    {"target_ingredient": "sardines", "type": "complement", "description": "Tilapia is low in omega-3; pairing weeks with sardines balances omega-3 intake in varied fish rotation"},
+    {"target_ingredient": "olive oil", "type": "synergy", "description": "Cooking tilapia in olive oil adds MUFA and improves vitamin D absorption"},
+    {"target_ingredient": "vegetables", "type": "complement", "description": "Neutral flavor of tilapia pairs well with bold vegetable preparations; standard Longevity Diet dinner combination"}
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

@@ -1,0 +1,70 @@
+{
+  "name": "Beans",
+  "slug": "beans",
+  "category": "legume",
+  "aliases": ["green beans", "string beans", "French beans", "haricots verts"],
+  "book_claims": [
+    {
+      "claim": "Green beans are part of the traditional Italian diet used as an example for the ancestral-diet approach to autoimmune disease prevention",
+      "mechanism": "Component of a vegetable-rich traditional diet associated with low rates of autoimmune and chronic disease",
+      "study_ref": "",
+      "confidence": "low"
+    },
+    {
+      "claim": "Beans are a vegetable staple used in multiple Longevity Diet dishes including the Molochio recipe pasta e vaianeia and Ligurian minestrone, served at ~150 g per serving",
+      "mechanism": "High fiber and plant protein content; low glycemic index; supports gut microbiome diversity and satiety",
+      "study_ref": "",
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31728499/",
+      "finding": "PMID 31728499: Higher legume intake is associated with reduced all-cause mortality and cardiovascular mortality across multiple cohort studies; beans are among the most studied longevity-associated foods",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26853923/",
+      "finding": "PMID 26853923: Legume consumption is associated with lower fasting blood glucose and improved insulin sensitivity; supports metabolic health as a longevity pathway",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Examine.com",
+      "url": "https://examine.com/food/green-beans/",
+      "finding": "Green beans provide fiber, vitamin C, vitamin K, and folate; fermentable fiber feeds beneficial gut bacteria, supporting the gut-longevity axis",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["mildly sweet", "grassy", "vegetal", "slightly earthy"],
+    "aroma": ["fresh", "green", "herbaceous"],
+    "texture": ["crisp when raw", "tender when cooked", "slightly firm"],
+    "culinary_category": "vegetable legume"
+  },
+  "culinary_pairings": [
+    {"ingredient": "olive oil", "tradition": "Italian/Mediterranean", "source": "culinary tradition"},
+    {"ingredient": "garlic", "tradition": "Italian/Mediterranean", "source": "culinary tradition"},
+    {"ingredient": "tomatoes", "tradition": "Southern Italian", "source": "culinary tradition"},
+    {"ingredient": "pasta", "tradition": "Calabrian (pasta e vaianeia)", "source": "The Longevity Diet"},
+    {"ingredient": "lemon", "tradition": "Mediterranean", "source": "culinary tradition"}
+  ],
+  "nutrient_highlights": [
+    {"compound": "Dietary fiber", "amount_per_100g": "2.7 g", "bioavailability_notes": "Mix of soluble and insoluble fiber; supports gut microbiome and bile acid recycling"},
+    {"compound": "Vitamin C", "amount_per_100g": "12 mg (cooked)", "bioavailability_notes": "Water-soluble; brief cooking preserves more than prolonged boiling"},
+    {"compound": "Vitamin K1", "amount_per_100g": "43 mcg (cooked)", "bioavailability_notes": "Fat-soluble; absorption enhanced by co-ingestion with olive oil"},
+    {"compound": "Folate", "amount_per_100g": "37 mcg (cooked)", "bioavailability_notes": "Essential for DNA methylation; bioavailability ~85% from cooked vegetables"},
+    {"compound": "Manganese", "amount_per_100g": "0.21 mg (cooked)", "bioavailability_notes": "Cofactor for SOD2 antioxidant enzyme; plant sources have moderate bioavailability"}
+  ],
+  "synergies": [
+    {"target_ingredient": "olive oil", "type": "synergy", "description": "Olive oil enhances absorption of fat-soluble vitamin K in beans and contributes anti-inflammatory polyphenols"},
+    {"target_ingredient": "pasta", "type": "complement", "description": "Classic longevity combination in pasta e vaianeia; legume fiber lowers the glycemic response of pasta"},
+    {"target_ingredient": "garlic", "type": "synergy", "description": "Garlic's organosulfur compounds and beans' fiber act synergistically on gut microbiome diversity and immune modulation"},
+    {"target_ingredient": "tomatoes", "type": "complement", "description": "Traditional pairing in Calabrian cooking; vitamin C in tomatoes enhances iron absorption from beans"}
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

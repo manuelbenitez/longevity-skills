@@ -1,0 +1,53 @@
+{
+  "name": "Pecorino Cheese",
+  "slug": "pecorino-cheese",
+  "category": "dairy",
+  "aliases": ["ewe's milk cheese", "sheep's milk cheese", "Pecorino Romano"],
+  "book_claims": [
+    {
+      "claim": "Pecorino is consumed by Sardinian centenarians and described as a high omega-3 cheese made from ewe's milk",
+      "mechanism": "Ewe's milk has a different fatty acid profile than cow's milk, with higher omega-3 content and conjugated linoleic acid (CLA)",
+      "study_ref": null,
+      "confidence": "medium"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16373941/",
+      "finding": "Sheep's milk fat contains 2–3× more CLA than cow's milk; CLA associated with anti-inflammatory and anti-carcinogenic effects in animal and some human studies",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25889163/",
+      "finding": "Sardinian centenarian dietary patterns include regular sheep's milk cheese consumption; region-specific dairy-longevity association noted in multiple epidemiological studies",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["salty", "sharp", "tangy", "nutty"],
+    "aroma": ["funky", "sharp", "barnyard"],
+    "texture": ["hard", "granular", "crumbly"],
+    "culinary_category": "aged hard cheese"
+  },
+  "culinary_pairings": [
+    {"ingredient": "pasta", "tradition": "Italian (Roman/Sardinian)", "source": "traditional"},
+    {"ingredient": "fava beans", "tradition": "Sardinian", "source": "traditional"},
+    {"ingredient": "honey", "tradition": "Italian", "source": "traditional"}
+  ],
+  "nutrient_highlights": [
+    {"compound": "CLA (conjugated linoleic acid)", "amount_per_100g": "0.4–0.7 g", "bioavailability_notes": "Higher than cow's milk cheese; ruminant-derived CLA associated with anti-inflammatory effects"},
+    {"compound": "Calcium", "amount_per_100g": "760 mg", "bioavailability_notes": "Well-absorbed; hard cheeses provide concentrated calcium without lactose intolerance issues for most people"},
+    {"compound": "Protein", "amount_per_100g": "26 g", "bioavailability_notes": "Complete protein; aged cheeses have lower lactose than fresh dairy"}
+  ],
+  "synergies": [
+    {"target_ingredient": "feta-cheese", "type": "complement", "description": "Both goat/sheep milk cheeses preferred over cow's milk cheese in the Longevity Diet"},
+    {"target_ingredient": "pasta", "type": "complement", "description": "Traditional Italian pairing; use modest portions per Longevity Diet principles"},
+    {"target_ingredient": "fava-beans", "type": "complement", "description": "Classic Sardinian blue-zone combination; legume protein + sheep cheese fat and protein"}
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

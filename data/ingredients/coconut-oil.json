@@ -1,0 +1,95 @@
+{
+  "name": "Coconut Oil",
+  "slug": "coconut-oil",
+  "category": "oil",
+  "aliases": ["virgin coconut oil", "extra virgin coconut oil", "EVCO", "medium-chain fatty acids oil", "MCFA oil", "VCO"],
+  "book_claims": [
+    {
+      "claim": "Consumption of 40 mL per day of extra virgin coconut oil resulted in an improvement in cognitive status in Alzheimer's disease patients. Coconut oil is high in medium-chain fatty acids (6–12 carbons), which are easily converted to ketone bodies — the same molecules produced during fasting. The brain uses ketones as a major energy source when glucose is scarce, potentially bypassing impaired glucose metabolism in Alzheimer's. Avoid if at risk for cardiovascular disease due to high saturated fat content.",
+      "mechanism": "Medium-chain triglycerides (MCTs) are rapidly converted to ketone bodies in the liver, providing an alternative brain fuel source that bypasses glucose metabolism deficits in Alzheimer's disease; mirrors the metabolic state of fasting, a core Longevity Diet strategy.",
+      "study_ref": null,
+      "confidence": "medium"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "Fernando et al., Nutritional Neuroscience (2015) — PMID 25997382",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25997382/",
+      "finding": "In a randomized controlled trial, 40 mL/day of extra virgin coconut oil for 21 days significantly improved cognitive scores (MMSE) in Alzheimer's disease patients compared to controls, with women showing greater benefit — directly corroborating the book's claim.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Henderson (2008) — PMID 18845187",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18845187/",
+      "finding": "MCT-derived ketone bodies elevated plasma beta-hydroxybutyrate levels and improved cognitive performance in mild-to-moderate Alzheimer's patients in a double-blind crossover study, establishing the ketone-as-brain-fuel mechanism the book cites.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Eyres et al., Nutrition Reviews (2016) — PMID 26946252",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26946252/",
+      "finding": "Coconut oil consumption raises both LDL and HDL cholesterol versus unsaturated plant oils; cardiovascular effects are intermediate between butter and olive oil. This supports the book's caution to avoid in cardiovascular disease patients.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["mildly sweet", "subtly coconutty", "neutral at high heat"],
+    "aroma": ["tropical", "lightly nutty", "coconut"],
+    "texture": ["solid below 24°C", "liquid above 24°C", "smooth"],
+    "culinary_category": "cooking oil / fat"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "sweet potato",
+      "tradition": "Contemporary / Southeast Asian",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "turmeric",
+      "tradition": "South Asian",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "dark chocolate",
+      "tradition": "Contemporary",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "banana",
+      "tradition": "Southeast Asian / Caribbean",
+      "source": "General culinary"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Lauric acid (C12:0 saturated fat)",
+      "amount_per_100g": "~47 g",
+      "bioavailability_notes": "Primarily absorbed via portal vein (unlike long-chain fatty acids); converted to monolaurin with antimicrobial properties; raises both LDL and HDL."
+    },
+    {
+      "compound": "Caprylic acid (C8:0) and Capric acid (C10:0)",
+      "amount_per_100g": "~10–14 g combined",
+      "bioavailability_notes": "The most ketogenic MCTs; rapidly oxidized in liver to ketone bodies; commercially concentrated as 'MCT oil' for ketogenic therapeutic applications."
+    },
+    {
+      "compound": "Vitamin E (tocopherols)",
+      "amount_per_100g": "~0.1 mg",
+      "bioavailability_notes": "Modest vitamin E content; fat-soluble antioxidant protecting the oil itself from oxidative rancidity."
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "turmeric",
+      "type": "synergy",
+      "description": "Coconut oil fat dramatically increases absorption of curcumin from turmeric; both have anti-neuroinflammatory properties relevant to Alzheimer's prevention."
+    },
+    {
+      "target_ingredient": "extra-virgin-olive-oil",
+      "type": "antagonism",
+      "description": "Coconut oil should not replace olive oil as the primary cooking fat for cardiovascular-healthy populations; coconut oil's saturated fat profile raises LDL versus olive oil's monounsaturated-fat-driven LDL reduction."
+    }
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

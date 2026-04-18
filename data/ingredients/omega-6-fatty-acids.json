@@ -1,0 +1,106 @@
+{
+  "name": "Omega-6 Fatty Acids",
+  "slug": "omega-6-fatty-acids",
+  "category": "nutrient",
+  "aliases": ["linoleic acid", "arachidonic acid", "polyunsaturated fats", "LA", "n-6 fatty acids"],
+  "book_claims": [
+    {
+      "claim": "Omega-6 is an essential fatty acid the human body cannot synthesise and must obtain from diet; it is required for normal cell and organ function.",
+      "mechanism": "Linoleic acid is incorporated into cell membranes and serves as a precursor to arachidonic acid, which gives rise to pro-inflammatory eicosanoids; balance with omega-3 intake modulates the inflammatory/anti-inflammatory equilibrium.",
+      "study_ref": null,
+      "confidence": "high"
+    },
+    {
+      "claim": "The Longevity Diet recommends obtaining omega-6 from fish and select plant oils and cautions against overconsumption relative to omega-3 to avoid promoting chronic inflammation.",
+      "mechanism": "Western diets have omega-6:omega-3 ratios of 15–20:1 versus an evolutionary target of ~4:1; excess omega-6 competes with omega-3 for desaturase enzymes and shifts eicosanoid balance toward pro-inflammatory mediators.",
+      "study_ref": null,
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "Simopoulos, Biomedicine & Pharmacotherapy (2002) — PMID 12442909",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12442909/",
+      "finding": "The human genome evolved on a diet with an omega-6:omega-3 ratio close to 1:1; the modern Western ratio of 15–20:1 drives pro-inflammatory gene expression and is associated with increased rates of cardiovascular disease, cancer, and inflammatory disorders — all modifiable with dietary adjustment.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Harris et al., Circulation (2009) — PMID 19892229",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19892229/",
+      "finding": "Linoleic acid (the principal dietary omega-6) is not inherently pro-inflammatory at intakes within normal dietary ranges; its balance with omega-3 rather than its absolute quantity is the key determinant of cardiovascular risk, supporting a quality-of-fat rather than restriction framing.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Calder, Annals of Nutrition and Metabolism (2021) — PMID 34350537",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34350537/",
+      "finding": "Both omega-3 and omega-6 are necessary; omega-6 deficiency impairs skin barrier function, reproductive health, and immune regulation; the goal is an adequate, balanced supply rather than elimination of either class.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["neutral (as isolated nutrient)"],
+    "aroma": [],
+    "texture": [],
+    "culinary_category": "nutrient / dietary fat"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "omega-3 fatty acids",
+      "tradition": "Nutritional science",
+      "source": "The Longevity Diet"
+    },
+    {
+      "ingredient": "salmon",
+      "tradition": "Mediterranean",
+      "source": "The Longevity Diet"
+    },
+    {
+      "ingredient": "walnuts",
+      "tradition": "Mediterranean",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "extra-virgin-olive-oil",
+      "tradition": "Mediterranean",
+      "source": "The Longevity Diet"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Linoleic acid (LA, 18:2n-6)",
+      "amount_per_100g": "N/A — varies by food source",
+      "bioavailability_notes": "Parent omega-6; efficiently absorbed from plant oils (sunflower, safflower, soybean); elongated and desaturated to arachidonic acid in liver."
+    },
+    {
+      "compound": "Arachidonic acid (AA, 20:4n-6)",
+      "amount_per_100g": "~0.1–0.2 g per 100 g in meat",
+      "bioavailability_notes": "Pre-formed in animal foods; directly incorporated into cell membranes; precursor to pro-inflammatory prostaglandins, thromboxanes, and leukotrienes."
+    },
+    {
+      "compound": "Gamma-linolenic acid (GLA, 18:3n-6)",
+      "amount_per_100g": "Trace in evening primrose, borage, hemp",
+      "bioavailability_notes": "Downstream omega-6 with anti-inflammatory properties; uncommon in standard diets."
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "omega-3-fatty-acids",
+      "type": "complement",
+      "description": "Omega-6 and omega-3 are metabolic counterparts; maintaining a ratio close to 4:1 (omega-6:omega-3) is associated with reduced cardiovascular disease and inflammatory conditions — the target of the Longevity Diet's seafood and olive oil emphasis."
+    },
+    {
+      "target_ingredient": "extra-virgin-olive-oil",
+      "type": "complement",
+      "description": "Replacing high-omega-6 seed oils with olive oil naturally improves the dietary omega-6:omega-3 ratio while preserving essential fatty acid intake."
+    },
+    {
+      "target_ingredient": "walnuts",
+      "type": "complement",
+      "description": "Walnuts are the only common nut with a substantial ALA (omega-3) content that partially offsets their linoleic acid (omega-6) load."
+    }
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

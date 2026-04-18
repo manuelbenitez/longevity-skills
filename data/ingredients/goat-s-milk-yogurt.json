@@ -1,0 +1,98 @@
+{
+  "name": "goat's milk yogurt",
+  "slug": "goat-s-milk-yogurt",
+  "category": "dairy",
+  "aliases": [],
+  "book_claims": [
+    {
+      "claim": "Recommended for those over 65 losing muscle mass, consumed in high-longevity areas",
+      "mechanism": "Goat's milk proteins and probiotics support gut health; easier digestion than cow's milk",
+      "confidence": "medium"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "Nutrients, 2019 (PMID 31426388)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31426388/",
+      "finding": "Goat milk fermented products show higher bioavailability of calcium and phosphorus than cow milk, with probiotic strains improving gut microbiota diversity in older adults.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Journal of Dairy Science, 2011 (PMID 21183035)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21183035/",
+      "finding": "Goat milk proteins form softer curds in the stomach, improving digestibility and reducing gastrointestinal inflammation compared to cow milk.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": [
+      "tangy",
+      "slightly earthy",
+      "mildly sweet"
+    ],
+    "aroma": [
+      "grassy",
+      "slightly musky"
+    ],
+    "texture": [
+      "creamy",
+      "slightly grainy"
+    ],
+    "culinary_category": "fermented dairy"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "honey",
+      "tradition": "Mediterranean breakfast",
+      "source": "traditional"
+    },
+    {
+      "ingredient": "walnuts",
+      "tradition": "Middle Eastern mezze",
+      "source": "traditional"
+    },
+    {
+      "ingredient": "fresh herbs (mint, dill)",
+      "tradition": "Levantine cuisine",
+      "source": "traditional"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Calcium",
+      "amount_per_100g": "120mg",
+      "bioavailability_notes": "Higher bioavailability than cow milk due to smaller fat globules and different casein structure"
+    },
+    {
+      "compound": "Probiotics (Lactobacillus spp.)",
+      "amount_per_100g": "10^7\u201310^9 CFU",
+      "bioavailability_notes": "Survive gastric transit better in goat milk matrix; colonize colon effectively"
+    },
+    {
+      "compound": "Medium-chain fatty acids (capric, caprylic acid)",
+      "amount_per_100g": "~2g",
+      "bioavailability_notes": "Rapidly absorbed, support gut epithelial integrity and have antimicrobial properties"
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "walnuts",
+      "type": "complement",
+      "description": "Omega-3 fats in walnuts complement the anti-inflammatory capric acid in goat yogurt, supporting gut-brain axis health"
+    },
+    {
+      "target_ingredient": "olive oil",
+      "type": "complement",
+      "description": "Polyphenols in olive oil enhance absorption of fat-soluble vitamins (A, D) in goat yogurt"
+    },
+    {
+      "target_ingredient": "blueberries",
+      "type": "synergy",
+      "description": "Anthocyanins in blueberries and probiotics in yogurt together enhance gut microbiota diversity and reduce oxidative stress"
+    }
+  ],
+  "last_updated": "2026-04-18T08:08:05Z",
+  "last_researched": "2026-04-18T08:08:05Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

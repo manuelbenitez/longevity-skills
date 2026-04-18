@@ -1,0 +1,105 @@
+{
+  "name": "Eggplant",
+  "slug": "eggplant",
+  "category": "vegetable",
+  "aliases": ["aubergine", "brinjal", "Solanum melongena", "melanzane"],
+  "book_claims": [
+    {
+      "claim": "Vegetable used in two Longevity Diet dishes: grilled eggplant with feta and tomatoes, and Ligurian minestrone. Recommended serving: 250 g sliced and grilled, or 1 medium in soup.",
+      "mechanism": "Nightshade vegetable providing dietary fiber, antioxidant polyphenols (nasunin, chlorogenic acid), and a low-calorie, satiating base for longevity-aligned Mediterranean dishes.",
+      "study_ref": null,
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "Noda et al., Phytochemistry (2000) — PMID 10718264",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10718264/",
+      "finding": "Nasunin — the anthocyanin pigment in eggplant skin — is a potent iron chelator and free radical scavenger; it protects lipids in brain cell membranes from oxidative damage and inhibits the iron-dependent Fenton reaction, supporting neurological longevity.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Kwon et al., Bioresource Technology (2008) — PMID 17889540",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17889540/",
+      "finding": "Eggplant extracts rich in chlorogenic acid inhibit alpha-glucosidase and pancreatic lipase in vitro, reducing postprandial glucose and fat absorption; chlorogenic acid also stimulates glucose uptake in muscle cells — mechanisms relevant to diabetes prevention and metabolic longevity.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Guasch-Ferré et al., JAMA Internal Medicine (2019) — PMID 31086961",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31086961/",
+      "finding": "Increased plant food consumption, including Mediterranean vegetables like eggplant, in the PREDIMED-Plus trial was associated with significant reductions in cardiovascular events and all-cause mortality — supporting the vegetable-rich Longevity Diet pattern.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["mild", "slightly bitter raw", "rich and savory when cooked", "umami when roasted"],
+    "aroma": ["neutral raw", "smoky when grilled", "savory when sautéed"],
+    "texture": ["spongy raw", "creamy when fully cooked", "silky when roasted"],
+    "culinary_category": "vegetable / nightshade"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "feta",
+      "tradition": "Greek / Mediterranean",
+      "source": "The Longevity Diet"
+    },
+    {
+      "ingredient": "tomato",
+      "tradition": "Mediterranean",
+      "source": "The Longevity Diet"
+    },
+    {
+      "ingredient": "extra-virgin olive oil",
+      "tradition": "Mediterranean",
+      "source": "The Longevity Diet"
+    },
+    {
+      "ingredient": "garlic",
+      "tradition": "Mediterranean / Middle Eastern",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "basil",
+      "tradition": "Italian",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "miso",
+      "tradition": "Japanese",
+      "source": "General culinary"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Nasunin (delphinidin-3-rutinoside)",
+      "amount_per_100g (skin)": "~750 mg",
+      "bioavailability_notes": "Concentrated in purple skin; significantly reduced by peeling — leave skin on for maximum benefit; absorbed in small intestine; brain-protective iron chelator and antioxidant."
+    },
+    {
+      "compound": "Chlorogenic acid",
+      "amount_per_100g": "~30–60 mg",
+      "bioavailability_notes": "Partially absorbed in small intestine; extensively metabolized by gut microbiota to caffeic acid and ferulic acid; anti-hyperglycemic, anti-inflammatory, and anti-mutagenic activity."
+    },
+    {
+      "compound": "Dietary fiber",
+      "amount_per_100g": "~3 g",
+      "bioavailability_notes": "Mixed soluble and insoluble fiber; supports gut motility and microbiome diversity; resistant to digestion, fermented to short-chain fatty acids in colon."
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "tomato",
+      "type": "synergy",
+      "description": "Eggplant chlorogenic acid and tomato lycopene both inhibit LDL oxidation via complementary mechanisms; the classic Mediterranean ratatouille-type combination is nutritionally synergistic for cardiovascular protection."
+    },
+    {
+      "target_ingredient": "extra-virgin-olive-oil",
+      "type": "synergy",
+      "description": "Olive oil fat enhances absorption of eggplant's fat-soluble nasunin and chlorogenic acid; grilling or roasting eggplant with olive oil as the Longevity Diet specifies is the optimal preparation."
+    }
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

@@ -1,0 +1,69 @@
+{
+  "name": "Shrimp",
+  "slug": "shrimp",
+  "category": "shellfish",
+  "aliases": ["crustaceans", "prawns", "tiger shrimp", "gulf shrimp"],
+  "book_claims": [
+    {
+      "claim": "Shrimp recommended as a high omega-3, omega-6, and vitamin B12 crustacean for the Longevity Diet",
+      "mechanism": "Lean protein source with omega-3 content and low mercury",
+      "study_ref": "",
+      "confidence": "high"
+    },
+    {
+      "claim": "Shrimp is used in the Longevity Diet (black rice with zucchini and shrimp); provides omega-3 (0.24 g EPA/DHA per 75 g cooked)",
+      "mechanism": "Lean protein and omega-3 source; low in mercury, suitable for frequent seafood servings",
+      "study_ref": "",
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11122711/",
+      "finding": "Shrimp consumption (PMID 11122711) raised LDL but simultaneously raised HDL and reduced triglycerides more than a low-fat diet; net cardiovascular effect is favorable compared to high saturated fat foods",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26950145/",
+      "finding": "Shrimp provides astaxanthin, selenium, and complete protein with very low caloric density (PMID 26950145); selenium supports antioxidant selenoprotein synthesis relevant to longevity",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Examine.com",
+      "url": "https://examine.com/food/shrimp/",
+      "finding": "Shrimp is high in iodine, selenium, and vitamin B12 with a very lean protein profile (~24 g protein per 100 g cooked); low in saturated fat and mercury, making it an optimal longevity protein source",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["sweet", "briny", "mild umami"],
+    "aroma": ["oceanic", "subtle sweetness when cooked", "neutral raw"],
+    "texture": ["firm", "slightly springy", "juicy when not overcooked"],
+    "culinary_category": "shellfish / crustacean"
+  },
+  "culinary_pairings": [
+    {"ingredient": "black rice", "tradition": "Italian (Longevity Diet)", "source": "The Longevity Diet"},
+    {"ingredient": "zucchini", "tradition": "Mediterranean", "source": "The Longevity Diet"},
+    {"ingredient": "garlic", "tradition": "Mediterranean", "source": "culinary tradition"},
+    {"ingredient": "lemon", "tradition": "Mediterranean", "source": "culinary tradition"},
+    {"ingredient": "olive oil", "tradition": "Mediterranean", "source": "culinary tradition"}
+  ],
+  "nutrient_highlights": [
+    {"compound": "Protein", "amount_per_100g": "24 g (cooked)", "bioavailability_notes": "Complete protein with all essential amino acids; high digestibility"},
+    {"compound": "Selenium", "amount_per_100g": "39.6 mcg (cooked)", "bioavailability_notes": "Organic selenocysteine form; highly bioavailable; critical for antioxidant selenoproteins"},
+    {"compound": "EPA + DHA (omega-3)", "amount_per_100g": "0.32 g (cooked)", "bioavailability_notes": "Lower than fatty fish but still bioavailable marine omega-3s"},
+    {"compound": "Vitamin B12", "amount_per_100g": "1.1 mcg (cooked)", "bioavailability_notes": "Animal-sourced B12; highly bioavailable"},
+    {"compound": "Iodine", "amount_per_100g": "35 mcg (cooked)", "bioavailability_notes": "Supports thyroid hormone synthesis; well absorbed from seafood"}
+  ],
+  "synergies": [
+    {"target_ingredient": "black rice", "type": "complement", "description": "Black rice anthocyanins and shrimp astaxanthin provide complementary antioxidant protection; a Longevity Diet meal combination"},
+    {"target_ingredient": "garlic", "type": "synergy", "description": "Garlic allicin and shrimp selenium together activate antioxidant pathways more effectively than either alone"},
+    {"target_ingredient": "lemon juice", "type": "synergy", "description": "Vitamin C from lemon improves absorption of shrimp's non-heme iron component"}
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

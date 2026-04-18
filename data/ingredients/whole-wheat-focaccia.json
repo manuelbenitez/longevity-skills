@@ -1,0 +1,100 @@
+{
+  "name": "whole-wheat focaccia",
+  "slug": "whole-wheat-focaccia",
+  "category": "grain",
+  "aliases": [],
+  "book_claims": [
+    {
+      "claim": "Whole-grain bread used in the Longevity Diet as a breakfast and side item.",
+      "mechanism": null,
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "Nutrients, 2021 (PMID 33467601)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33467601/",
+      "finding": "Whole-wheat bread significantly reduces postprandial glucose and insulin responses compared to refined wheat; associated with lower risk of type 2 diabetes.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "American Journal of Clinical Nutrition, 2017 (PMID 28077378)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28077378/",
+      "finding": "Whole grain consumption (\u22653 servings/day) associated with 22% lower all-cause mortality in meta-analysis of prospective cohort studies.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": [
+      "nutty",
+      "slightly sweet",
+      "wheaty"
+    ],
+    "aroma": [
+      "yeasty",
+      "olive oil",
+      "toasted grain"
+    ],
+    "texture": [
+      "chewy",
+      "airy crumb",
+      "crisp crust"
+    ],
+    "culinary_category": "Italian flatbread"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "olive oil",
+      "tradition": "Ligurian focaccia dipped in extra-virgin olive oil",
+      "source": "traditional Italian"
+    },
+    {
+      "ingredient": "rosemary",
+      "tradition": "Classic rosemary focaccia",
+      "source": "traditional Italian"
+    },
+    {
+      "ingredient": "olives",
+      "tradition": "Focaccia with olives (Ligurian)",
+      "source": "traditional"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Whole-grain fiber (arabinoxylan, beta-glucan)",
+      "amount_per_100g": "~6g",
+      "bioavailability_notes": "Fermentable fiber feeds butyrate-producing microbiota; slows glucose absorption"
+    },
+    {
+      "compound": "Phenolic acids (ferulic acid)",
+      "amount_per_100g": "~200-400\u03bcg",
+      "bioavailability_notes": "Bound form released by gut microbiota; antioxidant activity against lipid peroxidation"
+    },
+    {
+      "compound": "B vitamins (B1, B3, folate)",
+      "amount_per_100g": "~0.3mg B1, ~2mg B3",
+      "bioavailability_notes": "Retained in whole grain; support energy metabolism and DNA methylation"
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "olive oil",
+      "type": "synergy",
+      "description": "Oleic acid slows gastric emptying, lowering glycemic impact; polyphenols add anti-inflammatory effects"
+    },
+    {
+      "target_ingredient": "rosemary",
+      "type": "synergy",
+      "description": "Rosmarinic acid and carnosic acid in rosemary complement ferulic acid in whole wheat for combined antioxidant effects"
+    },
+    {
+      "target_ingredient": "legumes",
+      "type": "complement",
+      "description": "Pairing with legumes creates complete amino acid profile and combined fiber types"
+    }
+  ],
+  "last_updated": "2026-04-18T08:08:05Z",
+  "last_researched": "2026-04-18T08:08:05Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

@@ -1,0 +1,68 @@
+{
+  "name": "Grapes",
+  "slug": "grapes",
+  "category": "fruit",
+  "aliases": ["raisins", "red grapes", "green grapes", "black grapes"],
+  "book_claims": [
+    {
+      "claim": "Suggested as a dessert option in the Longevity Diet; 100–150 g fresh or 20 g raisins as a substitute.",
+      "mechanism": "Provides natural sugars, polyphenols, and resveratrol within the context of a predominantly plant-based longevity eating pattern.",
+      "study_ref": "",
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23140431/",
+      "finding": "Resveratrol, concentrated in grape skins, activates SIRT1 and AMPK pathways mimicking caloric restriction, extending lifespan in multiple model organisms. (PMID 23140431)",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26234564/",
+      "finding": "Grape polyphenols including quercetin and anthocyanins reduce oxidative stress and inflammation biomarkers in human trials, supporting cardiovascular longevity. (PMID 26234564)",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34881017/",
+      "finding": "Regular grape consumption associated with improved gut microbiota diversity and reduced systemic inflammation in a randomized crossover study. (PMID 34881017)",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Examine.com",
+      "url": "https://examine.com/supplements/resveratrol/",
+      "finding": "Resveratrol from grapes activates longevity-associated sirtuins; human evidence is promising for cardiovascular and metabolic benefits though bioavailability of oral resveratrol is variable.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["sweet", "slightly tart", "juicy"],
+    "aroma": ["fruity", "floral", "musky (dark varieties)"],
+    "texture": ["crisp", "juicy", "thin-skinned"],
+    "culinary_category": "table fruit / dessert fruit"
+  },
+  "culinary_pairings": [
+    {"ingredient": "walnuts", "tradition": "Mediterranean", "source": "culinary tradition"},
+    {"ingredient": "fennel", "tradition": "Italian", "source": "culinary tradition"},
+    {"ingredient": "olive oil", "tradition": "Mediterranean salad", "source": "culinary tradition"},
+    {"ingredient": "honey", "tradition": "Middle Eastern", "source": "culinary tradition"}
+  ],
+  "nutrient_highlights": [
+    {"compound": "Resveratrol", "amount_per_100g": "0.1–0.7 mg (red/black varieties)", "bioavailability_notes": "Concentrated in skin; absorbed in small intestine; metabolized rapidly"},
+    {"compound": "Quercetin", "amount_per_100g": "~3.5 mg", "bioavailability_notes": "Enhanced absorption with dietary fat"},
+    {"compound": "Anthocyanins", "amount_per_100g": "25–92 mg (dark varieties)", "bioavailability_notes": "Higher in red/black grapes; antioxidant and anti-inflammatory"},
+    {"compound": "Vitamin K", "amount_per_100g": "14.6 mcg", "bioavailability_notes": "Fat-soluble; absorption improved with a small amount of fat"},
+    {"compound": "Potassium", "amount_per_100g": "191 mg", "bioavailability_notes": "Well bioavailable from fresh fruit"}
+  ],
+  "synergies": [
+    {"target_ingredient": "walnuts", "type": "synergy", "description": "Both contain resveratrol and polyphenols; combined consumption amplifies SIRT1 activation and anti-inflammatory signaling"},
+    {"target_ingredient": "honey", "type": "complement", "description": "Traditional pairing; both provide polyphenols with complementary antioxidant profiles"},
+    {"target_ingredient": "olive oil", "type": "complement", "description": "Fat in olive oil enhances absorption of fat-soluble grape polyphenols and vitamin K"}
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

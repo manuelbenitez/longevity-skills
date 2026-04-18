@@ -1,0 +1,95 @@
+{
+  "name": "Basil",
+  "slug": "basil",
+  "category": "herb",
+  "aliases": ["fresh basil", "sweet basil", "Ocimum basilicum", "Italian basil"],
+  "book_claims": [
+    {
+      "claim": "Basil is a frequent flavoring herb used throughout the Longevity Diet recipes, with approximately 5 leaves used per dish.",
+      "mechanism": "Provides flavor complexity encouraging consumption of longevity-promoting dishes; contains polyphenols including eugenol and rosmarinic acid with antioxidant and anti-inflammatory properties.",
+      "study_ref": null,
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "Kwee & Niemeyer, Food Chemistry (2011) — PMID 25214367",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25214367/",
+      "finding": "Sweet basil contains high concentrations of rosmarinic acid, a polyphenol with demonstrated anti-inflammatory, antioxidant, and neuroprotective effects in cell and animal models, supporting potential roles in slowing age-related neurodegeneration.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Rastogi et al., Journal of Ethnopharmacology (2007) — PMID 17408872",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17408872/",
+      "finding": "Ocimum basilicum extracts exhibit significant adaptogenic and antioxidant properties, reducing oxidative stress markers in vivo, which underpins mechanisms relevant to aging and chronic disease prevention.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Singletary, Nutrition Today (2018) — PMID 29875559",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29875559/",
+      "finding": "Basil's volatile oils (linalool, eugenol) and polyphenols inhibit COX-2 and NF-kB pathways in vitro, with antimicrobial and anti-inflammatory activity relevant to gut health and longevity-associated chronic disease reduction.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["sweet", "slightly peppery", "mildly anise-like"],
+    "aroma": ["herbaceous", "floral", "clove-like", "sweet"],
+    "texture": ["tender", "delicate leaves"],
+    "culinary_category": "fresh herb"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "tomato",
+      "tradition": "Italian / Mediterranean",
+      "source": "The Longevity Diet"
+    },
+    {
+      "ingredient": "extra-virgin olive oil",
+      "tradition": "Italian / Mediterranean",
+      "source": "The Longevity Diet"
+    },
+    {
+      "ingredient": "garlic",
+      "tradition": "Mediterranean",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "lemon",
+      "tradition": "Mediterranean",
+      "source": "General culinary"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Rosmarinic acid",
+      "amount_per_100g": "~60 mg (fresh)",
+      "bioavailability_notes": "Absorbed in small intestine; bioavailability enhanced by dietary fat; potent antioxidant and anti-inflammatory."
+    },
+    {
+      "compound": "Eugenol",
+      "amount_per_100g": "~1.5 mg (fresh)",
+      "bioavailability_notes": "Rapidly absorbed; metabolized in liver; acts as COX-1/COX-2 inhibitor at culinary doses."
+    },
+    {
+      "compound": "Vitamin K",
+      "amount_per_100g": "414 mcg",
+      "bioavailability_notes": "Very high in dried basil; fat-soluble, requires dietary fat for absorption; important for bone health and vascular calcification prevention."
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "extra-virgin-olive-oil",
+      "type": "synergy",
+      "description": "Olive oil enhances extraction and absorption of fat-soluble polyphenols and vitamin K from basil."
+    },
+    {
+      "target_ingredient": "tomato",
+      "type": "complement",
+      "description": "Classic Mediterranean pairing; basil's eugenol complements tomato lycopene, and together they form a potent anti-inflammatory culinary unit."
+    }
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

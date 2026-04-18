@@ -1,0 +1,67 @@
+{
+  "name": "Magnesium",
+  "slug": "magnesium",
+  "category": "nutrient",
+  "aliases": ["dietary magnesium", "magnesium glycinate", "magnesium citrate", "magnesium oxide"],
+  "book_claims": [
+    {
+      "claim": "50–90% of US adults are deficient in magnesium; important for multiple essential body functions. Ensure adequate intake via multivitamin every 2–3 days; obtain from nuts, legumes, and whole grains.",
+      "mechanism": "Cofactor for over 300 enzymatic reactions; essential for energy metabolism (ATP synthesis), DNA repair, muscle and nerve function, protein synthesis, and regulation of blood glucose and blood pressure.",
+      "study_ref": "",
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29093983/",
+      "finding": "Higher dietary magnesium intake is associated with reduced all-cause mortality, cardiovascular disease, and type 2 diabetes risk; each 100 mg/day increase in magnesium associated with a 22% lower risk of cardiovascular death in meta-analysis. (PMID 29093983)",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27933574/",
+      "finding": "Magnesium is a required cofactor for telomerase activity and DNA double-strand break repair; chronic magnesium insufficiency accelerates genomic instability and cellular aging in animal models. (PMID 27933574)",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31136047/",
+      "finding": "Magnesium supplementation reduces inflammatory markers (CRP, IL-6) and improves insulin sensitivity in people with type 2 diabetes and metabolic syndrome; meta-analysis of 32 trials. (PMID 31136047)",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Examine.com",
+      "url": "https://examine.com/supplements/magnesium/",
+      "finding": "Magnesium glycinate and magnesium citrate have the highest bioavailability (70–80%) compared to magnesium oxide (~4%); food sources (nuts, legumes, leafy greens, whole grains) provide well-absorbed organic magnesium bound to amino acids and phytates.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": [],
+    "aroma": [],
+    "texture": [],
+    "culinary_category": "micronutrient"
+  },
+  "culinary_pairings": [
+    {"ingredient": "kidney beans", "tradition": "plant-based nutrition", "source": "The Longevity Diet"},
+    {"ingredient": "walnuts", "tradition": "nut-rich longevity diet", "source": "The Longevity Diet"},
+    {"ingredient": "oats", "tradition": "whole grain breakfast", "source": "The Longevity Diet"},
+    {"ingredient": "linseed oil", "tradition": "evidence-based nutrition", "source": "research"}
+  ],
+  "nutrient_highlights": [
+    {"compound": "Magnesium (elemental)", "amount_per_100g": "RDA: 310–420 mg/day (adults)", "bioavailability_notes": "Absorption 30–40% from food; magnesium glycinate and citrate best supplemental forms; magnesium oxide poorly absorbed"},
+    {"compound": "Magnesium in nuts (almonds)", "amount_per_100g": "268 mg per 100 g", "bioavailability_notes": "Well-absorbed from whole foods despite phytate binding"},
+    {"compound": "Magnesium in legumes (black beans)", "amount_per_100g": "70 mg per 100 g (cooked)", "bioavailability_notes": "Soaking and cooking reduces phytate, improving bioavailability"}
+  ],
+  "synergies": [
+    {"target_ingredient": "calcium", "type": "synergy", "description": "Magnesium is required for proper calcium metabolism, bone mineralization, and vascular calcium regulation; both must be adequate for bone longevity"},
+    {"target_ingredient": "kidney beans", "type": "complement", "description": "Kidney beans are a plant-based magnesium source; combined with other legumes and whole grains they can meet 50–60% of daily magnesium needs"},
+    {"target_ingredient": "linseed oil", "type": "synergy", "description": "Magnesium and omega-3 fatty acids (ALA from linseed oil) act synergistically to reduce cardiovascular inflammation and arrhythmia risk"},
+    {"target_ingredient": "iron", "type": "complement", "description": "Both magnesium and iron are commonly deficient on plant-based diets; adequate intake of both is required for optimal immune and cellular function"}
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

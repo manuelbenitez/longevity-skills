@@ -1,0 +1,110 @@
+{
+  "name": "Papaya",
+  "slug": "papaya",
+  "category": "fruit",
+  "aliases": ["pawpaw", "Carica papaya", "maradol papaya"],
+  "book_claims": [
+    {
+      "claim": "Papaya is listed as a dietary source of folate (27 mcg per ½ cup raw cubed, 7% DV).",
+      "mechanism": "Tropical fruit contributing natural folate to support DNA synthesis, methylation cycles, and homocysteine regulation — processes central to cellular longevity.",
+      "study_ref": null,
+      "confidence": "medium"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "Usman et al., International Journal of Food Science and Technology (2020) — PMID unavailable; DOI 10.1111/ijfs.14408",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/",
+      "finding": "Papaya is one of the richest food sources of lycopene and beta-cryptoxanthin alongside beta-carotene; these carotenoids reduce oxidative DNA damage and inflammatory cytokines in clinical studies, providing anti-aging benefits beyond the folate noted in the book.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Somanah et al., Journal of the Science of Food and Agriculture (2012) — PMID 22777855",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22777855/",
+      "finding": "Fermented papaya preparation (FPP) reduced oxidative stress markers (8-OHdG, protein carbonyls) and inflammatory cytokines in a randomised controlled trial of healthy older adults, supporting papaya's role in combating age-associated oxidative burden.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "González-Aguilar et al., Food Research International (2008) — PMID unavailable; DOI 10.1016/j.foodres.2007.10.001",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/",
+      "finding": "Papaya's unique carotenoid matrix (lycopene, beta-carotene, cryptoxanthin) demonstrates synergistic antioxidant activity superior to individual carotenoids, underscoring the importance of consuming whole fruit rather than isolated supplements.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["sweet", "musky", "tropical"],
+    "aroma": ["floral", "musky", "sweet tropical"],
+    "texture": ["buttery", "soft", "juicy"],
+    "culinary_category": "fresh tropical fruit"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "lime",
+      "tradition": "Latin American / Southeast Asian",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "mint",
+      "tradition": "Caribbean",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "mango",
+      "tradition": "Tropical",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "chili",
+      "tradition": "Thai / Laotian",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "ginger",
+      "tradition": "Asian / Caribbean",
+      "source": "General culinary"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Lycopene",
+      "amount_per_100g": "~1.8–5.3 mg (varies by variety)",
+      "bioavailability_notes": "Higher in red-fleshed varieties; fat-soluble — absorption increases with dietary fat; heating slightly improves bioavailability."
+    },
+    {
+      "compound": "Beta-carotene (pro-vitamin A)",
+      "amount_per_100g": "~47 mcg RAE",
+      "bioavailability_notes": "Converted to retinol in the intestinal wall; absorption improved with fat; supports immune function and epithelial integrity."
+    },
+    {
+      "compound": "Papain (proteolytic enzyme)",
+      "amount_per_100g": "Present in latex; trace in ripe pulp",
+      "bioavailability_notes": "Breaks down protein; denatures with cooking; may support digestive comfort; partially inactivated by stomach acid."
+    },
+    {
+      "compound": "Vitamin C",
+      "amount_per_100g": "62 mg",
+      "bioavailability_notes": "One of the highest vitamin C concentrations among tropical fruits; well absorbed from fresh ripe papaya."
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "extra-virgin-olive-oil",
+      "type": "synergy",
+      "description": "Dietary fat from olive oil dramatically increases absorption of papaya's fat-soluble lycopene and beta-carotene; adding olive oil to a fruit salad including papaya is nutritionally meaningful."
+    },
+    {
+      "target_ingredient": "mango",
+      "type": "complement",
+      "description": "Mango and papaya together provide a broad carotenoid spectrum (lutein, beta-carotene, lycopene, cryptoxanthin), vitamin C, folate, and mangiferin; this tropical duo maximises antioxidant diversity."
+    },
+    {
+      "target_ingredient": "lime",
+      "type": "complement",
+      "description": "Lime's acidity enhances flavour and its vitamin C boosts iron absorption when papaya is served alongside iron-rich foods."
+    }
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

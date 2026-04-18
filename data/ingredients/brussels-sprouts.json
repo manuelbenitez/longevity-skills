@@ -1,0 +1,110 @@
+{
+  "name": "Brussels Sprouts",
+  "slug": "brussels-sprouts",
+  "category": "vegetable",
+  "aliases": ["Brassica oleracea var. gemmifera", "mini cabbages"],
+  "book_claims": [
+    {
+      "claim": "Brussels sprouts are featured as a Longevity Diet lunch dish (250 g boiled, with garlic, pine nuts, and Parmesan). They provide folate (78 mcg per 1/2 cup frozen boiled, ~20% DV) and vitamin C (48 mg per 1/2 cup cooked, ~80% DV).",
+      "mechanism": "Cruciferous vegetables contain glucosinolates that are hydrolyzed to isothiocyanates (e.g., sulforaphane) upon chewing, activating Nrf2-mediated cytoprotective gene expression; folate supports DNA methylation; vitamin C is a primary water-soluble antioxidant.",
+      "study_ref": null,
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "Traka & Mithen, Phytochemistry Reviews (2009) — PMID 20835396",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20835396/",
+      "finding": "Isothiocyanates from cruciferous vegetables such as Brussels sprouts activate Nrf2 transcription factor, upregulating phase II detoxification enzymes (glutathione S-transferase, NQO1) that protect against oxidative DNA damage — a central mechanism in aging and cancer prevention.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Liu et al., JNCI (2016) — PMID 27059373",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27059373/",
+      "finding": "Pooled analysis across 24 prospective cohort studies found that each 100 g/day increment of cruciferous vegetable consumption was associated with a 10% reduction in all-cause mortality, with the strongest associations for cardiovascular mortality, supporting a direct longevity link.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Higdon et al., Pharmacological Research (2007) — PMID 17317210",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17317210/",
+      "finding": "Brussels sprouts consistently rank among the highest cruciferous vegetables for total glucosinolate content (up to 237 mg/100 g fresh weight), with glucoraphanin and sinigrin predominating; these are converted to sulforaphane and allyl isothiocyanate which have demonstrated anti-cancer and anti-inflammatory activity.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["mildly bitter", "nutty when roasted", "slightly sweet when caramelized"],
+    "aroma": ["sulfurous (raw)", "nutty (roasted)", "cabbage-like"],
+    "texture": ["firm", "crisp (raw)", "tender with slight resistance (cooked)"],
+    "culinary_category": "cruciferous vegetable"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "garlic",
+      "tradition": "Mediterranean / Longevity Diet",
+      "source": "The Longevity Diet"
+    },
+    {
+      "ingredient": "pine nuts",
+      "tradition": "Italian / Mediterranean",
+      "source": "The Longevity Diet"
+    },
+    {
+      "ingredient": "parmesan",
+      "tradition": "Italian",
+      "source": "The Longevity Diet"
+    },
+    {
+      "ingredient": "extra-virgin olive oil",
+      "tradition": "Mediterranean",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "lemon",
+      "tradition": "Mediterranean",
+      "source": "General culinary"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Glucosinolates (total)",
+      "amount_per_100g": "~237 mg (fresh)",
+      "bioavailability_notes": "Hydrolyzed to isothiocyanates by myrosinase upon chewing or gut microbiota; cooking reduces myrosinase activity, slightly lowering isothiocyanate yield."
+    },
+    {
+      "compound": "Vitamin C",
+      "amount_per_100g": "85 mg (raw), ~48 mg (cooked)",
+      "bioavailability_notes": "Water-soluble; sensitive to heat and oxidation; retain more by steaming rather than boiling."
+    },
+    {
+      "compound": "Folate",
+      "amount_per_100g": "61 mcg (raw)",
+      "bioavailability_notes": "Natural food folate; bioavailability ~50%; reduces with prolonged boiling — prefer steaming."
+    },
+    {
+      "compound": "Vitamin K1",
+      "amount_per_100g": "177 mcg (raw)",
+      "bioavailability_notes": "Fat-soluble; absorption enhanced by dietary fat; essential for bone health and vascular calcification prevention."
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "garlic",
+      "type": "synergy",
+      "description": "Garlic's organosulfur compounds and Brussels sprouts' isothiocyanates together provide additive Nrf2 activation and anti-inflammatory effects."
+    },
+    {
+      "target_ingredient": "extra-virgin-olive-oil",
+      "type": "complement",
+      "description": "Olive oil dramatically increases absorption of fat-soluble vitamin K from Brussels sprouts and carries polyphenols that act synergistically with isothiocyanates."
+    },
+    {
+      "target_ingredient": "pine-nuts",
+      "type": "complement",
+      "description": "Pine nuts add healthy fats that boost absorption of fat-soluble nutrients and provide plant protein to round out the dish."
+    }
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

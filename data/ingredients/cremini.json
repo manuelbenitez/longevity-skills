@@ -1,0 +1,100 @@
+{
+  "name": "Cremini",
+  "slug": "cremini",
+  "category": "mushroom",
+  "aliases": ["cremini mushrooms", "baby bella", "brown mushroom", "Agaricus bisporus (brown)", "crimini"],
+  "book_claims": [
+    {
+      "claim": "Cremini mushrooms are used in multiple Longevity Diet dishes (75–150 g raw or boiled per dish). As members of the mushroom food group, they share the vitamin D-synthesizing property of all mushrooms when UV-exposed. Maitake mushrooms are the top food source of vitamin D (786 IU per cup, 196.5% DV); chanterelles provide 114 IU; shiitake cooked 41 IU; white mushrooms cooked 12 IU per cup.",
+      "mechanism": "Mushrooms synthesize vitamin D2 (ergocalciferol) upon UV light exposure via ergosterol photolysis — the only non-animal food to produce vitamin D endogenously; vitamin D deficiency is pandemic and strongly associated with accelerated aging, immune dysfunction, and cardiovascular disease.",
+      "study_ref": null,
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "Cardwell et al., Journal of Nutrition (2018) — PMID 30321261",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30321261/",
+      "finding": "UV-exposed mushrooms provide meaningful amounts of vitamin D2 that significantly raise serum 25(OH)D levels in randomized trials; one cup of UV-exposed white mushrooms daily raised 25(OH)D by 7.8 nmol/L over 12 weeks, comparable to vitamin D2 supplements.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Ba et al., Nutrients (2021) — PMID 34835538",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34835538/",
+      "finding": "Cremini and other Agaricus bisporus mushrooms contain ergothioneine, a unique antioxidant synthesized only by fungi that accumulates in mitochondria and erythrocytes; ergothioneine levels in blood inversely correlate with age-related diseases and all-cause mortality in epidemiological studies.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Cheskin et al., Appetite (2008) — PMID 18495312",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18495312/",
+      "finding": "Substituting mushrooms for beef in mixed dishes reduced energy intake by 420 kcal/day with equivalent satiety scores — a caloric restriction strategy consistent with the Longevity Diet's emphasis on reducing animal protein and caloric density while maintaining meal satisfaction.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["savory", "umami-rich", "earthy", "mildly meaty"],
+    "aroma": ["earthy", "woodsy", "savory", "faint mushroom"],
+    "texture": ["firm raw", "tender when cooked", "slightly chewy"],
+    "culinary_category": "mushroom / fungi"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "extra-virgin olive oil",
+      "tradition": "Italian / Mediterranean",
+      "source": "The Longevity Diet"
+    },
+    {
+      "ingredient": "garlic",
+      "tradition": "Mediterranean",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "thyme",
+      "tradition": "Mediterranean / French",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "parsley",
+      "tradition": "Mediterranean",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "legumes",
+      "tradition": "Italian",
+      "source": "General culinary"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Ergothioneine",
+      "amount_per_100g": "~1.3–4.9 mg (cremini)",
+      "bioavailability_notes": "Unique mitochondria-targeted antioxidant synthesized only by fungi; transported into cells by OCTN1 transporter; accumulates in high-oxidative-stress tissues (mitochondria, liver, kidney, blood); stable to cooking."
+    },
+    {
+      "compound": "Vitamin D2 (ergocalciferol, UV-exposed)",
+      "amount_per_100g (UV-exposed)": "~10–20 mcg (400–800 IU)",
+      "bioavailability_notes": "Formed when ergosterol in mushroom skin is exposed to UV light (sunlight or UV lamp); place gill-side up in sunlight for 15–30 min to maximize D2 content; cooking preserves D2."
+    },
+    {
+      "compound": "Beta-glucans (1,3/1,6-beta-D-glucan)",
+      "amount_per_100g": "~0.5–1.5 g",
+      "bioavailability_notes": "Immunomodulatory polysaccharides that activate macrophages and NK cells via Dectin-1 receptors; partially fermented in colon; evidence for anti-tumor and anti-infective immune enhancement."
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "extra-virgin-olive-oil",
+      "type": "synergy",
+      "description": "Fat enhances absorption of mushroom's fat-soluble vitamin D2; sautéing cremini in olive oil is the nutritionally optimal preparation method."
+    },
+    {
+      "target_ingredient": "legumes",
+      "type": "complement",
+      "description": "Mushroom umami (glutamates) reduces perceived need for animal protein in dishes; combined with legumes in the Italian culinary tradition, they deliver a protein- and fiber-complete meal aligned with longevity dietary principles."
+    }
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

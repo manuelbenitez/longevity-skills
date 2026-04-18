@@ -1,0 +1,71 @@
+{
+  "name": "Kidney Beans",
+  "slug": "kidney-beans",
+  "category": "legume",
+  "aliases": ["red kidney beans", "dark red kidney beans", "light red kidney beans"],
+  "book_claims": [
+    {
+      "claim": "Source of folate (46 mcg per ½ cup canned, 12% DV), iron (2 mg per ½ cup canned, 11% DV), and magnesium (35 mg per ½ cup canned, 9% DV).",
+      "mechanism": "Plant protein source providing multiple micronutrients (folate for DNA synthesis, iron for immune function, magnesium for enzymatic reactions) critical for longevity; legumes are a cornerstone of all Blue Zone and centenarian diets.",
+      "study_ref": "",
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24871476/",
+      "finding": "Legume consumption (including kidney beans) is the single most consistent dietary predictor of longevity across five Blue Zone centenarian populations; each 20 g/day increase associated with a 7–8% reduction in mortality risk. (PMID 24871476)",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26853820/",
+      "finding": "Kidney beans contain resistant starch and soluble fiber that act as prebiotics, promoting short-chain fatty acid production (butyrate), reducing gut inflammation, and supporting microbiome diversity linked to healthy aging. (PMID 26853820)",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27723153/",
+      "finding": "Regular legume consumption reduces fasting blood glucose, LDL cholesterol, and inflammatory markers; kidney beans specifically show favorable glycemic index effects supporting metabolic longevity. (PMID 27723153)",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Examine.com",
+      "url": "https://examine.com/nutrition/benefits-of-beans/",
+      "finding": "Kidney beans provide complete amino acid profiles when paired with grains, high fiber content, resistant starch, and multiple longevity-relevant micronutrients; their protein quality index is adequate for plant-based longevity diets.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["earthy", "slightly nutty", "mild", "creamy when cooked"],
+    "aroma": ["neutral earthy", "subtle legume aroma"],
+    "texture": ["firm-tender", "mealy interior", "skin holds shape when cooked"],
+    "culinary_category": "legume / pulse"
+  },
+  "culinary_pairings": [
+    {"ingredient": "olive oil", "tradition": "Mediterranean", "source": "The Longevity Diet"},
+    {"ingredient": "lemon", "tradition": "Mediterranean / Middle Eastern", "source": "The Longevity Diet"},
+    {"ingredient": "lettuce", "tradition": "salad tradition", "source": "culinary tradition"},
+    {"ingredient": "rosemary", "tradition": "Italian", "source": "culinary tradition"},
+    {"ingredient": "onion", "tradition": "global", "source": "culinary tradition"},
+    {"ingredient": "tomatoes", "tradition": "Mediterranean", "source": "culinary tradition"}
+  ],
+  "nutrient_highlights": [
+    {"compound": "Dietary fiber", "amount_per_100g": "~7.4 g (cooked)", "bioavailability_notes": "High in both soluble fiber (cholesterol-lowering) and resistant starch (prebiotic); fermented in colon to produce butyrate"},
+    {"compound": "Plant protein", "amount_per_100g": "~8.7 g (cooked)", "bioavailability_notes": "Lower IGF-1 stimulation than animal protein; digestibility enhanced by cooking and soaking"},
+    {"compound": "Folate", "amount_per_100g": "~33 mcg (cooked)", "bioavailability_notes": "Folate is heat-sensitive; canned beans retain approximately 60–70% of original folate content"},
+    {"compound": "Iron (non-heme)", "amount_per_100g": "~2.9 mg (cooked)", "bioavailability_notes": "Absorption enhanced by vitamin C co-ingestion; inhibited by phytates in same meal"},
+    {"compound": "Magnesium", "amount_per_100g": "~45 mg (cooked)", "bioavailability_notes": "Bioavailability ~30–40%; soaking reduces phytate inhibition"}
+  ],
+  "synergies": [
+    {"target_ingredient": "lemon", "type": "synergy", "description": "Vitamin C from lemon dramatically enhances non-heme iron absorption from kidney beans — the key strategy for iron adequacy on plant-based longevity diets"},
+    {"target_ingredient": "olive oil", "type": "complement", "description": "Olive oil enhances satiety and micronutrient absorption; the fat-soluble carotenoids present in bean dishes are better absorbed with olive oil"},
+    {"target_ingredient": "lettuce", "type": "complement", "description": "Classic longevity salad pairing in The Longevity Diet; provides complementary textures and nutrients"},
+    {"target_ingredient": "iron", "type": "complement", "description": "Kidney beans are a significant plant-based iron source; understanding iron bioavailability from beans is central to plant-forward longevity nutrition"}
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

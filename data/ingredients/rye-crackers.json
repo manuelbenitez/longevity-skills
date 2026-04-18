@@ -1,0 +1,100 @@
+{
+  "name": "rye crackers",
+  "slug": "rye-crackers",
+  "category": "grain",
+  "aliases": [],
+  "book_claims": [
+    {
+      "claim": "Whole-grain cracker used as a side in the Longevity Diet.",
+      "mechanism": null,
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "Nutrients, 2017 (PMID 28208856)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28208856/",
+      "finding": "Rye consumption significantly improves insulin sensitivity and reduces postprandial insulin response compared to wheat; rye's unique fiber composition is responsible.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "British Journal of Nutrition, 2012 (PMID 22004653)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22004653/",
+      "finding": "Whole-grain rye diet reduces inflammatory markers (CRP, IL-6) and improves gut microbiota composition compared to refined wheat in a 12-week intervention.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": [
+      "earthy",
+      "slightly sour",
+      "nutty",
+      "robust"
+    ],
+    "aroma": [
+      "malty",
+      "toasted grain"
+    ],
+    "texture": [
+      "dense",
+      "crisp",
+      "crunchy"
+    ],
+    "culinary_category": "whole-grain cracker"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "smoked salmon",
+      "tradition": "Scandinavian open-faced sandwich (sm\u00f8rrebr\u00f8d)",
+      "source": "traditional Scandinavian"
+    },
+    {
+      "ingredient": "avocado",
+      "tradition": "Contemporary Nordic-Mediterranean fusion",
+      "source": "modern"
+    },
+    {
+      "ingredient": "sardines",
+      "tradition": "Nordic fish topping on crispbread",
+      "source": "traditional Scandinavian"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Arabinoxylan fiber",
+      "amount_per_100g": "~8-10g",
+      "bioavailability_notes": "Among the highest prebiotic fiber of any grain; selectively feeds Bifidobacterium and Lactobacillus"
+    },
+    {
+      "compound": "Beta-glucan",
+      "amount_per_100g": "~1-2g",
+      "bioavailability_notes": "Soluble fiber forming viscous gel; reduces cholesterol absorption and slows glucose release"
+    },
+    {
+      "compound": "Alkylresorcinols",
+      "amount_per_100g": "~400-1000\u03bcg",
+      "bioavailability_notes": "Unique rye phenolics; antioxidant and anti-carcinogenic in cell studies"
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "salmon",
+      "type": "synergy",
+      "description": "Omega-3s in salmon combined with rye fiber create potent anti-inflammatory and cardiovascular-protective combination"
+    },
+    {
+      "target_ingredient": "sardines",
+      "type": "synergy",
+      "description": "EPA/DHA from sardines and arabinoxylan from rye together reduce triglycerides and support gut microbiome diversity"
+    },
+    {
+      "target_ingredient": "olive oil",
+      "type": "complement",
+      "description": "Olive oil's oleocanthal anti-inflammatory effects complement rye's alkylresorcinols for combined NF-kB inhibition"
+    }
+  ],
+  "last_updated": "2026-04-18T08:08:05Z",
+  "last_researched": "2026-04-18T08:08:05Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

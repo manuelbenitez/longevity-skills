@@ -8,6 +8,8 @@ When the user's request matches an available skill, invoke it using the Skill to
 as your FIRST action. Do NOT answer directly when a skill exists for the task.
 
 - "extract", "process chapter", "book claims", "parse" -> invoke extract-book-knowledge
+- "expand groups", "split categories", "atomise ingredients" -> invoke expand-ingredient-groups
+- "check duplicates", "compare ingredients", "what's new", "dedup" -> invoke dedup-ingredients
 - "research", "enrich", "look up ingredient", "studies" -> invoke research-ingredient
 - "wiki", "article", "entry", "write about" -> invoke generate-wiki-entry
 - "recipe", "cook", "meal", "dish" -> invoke generate-recipe
@@ -22,6 +24,18 @@ data/book-raw/*.txt          (user input: book chapter text)
        |
        v
 data/book-extracts/*.json    (structured claims per chapter)
+       |
+       v
+/expand-ingredient-groups
+       |
+       v
+data/book-extracts/ingredients-master.json  (groups expanded, members linked)
+       |
+       v
+/dedup-ingredients
+       |
+       v
+data/dedup/*.json            (new / fuzzy / existing buckets)
        |
        v
 /research-ingredient
@@ -42,6 +56,7 @@ Skills write output relative to the current working directory:
 
 - `data/book-raw/` -- book epub, PDF, or plain text chapter files (user provides these)
 - `data/book-extracts/` -- book extract JSON (output of /extract-book-knowledge)
+- `data/dedup/` -- dedup reports (output of /dedup-ingredients)
 - `data/ingredients/` -- ingredient profile JSON (output of /research-ingredient)
 - `content/wiki/` -- wiki entry Markdown (output of /generate-wiki-entry)
 - `content/recipes/` -- recipe Markdown (output of /generate-recipe)

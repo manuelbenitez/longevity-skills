@@ -1,0 +1,113 @@
+{
+  "name": "White Meat",
+  "slug": "white-meat",
+  "category": "meat",
+  "aliases": ["poultry", "chicken", "turkey", "chicken breast", "turkey breast"],
+  "book_claims": [
+    {
+      "claim": "White meat (chicken, poultry) is excluded from the core Longevity Diet and associated with elevated IGF-1 when consumed as a primary protein source.",
+      "mechanism": "Though lower in saturated fat than red meat, white meat still elevates IGF-1 and activates TOR-S6K signaling. Okinawans consumed 10× less poultry than Americans, and centenarian populations rely primarily on legumes and fish rather than poultry for protein.",
+      "study_ref": "",
+      "confidence": "high"
+    },
+    {
+      "claim": "White meat may be cautiously reintroduced after age 65 if muscle mass or weight is declining.",
+      "mechanism": "After age 65, the risk-benefit ratio shifts; the anabolic effects of higher protein (including from animal sources) become more important for sarcopenia prevention. The IGF-1 risk becomes less relevant relative to the benefit of maintaining muscle mass.",
+      "study_ref": "",
+      "confidence": "high"
+    },
+    {
+      "claim": "Fish is recommended as the replacement for red and white meat as the primary animal protein source in the Longevity Diet.",
+      "mechanism": "Fish provides equivalent or superior protein quality with lower branched-chain amino acid content relative to red/white meat, lower saturated fat, and additional longevity-promoting nutrients (omega-3, B12, vitamin D).",
+      "study_ref": "",
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24523914/",
+      "finding": "PMID 24523914: Protein source composition influences IGF-1 levels; plant-based diets result in lower circulating IGF-1 than animal-protein-dominant diets, supporting the book's recommendation to favor legumes over poultry as the primary protein.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24619916/",
+      "finding": "PMID 24619916: In the NHANES cohort, high animal protein intake (including white meat) in people aged 50–65 was associated with a 4× increased mortality risk; risk did not persist in those over 65 — consistent with Longo's age-stratified recommendation.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26853923/",
+      "finding": "PMID 26853923: Leucine and branched-chain amino acids from animal meat (including poultry) robustly activate mTORC1; plant-based proteins activate mTOR to a lesser degree, potentially explaining the longevity advantage of legume-based diets.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Examine.com",
+      "url": "https://examine.com/nutrition/is-red-meat-bad/",
+      "finding": "Examine notes that while white meat is generally considered healthier than red meat, the mechanistic case for limiting all meat protein in favor of plant and fish sources for longevity (mTOR/IGF-1 pathway) is well-supported in the literature.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["mild", "savory", "clean", "neutral"],
+    "aroma": ["roasted", "savory", "subtle"],
+    "texture": ["lean", "firm", "tender when cooked properly"],
+    "culinary_category": "protein / main"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "lemon",
+      "tradition": "Mediterranean",
+      "source": "Classic Mediterranean roasted chicken preparation"
+    },
+    {
+      "ingredient": "rosemary",
+      "tradition": "Italian",
+      "source": "Pollo al rosmarino"
+    },
+    {
+      "ingredient": "garlic",
+      "tradition": "Mediterranean",
+      "source": "Universal pairing for poultry"
+    },
+    {
+      "ingredient": "legumes",
+      "tradition": "Mediterranean",
+      "source": "Longevity Diet substitution: legumes as primary protein replacing white meat"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Complete protein",
+      "amount_per_100g": "~31 g per 100 g chicken breast (cooked)",
+      "bioavailability_notes": "High digestibility corrected amino acid score (DIAAS ~1.08); all essential amino acids present. Leucine content (~2.7 g per 100 g) is the primary mTOR-activating concern."
+    },
+    {
+      "compound": "Niacin (B3)",
+      "amount_per_100g": "~14.8 mg per 100 g cooked chicken breast (74% DV)",
+      "bioavailability_notes": "Chicken is one of the best dietary sources of niacin; supports NAD+ synthesis and DNA repair pathways relevant to longevity."
+    },
+    {
+      "compound": "Selenium",
+      "amount_per_100g": "~27 mcg per 100 g cooked chicken breast (49% DV)",
+      "bioavailability_notes": "Selenomethionine form from meat is highly bioavailable; selenium is essential for glutathione peroxidase and thyroid hormone metabolism."
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "legumes",
+      "type": "antagonism",
+      "description": "Legumes are the recommended protein replacement for white meat in the Longevity Diet. Legumes provide comparable protein with significantly lower mTOR/IGF-1 activation, additional fiber, and longevity-associated micronutrients."
+    },
+    {
+      "target_ingredient": "fish",
+      "type": "antagonism",
+      "description": "Fish is the preferred animal protein in the Longevity Diet over white meat; fish provides omega-3, vitamin B12, and vitamin D that poultry lacks, with a better longevity risk-benefit profile."
+    }
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

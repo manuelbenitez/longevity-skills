@@ -1,0 +1,101 @@
+{
+  "name": "walnut bread",
+  "slug": "walnut-bread",
+  "category": "grain",
+  "aliases": [],
+  "book_claims": [
+    {
+      "claim": "Specialty breads used as breakfast items in the Longevity Diet.",
+      "mechanism": null,
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "Nutrients, 2016 (PMID 27657162)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27657162/",
+      "finding": "Walnut-enriched whole-grain bread shows significantly higher omega-3 ALA content; walnut polyphenols (ellagitannins) remain bioavailable after baking.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Journal of Nutrition, 2012 (PMID 22277552)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22277552/",
+      "finding": "Daily consumption of walnut-enriched foods reduces LDL cholesterol and improves vascular endothelial function.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": [
+      "nutty",
+      "slightly bitter",
+      "earthy",
+      "rich"
+    ],
+    "aroma": [
+      "toasted walnut",
+      "yeasty",
+      "wheaty"
+    ],
+    "texture": [
+      "dense crumb",
+      "chewy",
+      "crunchy from walnut pieces"
+    ],
+    "culinary_category": "specialty whole-grain bread"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "goat's milk yogurt",
+      "tradition": "Mediterranean breakfast",
+      "source": "traditional"
+    },
+    {
+      "ingredient": "blueberry jam",
+      "tradition": "Longevity Diet breakfast",
+      "source": "The Longevity Diet"
+    },
+    {
+      "ingredient": "olive oil",
+      "tradition": "Italian bread with olive oil",
+      "source": "traditional Italian"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Alpha-linolenic acid (ALA, from walnuts)",
+      "amount_per_100g": "~2-4g",
+      "bioavailability_notes": "Plant omega-3; partial conversion to EPA (~8%); anti-inflammatory precursor"
+    },
+    {
+      "compound": "Ellagitannins (from walnuts)",
+      "amount_per_100g": "~100-300mg",
+      "bioavailability_notes": "Metabolized by gut microbiota to urolithins A and B; potent mitophagy activators improving mitochondrial function"
+    },
+    {
+      "compound": "Whole-grain fiber (arabinoxylan)",
+      "amount_per_100g": "~4-6g",
+      "bioavailability_notes": "Prebiotic effect feeds urolithin-producing bacteria, amplifying walnut polyphenol benefits"
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "blueberry jam",
+      "type": "synergy",
+      "description": "Ellagitannins from walnuts and anthocyanins from blueberries synergistically inhibit NF-kB and reduce cardiovascular risk markers"
+    },
+    {
+      "target_ingredient": "goat's milk yogurt",
+      "type": "synergy",
+      "description": "Probiotic bacteria in yogurt enhance urolithin production from walnut ellagitannins, amplifying mitochondrial health benefits"
+    },
+    {
+      "target_ingredient": "olive oil",
+      "type": "complement",
+      "description": "Oleic acid improves absorption of walnut's fat-soluble vitamin E and tocopherols"
+    }
+  ],
+  "last_updated": "2026-04-18T08:08:05Z",
+  "last_researched": "2026-04-18T08:08:05Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

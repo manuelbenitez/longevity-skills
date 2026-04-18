@@ -1,0 +1,125 @@
+{
+  "name": "Zucchini",
+  "slug": "zucchini",
+  "category": "vegetable",
+  "aliases": ["courgette", "summer squash", "Italian squash", "baby marrow"],
+  "book_claims": [
+    {
+      "claim": "Zucchini is a frequently used vegetable in the Longevity Diet, appearing across multiple dishes including rice with zucchini and peas, Ligurian minestrone, and black rice with shrimp.",
+      "mechanism": "Low-calorie, high-water vegetable that contributes volume and micronutrients to meals without adding significant caloric load; supports satiety on a calorie-appropriate longevity diet.",
+      "study_ref": "",
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30263869/",
+      "finding": "PMID 30263869: High vegetable consumption (≥5 servings/day including squash varieties) is associated with a 26% reduction in all-cause mortality; mechanistically linked to antioxidant phytochemicals, fiber, and potassium.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29099553/",
+      "finding": "PMID 29099553: Cucurbit vegetables including zucchini contain cucurbitacins and carotenoids (lutein, zeaxanthin) with demonstrated anti-inflammatory and anti-proliferative properties in vitro, consistent with longevity-promoting dietary patterns.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Examine.com",
+      "url": "https://examine.com/nutrition/zucchini/",
+      "finding": "Examine confirms zucchini is a source of vitamin C (~18 mg/100 g), potassium (~262 mg/100 g), folate (~24 mcg/100 g), and lutein + zeaxanthin (~2.1 mg/100 g); the lutein content supports eye and brain health in aging.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["mild", "slightly sweet", "fresh", "neutral"],
+    "aroma": ["fresh vegetal", "light", "cucumber-like"],
+    "texture": ["tender", "slightly firm when raw", "soft when cooked", "watery"],
+    "culinary_category": "vegetable / side / soup ingredient"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "wild rice",
+      "tradition": "Longevity Diet / Mediterranean-inspired",
+      "source": "Rice with zucchini dish in The Longevity Diet"
+    },
+    {
+      "ingredient": "shrimp",
+      "tradition": "Mediterranean",
+      "source": "Black rice with shrimp and zucchini — Longevity Diet recipe"
+    },
+    {
+      "ingredient": "peas",
+      "tradition": "Italian",
+      "source": "Rice with zucchini and peas — Longevity Diet recipe"
+    },
+    {
+      "ingredient": "tomatoes",
+      "tradition": "Italian / Provencal",
+      "source": "Ratatouille and Italian soffritto base"
+    },
+    {
+      "ingredient": "basil",
+      "tradition": "Italian (Ligurian)",
+      "source": "Ligurian minestrone featuring zucchini and basil pesto"
+    },
+    {
+      "ingredient": "olive oil",
+      "tradition": "Mediterranean",
+      "source": "Standard cooking fat for sautéed or grilled zucchini"
+    },
+    {
+      "ingredient": "garlic",
+      "tradition": "Mediterranean",
+      "source": "Aglio e zucchine — classic Italian preparation"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Potassium",
+      "amount_per_100g": "~262 mg per 100 g raw",
+      "bioavailability_notes": "Supports blood pressure regulation and cardiovascular health; retained well in steaming vs boiling."
+    },
+    {
+      "compound": "Vitamin C",
+      "amount_per_100g": "~18 mg per 100 g raw (~20% DV)",
+      "bioavailability_notes": "Water-soluble; light steaming or sautéing preserves most vitamin C; boiling can reduce by 30–50%."
+    },
+    {
+      "compound": "Folate",
+      "amount_per_100g": "~24 mcg per 100 g raw (~6% DV)",
+      "bioavailability_notes": "Contributes to daily folate intake; important for DNA methylation and cell division."
+    },
+    {
+      "compound": "Lutein + Zeaxanthin",
+      "amount_per_100g": "~2.1 mg per 100 g",
+      "bioavailability_notes": "Fat-soluble carotenoids that protect the macula and support brain health; bioavailability enhanced by cooking with olive oil."
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "wild rice",
+      "type": "complement",
+      "description": "Featured together in the Longevity Diet rice with zucchini recipe; zucchini adds hydration, vitamin C, and potassium while wild rice provides sustained energy and complete grain nutrition."
+    },
+    {
+      "target_ingredient": "olive oil",
+      "type": "synergy",
+      "description": "Sautéing zucchini in olive oil increases absorption of fat-soluble carotenoids (lutein, zeaxanthin, beta-carotene); the standard Mediterranean preparation method."
+    },
+    {
+      "target_ingredient": "shrimp",
+      "type": "complement",
+      "description": "Paired in the Longevity Diet black rice with shrimp and zucchini dish; shrimp provides omega-3 and iodine while zucchini contributes fiber, potassium, and phytonutrients."
+    },
+    {
+      "target_ingredient": "basil",
+      "type": "complement",
+      "description": "Classic Ligurian minestrone pairing; basil's volatile phenolics (linalool, eugenol) add anti-inflammatory compounds to the micronutrient-rich zucchini base."
+    }
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

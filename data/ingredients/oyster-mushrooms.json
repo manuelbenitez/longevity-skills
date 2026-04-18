@@ -1,0 +1,110 @@
+{
+  "name": "Oyster Mushrooms",
+  "slug": "oyster-mushrooms",
+  "category": "mushroom",
+  "aliases": ["Pleurotus ostreatus", "pearl oyster mushroom", "grey oyster mushroom"],
+  "book_claims": [
+    {
+      "claim": "Oyster mushrooms are part of the mushroom group used in multiple Longevity Diet dishes. Like other mushrooms, they synthesise vitamin D upon UV light exposure, contributing to dietary vitamin D intake (recommended at 75–150 g raw or boiled per dish).",
+      "mechanism": "Mushrooms convert ergosterol to ergocalciferol (vitamin D2) when exposed to sunlight or UV light; vitamin D supports immune regulation, calcium absorption, and may reduce cancer and cardiovascular disease risk.",
+      "study_ref": null,
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "Valverde et al., Evidence-Based Complementary and Alternative Medicine (2015) — PMID 26136805",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26136805/",
+      "finding": "Pleurotus ostreatus contains a range of bioactive compounds including beta-glucans, lovastatin, ergothioneine, and phenolic antioxidants; in preclinical and clinical studies these lower LDL cholesterol, inhibit tumour cell proliferation, and modulate immune responses.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Elsayed et al., Saudi Pharmaceutical Journal (2014) — PMID 25473334",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25473334/",
+      "finding": "Oyster mushroom beta-glucans (pleuran) activate natural killer cells and macrophages through pattern recognition receptors; clinical trials have shown reduced incidence and severity of respiratory infections, supporting immune longevity.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Kalaras et al., Food Chemistry (2017) — PMID 28606570",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28606570/",
+      "finding": "UV-exposed oyster mushrooms provide ergocalciferol (vitamin D2) at levels that meaningfully raise 25-hydroxyvitamin D status, comparable to vitamin D2 supplements, validating the Longevity Diet's use of mushrooms as a vitamin D food source.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["mild", "delicate", "slightly sweet", "umami"],
+    "aroma": ["fresh", "earthy", "faintly anise-like"],
+    "texture": ["velvety", "tender", "slightly chewy at the edges when sautéed"],
+    "culinary_category": "mushroom / fungus"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "garlic",
+      "tradition": "Mediterranean / East Asian",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "pasta",
+      "tradition": "Italian",
+      "source": "The Longevity Diet"
+    },
+    {
+      "ingredient": "thyme",
+      "tradition": "French / Mediterranean",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "extra-virgin-olive-oil",
+      "tradition": "Mediterranean",
+      "source": "The Longevity Diet"
+    },
+    {
+      "ingredient": "parmesan cheese",
+      "tradition": "Italian",
+      "source": "General culinary"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Beta-glucans (pleuran)",
+      "amount_per_100g": "~0.6–2 g",
+      "bioavailability_notes": "Immune-modulating polysaccharides; partially fermented by gut bacteria; activate innate immune receptors."
+    },
+    {
+      "compound": "Ergothioneine",
+      "amount_per_100g": "~0.5–5 mg",
+      "bioavailability_notes": "Rare dietary antioxidant with dedicated transporter (OCTN1); accumulates in tissues under oxidative stress; associated with reduced incidence of cognitive decline."
+    },
+    {
+      "compound": "Vitamin D2 (ergocalciferol, UV-exposed)",
+      "amount_per_100g": "Up to 400 IU (UV-treated)",
+      "bioavailability_notes": "Less potent than D3 but still raises serum 25(OH)D; store gills-up in sunlight for 15–30 min to maximise D2 content."
+    },
+    {
+      "compound": "Lovastatin (beta-hydroxy-beta-methylglutaric acid)",
+      "amount_per_100g": "Trace amounts",
+      "bioavailability_notes": "Natural HMG-CoA reductase inhibitor; dietary amounts too low for pharmacological effect but may contribute to modest LDL-lowering."
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "garlic",
+      "type": "synergy",
+      "description": "Garlic allicin and oyster mushroom beta-glucans each independently modulate innate immunity; combined consumption shows additive immune-stimulating effects in clinical research."
+    },
+    {
+      "target_ingredient": "extra-virgin-olive-oil",
+      "type": "complement",
+      "description": "Sautéing oyster mushrooms in olive oil enhances absorption of fat-soluble vitamin D2 and ergothioneine while adding oleocanthal's anti-inflammatory effects."
+    },
+    {
+      "target_ingredient": "spinach",
+      "type": "complement",
+      "description": "Mushroom ergothioneine and spinach glutathione act as complementary antioxidants, protecting different cellular compartments from oxidative damage."
+    }
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

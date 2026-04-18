@@ -1,0 +1,110 @@
+{
+  "name": "Mussels",
+  "slug": "mussels",
+  "category": "shellfish",
+  "aliases": ["blue mussels", "Mytilus edulis"],
+  "book_claims": [
+    {
+      "claim": "Mussels are used in the Longevity Diet (spaghetti with clams and mussels) and are an outstanding source of vitamin B12 (25 mcg per 75 g cooked, 417% DV), iron (5.71 mg per 3 oz cooked, 32% DV), and omega-3 EPA/DHA (0.59 g per 75 g cooked).",
+      "mechanism": "Vitamin B12 is essential for neurological integrity and DNA methylation; iron supports oxygen transport; omega-3 fatty acids reduce systemic inflammation and cardiovascular risk.",
+      "study_ref": null,
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "Zheng et al., Critical Reviews in Food Science and Nutrition (2020) — PMID 31986905",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31986905/",
+      "finding": "Mussels have among the highest omega-3 EPA+DHA concentrations per calorie of any food, and their consumption is associated with reduced plasma triglycerides and improved cardiovascular risk profiles in Mediterranean populations.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Watanabe et al., European Journal of Clinical Nutrition (2014) — PMID 24646707",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24646707/",
+      "finding": "Bivalves including mussels are the most concentrated dietary source of bioavailable vitamin B12; a single 75 g serving can satisfy weekly B12 requirements for most adults, making them especially important for preventing deficiency-related neurodegeneration.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Tacon & Metian, Aquaculture (2013) — PMID unavailable; DOI 10.1016/j.aquaculture.2013.01.034",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/",
+      "finding": "Farmed mussels have a very low ecological footprint, require no feed inputs, and filter phytoplankton; their sustainability profile aligns with plant-forward longevity diets that also include moderate seafood.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["briny", "sweet", "umami"],
+    "aroma": ["oceanic", "fresh sea air", "lightly mineral"],
+    "texture": ["tender", "slightly chewy", "plump when just cooked"],
+    "culinary_category": "shellfish / bivalve"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "pasta",
+      "tradition": "Italian / Mediterranean",
+      "source": "The Longevity Diet"
+    },
+    {
+      "ingredient": "garlic",
+      "tradition": "Mediterranean",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "white wine",
+      "tradition": "French / Italian",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "parsley",
+      "tradition": "Mediterranean",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "clams",
+      "tradition": "Italian / Mediterranean",
+      "source": "The Longevity Diet"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Vitamin B12",
+      "amount_per_100g": "~20 mcg (cooked)",
+      "bioavailability_notes": "Intrinsic-factor-dependent absorption; one of the highest bioavailable B12 sources available; critical for aging populations at risk of B12 insufficiency."
+    },
+    {
+      "compound": "EPA + DHA (omega-3)",
+      "amount_per_100g": "~0.79 g (cooked)",
+      "bioavailability_notes": "Marine long-chain omega-3; directly incorporated into cell membranes and brain tissue without hepatic conversion steps required for ALA."
+    },
+    {
+      "compound": "Iron (heme)",
+      "amount_per_100g": "~7.6 mg (cooked)",
+      "bioavailability_notes": "Heme iron is absorbed at 15–35%; significantly higher than non-heme plant iron; supports hemoglobin and mitochondrial function."
+    },
+    {
+      "compound": "Selenium",
+      "amount_per_100g": "~44 mcg (cooked)",
+      "bioavailability_notes": "Cofactor for glutathione peroxidase and other antioxidant selenoproteins; supports thyroid function and immune response."
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "pasta",
+      "type": "complement",
+      "description": "Pasta provides the carbohydrate scaffold that makes mussels a complete longevity meal; the combination mirrors traditional Mediterranean Blue Zone dishes."
+    },
+    {
+      "target_ingredient": "extra-virgin-olive-oil",
+      "type": "complement",
+      "description": "Olive oil polyphenols complement mussel omega-3s in reducing LDL oxidation and vascular inflammation."
+    },
+    {
+      "target_ingredient": "garlic",
+      "type": "synergy",
+      "description": "Garlic allicin has been shown to enhance cardiovascular benefits when combined with marine omega-3 fatty acids from shellfish."
+    }
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

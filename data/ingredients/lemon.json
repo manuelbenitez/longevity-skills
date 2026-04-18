@@ -1,0 +1,71 @@
+{
+  "name": "Lemon",
+  "slug": "lemon",
+  "category": "fruit",
+  "aliases": ["lemon juice", "lemon zest", "lemon peel"],
+  "book_claims": [
+    {
+      "claim": "Used throughout the Longevity Diet as a flavoring in beverages and as a dressing for vegetables. Also a source of vitamin C. Recommended: ½ lemon squeezed into tea or coffee; as dressing for cooked vegetables.",
+      "mechanism": "Vitamin C supports immune function and collagen synthesis; used as a flavoring to replace salt and enhance palatability of vegetable-heavy dishes on the Longevity Diet.",
+      "study_ref": "",
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25048971/",
+      "finding": "Vitamin C from citrus (including lemon) is the most potent dietary enhancer of non-heme iron absorption, increasing uptake 2–6 fold when consumed together with plant-based iron sources. (PMID 25048971)",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25912614/",
+      "finding": "Lemon polyphenols, including hesperidin and eriocitrin, reduce oxidative stress, improve lipid profiles, and exert anti-inflammatory effects in animal models and human studies. (PMID 25912614)",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31906745/",
+      "finding": "D-limonene from lemon peel demonstrates anti-cancer activity through induction of apoptosis and inhibition of tumor cell proliferation in in vitro and animal studies. (PMID 31906745)",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Examine.com",
+      "url": "https://examine.com/nutrition/citrus-fruits/",
+      "finding": "Lemon is a rich source of vitamin C (53 mg/100 g juice), flavonoids (hesperidin, naringenin), and d-limonene; daily citrus consumption is associated with reduced cancer risk in observational studies.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["tart", "bright", "acidic", "floral (zest)"],
+    "aroma": ["citrus", "fresh", "floral", "zesty"],
+    "texture": ["juicy", "aqueous"],
+    "culinary_category": "citrus / acidulant"
+  },
+  "culinary_pairings": [
+    {"ingredient": "olive oil", "tradition": "Mediterranean dressing", "source": "The Longevity Diet"},
+    {"ingredient": "chicory", "tradition": "Italian", "source": "The Longevity Diet"},
+    {"ingredient": "kidney beans", "tradition": "Mediterranean salad", "source": "The Longevity Diet"},
+    {"ingredient": "fennel", "tradition": "Italian Mediterranean", "source": "culinary tradition"},
+    {"ingredient": "herring", "tradition": "Nordic/Mediterranean", "source": "culinary tradition"},
+    {"ingredient": "honey", "tradition": "Mediterranean tonic", "source": "culinary tradition"},
+    {"ingredient": "lettuce", "tradition": "Mediterranean salad", "source": "culinary tradition"}
+  ],
+  "nutrient_highlights": [
+    {"compound": "Vitamin C", "amount_per_100g": "53 mg (juice)", "bioavailability_notes": "Highly bioavailable; water-soluble; unstable — use fresh squeezed for maximum content"},
+    {"compound": "Hesperidin (flavonoid)", "amount_per_100g": "~20 mg", "bioavailability_notes": "Concentrated in pith and peel; enhances capillary integrity and has anti-inflammatory effects"},
+    {"compound": "D-limonene (terpene)", "amount_per_100g": "~6 mg (zest)", "bioavailability_notes": "Present predominantly in zest/peel; fat-soluble; use zest in cooking to capture this compound"},
+    {"compound": "Citric acid", "amount_per_100g": "~47 g/L in juice", "bioavailability_notes": "Organic acid that enhances mineral absorption and kidney stone prevention"}
+  ],
+  "synergies": [
+    {"target_ingredient": "iron", "type": "synergy", "description": "Vitamin C from lemon is the most effective dietary strategy for enhancing non-heme iron absorption from plant foods on the Longevity Diet"},
+    {"target_ingredient": "kidney beans", "type": "synergy", "description": "Squeezing lemon juice over bean dishes doubles or triples iron bioavailability from the beans"},
+    {"target_ingredient": "olive oil", "type": "complement", "description": "Lemon-olive oil is the foundational Longevity Diet dressing; the fat in olive oil enhances absorption of fat-soluble compounds while lemon's acidity brightens flavors"},
+    {"target_ingredient": "fennel", "type": "complement", "description": "Classic fennel salad dressing in The Longevity Diet; citrus acidity complements fennel's anise sweetness"}
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

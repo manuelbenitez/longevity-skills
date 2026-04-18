@@ -1,0 +1,68 @@
+{
+  "name": "Honey",
+  "slug": "honey",
+  "category": "other",
+  "aliases": ["raw honey", "natural honey"],
+  "book_claims": [
+    {
+      "claim": "Small amount of natural sweetener used in the Longevity Diet oatmeal breakfast. Recommended: 10 g (2 tsp) added to oatmeal.",
+      "mechanism": "Provides natural fructose and glucose with trace polyphenols; used in minimal quantities to sweeten plant-based breakfast foods without promoting the glycemic spikes of refined sugar.",
+      "study_ref": "",
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22210171/",
+      "finding": "Honey contains over 180 compounds including polyphenols and flavonoids; moderate consumption associated with reduced oxidative stress markers compared to sucrose in randomized trials. (PMID 22210171)",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35010988/",
+      "finding": "Systematic review found honey consumption modestly reduced fasting blood glucose, LDL cholesterol, and inflammatory markers (CRP, IL-6) compared to other sweeteners, particularly raw and dark honeys. (PMID 35010988)",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31889199/",
+      "finding": "Honey's antimicrobial and prebiotic properties support gut microbiota diversity; Lactobacillus and Bifidobacterium populations increase with moderate honey consumption. (PMID 31889199)",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Examine.com",
+      "url": "https://examine.com/supplements/honey/",
+      "finding": "While honey has a similar caloric profile to sugar, its polyphenol content (kaempferol, quercetin, luteolin) provides antioxidant effects at small doses; should still be used sparingly in longevity-focused diets.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["sweet", "floral", "caramel-like", "varietal complexity"],
+    "aroma": ["floral", "fruity", "warm"],
+    "texture": ["viscous", "liquid to crystallized depending on type"],
+    "culinary_category": "natural sweetener"
+  },
+  "culinary_pairings": [
+    {"ingredient": "oats", "tradition": "Longevity Diet breakfast", "source": "The Longevity Diet"},
+    {"ingredient": "walnuts", "tradition": "Mediterranean", "source": "culinary tradition"},
+    {"ingredient": "lemon", "tradition": "Mediterranean / herbal medicine", "source": "culinary tradition"},
+    {"ingredient": "grapes", "tradition": "Middle Eastern", "source": "culinary tradition"},
+    {"ingredient": "fennel", "tradition": "Italian", "source": "culinary tradition"}
+  ],
+  "nutrient_highlights": [
+    {"compound": "Fructose", "amount_per_100g": "~40 g", "bioavailability_notes": "Rapidly absorbed; use in small quantities to minimize glycemic impact"},
+    {"compound": "Quercetin", "amount_per_100g": "trace (~0.05 mg)", "bioavailability_notes": "Bioavailability from honey is modest but consistent; enhances antioxidant defense"},
+    {"compound": "Kaempferol", "amount_per_100g": "trace", "bioavailability_notes": "Anti-inflammatory flavonoid; varietal honeys (buckwheat, manuka) have higher polyphenol density"},
+    {"compound": "Hydrogen peroxide (antimicrobial)", "amount_per_100g": "enzymatically generated", "bioavailability_notes": "Relevant to antimicrobial activity; inactivated by heat — use raw honey for maximum benefit"}
+  ],
+  "synergies": [
+    {"target_ingredient": "oats", "type": "complement", "description": "Honey's natural sugars provide immediate energy to complement oats' slow-release complex carbohydrates; polyphenols in honey add antioxidant benefit to the breakfast"},
+    {"target_ingredient": "lemon", "type": "synergy", "description": "Honey and lemon is a traditional longevity tonic; honey's antimicrobial compounds and lemon's vitamin C provide complementary immune support"},
+    {"target_ingredient": "walnuts", "type": "complement", "description": "Honey's polyphenols and walnuts' omega-3s provide complementary anti-inflammatory effects in a traditional Mediterranean dessert pairing"}
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

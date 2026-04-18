@@ -1,0 +1,53 @@
+{
+  "name": "Snapper",
+  "slug": "snapper",
+  "category": "fish",
+  "aliases": ["red snapper", "Pacific snapper"],
+  "book_claims": [
+    {
+      "claim": "Listed as a source of omega-3 (0.25 g EPA/DHA per 75 g cooked)",
+      "mechanism": "Lean white fish with modest omega-3 content",
+      "study_ref": null,
+      "confidence": "medium"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25267243/",
+      "finding": "Red snapper provides complete protein and moderate selenium; mercury levels acceptable at 2–3 servings per week; not a high omega-3 source",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16581971/",
+      "finding": "Even modest EPA/DHA from lean fish contributes to cardiovascular risk reduction; snapper appropriate as part of varied 2–3 fish servings per week",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["mild", "slightly sweet", "nutty"],
+    "aroma": ["fresh", "oceanic"],
+    "texture": ["firm", "flaky", "moist"],
+    "culinary_category": "white fish"
+  },
+  "culinary_pairings": [
+    {"ingredient": "lemon", "tradition": "Mediterranean/American", "source": "traditional"},
+    {"ingredient": "olive oil", "tradition": "Mediterranean", "source": "traditional"},
+    {"ingredient": "tomatoes", "tradition": "Mediterranean", "source": "traditional"}
+  ],
+  "nutrient_highlights": [
+    {"compound": "Complete protein", "amount_per_100g": "26 g", "bioavailability_notes": "High-quality lean protein; all essential amino acids"},
+    {"compound": "Selenium", "amount_per_100g": "38 mcg", "bioavailability_notes": "Antioxidant; supports thyroid function; high bioavailability from fish"},
+    {"compound": "EPA + DHA", "amount_per_100g": "0.33 g", "bioavailability_notes": "Moderate; contribute to weekly omega-3 target when combined with sardines or anchovies in the same week"}
+  ],
+  "synergies": [
+    {"target_ingredient": "sardines", "type": "complement", "description": "Book recommends 2–3 fish servings/week; snapper as lean white fish complements high-omega-3 oily fish like sardines"},
+    {"target_ingredient": "olive oil", "type": "synergy", "description": "Adds MUFA and improves absorption of fat-soluble vitamins; traditional Mediterranean preparation"},
+    {"target_ingredient": "lemon", "type": "complement", "description": "Acid brightens the mild flavor and adds vitamin C to the meal"}
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

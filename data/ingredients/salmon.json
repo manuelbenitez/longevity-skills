@@ -1,0 +1,69 @@
+{
+  "name": "Salmon",
+  "slug": "salmon",
+  "category": "fish",
+  "aliases": ["salmon fillet", "wild-caught salmon", "Atlantic salmon", "sockeye salmon"],
+  "book_claims": [
+    {
+      "claim": "Salmon is recommended as a high omega-3, omega-6, and vitamin B12 fish for the Longevity Diet",
+      "mechanism": "High EPA/DHA (omega-3) content; reduces cardiovascular risk and inflammation; essential for cell membrane function",
+      "study_ref": "",
+      "confidence": "high"
+    },
+    {
+      "claim": "Wild-caught salmon is a top source of vitamin B12 (2.3–4 mcg per 75 g cooked, 38–67% DV), vitamin D (44–447 IU per 3 oz cooked, 11–112% DV), omega-3 (1.08–1.38 g EPA/DHA per 75 g), vitamin A (59 mcg RAE), and magnesium (26 mg per 3 oz); also a calcium source when canned with bones",
+      "mechanism": "Rich in omega-3 fatty acids (EPA/DHA), vitamin D, vitamin B12, and protein; supports cardiovascular and brain health",
+      "study_ref": "",
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17374686/",
+      "finding": "Meta-analysis (PMID 17374686) found regular fatty fish consumption reduces coronary heart disease mortality by ~36%; EPA/DHA in salmon is a primary driver",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26263244/",
+      "finding": "Salmon omega-3s (EPA/DHA) reduce systemic inflammation markers including IL-6 and TNF-alpha (PMID 26263244), supporting longevity pathways",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Examine.com",
+      "url": "https://examine.com/food/salmon/",
+      "finding": "Salmon is one of the richest dietary sources of EPA and DHA; regular consumption linked to reduced triglycerides, improved HDL, and lower all-cause mortality in large cohort studies",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["rich", "buttery", "mildly savory", "slightly sweet"],
+    "aroma": ["oceanic", "mild fish", "umami"],
+    "texture": ["flaky", "moist", "tender"],
+    "culinary_category": "fatty fish"
+  },
+  "culinary_pairings": [
+    {"ingredient": "lemon", "tradition": "European", "source": "culinary tradition"},
+    {"ingredient": "dill", "tradition": "Scandinavian", "source": "culinary tradition"},
+    {"ingredient": "capers", "tradition": "Mediterranean", "source": "culinary tradition"},
+    {"ingredient": "extra virgin olive oil", "tradition": "Mediterranean", "source": "culinary tradition"},
+    {"ingredient": "asparagus", "tradition": "European", "source": "culinary tradition"}
+  ],
+  "nutrient_highlights": [
+    {"compound": "EPA + DHA (omega-3)", "amount_per_100g": "2.2 g (wild Atlantic cooked)", "bioavailability_notes": "Highly bioavailable marine omega-3s; superior to plant ALA sources"},
+    {"compound": "Vitamin D", "amount_per_100g": "447–526 IU (wild cooked)", "bioavailability_notes": "One of the richest food sources; fat in fish enhances absorption"},
+    {"compound": "Vitamin B12", "amount_per_100g": "3.2 mcg (cooked)", "bioavailability_notes": "Animal-sourced B12 is highly bioavailable without conversion"},
+    {"compound": "Protein", "amount_per_100g": "25 g (cooked)", "bioavailability_notes": "Complete protein; PDCAAS close to 1.0"},
+    {"compound": "Astaxanthin", "amount_per_100g": "0.4–3.8 mg", "bioavailability_notes": "Carotenoid antioxidant; fat-soluble, enhanced by dietary fat co-ingestion"}
+  ],
+  "synergies": [
+    {"target_ingredient": "olive oil", "type": "synergy", "description": "Olive oil polyphenols and salmon omega-3s together reduce cardiovascular inflammation through complementary pathways"},
+    {"target_ingredient": "vitamin d", "type": "complement", "description": "Salmon is among the richest natural food sources of vitamin D, synergizing with its own calcium-sparing effect"},
+    {"target_ingredient": "sardines", "type": "complement", "description": "Both low-mercury oily fish; rotating between them diversifies omega-3 and mineral intake"}
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

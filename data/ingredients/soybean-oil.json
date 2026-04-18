@@ -1,0 +1,53 @@
+{
+  "name": "Soybean Oil",
+  "slug": "soybean-oil",
+  "category": "oil",
+  "aliases": ["soy oil", "vegetable oil (soybean)"],
+  "book_claims": [
+    {
+      "claim": "Listed as a source of omega-3 ALA (0.31 g per 1 tsp) and vitamin E (1.1 mg per 1 tbsp, 6% DV)",
+      "mechanism": "Plant oil with ALA omega-3 and vitamin E",
+      "study_ref": null,
+      "confidence": "medium"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26946249/",
+      "finding": "Soybean oil has an omega-6 to omega-3 ratio of ~7:1; excessive use relative to olive oil may promote inflammation; canola or walnut oil provide better omega-3 balance",
+      "agrees_with_book": false
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24386399/",
+      "finding": "Soybean oil vitamin E (primarily gamma-tocopherol) has antioxidant properties; however, high linoleic acid content may increase lipid peroxidation at cooking temperatures",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["neutral", "very mild"],
+    "aroma": ["neutral", "faintly beany"],
+    "texture": ["liquid", "light"],
+    "culinary_category": "cooking oil"
+  },
+  "culinary_pairings": [
+    {"ingredient": "vegetables", "tradition": "Asian/American", "source": "traditional"},
+    {"ingredient": "tofu", "tradition": "Asian", "source": "traditional"},
+    {"ingredient": "salad greens", "tradition": "American", "source": "traditional"}
+  ],
+  "nutrient_highlights": [
+    {"compound": "ALA (omega-3)", "amount_per_100g": "6.8 g", "bioavailability_notes": "Plant form; ~5–15% conversion to EPA/DHA; lower efficacy than marine omega-3s"},
+    {"compound": "Linoleic acid (omega-6)", "amount_per_100g": "51 g", "bioavailability_notes": "Very high omega-6; unfavorable ratio when used as primary cooking oil"},
+    {"compound": "Vitamin E", "amount_per_100g": "8.2 mg", "bioavailability_notes": "Primarily gamma-tocopherol; antioxidant; degrades with high-heat cooking"}
+  ],
+  "synergies": [
+    {"target_ingredient": "olive oil", "type": "antagonism", "description": "Olive oil is the preferred cooking fat in Longevity Diet; soybean oil's high omega-6 content makes it a less favorable alternative"},
+    {"target_ingredient": "omega-3-fatty-acids", "type": "complement", "description": "ALA in soybean oil contributes modestly to omega-3 status; best used sparingly alongside marine omega-3 sources"},
+    {"target_ingredient": "walnut-oil", "type": "complement", "description": "Both are plant-based omega-3 containing oils; walnut oil has a more favorable omega-6:omega-3 ratio"}
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

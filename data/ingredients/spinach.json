@@ -1,0 +1,53 @@
+{
+  "name": "Spinach",
+  "slug": "spinach",
+  "category": "vegetable",
+  "aliases": ["baby spinach", "spinach, boiled", "spinach, frozen"],
+  "book_claims": [
+    {
+      "claim": "Featured vegetable across multiple Longevity Diet meals; top folate source (131 mcg per ½ cup boiled, 33% DV) and iron (3 mg per ½ cup boiled, 17% DV); also provides vitamin A (573 mcg RAE per ½ cup frozen/boiled, 229% DV) and vitamin E (1.9 mg per ½ cup boiled, 10% DV)",
+      "mechanism": "Rich in folate, iron, vitamin A, and vitamin E",
+      "study_ref": null,
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24898241/",
+      "finding": "Spinach provides thylakoid membranes that suppress appetite hormones and improve satiety; also associated with reduced DNA oxidative damage",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19682072/",
+      "finding": "Spinach iron bioavailability is low (~1–2%) due to high oxalate content; cooking and vitamin C co-ingestion improves non-heme iron absorption",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["mild", "slightly bitter", "earthy"],
+    "aroma": ["green", "vegetal"],
+    "texture": ["tender when cooked", "crisp when raw"],
+    "culinary_category": "leafy green"
+  },
+  "culinary_pairings": [
+    {"ingredient": "olive oil", "tradition": "Mediterranean/Italian", "source": "The Longevity Diet"},
+    {"ingredient": "lemon", "tradition": "Mediterranean", "source": "The Longevity Diet"},
+    {"ingredient": "raisins", "tradition": "Catalan/Sicilian", "source": "The Longevity Diet"}
+  ],
+  "nutrient_highlights": [
+    {"compound": "Folate", "amount_per_100g": "194 mcg (cooked)", "bioavailability_notes": "~50% bioavailability; cooking increases concentration per gram but reduces total folate"},
+    {"compound": "Iron (non-heme)", "amount_per_100g": "3.6 mg (cooked)", "bioavailability_notes": "Only ~2% absorbed due to oxalate; pair with vitamin C source to improve absorption"},
+    {"compound": "Vitamin A (as beta-carotene)", "amount_per_100g": "573 mcg RAE (cooked)", "bioavailability_notes": "Conversion from beta-carotene; fat required for absorption"}
+  ],
+  "synergies": [
+    {"target_ingredient": "lemon", "type": "synergy", "description": "Vitamin C from lemon enhances non-heme iron absorption from spinach, partially offsetting oxalate inhibition"},
+    {"target_ingredient": "olive oil", "type": "synergy", "description": "Fat essential for absorption of fat-soluble vitamins A, E, and K concentrated in spinach"},
+    {"target_ingredient": "raisins", "type": "complement", "description": "Traditional Catalan/Sicilian spinach con pasas; raisins add sweetness and iron alongside spinach in Longevity Diet recipe"}
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

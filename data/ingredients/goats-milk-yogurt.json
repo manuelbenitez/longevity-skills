@@ -1,0 +1,70 @@
+{
+  "name": "Goat's Milk Yogurt",
+  "slug": "goats-milk-yogurt",
+  "category": "dairy",
+  "aliases": ["goat yogurt", "goat's milk yoghurt", "sheep's milk yogurt", "goat dairy"],
+  "book_claims": [
+    {
+      "claim": "Goat's and sheep's milk products can be consumed in limited amounts in the Longevity Diet as an exception to the general avoidance of dairy; goat's milk has a different protein and fat profile from cow's milk and has been part of the diet of long-lived populations in Sardinia and Southern Italy; the Biosphere 2 experiment included ~84 g/day of goat's milk and yogurt",
+      "mechanism": "Goat's milk contains smaller fat globules, higher medium-chain triglycerides, and lower αs1-casein than cow's milk; these properties may improve digestibility and reduce inflammation; historically consumed in Blue Zone longevity populations",
+      "study_ref": "",
+      "confidence": "medium"
+    },
+    {
+      "claim": "Goat's milk yogurt is used as a snack in the Longevity Diet on specific days; recommended at 125 g per snack serving",
+      "mechanism": "Provides protein, calcium, and probiotic cultures; fermentation reduces lactose content, improving tolerability",
+      "study_ref": "",
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21428901/",
+      "finding": "PMID 21428901: Goat's milk has superior digestibility in human clinical studies compared to cow's milk; smaller fat globule size, higher short- and medium-chain fatty acid content, and lower αs1-casein reduce gastrointestinal transit time and inflammation markers",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24695892/",
+      "finding": "PMID 24695892: Fermented dairy (including goat yogurt) provides Lactobacillus and Bifidobacterium cultures that modulate gut microbiota composition; regular yogurt consumption is associated with reduced systemic inflammation and lower type 2 diabetes risk",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Examine.com",
+      "url": "https://examine.com/food/goat-milk/",
+      "finding": "Goat's milk provides ~134 mg calcium per 100 mL, higher potassium and slightly more vitamin A than cow's milk; goat yogurt fermentation produces kefiran and other prebiotic compounds supporting gut barrier integrity",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["tangy", "slightly earthy", "milky", "creamy", "mildly tart"],
+    "aroma": ["lactic", "slightly grassy", "barn-like when full-fat"],
+    "texture": ["creamy", "smooth", "thinner than Greek yogurt", "pourable"],
+    "culinary_category": "fermented dairy"
+  },
+  "culinary_pairings": [
+    {"ingredient": "walnuts", "tradition": "Mediterranean/Italian", "source": "culinary tradition"},
+    {"ingredient": "honey", "tradition": "Mediterranean/Greek", "source": "culinary tradition"},
+    {"ingredient": "berries", "tradition": "Contemporary longevity snack", "source": "culinary tradition"},
+    {"ingredient": "figs", "tradition": "Mediterranean", "source": "culinary tradition"},
+    {"ingredient": "olive oil", "tradition": "Sardinian", "source": "culinary tradition"}
+  ],
+  "nutrient_highlights": [
+    {"compound": "Calcium", "amount_per_100g": "~110–135 mg (yogurt)", "bioavailability_notes": "High bioavailability (~32–36%); fermented form may improve absorption compared to fresh milk due to reduced lactose and lower pH"},
+    {"compound": "Protein", "amount_per_100g": "3.6–4.5 g", "bioavailability_notes": "Complete protein; casein and whey fraction; slow-to-moderate digestion rate; supports muscle protein synthesis especially important after age 65"},
+    {"compound": "Probiotic cultures", "amount_per_100g": "≥10⁶–10⁸ CFU (live cultures)", "bioavailability_notes": "Lactobacillus acidophilus, L. bulgaricus, Streptococcus thermophilus; survive gastric passage at higher rates in fermented form"},
+    {"compound": "Medium-chain triglycerides (MCTs)", "amount_per_100g": "~0.5–1 g", "bioavailability_notes": "Directly absorbed in small intestine without bile salts; rapidly available for energy; anti-microbial properties"},
+    {"compound": "Vitamin B2 (riboflavin)", "amount_per_100g": "0.14 mg", "bioavailability_notes": "Highly bioavailable from dairy; essential for mitochondrial energy metabolism"}
+  ],
+  "synergies": [
+    {"target_ingredient": "walnuts", "type": "complement", "description": "Classic Longevity Diet snack combination; walnuts add omega-3 ALA and polyphenols to balance the saturated fat in yogurt and improve satiety"},
+    {"target_ingredient": "honey", "type": "complement", "description": "Traditional Mediterranean pairing; honey provides prebiotic oligosaccharides that feed the probiotic cultures in yogurt"},
+    {"target_ingredient": "figs", "type": "complement", "description": "Sardinian longevity tradition; fig polyphenols and prebiotics support the probiotic cultures in goat yogurt"},
+    {"target_ingredient": "multivitamin", "type": "complement", "description": "Yogurt calcium and vitamin D support the multivitamin's bone-health contribution; pairing timing maximizes calcium absorption"}
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

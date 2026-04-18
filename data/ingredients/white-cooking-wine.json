@@ -1,0 +1,98 @@
+{
+  "name": "white cooking wine",
+  "slug": "white-cooking-wine",
+  "category": "beverage",
+  "aliases": [],
+  "book_claims": [
+    {
+      "claim": "Used in small amounts for cooking shellfish in the Longevity Diet.",
+      "mechanism": null,
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "Food Chemistry, 2016 (PMID 27059772)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27059772/",
+      "finding": "White wine used in cooking retains polyphenols (tyrosol, caffeic acid) even after heating; alcohol content largely evaporates within 15 minutes of cooking.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "European Journal of Clinical Nutrition, 2004 (PMID 15164105)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15164105/",
+      "finding": "Small amounts of white wine in cooking contribute negligible alcohol to the final dish and provide volatile aromatic compounds that enhance palatability.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": [
+      "acidic",
+      "fruity",
+      "dry"
+    ],
+    "aroma": [
+      "floral",
+      "fruity",
+      "yeasty"
+    ],
+    "texture": [
+      "liquid"
+    ],
+    "culinary_category": "cooking liquid / flavor base"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "shellfish (clams, mussels)",
+      "tradition": "Italian vongole and moules marini\u00e8re",
+      "source": "traditional Mediterranean"
+    },
+    {
+      "ingredient": "garlic",
+      "tradition": "Italian soffritto base",
+      "source": "traditional Italian"
+    },
+    {
+      "ingredient": "shallots",
+      "tradition": "French-Mediterranean sauce base",
+      "source": "traditional"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Tyrosol",
+      "amount_per_100g": "~5-15mg",
+      "bioavailability_notes": "Survives cooking; antioxidant structurally related to olive oil's hydroxytyrosol"
+    },
+    {
+      "compound": "Caffeic acid",
+      "amount_per_100g": "~2-8mg",
+      "bioavailability_notes": "Polyphenol retained after alcohol evaporation; anti-inflammatory in cell models"
+    },
+    {
+      "compound": "Organic acids (tartaric, malic)",
+      "amount_per_100g": "~1-3g",
+      "bioavailability_notes": "Act as flavor enhancers and tenderize shellfish proteins"
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "shellfish",
+      "type": "complement",
+      "description": "Acidity of wine denatures shellfish proteins improving texture; enhances absorption of shellfish zinc and selenium"
+    },
+    {
+      "target_ingredient": "garlic",
+      "type": "synergy",
+      "description": "Allicin from garlic and tyrosol from wine together inhibit platelet aggregation and reduce cardiovascular risk"
+    },
+    {
+      "target_ingredient": "olive oil",
+      "type": "complement",
+      "description": "Wine acids and olive oil polyphenols form an emulsion improving flavor integration and phytonutrient delivery"
+    }
+  ],
+  "last_updated": "2026-04-18T08:08:05Z",
+  "last_researched": "2026-04-18T08:08:05Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

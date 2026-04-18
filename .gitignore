@@ -2,3 +2,5 @@
 *.swp
 .env
 .longevity-skills.json
+data/book-raw/
+.venv/

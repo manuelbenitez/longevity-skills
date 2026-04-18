@@ -1,0 +1,100 @@
+{
+  "name": "minestrone",
+  "slug": "minestrone",
+  "category": "other",
+  "aliases": [],
+  "book_claims": [
+    {
+      "claim": "Minestrone was a major part of Emma Morano's earlier diet",
+      "mechanism": "High vegetable, legume, and complex carbohydrate content; low glycemic; rich in micronutrients and fiber",
+      "confidence": "low"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "Public Health Nutrition, 2020 (PMID 31587706)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31587706/",
+      "finding": "Traditional minestrone soup provides high dietary fiber, vitamins C and K; regular legume-vegetable soup consumption associated with lower all-cause mortality in Italian cohorts.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "European Journal of Clinical Nutrition, 2016 (PMID 26603880)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26603880/",
+      "finding": "Vegetable-legume soups reduce postprandial glycemia and insulin response compared to equivalent energy from solid foods.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": [
+      "savory",
+      "umami",
+      "slightly sweet from vegetables"
+    ],
+    "aroma": [
+      "herbaceous",
+      "tomato",
+      "basil"
+    ],
+    "texture": [
+      "brothy",
+      "chunky",
+      "varied"
+    ],
+    "culinary_category": "Italian vegetable-legume soup"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "pesto",
+      "tradition": "Ligurian minestrone al pesto",
+      "source": "traditional Italian"
+    },
+    {
+      "ingredient": "whole-grain bread",
+      "tradition": "Italian table bread alongside soup",
+      "source": "traditional"
+    },
+    {
+      "ingredient": "Parmesan rind",
+      "tradition": "Slow-cooked Italian soups for umami depth",
+      "source": "traditional"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Dietary fiber (from legumes + vegetables)",
+      "amount_per_100g": "~2-3g",
+      "bioavailability_notes": "Mixed soluble/insoluble fiber; soluble fraction from beans feeds butyrate-producing microbiota"
+    },
+    {
+      "compound": "Lycopene (from tomatoes)",
+      "amount_per_100g": "~1-3mg",
+      "bioavailability_notes": "Bioavailability enhanced by cooking and presence of olive oil"
+    },
+    {
+      "compound": "Polyphenols (from diverse vegetables)",
+      "amount_per_100g": "variable",
+      "bioavailability_notes": "Aqueous cooking matrix extracts water-soluble polyphenols; consume the broth to capture them"
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "olive oil",
+      "type": "synergy",
+      "description": "Olive oil enhances lycopene and fat-soluble vitamin absorption; adds oleocanthal anti-inflammatory effects"
+    },
+    {
+      "target_ingredient": "pesto",
+      "type": "complement",
+      "description": "Basil and garlic in pesto add allicin and rosmarinic acid, extending the soup's anti-inflammatory profile"
+    },
+    {
+      "target_ingredient": "legumes",
+      "type": "synergy",
+      "description": "Bean varieties provide resistant starch and prebiotic fiber that synergize with vegetable polyphenols"
+    }
+  ],
+  "last_updated": "2026-04-18T08:08:05Z",
+  "last_researched": "2026-04-18T08:08:05Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

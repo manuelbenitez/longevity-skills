@@ -1,0 +1,121 @@
+{
+  "name": "Wild Rice",
+  "slug": "wild-rice",
+  "category": "grain",
+  "aliases": ["Zizania", "Canada rice", "Indian rice", "water oats", "manoomin"],
+  "book_claims": [
+    {
+      "claim": "Wild rice is used in the Longevity Diet as a base for vegetable dishes and is listed as an acceptable substitute for pasta at 40 g dry weight per serving.",
+      "mechanism": "Whole grain with intact bran providing fiber, resistant starch, and micronutrients; lower glycemic impact than refined white rice, supporting stable blood glucose and insulin signaling.",
+      "study_ref": "",
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30405742/",
+      "finding": "PMID 30405742: Wild rice is a rich source of antioxidants (particularly flavonoids and phenolic acids) with significantly higher ORAC values than white or brown rice; antioxidant-rich whole grains are associated with reduced inflammatory markers and metabolic disease risk.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22742587/",
+      "finding": "PMID 22742587: Wild rice consumption improved HDL cholesterol and reduced LDL oxidation in hypercholesterolemic subjects, supporting cardiovascular longevity benefits beyond basic carbohydrate replacement.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33003574/",
+      "finding": "PMID 33003574: Whole grain consumption (including wild rice) is inversely associated with all-cause mortality in large prospective cohort studies; each additional 28 g serving associated with ~5% reduction in mortality risk.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Examine.com",
+      "url": "https://examine.com/nutrition/is-rice-healthy/",
+      "finding": "Examine notes that wild rice has a significantly higher protein content (~14 g/100 g dry) than white rice (~7 g/100 g), lower glycemic index (~57 vs ~73), and substantially more zinc, magnesium, and B vitamins, making it a nutritionally superior whole grain choice.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["nutty", "earthy", "slightly grassy", "rich"],
+    "aroma": ["toasted grain", "woodsy", "earthy"],
+    "texture": ["chewy", "firm", "slightly al dente when cooked"],
+    "culinary_category": "whole grain / base"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "zucchini",
+      "tradition": "Longevity Diet / Mediterranean-inspired",
+      "source": "Rice with zucchini dish featured in the Longevity Diet"
+    },
+    {
+      "ingredient": "mushrooms",
+      "tradition": "North American",
+      "source": "Classic wild rice pilaf combination"
+    },
+    {
+      "ingredient": "cranberries",
+      "tradition": "Native American / North American",
+      "source": "Traditional preparation with wild berries"
+    },
+    {
+      "ingredient": "olive oil",
+      "tradition": "Mediterranean-fusion",
+      "source": "Longevity Diet cooking fat"
+    },
+    {
+      "ingredient": "vegetable broth",
+      "tradition": "Global",
+      "source": "Cooking liquid that adds flavor and micronutrients"
+    },
+    {
+      "ingredient": "walnuts",
+      "tradition": "North American health cuisine",
+      "source": "Omega-3 and protein enrichment for grain bowls"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Protein",
+      "amount_per_100g": "~14.7 g per 100 g dry; ~4 g per 100 g cooked",
+      "bioavailability_notes": "Higher protein content than any other rice; contains all essential amino acids though low in lysine; complements legumes well."
+    },
+    {
+      "compound": "Magnesium",
+      "amount_per_100g": "~177 mg per 100 g dry (~32 mg per 100 g cooked)",
+      "bioavailability_notes": "Magnesium is essential for over 300 enzymatic reactions including ATP synthesis, DNA repair, and insulin signaling; wild rice provides a meaningful whole-food source."
+    },
+    {
+      "compound": "Zinc",
+      "amount_per_100g": "~6 mg per 100 g dry (~1.3 mg per 100 g cooked)",
+      "bioavailability_notes": "Phytates in whole grain reduce bioavailability; soaking before cooking or consuming with vitamin C-rich foods improves absorption."
+    },
+    {
+      "compound": "Anthocyanins and phenolic acids",
+      "amount_per_100g": "~40–60 mg GAE per 100 g (varies by source)",
+      "bioavailability_notes": "Dark pigmentation indicates high anthocyanin content; these antioxidants reduce oxidative stress and inflammation associated with aging."
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "zucchini",
+      "type": "complement",
+      "description": "Featured together in the Longevity Diet recipe; wild rice provides sustained energy and protein while zucchini contributes water content, potassium, and vitamin C — a balanced longevity grain bowl."
+    },
+    {
+      "target_ingredient": "legumes",
+      "type": "synergy",
+      "description": "Wild rice is low in lysine; legumes are rich in lysine but low in methionine (abundant in rice). Combining them creates a complete amino acid profile — the classic protein complementarity of traditional diets."
+    },
+    {
+      "target_ingredient": "olive oil",
+      "type": "complement",
+      "description": "Adding olive oil to cooked wild rice increases caloric density (important for those over 65) and enhances absorption of fat-soluble vitamins present in accompanying vegetables."
+    }
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

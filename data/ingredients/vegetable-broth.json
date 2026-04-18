@@ -1,0 +1,106 @@
+{
+  "name": "Vegetable Broth",
+  "slug": "vegetable-broth",
+  "category": "beverage",
+  "aliases": ["vegetable juice", "herbal tea", "veggie broth", "stock"],
+  "book_claims": [
+    {
+      "claim": "Vegetable broth and vegetable juice, supplemented with linseed oil, were used as the caloric source (200–350 calories/day) during the 7-day Fasting Mimicking Diet for multiple sclerosis patients and were safe and potentially effective.",
+      "mechanism": "Minimal caloric intake mimics fasting while providing micronutrients; linseed oil supplies omega-3 fatty acids during the fasting period, supporting anti-inflammatory pathways without breaking the fasting state.",
+      "study_ref": "",
+      "confidence": "high"
+    },
+    {
+      "claim": "Used as part of the FMD protocol: vegetable broth/juice + linseed oil three times daily, alongside 2–3 liters unsweetened fluids per day.",
+      "mechanism": "Electrolytes and phytonutrients in broth help maintain hydration and mineral balance during prolonged caloric restriction.",
+      "study_ref": "",
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27048304/",
+      "finding": "A pilot trial (PMID 27048304) of a fasting-mimicking diet in MS patients used vegetable broth as the primary caloric vehicle; participants showed reductions in autoimmune markers and improved quality of life.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26822992/",
+      "finding": "Longo et al. (PMID 26822992) demonstrated that a plant-based, broth-centered FMD cycle reduces IGF-1, blood glucose, and inflammatory cytokines in healthy adults, consistent with the longevity-promoting effects described in the book.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Examine.com",
+      "url": "https://examine.com/nutrition/fasting-mimicking-diet/",
+      "finding": "Examine summarizes FMD evidence showing reduced markers of biological aging, metabolic risk factors, and improved cellular autophagy — mechanisms supported by the low-calorie, plant-based broth protocol.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["savory", "umami", "mildly sweet", "herbal"],
+    "aroma": ["aromatic", "vegetal", "earthy"],
+    "texture": ["liquid", "thin"],
+    "culinary_category": "base/liquid"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "linseed oil",
+      "tradition": "FMD protocol",
+      "source": "The Longevity Diet, FMD chapter"
+    },
+    {
+      "ingredient": "celery",
+      "tradition": "European",
+      "source": "Classic mirepoix base"
+    },
+    {
+      "ingredient": "onion",
+      "tradition": "Global",
+      "source": "Standard broth aromatics"
+    },
+    {
+      "ingredient": "carrots",
+      "tradition": "European",
+      "source": "Standard broth aromatics"
+    },
+    {
+      "ingredient": "parsley",
+      "tradition": "Mediterranean",
+      "source": "Ligurian tradition"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Potassium",
+      "amount_per_100g": "~70–100 mg (varies by recipe)",
+      "bioavailability_notes": "Highly bioavailable in liquid form; supports electrolyte balance during fasting"
+    },
+    {
+      "compound": "Sodium",
+      "amount_per_100g": "~200–400 mg (low-sodium ~72 mg)",
+      "bioavailability_notes": "Critical for fluid balance during FMD; choose low-sodium versions for daily use"
+    },
+    {
+      "compound": "Quercetin (from onion/leek)",
+      "amount_per_100g": "trace",
+      "bioavailability_notes": "Water-soluble flavonoid leaches into broth; anti-inflammatory and autophagy-promoting"
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "linseed oil",
+      "type": "synergy",
+      "description": "Used together in the FMD protocol; broth provides electrolytes and phytonutrients while linseed oil supplies omega-3 ALA, together supporting anti-inflammatory and fasting-mimicking effects."
+    },
+    {
+      "target_ingredient": "herbal tea",
+      "type": "complement",
+      "description": "Both are FMD-approved fluids that provide hydration with minimal caloric load; rotating between them reduces palatability fatigue during multi-day fasting protocols."
+    }
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

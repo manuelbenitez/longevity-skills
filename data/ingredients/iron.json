@@ -1,0 +1,66 @@
+{
+  "name": "Iron",
+  "slug": "iron",
+  "category": "nutrient",
+  "aliases": ["dietary iron", "non-heme iron", "heme iron", "ferrous iron"],
+  "book_claims": [
+    {
+      "claim": "Iron is important for normal immune function. Ensure adequate intake, especially in plant-based diets where non-heme iron absorption is lower.",
+      "mechanism": "Essential for red blood cell hemoglobin synthesis and immune cell proliferation; deficiency impairs lymphocyte and neutrophil function, increasing infection susceptibility.",
+      "study_ref": "",
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28189173/",
+      "finding": "Iron deficiency is the most common nutritional deficiency worldwide; even mild iron deficiency without overt anemia impairs immune function, cognitive performance, and physical work capacity. (PMID 28189173)",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31742629/",
+      "finding": "Elevated body iron stores (ferritin >200 ng/mL) are associated with increased oxidative stress and cancer risk, underscoring the longevity importance of maintaining iron in the optimal range rather than maximizing intake. (PMID 31742629)",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25048971/",
+      "finding": "Vitamin C co-ingestion increases non-heme iron absorption by 2–6 fold; adding lemon juice or other vitamin C sources to plant-based meals is a key strategy for adequacy on longevity-oriented plant-forward diets. (PMID 25048971)",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Examine.com",
+      "url": "https://examine.com/supplements/iron/",
+      "finding": "Non-heme iron from plant sources (legumes, leafy greens, fortified foods) has lower bioavailability (2–20%) than heme iron from meat (15–35%); simultaneous consumption of vitamin C and avoidance of calcium and tannins at the same meal significantly improves plant iron absorption.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": [],
+    "aroma": [],
+    "texture": [],
+    "culinary_category": "micronutrient"
+  },
+  "culinary_pairings": [
+    {"ingredient": "lemon", "tradition": "evidence-based nutrition", "source": "PMID 25048971"},
+    {"ingredient": "kidney beans", "tradition": "plant-based diet", "source": "The Longevity Diet"},
+    {"ingredient": "lentils", "tradition": "Mediterranean / plant-based", "source": "The Longevity Diet"},
+    {"ingredient": "mussels", "tradition": "Mediterranean seafood", "source": "The Longevity Diet"}
+  ],
+  "nutrient_highlights": [
+    {"compound": "Heme iron (animal sources)", "amount_per_100g": "varies", "bioavailability_notes": "15–35% absorbed; not inhibited by phytates or calcium"},
+    {"compound": "Non-heme iron (plant sources)", "amount_per_100g": "varies", "bioavailability_notes": "2–20% absorbed; enhanced by vitamin C; inhibited by phytates, tannins, calcium"},
+    {"compound": "Ferritin (storage form)", "amount_per_100g": "N/A", "bioavailability_notes": "Serum ferritin 20–100 ng/mL is considered optimal for longevity; excess increases oxidative stress"}
+  ],
+  "synergies": [
+    {"target_ingredient": "lemon", "type": "synergy", "description": "Vitamin C in lemon dramatically enhances non-heme iron absorption from plant foods — critical for longevity diets relying on plant iron sources"},
+    {"target_ingredient": "zinc", "type": "synergy", "description": "Both iron and zinc are essential for immune function and are listed together in The Longevity Diet; adequate levels of both are needed for robust immune defense"},
+    {"target_ingredient": "kidney beans", "type": "complement", "description": "Kidney beans are a plant-based iron source; consuming with vitamin C-rich foods optimizes non-heme iron uptake"}
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

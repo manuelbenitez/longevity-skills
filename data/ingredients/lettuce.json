@@ -1,0 +1,64 @@
+{
+  "name": "Lettuce",
+  "slug": "lettuce",
+  "category": "vegetable",
+  "aliases": ["mixed lettuce", "romaine lettuce", "cos lettuce", "butterhead lettuce"],
+  "book_claims": [
+    {
+      "claim": "Salad base used throughout the Longevity Diet. Romaine is a source of folate (64 mcg per cup shredded, 16% DV). Recommended: 150–200 g per salad.",
+      "mechanism": "Provides folate essential for DNA methylation and repair; as a base for multiple Longevity Diet salads, contributes to the daily vegetable volume central to longevity eating patterns.",
+      "study_ref": "",
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28338764/",
+      "finding": "Higher consumption of green leafy vegetables including lettuce associated with a 24% slower rate of cognitive decline in the MIND diet study; attributed to folate, vitamin K, and lutein content. (PMID 28338764)",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23953879/",
+      "finding": "Lettuce provides significant lutein and zeaxanthin (carotenoids not converted to vitamin A) that protect against age-related macular degeneration and cognitive decline. (PMID 23953879)",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Examine.com",
+      "url": "https://examine.com/nutrition/leafy-green-vegetables/",
+      "finding": "Romaine and other lettuces provide dietary nitrates that improve endothelial function and blood pressure; combined with their folate and vitamin K content, they support both cardiovascular and cognitive longevity.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["mild", "slightly bitter (romaine)", "neutral (butterhead)", "crisp-watery"],
+    "aroma": ["fresh", "green", "neutral"],
+    "texture": ["crisp (romaine)", "tender (butterhead)", "crunchy"],
+    "culinary_category": "salad green"
+  },
+  "culinary_pairings": [
+    {"ingredient": "olive oil", "tradition": "Mediterranean salad", "source": "The Longevity Diet"},
+    {"ingredient": "lemon", "tradition": "Mediterranean salad", "source": "The Longevity Diet"},
+    {"ingredient": "kidney beans", "tradition": "Longevity Diet bean salad", "source": "The Longevity Diet"},
+    {"ingredient": "fennel", "tradition": "Italian salad", "source": "culinary tradition"},
+    {"ingredient": "grapes", "tradition": "Waldorf-style salad", "source": "culinary tradition"},
+    {"ingredient": "walnuts", "tradition": "Mediterranean salad", "source": "culinary tradition"}
+  ],
+  "nutrient_highlights": [
+    {"compound": "Folate", "amount_per_100g": "~136 mcg (romaine)", "bioavailability_notes": "Water-soluble and heat-sensitive; eating lettuce raw preserves full folate content"},
+    {"compound": "Vitamin K", "amount_per_100g": "~102 mcg (romaine)", "bioavailability_notes": "Fat-soluble; absorption significantly enhanced by consuming with olive oil dressing"},
+    {"compound": "Lutein + Zeaxanthin", "amount_per_100g": "~1.7 mg (romaine)", "bioavailability_notes": "Carotenoids requiring fat for absorption; olive oil dressing is essential for uptake"},
+    {"compound": "Dietary nitrates", "amount_per_100g": "~100–200 mg", "bioavailability_notes": "Converted to nitric oxide by oral bacteria and gastric acid; improves vascular function"},
+    {"compound": "Vitamin C", "amount_per_100g": "~4 mg (romaine)", "bioavailability_notes": "Modest source; synergizes with lemon juice in salad dressings"}
+  ],
+  "synergies": [
+    {"target_ingredient": "olive oil", "type": "synergy", "description": "Fat in olive oil dressing is essential for absorbing fat-soluble vitamin K, lutein, and zeaxanthin from lettuce — consuming lettuce without fat reduces absorption by up to 90%"},
+    {"target_ingredient": "lemon", "type": "complement", "description": "Classic Longevity Diet dressing combination; lemon's vitamin C complements lettuce's folate, and acidity preserves freshness"},
+    {"target_ingredient": "kidney beans", "type": "complement", "description": "Longevity Diet salad pairing; lettuce provides volume and micronutrients while kidney beans contribute protein, fiber, and additional folate"}
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

@@ -1,0 +1,69 @@
+{
+  "name": "Tuna",
+  "slug": "tuna",
+  "category": "fish",
+  "aliases": ["tuna fish", "tuna light canned in water", "bluefin tuna", "albacore tuna", "yellowfin tuna"],
+  "book_claims": [
+    {
+      "claim": "Tuna should be avoided or minimized due to high mercury content",
+      "mechanism": "Large predatory fish bioaccumulates methylmercury through the food chain; methylmercury is a potent neurotoxin that damages the central nervous system",
+      "study_ref": "",
+      "confidence": "high"
+    },
+    {
+      "claim": "Bluefin tuna is a top vitamin B12 source (8.2–9.3 mcg per 75 g, 137–155% DV); light canned tuna provides B12 (2.2 mcg, 37% DV), iron (1 mg, 6% DV), omega-3 (0.21 g EPA/DHA per 75 g), and vitamin A (20 mcg RAE)",
+      "mechanism": "Source of vitamin B12, omega-3, iron, and lean protein; however mercury concerns outweigh benefits for regular consumption",
+      "study_ref": "",
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18541606/",
+      "finding": "Methylmercury in large predatory fish like bluefin tuna (PMID 18541606) accumulates with frequent consumption and is associated with cognitive decline; light canned tuna has substantially lower levels (~0.12 ppm vs ~0.35 ppm albacore)",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24886603/",
+      "finding": "EPA/DHA in canned light tuna (PMID 24886603) is lower than in fatty fish like salmon or sardines, reinforcing the book's preference for smaller oily fish over tuna for omega-3 benefits",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Examine.com",
+      "url": "https://examine.com/food/tuna/",
+      "finding": "Tuna is high in lean protein and B12 but its mercury content, particularly in albacore and bluefin, makes it a less favorable choice compared to sardines or salmon for longevity-focused diets",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["savory", "meaty", "mild umami", "rich"],
+    "aroma": ["oceanic", "mild fish", "neutral when canned"],
+    "texture": ["firm", "meaty", "flaky when cooked", "dense"],
+    "culinary_category": "large pelagic fish"
+  },
+  "culinary_pairings": [
+    {"ingredient": "pasta", "tradition": "Italian (Longevity Diet)", "source": "The Longevity Diet"},
+    {"ingredient": "olives", "tradition": "Mediterranean", "source": "The Longevity Diet"},
+    {"ingredient": "capers", "tradition": "Mediterranean", "source": "The Longevity Diet"},
+    {"ingredient": "tomatoes", "tradition": "Mediterranean", "source": "culinary tradition"},
+    {"ingredient": "lemon", "tradition": "Mediterranean", "source": "culinary tradition"}
+  ],
+  "nutrient_highlights": [
+    {"compound": "Vitamin B12", "amount_per_100g": "10.9 mcg (bluefin, raw)", "bioavailability_notes": "Animal-sourced; highly bioavailable; among the highest B12 concentrations of any food"},
+    {"compound": "Protein", "amount_per_100g": "30 g (cooked)", "bioavailability_notes": "Complete protein; very low in saturated fat"},
+    {"compound": "EPA + DHA (omega-3)", "amount_per_100g": "0.27 g (light canned)", "bioavailability_notes": "Lower than fatty fish; mercury co-exposure diminishes net benefit of regular consumption"},
+    {"compound": "Selenium", "amount_per_100g": "90 mcg (cooked)", "bioavailability_notes": "Selenium may partially counteract methylmercury toxicity but should not justify increased intake"},
+    {"compound": "Niacin (B3)", "amount_per_100g": "18.8 mg (cooked)", "bioavailability_notes": "Highly bioavailable; supports NAD+ synthesis important for cellular energy and longevity"}
+  ],
+  "synergies": [
+    {"target_ingredient": "tomatoes", "type": "complement", "description": "Tomato lycopene and tuna protein form a Mediterranean combination; vitamin C in tomatoes aids iron absorption"},
+    {"target_ingredient": "capers", "type": "complement", "description": "Classic Italian pairing; quercetin in capers adds antioxidant activity; flavors balance well"},
+    {"target_ingredient": "salmon", "type": "antagonism", "description": "Salmon is the preferred low-mercury alternative for omega-3 intake; tuna should be used only occasionally per the Longevity Diet"}
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

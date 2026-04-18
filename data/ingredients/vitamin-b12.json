@@ -1,0 +1,113 @@
+{
+  "name": "Vitamin B12",
+  "slug": "vitamin-b12",
+  "category": "nutrient",
+  "aliases": ["cobalamin", "cyanocobalamin", "methylcobalamin", "adenosylcobalamin"],
+  "book_claims": [
+    {
+      "claim": "Vitamin B12 deficiency is a specific risk for vegans and the elderly even on high-nourishment diets.",
+      "mechanism": "B12 is found almost exclusively in animal foods; essential for neurological function, DNA synthesis, and red blood cell formation. Absorption decreases with age due to reduced intrinsic factor secretion in the stomach.",
+      "study_ref": "",
+      "confidence": "high"
+    },
+    {
+      "claim": "B12 deficiency has been implicated in brain aging and dementias; Alzheimer's patients have lower levels of folate and vitamin B12.",
+      "mechanism": "B12 is required for the conversion of homocysteine to methionine; elevated homocysteine is a risk factor for neurodegeneration and cardiovascular disease.",
+      "study_ref": "",
+      "confidence": "high"
+    },
+    {
+      "claim": "Longo explicitly recommends a complete multivitamin and mineral pill every three days to prevent B12 deficiency, especially for those on plant-based diets.",
+      "mechanism": "Supplemental B12 bypasses the intrinsic factor dependency when taken in high-dose forms (cyanocobalamin or methylcobalamin), ensuring adequate status.",
+      "study_ref": "",
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26690265/",
+      "finding": "PMID 26690265: Meta-analysis confirms B12 deficiency prevalence of 6% in adults under 60 and up to 20% in the elderly; vegan and vegetarian populations show markedly higher rates, supporting Longo's supplementation recommendation.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19115110/",
+      "finding": "PMID 19115110: Review confirms that elevated homocysteine from B12/folate deficiency accelerates brain atrophy and cognitive decline, consistent with the book's claim linking low B12 to dementia risk.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22648703/",
+      "finding": "PMID 22648703: B12 supplementation in deficient elderly subjects reduced homocysteine and improved cognitive performance, supporting the book's recommendation to prioritize B12 status in aging populations.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Examine.com",
+      "url": "https://examine.com/supplements/vitamin-b12/",
+      "finding": "Examine confirms that methylcobalamin and adenosylcobalamin are the active coenzyme forms; high-dose cyanocobalamin (1000 mcg/day) is effective for vegans and those with absorption issues.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": [],
+    "aroma": [],
+    "texture": [],
+    "culinary_category": "supplement/nutrient"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "clams",
+      "tradition": "Mediterranean",
+      "source": "Top dietary B12 source (74.2 mcg per 75 g cooked)"
+    },
+    {
+      "ingredient": "salmon",
+      "tradition": "Global",
+      "source": "2.3–4 mcg per 75 g cooked"
+    },
+    {
+      "ingredient": "sardines",
+      "tradition": "Mediterranean",
+      "source": "6.8 mcg per 75 g canned"
+    },
+    {
+      "ingredient": "nutritional yeast",
+      "tradition": "Vegan",
+      "source": "Fortified source: 1 mcg per 2 g"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Cobalamin (active B12)",
+      "amount_per_100g": "N/A — supplement form",
+      "bioavailability_notes": "Methylcobalamin and adenosylcobalamin are the active coenzyme forms; cyanocobalamin requires hepatic conversion. Sublingual or high-dose oral supplementation bypasses intrinsic factor dependency."
+    },
+    {
+      "compound": "Homocysteine-lowering activity",
+      "amount_per_100g": "N/A",
+      "bioavailability_notes": "B12 acts as cofactor for methionine synthase; adequate status reduces plasma homocysteine, a marker of cardiovascular and neurological risk."
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "folate",
+      "type": "synergy",
+      "description": "B12 and folate act together in the one-carbon metabolism cycle; combined deficiency causes elevated homocysteine and macrocytic anemia. Both are flagged as deficiency risks in the book."
+    },
+    {
+      "target_ingredient": "fish",
+      "type": "synergy",
+      "description": "Fatty fish (clams, salmon, sardines) are the most bioavailable dietary B12 sources and are the cornerstone protein in the Longevity Diet, providing B12 alongside omega-3 and vitamin D."
+    },
+    {
+      "target_ingredient": "vitamin d",
+      "type": "complement",
+      "description": "Both nutrients are flagged as commonly deficient in aging and plant-based populations; Longo recommends co-supplementation via a multivitamin every 2–3 days."
+    }
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

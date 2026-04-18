@@ -1,0 +1,111 @@
+{
+  "name": "Black Beans",
+  "slug": "black-beans",
+  "category": "legume",
+  "aliases": ["black turtle beans", "frijoles negros"],
+  "book_claims": [
+    {
+      "claim": "Black beans are used in the Longevity Diet as a primary plant protein source (e.g., pasta with broccoli and black beans), recommended at 150 g wet weight (boiled, drained) per serving.",
+      "mechanism": "Provides complete amino acid spectrum when paired with grains; plant protein source associated with longevity in centenarian populations.",
+      "study_ref": null,
+      "confidence": "high"
+    },
+    {
+      "claim": "Black beans are a notable calcium source (102 mg per cup cooked, ~10% DV) and magnesium source (60 mg per 1/2 cup cooked, ~15% DV).",
+      "mechanism": "Calcium supports bone mineral density; magnesium is required for ATP synthesis, DNA repair, and over 300 enzymatic reactions.",
+      "study_ref": null,
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "Bazzano et al., Archives of Internal Medicine (2001) — PMID 11176744",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11176744/",
+      "finding": "In a prospective study of 9,632 US adults, legume consumption 4+ times per week versus less than once per week was associated with a 22% lower risk of coronary heart disease and 11% lower risk of cardiovascular disease, establishing legumes as a core longevity food.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Messina, American Journal of Clinical Nutrition (2014) — PMID 24898230",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24898230/",
+      "finding": "Legumes including black beans contain resistant starch, indigestible fiber, and polyphenols (anthocyanins in black beans) that collectively reduce postprandial glucose, feed beneficial microbiota, and reduce systemic inflammation — key pathways in longevity.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Aparicio-Fernandez et al., Plant Foods for Human Nutrition (2005) — PMID 16167185",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16167185/",
+      "finding": "Black bean seed coat is exceptionally rich in anthocyanins (particularly delphinidin-3-glucoside) and other polyphenols with in vitro antioxidant capacity comparable to or exceeding blueberries, supporting cardiovascular and anti-aging protection.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["earthy", "mildly sweet", "creamy"],
+    "aroma": ["mild", "earthy", "slightly smoky when cooked with aromatics"],
+    "texture": ["creamy interior", "slightly firm skin when cooked al dente"],
+    "culinary_category": "cooked legume"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "broccoli",
+      "tradition": "Mediterranean / Longevity Diet",
+      "source": "The Longevity Diet"
+    },
+    {
+      "ingredient": "pasta",
+      "tradition": "Italian / Mediterranean",
+      "source": "The Longevity Diet"
+    },
+    {
+      "ingredient": "garlic",
+      "tradition": "Latin American / Mediterranean",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "cumin",
+      "tradition": "Latin American",
+      "source": "General culinary"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Plant protein",
+      "amount_per_100g": "8.9 g (cooked)",
+      "bioavailability_notes": "PDCAAS ~0.75; improved when combined with grains; lower in sulfur amino acids, so pair with methionine-rich foods."
+    },
+    {
+      "compound": "Fiber (total)",
+      "amount_per_100g": "8.7 g (cooked)",
+      "bioavailability_notes": "High in soluble and insoluble fiber; feeds Bifidobacterium and Faecalibacterium prausnitzii, key longevity-associated microbes."
+    },
+    {
+      "compound": "Anthocyanins",
+      "amount_per_100g": "~214 mg (dry)",
+      "bioavailability_notes": "Primarily in seed coat; partially degraded by cooking; remaining fraction is bioavailable and acts as antioxidant."
+    },
+    {
+      "compound": "Folate",
+      "amount_per_100g": "149 mcg (cooked)",
+      "bioavailability_notes": "High natural folate content; important for DNA synthesis, methylation, and homocysteine regulation."
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "broccoli",
+      "type": "complement",
+      "description": "Black beans and broccoli together cover essential amino acids, calcium, and vitamin C in a single dish, forming a nutritionally complete longevity meal component."
+    },
+    {
+      "target_ingredient": "brown-rice",
+      "type": "synergy",
+      "description": "Classic complementary protein pairing; together they provide all essential amino acids, including methionine (low in beans) and lysine (low in rice)."
+    },
+    {
+      "target_ingredient": "extra-virgin-olive-oil",
+      "type": "complement",
+      "description": "Olive oil increases carotenoid and fat-soluble polyphenol absorption from the meal."
+    }
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

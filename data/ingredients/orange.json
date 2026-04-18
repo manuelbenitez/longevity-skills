@@ -1,0 +1,110 @@
+{
+  "name": "Orange",
+  "slug": "orange",
+  "category": "fruit",
+  "aliases": ["orange juice", "grapefruit juice", "navel orange", "Valencia orange"],
+  "book_claims": [
+    {
+      "claim": "Orange juice provides folate (35 mcg per ¾ cup, 9% DV), vitamin C (93 mg per ¾ cup, 155% DV), and — when fortified — calcium (261 mg per 6 oz, 26% DV). A medium fresh orange provides 70 mg vitamin C (117% DV) and 29 mcg folate (7% DV).",
+      "mechanism": "Citrus fruits are among the best dietary vitamin C sources; vitamin C supports collagen synthesis, immune function, and iron absorption; folate is required for DNA synthesis and methylation.",
+      "study_ref": null,
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "Cassidy et al., American Journal of Clinical Nutrition (2012) — PMID 22218162",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22218162/",
+      "finding": "High dietary intake of flavanones — the dominant polyphenol class in oranges — was associated with a 19% reduction in ischaemic stroke risk in women over 14 years of follow-up, independent of other dietary factors.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Guo et al., BMJ (2016) — PMID 27282876",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27282876/",
+      "finding": "A meta-analysis of prospective cohort studies found each additional serving of fruit per day associated with a 3% lower all-cause mortality; citrus fruits including oranges showed particularly strong associations with reduced cardiovascular disease mortality.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Scalbert et al., American Journal of Clinical Nutrition (2005) — PMID 15640510",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15640510/",
+      "finding": "Hesperidin and narirutin, the principal flavanones in oranges, inhibit LDL oxidation, improve endothelial function, and reduce plasma triglycerides in clinical trials — mechanisms directly relevant to cardiovascular longevity.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["sweet", "tart", "bright", "citrusy"],
+    "aroma": ["zesty", "floral", "sweet citrus"],
+    "texture": ["juicy", "segmented", "fibrous pith"],
+    "culinary_category": "fresh citrus fruit"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "fennel",
+      "tradition": "Italian / Sicilian",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "walnuts",
+      "tradition": "Mediterranean",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "dark chocolate",
+      "tradition": "European",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "arugula",
+      "tradition": "Italian",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "red onion",
+      "tradition": "Sicilian",
+      "source": "General culinary"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Vitamin C (ascorbic acid)",
+      "amount_per_100g": "53.2 mg (fresh)",
+      "bioavailability_notes": "Water-soluble; highly bioavailable from whole fruit; degrades with heat, light, and storage; best consumed fresh."
+    },
+    {
+      "compound": "Hesperidin (flavanone)",
+      "amount_per_100g": "~40–50 mg",
+      "bioavailability_notes": "Primarily in peel and white pith; hydrolysed by gut bacteria to hesperetin; anti-inflammatory and cardioprotective."
+    },
+    {
+      "compound": "Folate",
+      "amount_per_100g": "30 mcg",
+      "bioavailability_notes": "Naturally occurring 5-methyltetrahydrofolate; good bioavailability from fresh orange; reduced by heat processing."
+    },
+    {
+      "compound": "Calcium (fortified juice)",
+      "amount_per_100g": "~105 mg (calcium-fortified OJ)",
+      "bioavailability_notes": "Calcium absorption from fortified orange juice is comparable to dairy milk (~36%); useful for those who avoid dairy."
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "legumes",
+      "type": "synergy",
+      "description": "Vitamin C from orange juice or fresh orange consumed with a legume meal increases non-heme iron absorption by 2–6-fold by reducing ferric iron to the absorbable ferrous form."
+    },
+    {
+      "target_ingredient": "extra-virgin-olive-oil",
+      "type": "complement",
+      "description": "Orange's flavanones and olive oil's oleocanthal both inhibit NF-κB inflammatory pathways; the Mediterranean citrus-olive pairing amplifies cardiovascular protection."
+    },
+    {
+      "target_ingredient": "fennel",
+      "type": "complement",
+      "description": "Classic Sicilian pairing; the anise notes of fennel balance the sweet acidity of orange; both contribute anti-inflammatory polyphenols."
+    }
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

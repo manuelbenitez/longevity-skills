@@ -1,0 +1,78 @@
+{
+  "name": "Omega-3 Fatty Acids",
+  "slug": "omega-3-fatty-acids",
+  "category": "nutrient",
+  "aliases": ["EPA", "DHA", "ALA", "essential fatty acids", "polyunsaturated fats", "omega-3", "n-3 fatty acids", "polyunsaturated fatty acids", "linseed oil"],
+  "book_claims": [
+    {
+      "claim": "Omega-3 and omega-6 are essential fatty acids the human body cannot generate; essential for normal cell and organ function",
+      "mechanism": "Structural component of cell membranes (phospholipids); precursors to anti-inflammatory eicosanoids",
+      "study_ref": "",
+      "confidence": "high"
+    },
+    {
+      "claim": "Omega-3 multivitamin supplements are recommended at least twice during the preparatory week before fasting-mimicking diet",
+      "mechanism": "EPA and DHA support cell membrane function, reduce inflammation, and support cardiovascular and neurological health during fasting preparation",
+      "study_ref": "",
+      "confidence": "low"
+    },
+    {
+      "claim": "Deficiencies in omega-3 fatty acids have been implicated in brain aging and dementias",
+      "mechanism": "Omega-3 fatty acids are essential components of neuronal cell membranes and have anti-inflammatory effects in the brain",
+      "study_ref": "",
+      "confidence": "medium"
+    },
+    {
+      "claim": "Intake of mono- and polyunsaturated fats is associated with reduced cardiovascular disease",
+      "mechanism": "Polyunsaturated fats favorably affect lipid profiles and reduce inflammation",
+      "study_ref": "",
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31567591/",
+      "finding": "VITAL trial (PMID 31567591): marine omega-3 supplementation (1 g/day) significantly reduced major cardiovascular events by 28% in adults without prior CVD over 5 years; heart attack risk reduced by 28%",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28900017/",
+      "finding": "Omega-3 EPA/DHA intake is inversely associated with cognitive decline and Alzheimer's disease risk in multiple prospective cohort studies (PMID 28900017); DHA is the predominant fatty acid in neuronal membranes",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Examine.com",
+      "url": "https://examine.com/supplements/fish-oil/",
+      "finding": "Fish-derived EPA and DHA consistently reduce triglycerides by 15–30%, improve endothelial function, and modulate inflammatory cytokines (IL-6, TNF-α); supplementation with 1–3 g/day is well supported across hundreds of RCTs",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["neutral (as supplement)", "fishy (from fish oil)", "mild (from flaxseed oil)"],
+    "aroma": ["oceanic (fish-derived)", "neutral to nutty (plant-derived ALA)"],
+    "texture": ["oily", "liquid at room temperature"],
+    "culinary_category": "nutrient / functional fat"
+  },
+  "culinary_pairings": [
+    {"ingredient": "fatty fish (salmon, anchovies, sardines)", "tradition": "Mediterranean", "source": "The Longevity Diet"},
+    {"ingredient": "walnuts", "tradition": "Mediterranean / global", "source": "The Longevity Diet"},
+    {"ingredient": "flaxseeds", "tradition": "Northern European", "source": "culinary tradition"},
+    {"ingredient": "chia seeds", "tradition": "Latin American", "source": "culinary tradition"}
+  ],
+  "nutrient_highlights": [
+    {"compound": "EPA (eicosapentaenoic acid)", "amount_per_100g": "varies by source; ~1.5–2 g per 100 g salmon", "bioavailability_notes": "Marine EPA is highly bioavailable; triglyceride form (fish) slightly better absorbed than ethyl ester supplements"},
+    {"compound": "DHA (docosahexaenoic acid)", "amount_per_100g": "varies by source; ~1–1.5 g per 100 g salmon", "bioavailability_notes": "Critical for neuronal membrane fluidity; preferentially incorporated into brain and retina; absorption enhanced by dietary fat"},
+    {"compound": "ALA (alpha-linolenic acid)", "amount_per_100g": "~22 g per 100 g flaxseed; ~6.8 g per 100 g walnuts", "bioavailability_notes": "Plant-based omega-3; conversion to EPA/DHA is inefficient (<10%); dietary fat context improves conversion marginally"}
+  ],
+  "synergies": [
+    {"target_ingredient": "anchovies", "type": "synergy", "description": "Anchovies are a primary dietary source of EPA/DHA; consuming whole fish provides omega-3s alongside vitamin D and calcium, amplifying bone and cardiovascular benefits"},
+    {"target_ingredient": "sardines", "type": "synergy", "description": "Sardines and anchovies together fulfill the Longevity Diet's 2–3 weekly fish servings for optimal EPA/DHA intake with low mercury exposure"},
+    {"target_ingredient": "vitamin D", "type": "synergy", "description": "Omega-3s and vitamin D cooperatively regulate inflammatory gene expression; co-deficiency in both amplifies cardiovascular and cognitive risk"}
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

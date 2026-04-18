@@ -1,0 +1,70 @@
+{
+  "name": "Bread",
+  "slug": "bread",
+  "category": "grain",
+  "aliases": ["dark bread", "whole-wheat bread", "whole-grain bread", "white bread", "brown bread"],
+  "book_claims": [
+    {
+      "claim": "White bread has a very high glycemic index (~95) and should be minimized; whole-grain bread is strongly preferred in the Longevity Diet",
+      "mechanism": "Refined white flour is rapidly digested to glucose, causing insulin spikes; whole-grain fiber slows digestion and flattens the glycemic response",
+      "study_ref": "",
+      "confidence": "high"
+    },
+    {
+      "claim": "Whole-wheat bread provides calcium (30 mg per slice, 3% DV), iron (1 mg per slice, 6% DV), and magnesium (46 mg per 2 slices, 12% DV); 40–80 g per meal recommended; dark bread with olive oil was a staple of Molochio centenarian Salvatore Caruso",
+      "mechanism": "Fortified whole-grain breads supply folate, calcium, iron, and magnesium; modest portions with olive oil reduce glycemic load and add anti-inflammatory fats",
+      "study_ref": "",
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30418616/",
+      "finding": "PMID 30418616: Whole-grain bread consumption is inversely associated with all-cause mortality in large prospective cohorts; refined-grain bread shows no protective association",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27301975/",
+      "finding": "PMID 27301975: Whole-grain intake is associated with reduced risk of cardiovascular disease, type 2 diabetes, and colorectal cancer; each 28 g/day increment confers ~9% lower CVD mortality",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Examine.com",
+      "url": "https://examine.com/food/whole-grain-bread/",
+      "finding": "Whole-grain bread contains beta-glucan, arabinoxylans, and resistant starch that feed gut microbiota; sourdough fermentation further lowers the glycemic index to ~54 compared to ~70 for conventional whole-wheat",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["nutty", "mildly sweet", "earthy", "slightly tangy (sourdough)"],
+    "aroma": ["toasty", "yeasty", "wheaty"],
+    "texture": ["dense", "chewy", "crusty"],
+    "culinary_category": "staple grain / baked good"
+  },
+  "culinary_pairings": [
+    {"ingredient": "extra virgin olive oil", "tradition": "Southern Italian / Calabrian", "source": "The Longevity Diet"},
+    {"ingredient": "tomatoes", "tradition": "Tuscan (bruschetta)", "source": "culinary tradition"},
+    {"ingredient": "legumes", "tradition": "Mediterranean", "source": "culinary tradition"},
+    {"ingredient": "avocado", "tradition": "Contemporary", "source": "culinary tradition"},
+    {"ingredient": "walnuts", "tradition": "Italian", "source": "culinary tradition"}
+  ],
+  "nutrient_highlights": [
+    {"compound": "Dietary fiber", "amount_per_100g": "6–7 g (whole-wheat)", "bioavailability_notes": "Insoluble and soluble fiber; whole-grain varieties have significantly more than white bread (~2.7 g)"},
+    {"compound": "Magnesium", "amount_per_100g": "76 mg (whole-wheat)", "bioavailability_notes": "Bioavailability ~40–60%; phytate can limit absorption — sourdough fermentation reduces phytate"},
+    {"compound": "Iron", "amount_per_100g": "2.5 mg (whole-wheat, enriched)", "bioavailability_notes": "Non-heme iron; vitamin C co-ingestion substantially improves absorption"},
+    {"compound": "B vitamins (B1, B3, folate)", "amount_per_100g": "Folate ~22 mcg (whole-wheat)", "bioavailability_notes": "Enriched breads restore B vitamins lost in milling; whole-grain retains naturally occurring B vitamins"},
+    {"compound": "Selenium", "amount_per_100g": "28–36 mcg (whole-wheat)", "bioavailability_notes": "Highly bioavailable organic selenomethionine form; important for thyroid function and antioxidant defense"}
+  ],
+  "synergies": [
+    {"target_ingredient": "olive oil", "type": "synergy", "description": "Olive oil's monounsaturated fats slow gastric emptying, further lowering the glycemic load of bread and adding cardiovascular-protective polyphenols"},
+    {"target_ingredient": "legumes", "type": "complement", "description": "Bread and legumes together provide complementary amino acid profiles (lysine-limited grain + methionine-limited legume) for complete protein"},
+    {"target_ingredient": "tomatoes", "type": "complement", "description": "Vitamin C in tomatoes enhances non-heme iron absorption from whole-grain bread"},
+    {"target_ingredient": "walnuts", "type": "complement", "description": "Walnuts add omega-3 ALA and additional fiber; walnut bread is an explicitly named longevity-diet food in The Longevity Diet"}
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

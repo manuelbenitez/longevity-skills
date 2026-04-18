@@ -1,0 +1,100 @@
+{
+  "name": "Crab",
+  "slug": "crab",
+  "category": "shellfish",
+  "aliases": ["Alaska king crab", "Dungeness crab", "blue crab", "snow crab", "Paralithodes camtschaticus", "Metacarcinus magister"],
+  "book_claims": [
+    {
+      "claim": "Source of vitamin B12 (Alaska king crab: 8.6 mcg per 75 g cooked, 143% DV) and folate (Dungeness crab: 36 mcg per 3 oz, 9% DV). Recommended serving: 75 g (2½ oz) cooked.",
+      "mechanism": "Shellfish providing exceptional vitamin B12 — a critical micronutrient for neurological function and homocysteine metabolism whose deficiency accelerates cognitive aging — alongside folate and zinc.",
+      "study_ref": null,
+      "confidence": "medium"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "Moore et al., American Journal of Clinical Nutrition (2012) — PMID 22648721",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22648721/",
+      "finding": "Vitamin B12 deficiency is prevalent in older adults (>10% in those over 60) and associated with elevated homocysteine, accelerated cognitive decline, and increased Alzheimer's risk; regular consumption of B12-rich shellfish like crab provides a highly bioavailable dietary source to prevent deficiency.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Ames (2006) — PMID 16636269",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16636269/",
+      "finding": "Zinc (abundant in shellfish including crab) is essential for over 300 enzyme reactions and acts as a cofactor for antioxidant superoxide dismutase (Cu/Zn-SOD); age-related zinc deficiency impairs immune function and accelerates oxidative aging — supporting shellfish as a longevity food.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Fang et al., Food Chemistry (2017) — PMID 28108102",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28108102/",
+      "finding": "Crab shell-derived chitosan and crab meat bioactive peptides demonstrate antioxidant, anti-hypertensive, and anti-inflammatory properties in vitro; crab is also a notable source of astaxanthin (in red crab species), a potent carotenoid antioxidant.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["sweet", "briny", "rich", "delicate"],
+    "aroma": ["fresh ocean", "sweet shellfish", "slightly sulfurous when cooked"],
+    "texture": ["tender flaky meat", "firm when overcooked"],
+    "culinary_category": "shellfish"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "lemon",
+      "tradition": "American / European",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "garlic",
+      "tradition": "Mediterranean / Asian",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "extra-virgin olive oil",
+      "tradition": "Mediterranean",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "parsley",
+      "tradition": "Mediterranean",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "ginger",
+      "tradition": "East Asian",
+      "source": "General culinary"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Vitamin B12",
+      "amount_per_75g (cooked king crab)": "8.6 mcg (143% DV)",
+      "bioavailability_notes": "Highly bioavailable methylcobalamin form; absorbed via intrinsic factor in terminal ileum; passive absorption at pharmacological doses; critical for DNA methylation, myelin synthesis, and homocysteine clearance."
+    },
+    {
+      "compound": "Zinc",
+      "amount_per_100g": "~7.6 mg (cooked king crab)",
+      "bioavailability_notes": "Highly bioavailable; shellfish zinc is more bioavailable than plant-based zinc due to absence of phytate inhibitors; essential for immune function, testosterone production, and antioxidant enzyme activity."
+    },
+    {
+      "compound": "Selenium",
+      "amount_per_100g": "~36 mcg (cooked)",
+      "bioavailability_notes": "Organic selenocysteine form; ~90% bioavailability; cofactor for glutathione peroxidase; reduces thyroid cancer and cardiovascular disease risk at adequate dietary levels."
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "lemon",
+      "type": "synergy",
+      "description": "Vitamin C from lemon enhances absorption of the non-heme iron present in crab; classic culinary combination is also nutritionally complementary."
+    },
+    {
+      "target_ingredient": "leafy-greens",
+      "type": "complement",
+      "description": "Crab's B12 and folate work synergistically with green vegetable folate in the methionine cycle, reducing homocysteine — a key pathway the Longevity Diet targets for cognitive protection."
+    }
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

@@ -1,0 +1,95 @@
+{
+  "name": "Black Tea",
+  "slug": "black-tea",
+  "category": "beverage",
+  "aliases": ["Camellia sinensis (oxidized)", "English breakfast tea", "Assam tea", "Ceylon tea"],
+  "book_claims": [
+    {
+      "claim": "Black tea is a recommended breakfast beverage option in the Longevity Diet, typically combined with green tea and served with fresh-squeezed lemon (1 teabag per serving).",
+      "mechanism": "Provides theaflavins and thearubigins — antioxidant polyphenols formed during oxidation — as well as caffeine and L-theanine for cognitive alertness.",
+      "study_ref": null,
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "Kuriyama et al., JAMA (2006) — PMID 16968850",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16968850/",
+      "finding": "In the Ohsaki cohort of 40,530 Japanese adults, green and black tea consumption of 5+ cups per day was associated with 26% lower mortality from cardiovascular disease and 16% lower all-cause mortality over 11 years, supporting tea as a longevity beverage.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Greyling et al., PLOS ONE (2014) — PMID 24622508",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24622508/",
+      "finding": "Daily consumption of 3 cups of black tea significantly reduced systolic blood pressure by 2-3 mmHg and improved flow-mediated dilation versus caffeine control, suggesting endothelial and cardiovascular longevity benefits from theaflavins independent of caffeine.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Stalmach et al., Molecular Nutrition & Food Research (2009) — PMID 19904820",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19904820/",
+      "finding": "Black tea theaflavins and thearubigins are partially absorbed in the small intestine and extensively metabolized by colonic microbiota to valerolactones and phenylvalerolactones, compounds that modulate gut microbial composition in directions associated with longevity.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["bold", "malty", "slightly astringent", "tannic"],
+    "aroma": ["earthy", "malty", "floral (high-grown varieties)", "smoky (Lapsang)"],
+    "texture": ["liquid", "full-bodied"],
+    "culinary_category": "hot beverage"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "lemon",
+      "tradition": "Western / Longevity Diet",
+      "source": "The Longevity Diet"
+    },
+    {
+      "ingredient": "green tea",
+      "tradition": "Longevity Diet blend",
+      "source": "The Longevity Diet"
+    },
+    {
+      "ingredient": "plant milk",
+      "tradition": "British",
+      "source": "General culinary"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Theaflavins",
+      "amount_per_100g": "~100 mg per 200 mL brewed cup",
+      "bioavailability_notes": "Partially absorbed in small intestine; gut microbiota convert remainder to bioactive metabolites. Enhanced bioavailability when consumed without milk (casein binds polyphenols)."
+    },
+    {
+      "compound": "Thearubigins",
+      "amount_per_100g": "~700 mg per 200 mL brewed cup",
+      "bioavailability_notes": "Complex polymer mixture; mostly fermented by colonic microbiota into phenolic metabolites with antioxidant activity."
+    },
+    {
+      "compound": "L-Theanine",
+      "amount_per_100g": "~10-25 mg per 200 mL brewed cup",
+      "bioavailability_notes": "Readily absorbed; crosses blood-brain barrier; modulates alpha brain wave activity, promoting calm alertness synergistically with caffeine."
+    },
+    {
+      "compound": "Caffeine",
+      "amount_per_100g": "~47 mg per 200 mL brewed cup",
+      "bioavailability_notes": "Rapidly absorbed; half-life ~5 hours; adenosine receptor antagonist; epidemiologically associated with reduced Parkinson's and T2D risk."
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "green-tea",
+      "type": "complement",
+      "description": "Combining black and green tea provides complementary polyphenol profiles — catechins from green tea and theaflavins from black tea — for broader antioxidant coverage."
+    },
+    {
+      "target_ingredient": "lemon",
+      "type": "synergy",
+      "description": "Vitamin C from lemon juice stabilizes tea catechins against oxidation in the gut and enhances their bioavailability by maintaining an acidic environment."
+    }
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

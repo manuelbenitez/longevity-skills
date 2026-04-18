@@ -1,0 +1,105 @@
+{
+  "name": "Scallops",
+  "slug": "scallops",
+  "category": "shellfish",
+  "aliases": ["bay scallops", "sea scallops", "Pecten maximus", "Argopecten irradians"],
+  "book_claims": [
+    {
+      "claim": "Scallops are listed as a dietary source of omega-3 fatty acids, providing 0.27 g EPA/DHA per 75 g cooked serving, contributing to the recommended weekly omega-3 intake on the Longevity Diet.",
+      "mechanism": "Shellfish omega-3 source supporting cardiovascular and cognitive health; low mercury content makes scallops a safe, regular inclusion unlike larger predatory fish.",
+      "study_ref": null,
+      "confidence": "medium"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "Mozaffarian & Rimm, JAMA (2006) — PMID 17093249",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17093249/",
+      "finding": "Regular consumption of seafood including low-mercury shellfish is associated with significantly reduced cardiovascular mortality; EPA and DHA contribute to anti-arrhythmic, anti-inflammatory, and anti-atherogenic effects.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Hosomi et al., Journal of Food Science (2012) — PMID 22537083",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22537083/",
+      "finding": "Scallops are rich in taurine and glycine — amino acids with cardioprotective and anti-inflammatory properties — complementing their omega-3 content in supporting vascular health.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Bao et al., Journal of Nutritional Biochemistry (2016) — PMID 26963470",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26963470/",
+      "finding": "Scallop-derived glycosaminoglycans and bioactive peptides exhibit antioxidant and ACE-inhibitory activity in vitro, suggesting additional cardiovascular-protective mechanisms beyond fatty acid content.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["sweet", "briny", "mild", "buttery", "umami"],
+    "aroma": ["fresh ocean", "sweet shellfish", "light brine"],
+    "texture": ["tender", "firm when seared", "silky when just cooked", "rubbery if overcooked"],
+    "culinary_category": "shellfish / seafood"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "extra-virgin olive oil",
+      "tradition": "Mediterranean",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "lemon",
+      "tradition": "Mediterranean / French",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "garlic",
+      "tradition": "Mediterranean",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "cauliflower puree",
+      "tradition": "Modern Mediterranean",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "whole grain pasta",
+      "tradition": "Italian",
+      "source": "General culinary"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Omega-3 fatty acids (EPA + DHA)",
+      "amount_per_100g": "~0.37 g (cooked)",
+      "bioavailability_notes": "Naturally triglyceride-bound; bioavailability similar to fish oil supplements; EPA and DHA reduce platelet aggregation and systemic inflammation."
+    },
+    {
+      "compound": "Vitamin B12",
+      "amount_per_100g": "~1.4 mcg (cooked)",
+      "bioavailability_notes": "Meaningful B12 source; supports neurological function and homocysteine clearance critical for cardiovascular and cognitive aging."
+    },
+    {
+      "compound": "Taurine",
+      "amount_per_100g": "~827 mg",
+      "bioavailability_notes": "One of the richest dietary taurine sources; taurine has been shown to slow aging hallmarks in preclinical models and is conditionally essential under physiological stress."
+    },
+    {
+      "compound": "Selenium",
+      "amount_per_100g": "~23 mcg (cooked)",
+      "bioavailability_notes": "High bioavailability as selenomethionine; essential cofactor for antioxidant enzyme systems."
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "extra-virgin-olive-oil",
+      "type": "synergy",
+      "description": "Olive oil's oleic acid complements scallops' EPA/DHA in cardiovascular protection via complementary anti-inflammatory pathways; fat also enhances absorption of fat-soluble nutrients."
+    },
+    {
+      "target_ingredient": "garlic",
+      "type": "synergy",
+      "description": "Garlic's organosulfur compounds (allicin) and scallop taurine both exert blood pressure-lowering and anti-thrombotic effects via distinct mechanisms — a cardiovascular longevity synergy."
+    }
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

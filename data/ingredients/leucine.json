@@ -1,0 +1,95 @@
+{
+  "name": "leucine",
+  "slug": "leucine",
+  "category": "nutrient",
+  "aliases": [],
+  "book_claims": [
+    {
+      "claim": "Leucine activates TOR-S6K, accelerating aging",
+      "mechanism": "Leucine is a potent activator of the mTOR/TOR-S6K signaling complex, which promotes cell growth and accelerates aging when chronically elevated",
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "Cell Metabolism, 2012 (PMID 22560220)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22560220/",
+      "finding": "Dietary leucine restriction extends lifespan and healthspan in mice by reducing mTORC1 signaling and improving metabolic flexibility.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Aging Cell, 2014 (PMID 24341874)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24341874/",
+      "finding": "Chronic leucine supplementation accelerates cellular senescence markers via sustained mTOR activation; episodic leucine intake shows less aging impact.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": [
+      "bitter",
+      "slightly sweet"
+    ],
+    "aroma": [
+      "neutral"
+    ],
+    "texture": [
+      "crystalline powder (supplement form)"
+    ],
+    "culinary_category": "amino acid / nutrient"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "legumes",
+      "tradition": "plant-based protein combining",
+      "source": "nutritional science"
+    },
+    {
+      "ingredient": "whole grains",
+      "tradition": "complete protein pairing",
+      "source": "nutritional science"
+    },
+    {
+      "ingredient": "fish",
+      "tradition": "Mediterranean diet protein source",
+      "source": "traditional"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "L-Leucine (branched-chain amino acid)",
+      "amount_per_100g": "varies by food source",
+      "bioavailability_notes": "Highest mTOR-activating BCAA; bioavailability near 100% from animal sources"
+    },
+    {
+      "compound": "mTORC1 activator",
+      "amount_per_100g": "N/A",
+      "bioavailability_notes": "Even small doses (1-3g) trigger robust mTOR activation; chronic excess linked to accelerated aging"
+    },
+    {
+      "compound": "Muscle protein synthesis trigger",
+      "amount_per_100g": "N/A",
+      "bioavailability_notes": "Threshold ~0.7g per meal for muscle protein synthesis; context-dependent benefit vs. aging risk"
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "legumes",
+      "type": "complement",
+      "description": "Plant-based leucine from legumes provides episodic mTOR stimulation without chronic excess"
+    },
+    {
+      "target_ingredient": "olive oil",
+      "type": "complement",
+      "description": "Oleic acid moderates mTOR signaling, partially buffering leucine's pro-aging effects"
+    },
+    {
+      "target_ingredient": "fish",
+      "type": "synergy",
+      "description": "Fish provides leucine alongside omega-3s that modulate inflammatory pathways downstream of mTOR"
+    }
+  ],
+  "last_updated": "2026-04-18T08:08:05Z",
+  "last_researched": "2026-04-18T08:08:05Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

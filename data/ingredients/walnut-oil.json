@@ -1,0 +1,111 @@
+{
+  "name": "Walnut Oil",
+  "slug": "walnut-oil",
+  "category": "oil",
+  "aliases": ["walnut seed oil", "huile de noix"],
+  "book_claims": [
+    {
+      "claim": "Walnut oil is listed as a dietary source of omega-3 ALA providing 0.48 g per 1 tsp (5 mL).",
+      "mechanism": "Rich in alpha-linolenic acid (ALA), the plant-based omega-3 precursor; ALA can be elongated and desaturated to EPA and DHA, supporting anti-inflammatory eicosanoid production and cardiovascular protection.",
+      "study_ref": "",
+      "confidence": "medium"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23972731/",
+      "finding": "PMID 23972731: Walnut consumption (including walnut oil) was associated with significant reductions in LDL cholesterol and improved endothelial function in a meta-analysis of 13 trials, consistent with the book's promotion of nut-derived fats.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21621283/",
+      "finding": "PMID 21621283: Walnut oil improved lipid profiles and reduced oxidative stress markers in type 2 diabetic patients, supporting use as a longevity-promoting fat source.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33086688/",
+      "finding": "PMID 33086688: The WAHA trial found that walnut supplementation reduced LDL cholesterol and inflammatory markers, and was associated with slower brain aging — extending the longevity relevance beyond the book's omega-3 framing.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Examine.com",
+      "url": "https://examine.com/foods/walnuts/",
+      "finding": "Examine confirms walnut oil is among the richest plant sources of ALA (~10 g per tablespoon), with additional polyphenol content (ellagitannins, gamma-tocopherol) not present in refined olive oil, adding antioxidant longevity benefits.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["nutty", "rich", "slightly bitter", "earthy"],
+    "aroma": ["toasted walnut", "woody", "warm"],
+    "texture": ["light oil", "fluid"],
+    "culinary_category": "finishing oil / salad dressing"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "arugula",
+      "tradition": "Italian",
+      "source": "Classic bitter green salad"
+    },
+    {
+      "ingredient": "beets",
+      "tradition": "French",
+      "source": "Salade de betteraves aux noix"
+    },
+    {
+      "ingredient": "endive",
+      "tradition": "French",
+      "source": "Walnut vinaigrette on Belgian endive"
+    },
+    {
+      "ingredient": "lemon juice",
+      "tradition": "Mediterranean",
+      "source": "Dressing base for grain bowls"
+    },
+    {
+      "ingredient": "wild rice",
+      "tradition": "North American / health cuisine",
+      "source": "Finishing oil for wild rice salads"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Alpha-linolenic acid (ALA, omega-3)",
+      "amount_per_100g": "~10.4 g per 100 mL (~0.48 g per 1 tsp)",
+      "bioavailability_notes": "ALA bioavailability from oil is high; however, conversion to EPA/DHA is limited (~5–10%); best used alongside direct EPA/DHA sources (fatty fish) for full omega-3 benefits."
+    },
+    {
+      "compound": "Linoleic acid (omega-6)",
+      "amount_per_100g": "~53 g per 100 mL",
+      "bioavailability_notes": "High omega-6 content; omega-3:omega-6 ratio (~1:5) is better than most vegetable oils but should be balanced with EPA/DHA-rich foods."
+    },
+    {
+      "compound": "Gamma-tocopherol (vitamin E)",
+      "amount_per_100g": "~0.4 mg per 100 mL",
+      "bioavailability_notes": "Gamma-tocopherol has distinct anti-inflammatory activity from alpha-tocopherol; cold-pressed walnut oil retains more tocopherols than refined versions."
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "linseed oil",
+      "type": "complement",
+      "description": "Both are plant ALA sources; linseed oil has a higher ALA concentration (~7 g/tsp), while walnut oil offers superior culinary palatability. Using both diversifies polyphenol and tocopherol intake."
+    },
+    {
+      "target_ingredient": "walnuts",
+      "type": "complement",
+      "description": "Whole walnuts provide fiber and protein in addition to ALA; walnut oil provides concentrated omega-3 fat without the caloric bulk of the whole nut — useful for adding omega-3 to dressings and light dishes."
+    },
+    {
+      "target_ingredient": "leafy greens",
+      "type": "synergy",
+      "description": "Fat-soluble vitamins K, A, and E in dark leafy greens require dietary fat for absorption; using walnut oil as a dressing simultaneously delivers ALA and enhances micronutrient bioavailability."
+    }
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

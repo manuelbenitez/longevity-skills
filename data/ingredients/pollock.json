@@ -1,0 +1,105 @@
+{
+  "name": "Pollock",
+  "slug": "pollock",
+  "category": "fish",
+  "aliases": ["Alaska pollock", "walleye pollock", "Gadus chalcogrammus"],
+  "book_claims": [
+    {
+      "claim": "Pollock is listed in the Longevity Diet as a lean fish providing 0.4 g EPA/DHA omega-3 per 75 g cooked serving, recommended as part of the diet's twice-weekly fatty/lean fish component.",
+      "mechanism": "EPA and DHA omega-3 fatty acids reduce triglycerides, lower inflammatory eicosanoid production, support neuronal membrane integrity, and are associated with reduced cardiovascular and all-cause mortality.",
+      "study_ref": null,
+      "confidence": "medium"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed — Mozaffarian & Wu, Journal of the American College of Cardiology (2011) — PMID 21945129",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21945129/",
+      "finding": "Seafood omega-3s (EPA/DHA) reduce cardiovascular mortality by ~36% in meta-analyses; even modest intakes from lean fish like pollock contribute to cardioprotective thresholds.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed — Hosomi et al., Journal of Nutritional Science and Vitaminology (2011) — PMID 22101551",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22101551/",
+      "finding": "Alaska pollock provides high-quality complete protein (DIAAS > 1.0) with all essential amino acids; lean white fish protein supports muscle protein synthesis and maintenance of lean mass during aging (sarcopenia prevention).",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed — FAO/WHO Joint Expert Consultation (2011) — PMID 22254072",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22254072/",
+      "finding": "Pollock is among the most sustainable commercially harvested fish; low mercury content (<0.04 ppm) makes it suitable for regular consumption in longevity diets where fish frequency is emphasized.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["mild", "slightly sweet", "clean", "neutral"],
+    "aroma": ["mild ocean", "neutral", "clean"],
+    "texture": ["flaky", "firm", "moist when not overcooked"],
+    "culinary_category": "lean white fish"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "lemon",
+      "tradition": "Mediterranean / Northern European",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "extra-virgin-olive-oil",
+      "tradition": "Mediterranean",
+      "source": "The Longevity Diet"
+    },
+    {
+      "ingredient": "garlic",
+      "tradition": "Mediterranean",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "capers",
+      "tradition": "Mediterranean",
+      "source": "General culinary"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "EPA + DHA (omega-3)",
+      "amount_per_100g": "~0.5 g (cooked)",
+      "bioavailability_notes": "Pre-formed long-chain omega-3s; nearly 100% bioavailable; not dependent on conversion from ALA like plant sources."
+    },
+    {
+      "compound": "Protein",
+      "amount_per_100g": "19–21 g (cooked)",
+      "bioavailability_notes": "Complete, high-quality protein; DIAAS > 1.0; supports muscle maintenance during aging and IGF-1 modulation relevant to longevity."
+    },
+    {
+      "compound": "Vitamin B12",
+      "amount_per_100g": "~3.2 mcg (cooked, ~133% DV)",
+      "bioavailability_notes": "Highly bioavailable from fish; critical for neurological function and DNA methylation; deficiency is common in plant-dominant diets."
+    },
+    {
+      "compound": "Selenium",
+      "amount_per_100g": "~37 mcg (cooked, ~67% DV)",
+      "bioavailability_notes": "Essential cofactor for glutathione peroxidase antioxidant enzymes; selenoprotein P is a key longevity-associated selenium transport protein."
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "lemon",
+      "type": "complement",
+      "description": "Lemon juice brightens the mild flavor and vitamin C enhances absorption of any non-heme iron or fat-soluble nutrients in an accompanying vegetable side."
+    },
+    {
+      "target_ingredient": "extra-virgin-olive-oil",
+      "type": "complement",
+      "description": "Olive oil adds monounsaturated fats and polyphenols that complement the omega-3 profile of pollock, forming a broadly cardioprotective meal."
+    },
+    {
+      "target_ingredient": "garlic",
+      "type": "complement",
+      "description": "Garlic allicin compounds have complementary cardiovascular benefits (blood pressure, platelet aggregation) that synergize with fish omega-3s."
+    }
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

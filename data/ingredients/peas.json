@@ -1,0 +1,86 @@
+{
+  "name": "Peas",
+  "slug": "peas",
+  "category": "legume",
+  "aliases": ["garden peas", "English peas", "Pisum sativum", "dried peas", "split peas"],
+  "book_claims": [
+    {
+      "claim": "Regular legume consumption (3+ servings/week) associated with longest lifespan among Loma Linda Adventists",
+      "mechanism": "High fiber, plant protein, and complex carbohydrates; low glycemic load; does not activate pro-aging pathways like animal protein",
+      "study_ref": "",
+      "confidence": "high"
+    },
+    {
+      "claim": "Legumes are a core food in all centenarian blue-zone diets (Okinawa, Sardinia, Calabria, Loma Linda, Costa Rica, Greece)",
+      "mechanism": "Plant protein without IGF-1-elevating effect of animal protein; high fiber for gut health",
+      "study_ref": "",
+      "confidence": "high"
+    },
+    {
+      "claim": "Beans eaten almost every day by Molochio centenarians; legumes are primary protein source in Longevity Diet",
+      "mechanism": "High plant protein, fiber, and complex carbohydrates without animal-protein IGF-1 effects",
+      "study_ref": "",
+      "confidence": "high"
+    },
+    {
+      "claim": "Legumes associated with healthy aging, protection from cardiovascular disease, and cancer prevention",
+      "mechanism": "High in plant-based protein, complex carbohydrates, fiber, vitamins, and minerals; low in saturated fat; cause a lower insulin release than processed carbohydrates",
+      "study_ref": "",
+      "confidence": "high"
+    },
+    {
+      "claim": "Intake of beans reduces the risk of heart disease in women",
+      "mechanism": "Plant protein and soluble fiber lower LDL cholesterol and reduce cardiovascular risk",
+      "study_ref": "",
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19939654/",
+      "finding": "Pea protein supplementation significantly reduced systolic and diastolic blood pressure compared to dairy protein in a randomized controlled trial (PMID 19939654)",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22916807/",
+      "finding": "Regular legume consumption including peas is inversely associated with type 2 diabetes risk; peas have a glycemic index of ~22, among the lowest of starchy foods (PMID 22916807)",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Examine.com",
+      "url": "https://examine.com/food/peas/",
+      "finding": "Peas provide 5 g protein and 4.5 g fiber per 100 g cooked alongside folate, vitamin K, and manganese; their soluble fiber content feeds beneficial bifidobacteria, supporting microbiome-mediated longevity pathways",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["sweet", "grassy", "mild", "starchy-savory"],
+    "aroma": ["fresh", "vegetal", "sweet when young"],
+    "texture": ["tender", "slightly firm (al dente when fresh)", "soft and creamy when cooked through"],
+    "culinary_category": "legume"
+  },
+  "culinary_pairings": [
+    {"ingredient": "rice", "tradition": "Italian (Longevity Diet recipe: rice with zucchini and peas)", "source": "The Longevity Diet"},
+    {"ingredient": "zucchini", "tradition": "Italian", "source": "The Longevity Diet"},
+    {"ingredient": "olive oil", "tradition": "Mediterranean", "source": "culinary tradition"},
+    {"ingredient": "mint", "tradition": "British / Mediterranean", "source": "culinary tradition"},
+    {"ingredient": "anchovies", "tradition": "Italian", "source": "culinary tradition"}
+  ],
+  "nutrient_highlights": [
+    {"compound": "Protein", "amount_per_100g": "5.4 g (cooked)", "bioavailability_notes": "Plant protein; lower leucine content than animal sources reduces IGF-1 and mTOR activation"},
+    {"compound": "Dietary fiber", "amount_per_100g": "4.5 g (cooked)", "bioavailability_notes": "Mix of soluble and insoluble fiber; soluble portion fermented into propionate and butyrate by gut bacteria"},
+    {"compound": "Folate", "amount_per_100g": "47 mcg (cooked)", "bioavailability_notes": "Water-soluble; critical for one-carbon metabolism and DNA methylation"},
+    {"compound": "Vitamin K1", "amount_per_100g": "24 mcg (cooked)", "bioavailability_notes": "Fat-soluble; absorption enhanced with dietary fat; important for vascular calcification prevention"}
+  ],
+  "synergies": [
+    {"target_ingredient": "rice", "type": "complement", "description": "Rice and peas together form a complete amino acid profile; this is the basis of the Longevity Diet 'riso con zucchine e piselli' dish"},
+    {"target_ingredient": "olive oil", "type": "synergy", "description": "Fat from olive oil enhances vitamin K bioavailability from peas and slows carbohydrate absorption"},
+    {"target_ingredient": "anchovies", "type": "complement", "description": "Small amounts of umami-rich anchovies amplify the savory flavor of peas while adding EPA/DHA omega-3s to the dish"}
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

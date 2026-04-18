@@ -1,0 +1,80 @@
+{
+  "name": "Bell Peppers",
+  "slug": "bell-peppers",
+  "category": "vegetable",
+  "aliases": ["capsicum", "sweet pepper", "red pepper", "yellow pepper", "green pepper"],
+  "book_claims": [
+    {
+      "claim": "Eating 2+ servings of vegetables per day associated with longest lifespan among Loma Linda Adventists",
+      "mechanism": "Rich in fiber, vitamins, minerals, antioxidants, and phytonutrients; supports cellular defense and repair",
+      "study_ref": "",
+      "confidence": "high"
+    },
+    {
+      "claim": "Vegetables are a core component of all centenarian blue-zone diets and associated with reduced cancer and cardiovascular disease",
+      "mechanism": "Anti-inflammatory phytonutrients, fiber, and micronutrients; supports detoxification pathways",
+      "study_ref": "",
+      "confidence": "high"
+    },
+    {
+      "claim": "A variety of vegetables provides essential fatty acids, vitamins, and minerals that nourish the immune system — a major defense against cancer; specific vegetables for cancer prevention include green peppers",
+      "mechanism": "Dense micronutrient content supports immune function, cellular protection, and anti-inflammatory pathways",
+      "study_ref": "",
+      "confidence": "high"
+    },
+    {
+      "claim": "Plant-based diets rapidly alter gut microbiota from an inflammatory Western-diet profile to a less inflammatory one",
+      "mechanism": "Plant-based foods promote beneficial gut bacteria that regulate immune cell activity and reduce systemic inflammation",
+      "study_ref": "",
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32516501/",
+      "finding": "Bell peppers are among the richest dietary sources of vitamin C (PMID 32516501); a single red pepper supplies over 150% of daily vitamin C needs, supporting antioxidant defense and collagen synthesis",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26561072/",
+      "finding": "Carotenoids including beta-carotene and capsanthin in red bell peppers have demonstrated anti-inflammatory and anti-carcinogenic properties in cell and animal studies (PMID 26561072)",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Examine.com",
+      "url": "https://examine.com/food/bell-pepper/",
+      "finding": "Bell peppers score among the highest of common vegetables for antioxidant capacity; red peppers have significantly more vitamin C, carotenoids, and flavonoids than green, supporting longevity-relevant oxidative stress reduction",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["sweet", "mildly bitter (green)", "fruity (red/yellow)", "crisp"],
+    "aroma": ["fresh", "grassy", "sweet-vegetal when roasted"],
+    "texture": ["crunchy raw", "tender when roasted", "silky when peeled"],
+    "culinary_category": "vegetable"
+  },
+  "culinary_pairings": [
+    {"ingredient": "olive oil", "tradition": "Mediterranean", "source": "culinary tradition"},
+    {"ingredient": "tomatoes", "tradition": "Mediterranean", "source": "culinary tradition"},
+    {"ingredient": "garlic", "tradition": "Italian / Spanish", "source": "culinary tradition"},
+    {"ingredient": "chickpeas", "tradition": "Middle Eastern", "source": "culinary tradition"},
+    {"ingredient": "farro", "tradition": "Italian", "source": "culinary tradition"}
+  ],
+  "nutrient_highlights": [
+    {"compound": "Vitamin C", "amount_per_100g": "128 mg (red, raw)", "bioavailability_notes": "Water-soluble; best preserved raw or lightly cooked; co-ingestion with iron-rich foods enhances non-heme iron absorption"},
+    {"compound": "Beta-carotene (pro-vitamin A)", "amount_per_100g": "1624 mcg (red, raw)", "bioavailability_notes": "Fat-soluble; absorption significantly increased with co-ingested fat such as olive oil"},
+    {"compound": "Capsanthin (carotenoid)", "amount_per_100g": "~4 mg (red, raw)", "bioavailability_notes": "Unique xanthophyll with anti-inflammatory and antioxidant activity; fat-soluble"},
+    {"compound": "Vitamin B6", "amount_per_100g": "0.29 mg (red, raw)", "bioavailability_notes": "Supports neurotransmitter synthesis and immune function; bioavailable from fresh peppers"}
+  ],
+  "synergies": [
+    {"target_ingredient": "olive oil", "type": "synergy", "description": "Fat from olive oil dramatically enhances absorption of fat-soluble carotenoids (beta-carotene, capsanthin) from bell peppers"},
+    {"target_ingredient": "iron-rich legumes", "type": "synergy", "description": "High vitamin C content boosts non-heme iron absorption from legumes such as lentils, fava beans, and peas"},
+    {"target_ingredient": "tomatoes", "type": "complement", "description": "Both are lycopene/carotenoid-rich Mediterranean vegetables that combine well for anti-inflammatory, anti-cancer phytonutrient coverage"}
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

@@ -1,0 +1,53 @@
+{
+  "name": "Pecans",
+  "slug": "pecans",
+  "category": "nut",
+  "aliases": ["pecan nuts"],
+  "book_claims": [
+    {
+      "claim": "Used in the Longevity Diet barley salad and as a dessert nut; provides omega-3 ALA (0.25–0.29 g per ¼ cup)",
+      "mechanism": "Source of plant omega-3 ALA and healthy unsaturated fats",
+      "study_ref": null,
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21533536/",
+      "finding": "Pecan consumption associated with reduced LDL oxidation and total cholesterol in controlled trial; antioxidant capacity among highest of tree nuts",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28615375/",
+      "finding": "Tree nut consumption (including pecans) associated with 19% reduced cardiovascular mortality and 11% reduced all-cause mortality in meta-analysis",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["rich", "buttery", "slightly sweet", "nutty"],
+    "aroma": ["toasty", "caramel-like when roasted"],
+    "texture": ["crisp", "rich"],
+    "culinary_category": "tree nut"
+  },
+  "culinary_pairings": [
+    {"ingredient": "barley", "tradition": "American", "source": "The Longevity Diet"},
+    {"ingredient": "fruit", "tradition": "American", "source": "traditional"},
+    {"ingredient": "honey", "tradition": "American", "source": "traditional"}
+  ],
+  "nutrient_highlights": [
+    {"compound": "ALA (omega-3)", "amount_per_100g": "0.99 g", "bioavailability_notes": "Plant-form omega-3; ~5–15% conversion to EPA/DHA; contributes to omega-3 targets"},
+    {"compound": "Oleic acid (MUFA)", "amount_per_100g": "40 g", "bioavailability_notes": "Primary fatty acid; cardioprotective; lowers LDL when replacing saturated fat"},
+    {"compound": "Vitamin E (gamma-tocopherol)", "amount_per_100g": "1.4 mg", "bioavailability_notes": "Gamma-tocopherol form predominant; synergistic with other antioxidants"}
+  ],
+  "synergies": [
+    {"target_ingredient": "barley", "type": "complement", "description": "Longevity Diet barley salad pairing; nut fat improves absorption of fat-soluble vitamins in grain dishes"},
+    {"target_ingredient": "walnuts", "type": "complement", "description": "Both tree nuts recommended in Longevity Diet; walnuts have higher ALA, pecans higher antioxidant content"},
+    {"target_ingredient": "fruit", "type": "complement", "description": "Traditional dessert pairing; nut fat slows sugar absorption from fruit, reducing glycemic spike"}
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

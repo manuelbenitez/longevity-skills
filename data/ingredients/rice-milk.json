@@ -1,0 +1,53 @@
+{
+  "name": "Rice Milk",
+  "slug": "rice-milk",
+  "category": "beverage",
+  "aliases": ["beverages, rice milk, unsweetened", "rice drink"],
+  "book_claims": [
+    {
+      "claim": "Listed as a plant milk providing vitamin D (101 IU per 8 fl oz unsweetened, 25.25% DV) when fortified",
+      "mechanism": "Fortified plant milk serves as a vitamin D source for those avoiding dairy",
+      "study_ref": null,
+      "confidence": "medium"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29196015/",
+      "finding": "Rice milk has the highest arsenic content among plant milks; daily large-volume consumption not recommended especially in children; adults with varied diet face lower risk",
+      "agrees_with_book": false
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28847983/",
+      "finding": "Fortified plant milks including rice milk can effectively deliver vitamin D and calcium; bioavailability comparable to dairy milk when properly fortified",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["mildly sweet", "neutral", "thin"],
+    "aroma": ["neutral", "faint rice"],
+    "texture": ["watery", "thin"],
+    "culinary_category": "plant milk"
+  },
+  "culinary_pairings": [
+    {"ingredient": "cereal", "tradition": "American/European", "source": "traditional"},
+    {"ingredient": "oats", "tradition": "American/European", "source": "traditional"},
+    {"ingredient": "coffee", "tradition": "modern", "source": "traditional"}
+  ],
+  "nutrient_highlights": [
+    {"compound": "Vitamin D (fortified)", "amount_per_100g": "42 IU", "bioavailability_notes": "Only present when fortified; equivalent to dairy milk fortification"},
+    {"compound": "Carbohydrate", "amount_per_100g": "9 g", "bioavailability_notes": "Higher carbohydrate than other plant milks; high glycemic index; consider for those with blood sugar concerns"},
+    {"compound": "Calcium (fortified)", "amount_per_100g": "120 mg", "bioavailability_notes": "When fortified; bioavailability ~30%, similar to dairy milk"}
+  ],
+  "synergies": [
+    {"target_ingredient": "vitamin-d", "type": "synergy", "description": "Fortified rice milk is a dairy-free vehicle for vitamin D; aligns with book's recommendation for plant-based milk alternatives"},
+    {"target_ingredient": "almond-milk", "type": "complement", "description": "Both plant milks serve as dairy replacements; almond milk has lower carbs, rice milk has lower allergen profile"},
+    {"target_ingredient": "oats", "type": "complement", "description": "Traditional breakfast pairing; rice milk adds carbohydrates alongside oat's fiber and beta-glucan"}
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

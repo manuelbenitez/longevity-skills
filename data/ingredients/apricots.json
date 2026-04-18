@@ -1,0 +1,63 @@
+{
+  "name": "Apricots",
+  "slug": "apricots",
+  "category": "fruit",
+  "aliases": ["apricots dried sulfured", "dried apricots", "fresh apricots", "Prunus armeniaca"],
+  "book_claims": [
+    {
+      "claim": "Dried apricots suggested as a dessert in the Longevity Diet; source of vitamin A (63 mcg RAE per 10 halves dried, 25% DV) as beta-carotene",
+      "mechanism": "Dried fruit source of provitamin A (beta-carotene); beta-carotene is a fat-soluble antioxidant carotenoid that converts to retinol in the intestine",
+      "study_ref": "",
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22789423/",
+      "finding": "Apricot consumption (PMID 22789423) is associated with reduced markers of oxidative stress and improved antioxidant status; beta-carotene and chlorogenic acid are primary active compounds",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16820341/",
+      "finding": "Dried apricots have a moderate glycemic index (~31 dried) and high fiber content (PMID 16820341); their polyphenol content supports gut microbiome diversity and reduced postprandial glucose response",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Examine.com",
+      "url": "https://examine.com/food/apricots/",
+      "finding": "Apricots are a good source of potassium, beta-carotene, and dietary fiber; dried form concentrates nutrients but also sugar; pairing with nuts (as the Longevity Diet recommends) blunts glycemic impact",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["sweet", "tart", "fruity", "honeyed when dried"],
+    "aroma": ["floral", "fruity", "slightly musky"],
+    "texture": ["chewy (dried)", "soft and juicy (fresh)", "velvety skin"],
+    "culinary_category": "stone fruit"
+  },
+  "culinary_pairings": [
+    {"ingredient": "walnuts", "tradition": "Mediterranean (Longevity Diet dessert)", "source": "The Longevity Diet"},
+    {"ingredient": "almonds", "tradition": "Middle Eastern", "source": "culinary tradition"},
+    {"ingredient": "yogurt", "tradition": "Middle Eastern/European", "source": "culinary tradition"},
+    {"ingredient": "rosemary", "tradition": "Mediterranean", "source": "culinary tradition"},
+    {"ingredient": "chicken", "tradition": "Moroccan/Mediterranean", "source": "culinary tradition"}
+  ],
+  "nutrient_highlights": [
+    {"compound": "Beta-carotene (provitamin A)", "amount_per_100g": "2163 mcg (dried)", "bioavailability_notes": "Fat-soluble; absorption significantly enhanced by co-ingested fat (e.g., nuts or olive oil)"},
+    {"compound": "Potassium", "amount_per_100g": "1162 mg (dried)", "bioavailability_notes": "Highly bioavailable; supports blood pressure regulation and cardiovascular health"},
+    {"compound": "Dietary fiber", "amount_per_100g": "7.3 g (dried)", "bioavailability_notes": "Soluble and insoluble fiber; supports gut microbiome and slows sugar absorption"},
+    {"compound": "Chlorogenic acid (polyphenol)", "amount_per_100g": "~150 mg (fresh)", "bioavailability_notes": "Absorbed in small intestine and colon; anti-inflammatory and antioxidant"},
+    {"compound": "Iron (non-heme)", "amount_per_100g": "2.7 mg (dried)", "bioavailability_notes": "Pairing with vitamin C significantly improves absorption"}
+  ],
+  "synergies": [
+    {"target_ingredient": "walnuts", "type": "complement", "description": "Classic Longevity Diet dessert pairing; walnuts' fat enhances beta-carotene absorption from apricots; protein and fat buffer apricot's sugar"},
+    {"target_ingredient": "olive oil", "type": "synergy", "description": "Fat from olive oil dramatically increases bioavailability of apricot's beta-carotene (provitamin A)"},
+    {"target_ingredient": "vitamin c foods", "type": "synergy", "description": "Pairing apricots with a vitamin C source (e.g., citrus) enhances non-heme iron absorption from the dried fruit"}
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

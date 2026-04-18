@@ -1,0 +1,116 @@
+{
+  "name": "Navy Beans",
+  "slug": "navy-beans",
+  "category": "legume",
+  "aliases": ["white beans", "cannellini beans", "white cannellini beans", "haricot beans"],
+  "book_claims": [
+    {
+      "claim": "Navy beans (white/cannellini beans) are used in multiple Longevity Diet dishes including the Molochio pasta e vaianeia, Ligurian minestrone, and white bean salad, recommended at 150 g wet weight (drained) per serving.",
+      "mechanism": "Plant protein source associated with longevity in centenarian populations; fiber feeds beneficial gut bacteria; phytochemicals reduce chronic disease risk.",
+      "study_ref": null,
+      "confidence": "high"
+    },
+    {
+      "claim": "White beans are a notable iron source (8 mg per cup canned, 44% DV) and calcium source (81 mg per ½ cup cooked, 8% DV).",
+      "mechanism": "Plant-based iron supports oxygen transport; calcium contributes to bone mineral density maintenance in aging adults.",
+      "study_ref": null,
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "Bazzano et al., Archives of Internal Medicine (2001) — PMID 11176744",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11176744/",
+      "finding": "In a prospective cohort of 9,632 US adults, legume consumption ≥4 times per week versus <1 time per week was associated with a 22% lower risk of coronary heart disease, firmly establishing legumes including navy beans as longevity foods.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Higgins, Advances in Nutrition (2012) — PMID 22585912",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22585912/",
+      "finding": "White navy beans contain high levels of resistant starch and soluble fiber that reduce postprandial glucose response by up to 25%, improve insulin sensitivity, and promote satiety — metabolic benefits directly relevant to healthy aging and weight management.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Mudryj et al., Applied Physiology, Nutrition, and Metabolism (2012) — PMID 22540923",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22540923/",
+      "finding": "Legume consumption is the single most consistent dietary predictor of longevity across Blue Zone populations in Sardinia, Okinawa, Loma Linda, and Nicoya, with bean intake associated with a 7–8% reduction in mortality risk per 20 g/day increment.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["mild", "slightly earthy", "creamy", "neutral"],
+    "aroma": ["subtle", "earthy", "nutty when cooked"],
+    "texture": ["creamy", "smooth interior", "tender skin when fully cooked"],
+    "culinary_category": "cooked legume"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "pasta",
+      "tradition": "Italian / Mediterranean",
+      "source": "The Longevity Diet"
+    },
+    {
+      "ingredient": "tomatoes",
+      "tradition": "Mediterranean",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "rosemary",
+      "tradition": "Italian / Ligurian",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "extra-virgin-olive-oil",
+      "tradition": "Mediterranean",
+      "source": "The Longevity Diet"
+    },
+    {
+      "ingredient": "garlic",
+      "tradition": "Mediterranean",
+      "source": "General culinary"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Plant protein",
+      "amount_per_100g": "8.2 g (cooked)",
+      "bioavailability_notes": "PDCAAS ~0.68; complements grains to provide all essential amino acids; methionine-limiting."
+    },
+    {
+      "compound": "Fiber (total)",
+      "amount_per_100g": "10.5 g (cooked)",
+      "bioavailability_notes": "Among the highest fiber contents of any legume; high in soluble fiber that reduces LDL cholesterol and feeds butyrate-producing bacteria."
+    },
+    {
+      "compound": "Resistant starch",
+      "amount_per_100g": "~3–5 g (cooked)",
+      "bioavailability_notes": "Fermented by colonic bacteria to short-chain fatty acids (butyrate, propionate); reduces glycaemic index and supports colon health."
+    },
+    {
+      "compound": "Folate",
+      "amount_per_100g": "140 mcg (cooked)",
+      "bioavailability_notes": "High natural folate content; important for DNA synthesis and homocysteine metabolism."
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "pasta",
+      "type": "complement",
+      "description": "Pasta e fagioli is the archetypal Longevity Diet pairing; together they form a complete protein and provide sustained energy with low glycaemic impact."
+    },
+    {
+      "target_ingredient": "extra-virgin-olive-oil",
+      "type": "synergy",
+      "description": "Olive oil's oleocanthal reduces inflammation from lectins; fat improves absorption of fat-soluble vitamins in the dish."
+    },
+    {
+      "target_ingredient": "tomatoes",
+      "type": "complement",
+      "description": "Tomato vitamin C converts non-heme iron from beans to the more absorbable ferrous form, meaningfully improving iron uptake."
+    }
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

@@ -1,0 +1,90 @@
+{
+  "name": "Canola Oil",
+  "slug": "canola-oil",
+  "category": "oil",
+  "aliases": ["rapeseed oil", "LEAR oil (Low Erucic Acid Rapeseed)"],
+  "book_claims": [
+    {
+      "claim": "Canola oil is listed in the Longevity Diet as a source of omega-3 ALA (0.42 g per 1 tsp), used in small quantities (1 tsp / 5 mL) as a cooking oil.",
+      "mechanism": "ALA (alpha-linolenic acid) is an essential omega-3 fatty acid; dietary ALA can be converted to EPA and DHA (though conversion rate is low, ~5-10%); associated with reduced cardiovascular inflammation.",
+      "study_ref": null,
+      "confidence": "medium"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "Bhatt et al., JAMA (2019) — PMID 30865121",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30865121/",
+      "finding": "While focused on marine omega-3s, the REDUCE-IT trial established that omega-3 fatty acids (EPA) reduce major adverse cardiovascular events by 25%, providing mechanistic context for why ALA-containing canola oil is included in cardiovascular longevity protocols.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Gillingham et al., Applied Physiology, Nutrition, and Metabolism (2011) — PMID 21848461",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21848461/",
+      "finding": "Canola oil as a replacement for saturated fat significantly reduced LDL cholesterol by 17% and total:HDL ratio in RCTs; its favorable MUFA:PUFA profile and low saturated fat content support use in cardiovascular-protective diets.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Mozaffarian et al., New England Journal of Medicine (2010) — PMID 20071704",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20071704/",
+      "finding": "Replacing dietary saturated fats with unsaturated fats (particularly MUFA and omega-3 PUFA as found in canola oil) reduced coronary heart disease events by ~30%, supporting canola oil's role as part of a longevity-oriented dietary fat strategy.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["neutral", "very mild"],
+    "aroma": ["nearly odorless (refined)", "slightly nutty (cold-pressed)"],
+    "texture": ["liquid at room temperature", "light"],
+    "culinary_category": "cooking oil"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "extra-virgin olive oil",
+      "tradition": "Mediterranean / Longevity Diet",
+      "source": "The Longevity Diet"
+    },
+    {
+      "ingredient": "garlic",
+      "tradition": "Global",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "vegetables",
+      "tradition": "Global",
+      "source": "General culinary"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Alpha-linolenic acid (ALA, omega-3)",
+      "amount_per_100g": "9.1 g",
+      "bioavailability_notes": "Readily absorbed; converted to EPA at ~5-10% and DHA at <0.5% efficiency; contributes to total omega-3 intake but does not replace marine EPA/DHA."
+    },
+    {
+      "compound": "Oleic acid (MUFA, omega-9)",
+      "amount_per_100g": "63.3 g",
+      "bioavailability_notes": "Highly bioavailable; major contributor to LDL-lowering effect; stable for cooking at moderate temperatures."
+    },
+    {
+      "compound": "Vitamin E (tocopherols)",
+      "amount_per_100g": "17.5 mg",
+      "bioavailability_notes": "Fat-soluble antioxidant; absorbed with fat; helps protect PUFAs in the oil from oxidation."
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "extra-virgin-olive-oil",
+      "type": "complement",
+      "description": "Canola oil contributes ALA omega-3 while olive oil contributes oleocanthal and squalene; using both provides a broader range of lipid-based bioactives."
+    },
+    {
+      "target_ingredient": "vegetables",
+      "type": "complement",
+      "description": "Fat-soluble carotenoids (beta-carotene, lycopene, lutein) in vegetables require co-consumption of fat like canola oil for absorption; even a small amount significantly increases carotenoid bioavailability."
+    }
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

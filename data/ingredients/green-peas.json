@@ -1,0 +1,65 @@
+{
+  "name": "Green Peas",
+  "slug": "green-peas",
+  "category": "legume",
+  "aliases": ["peas", "garden peas"],
+  "book_claims": [
+    {
+      "claim": "Regular legume consumption (3+ servings/week) associated with longest lifespan among Loma Linda Adventists",
+      "mechanism": "High fiber, plant protein, and complex carbohydrates; low glycemic load; does not activate pro-aging pathways like animal protein",
+      "study_ref": null,
+      "confidence": "high"
+    },
+    {
+      "claim": "Legumes are a core food in all centenarian blue-zone diets (Okinawa, Sardinia, Calabria, Loma Linda, Costa Rica, Greece)",
+      "mechanism": "Plant protein without IGF-1-elevating effect of animal protein; high fiber for gut health",
+      "study_ref": null,
+      "confidence": "high"
+    },
+    {
+      "claim": "Legumes associated with healthy aging, protection from cardiovascular disease, and cancer prevention",
+      "mechanism": "High in plant-based protein, complex carbohydrates, fiber, vitamins, and minerals; low in saturated fat; cause lower insulin release than processed carbohydrates",
+      "study_ref": null,
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21816932/",
+      "finding": "Legume consumption inversely associated with all-cause mortality across five cohorts including Loma Linda Adventist Health Study",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19386029/",
+      "finding": "Green peas provide resistant starch and soluble fiber that reduce postprandial glucose and insulin response",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["sweet", "mild", "earthy"],
+    "aroma": ["fresh", "grassy"],
+    "texture": ["tender", "slightly firm"],
+    "culinary_category": "vegetable-legume"
+  },
+  "culinary_pairings": [
+    {"ingredient": "pasta", "tradition": "Italian", "source": "The Longevity Diet"},
+    {"ingredient": "mint", "tradition": "British", "source": "traditional"},
+    {"ingredient": "olive oil", "tradition": "Mediterranean", "source": "The Longevity Diet"}
+  ],
+  "nutrient_highlights": [
+    {"compound": "Plant protein", "amount_per_100g": "5 g", "bioavailability_notes": "Moderate digestibility; lysine-rich, complementary to grains"},
+    {"compound": "Fiber", "amount_per_100g": "5 g", "bioavailability_notes": "Mix of soluble and insoluble; supports microbiome"},
+    {"compound": "Folate", "amount_per_100g": "65 mcg", "bioavailability_notes": "Good bioavailability; enhanced by light cooking"}
+  ],
+  "synergies": [
+    {"target_ingredient": "pasta", "type": "complement", "description": "Pasta e vaianeia — traditional Molochio longevity dish combining pasta and legumes for complete amino acid profile"},
+    {"target_ingredient": "olive oil", "type": "synergy", "description": "Fat increases absorption of fat-soluble vitamins present in peas and lowers glycemic impact"},
+    {"target_ingredient": "beans", "type": "complement", "description": "Both legumes reinforce plant-protein goals of Longevity Diet when varied across meals"}
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

@@ -1,0 +1,100 @@
+{
+  "name": "Cashews",
+  "slug": "cashews",
+  "category": "nut",
+  "aliases": ["cashew nuts", "Anacardium occidentale"],
+  "book_claims": [
+    {
+      "claim": "Cashews are a source of iron (2 mg per 1 oz oil roasted, ~11% DV) and magnesium (74 mg per 1 oz dry roasted, ~19% DV), recommended at 1 oz (~18 nuts).",
+      "mechanism": "Iron is essential for hemoglobin synthesis, oxygen transport, and mitochondrial electron transport; magnesium is a cofactor in over 300 enzymatic reactions including ATP synthesis, DNA repair, and protein synthesis.",
+      "study_ref": null,
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "Aune et al., BMC Medicine (2016) — PMID 27916000",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27916000/",
+      "finding": "Dose-response meta-analysis of 29 prospective studies found that nut consumption of 28 g/day (1 oz) was associated with a 22% lower risk of cardiovascular disease, 13% lower cancer risk, and 22% lower all-cause mortality, consistent with cashews as part of a longevity nut strategy.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "de Souza et al., Nutrients (2017) — PMID 28654669",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28654669/",
+      "finding": "Cashew nut consumption in a randomized trial modestly reduced LDL cholesterol and improved HDL:LDL ratio, with no effect on body weight despite energy density, supporting their inclusion in cardiometabolic longevity diets.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Ros, American Journal of Clinical Nutrition (2010) — PMID 20833638",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20833638/",
+      "finding": "Cashews' high monounsaturated fat (oleic acid) and magnesium content improve endothelial function and insulin sensitivity; magnesium adequacy is independently associated with 23% lower type 2 diabetes incidence, a key modifiable longevity risk factor.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["mild", "buttery", "slightly sweet"],
+    "aroma": ["mild", "slightly buttery", "nutty"],
+    "texture": ["crunchy (dry roasted)", "creamy (raw or soaked)"],
+    "culinary_category": "nut"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "mixed nuts",
+      "tradition": "Mediterranean / Longevity Diet",
+      "source": "The Longevity Diet"
+    },
+    {
+      "ingredient": "stir-fry vegetables",
+      "tradition": "Asian",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "plant milk",
+      "tradition": "Global",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "dates",
+      "tradition": "Mediterranean / Middle Eastern",
+      "source": "General culinary"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Magnesium",
+      "amount_per_100g": "292 mg (raw)",
+      "bioavailability_notes": "~30-40% bioavailability; phytates reduce absorption — soaking or roasting partially reduces phytate content. Essential for insulin signaling and mitochondrial function."
+    },
+    {
+      "compound": "Iron (non-heme)",
+      "amount_per_100g": "6.7 mg (raw)",
+      "bioavailability_notes": "Non-heme iron; bioavailability ~5-12%; significantly enhanced by concurrent vitamin C intake and reduced by phytates and calcium."
+    },
+    {
+      "compound": "Oleic acid (MUFA)",
+      "amount_per_100g": "23.8 g",
+      "bioavailability_notes": "Well absorbed; reduces LDL oxidation and improves endothelial function; same predominant fatty acid as olive oil."
+    },
+    {
+      "compound": "Copper",
+      "amount_per_100g": "2.2 mg",
+      "bioavailability_notes": "Excellent source; copper is a cofactor for superoxide dismutase (antioxidant enzyme) and is required for collagen cross-linking and neurological function."
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "vitamin-c-rich-foods",
+      "type": "synergy",
+      "description": "Consuming cashews alongside vitamin C-rich foods (bell peppers, citrus) increases non-heme iron absorption up to 6-fold by reducing iron from Fe3+ to the more absorbable Fe2+ form."
+    },
+    {
+      "target_ingredient": "walnuts",
+      "type": "complement",
+      "description": "Combining cashews with walnuts provides cashews' MUFA and magnesium alongside walnuts' superior ALA omega-3 and ellagic acid content, creating a broader nutritional and longevity profile."
+    }
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

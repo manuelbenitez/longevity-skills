@@ -1,0 +1,71 @@
+{
+  "name": "Maitake",
+  "slug": "maitake",
+  "category": "mushroom",
+  "aliases": ["hen of the woods", "Grifola frondosa", "dancing mushroom", "maitake mushroom"],
+  "book_claims": [
+    {
+      "claim": "Used in multiple Longevity Diet dishes. Maitake mushrooms are the top food source of vitamin D among mushrooms (786 IU per cup raw, 196.5% DV), the highest of any non-animal food when UV-exposed.",
+      "mechanism": "Mushrooms synthesize vitamin D2 (ergocalciferol) upon UV light exposure, analogous to human skin producing vitamin D3; maitake's ergosterol-rich structure makes it the most potent dietary vitamin D source among mushrooms.",
+      "study_ref": "",
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23402898/",
+      "finding": "Maitake mushrooms contain beta-glucan polysaccharides (D-fraction) that stimulate NK cell and macrophage activity, demonstrating significant immunomodulatory effects in human cancer patients and healthy volunteers. (PMID 23402898)",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19193149/",
+      "finding": "Maitake D-fraction (beta-glucan extract) inhibits tumor growth in mouse models and enhances the efficacy of standard chemotherapy; supports inclusion of maitake in cancer-preventive longevity diets. (PMID 19193149)",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25866155/",
+      "finding": "UV-exposed maitake mushrooms (placed gills-up in sunlight for 1–2 hours) generate sufficient vitamin D2 to meet or exceed daily requirements; equivalent to 9 mcg (360 IU) per gram dry weight after sun exposure. (PMID 25866155)",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Examine.com",
+      "url": "https://examine.com/supplements/maitake/",
+      "finding": "Maitake beta-glucans activate innate immune pathways (TLR2, Dectin-1 receptors), reduce blood glucose, and demonstrate anti-tumor activity; vitamin D2 from sun-exposed maitake is bioavailable and raises serum 25(OH)D2 comparably to supplemental vitamin D2.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["earthy", "savory", "umami-rich", "slightly peppery"],
+    "aroma": ["forest floor", "earthy", "woodsy", "rich umami"],
+    "texture": ["frilly and delicate raw", "tender when cooked", "slightly chewy"],
+    "culinary_category": "culinary and medicinal mushroom"
+  },
+  "culinary_pairings": [
+    {"ingredient": "olive oil", "tradition": "Italian / Mediterranean", "source": "The Longevity Diet"},
+    {"ingredient": "garlic", "tradition": "Italian Mediterranean", "source": "culinary tradition"},
+    {"ingredient": "lemon", "tradition": "Italian", "source": "culinary tradition"},
+    {"ingredient": "thyme", "tradition": "European", "source": "culinary tradition"},
+    {"ingredient": "pasta", "tradition": "Italian", "source": "culinary tradition"},
+    {"ingredient": "barley", "tradition": "Italian / Japanese", "source": "culinary tradition"}
+  ],
+  "nutrient_highlights": [
+    {"compound": "Vitamin D2 (ergocalciferol)", "amount_per_100g": "~786 IU (UV-exposed, raw)", "bioavailability_notes": "UV-exposed maitake is the richest plant-kingdom vitamin D source; cooking reduces content by ~50% — use raw or lightly sautéed; gills-up sun exposure for 30–60 min maximizes D2"},
+    {"compound": "Beta-glucans (D-fraction)", "amount_per_100g": "~15–30 g (dry weight basis)", "bioavailability_notes": "Partially digested; activate pattern recognition receptors on immune cells; not destroyed by cooking"},
+    {"compound": "Ergothioneine", "amount_per_100g": "~1.3 mg", "bioavailability_notes": "Unique thiol antioxidant synthesized only by fungi; stable to cooking; accumulates in high-stress tissues (liver, kidney, brain)"},
+    {"compound": "Potassium", "amount_per_100g": "~210 mg (raw)", "bioavailability_notes": "Well-bioavailable; supports blood pressure regulation"},
+    {"compound": "Copper", "amount_per_100g": "~0.3 mg (raw)", "bioavailability_notes": "Mushrooms are good copper sources; essential for immune cell function and antioxidant enzymes"}
+  ],
+  "synergies": [
+    {"target_ingredient": "olive oil", "type": "synergy", "description": "Fat in olive oil significantly enhances absorption of fat-soluble vitamin D2 from maitake — always sauté maitake in olive oil or dress with olive oil"},
+    {"target_ingredient": "herring", "type": "complement", "description": "Herring provides vitamin D3 while maitake provides D2; together they cover both major dietary forms of vitamin D, supporting more complete vitamin D status"},
+    {"target_ingredient": "garlic", "type": "complement", "description": "Classic culinary pairing in Italian longevity cooking; garlic's allicin and maitake's beta-glucans provide complementary immunomodulatory effects"},
+    {"target_ingredient": "lemon", "type": "complement", "description": "Brightness of lemon contrasts maitake's earthiness; vitamin C in lemon may enhance uptake of non-heme iron present in the mushroom"}
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

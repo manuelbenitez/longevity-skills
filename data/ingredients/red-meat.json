@@ -1,0 +1,65 @@
+{
+  "name": "Red Meat",
+  "slug": "red-meat",
+  "category": "meat",
+  "aliases": ["beef", "pork", "lamb", "processed meat", "animal meat"],
+  "book_claims": [
+    {
+      "claim": "Red meat is explicitly excluded from the Longevity Diet; associated with increased cancer and cardiovascular disease risk",
+      "mechanism": "High leucine, saturated fat, heme iron; elevates IGF-1 and TOR-S6K; pro-inflammatory",
+      "study_ref": "ch4-13 — Fung et al., Annals of Internal Medicine, 2010",
+      "confidence": "high"
+    },
+    {
+      "claim": "High intake of red meat correlates with elevated risk of heart disease in women",
+      "mechanism": "High animal-based protein and saturated fat content raise cardiovascular risk",
+      "study_ref": null,
+      "confidence": "high"
+    },
+    {
+      "claim": "A low-carbohydrate, mostly animal-based, high-protein diet doubles the risk of death from any cause and raises cardiovascular disease death risk by 40%",
+      "mechanism": "Animal protein raises IGF-1 and promotes inflammation; saturated fat increases LDL cholesterol",
+      "study_ref": null,
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20479151/",
+      "finding": "Fung et al. (2010) confirmed: low-carb animal-protein diet associated with 2× higher all-cause mortality; plant-based low-carb diet not associated with increased risk",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23779232/",
+      "finding": "Pan et al. (2012) NEJM: each additional daily serving of red meat associated with 13% increased all-cause mortality; processed meat 20%",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["savory", "umami", "rich"],
+    "aroma": ["meaty", "iron-forward"],
+    "texture": ["chewy", "fibrous"],
+    "culinary_category": "animal protein"
+  },
+  "culinary_pairings": [
+    {"ingredient": "legumes", "tradition": "global", "source": "replacement pairing"},
+    {"ingredient": "vegetables", "tradition": "global", "source": "traditional"},
+    {"ingredient": "grains", "tradition": "global", "source": "traditional"}
+  ],
+  "nutrient_highlights": [
+    {"compound": "Heme iron", "amount_per_100g": "2–3 mg", "bioavailability_notes": "Highly bioavailable but excessive heme iron linked to oxidative stress and colorectal cancer"},
+    {"compound": "Saturated fat", "amount_per_100g": "5–15 g", "bioavailability_notes": "Raises LDL; no recommended intake in Longevity Diet"},
+    {"compound": "Leucine", "amount_per_100g": "1.7–2 g", "bioavailability_notes": "mTOR/IGF-1 activator; high levels associated with accelerated aging in preclinical studies"}
+  ],
+  "synergies": [
+    {"target_ingredient": "legumes", "type": "antagonism", "description": "Legumes are the recommended plant-protein replacement for red meat in the Longevity Diet"},
+    {"target_ingredient": "fish", "type": "antagonism", "description": "Fish is the only recommended animal protein; red meat should be eliminated"},
+    {"target_ingredient": "vegetables", "type": "complement", "description": "Traditional pairing but does not mitigate cardiovascular or cancer risks attributed to red meat"}
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

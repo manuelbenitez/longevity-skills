@@ -1,0 +1,70 @@
+{
+  "name": "Broccoli",
+  "slug": "broccoli",
+  "category": "vegetable",
+  "aliases": ["broccolini", "broccoli florets", "Calabrese broccoli"],
+  "book_claims": [
+    {
+      "claim": "Broccoli is explicitly listed as a recommended vegetable in the Longevity Diet; rich in sulforaphane, vitamin C, vitamin K, and fiber with anti-cancer and anti-inflammatory properties",
+      "mechanism": "Sulforaphane activates Nrf2 pathway, upregulating detoxification enzymes; vitamin C and K support immune and bone health; fiber feeds microbiome",
+      "study_ref": "",
+      "confidence": "high"
+    },
+    {
+      "claim": "Broccoli is a frequently used vegetable across the Longevity Diet meal plan; source of folate (52 mcg per ½ cup frozen/cooked, 13% DV), vitamin C (51 mg per ½ cup cooked, 85% DV), vitamin A (60 mcg RAE per ½ cup boiled, 24% DV), calcium (21 mg per ½ cup raw), and iron (1 mg per ½ cup boiled); recommended at 150–200 g boiled or steamed",
+      "mechanism": "Rich in vitamin C, folate, vitamin A, and vitamin K; supports multiple micronutrient targets on the Longevity Diet",
+      "study_ref": "",
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28615356/",
+      "finding": "PMID 28615356: Sulforaphane from broccoli induces Nrf2-mediated cytoprotective gene expression and has demonstrated anti-cancer activity in multiple cell lines and animal models; clinical trials show bioavailability from broccoli sprouts and florets",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29739681/",
+      "finding": "PMID 29739681: Cruciferous vegetable intake (including broccoli) is inversely associated with all-cause mortality and cancer mortality; each 100 g/day increment associated with ~10% lower cancer mortality risk",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Examine.com",
+      "url": "https://examine.com/food/broccoli/",
+      "finding": "Broccoli's glucosinolates are converted to sulforaphane by myrosinase (enhanced by light chopping and 40-minute rest before cooking); lightly steaming preserves more sulforaphane than boiling",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["mildly bitter", "earthy", "slightly sweet when roasted", "vegetal"],
+    "aroma": ["sulfurous when overcooked", "fresh and grassy when raw", "nutty when roasted"],
+    "texture": ["firm", "crunchy when raw", "tender-crisp when steamed", "soft when boiled"],
+    "culinary_category": "cruciferous vegetable"
+  },
+  "culinary_pairings": [
+    {"ingredient": "garlic", "tradition": "Italian/Mediterranean", "source": "culinary tradition"},
+    {"ingredient": "olive oil", "tradition": "Mediterranean", "source": "culinary tradition"},
+    {"ingredient": "lemon", "tradition": "Mediterranean", "source": "culinary tradition"},
+    {"ingredient": "anchovies", "tradition": "Italian", "source": "culinary tradition"},
+    {"ingredient": "chickpeas", "tradition": "Mediterranean", "source": "culinary tradition"}
+  ],
+  "nutrient_highlights": [
+    {"compound": "Sulforaphane (from glucoraphanin)", "amount_per_100g": "~40–60 mg glucoraphanin (raw)", "bioavailability_notes": "Activated by myrosinase; chopping and resting before cooking maximizes conversion; light steaming preferred over boiling"},
+    {"compound": "Vitamin C", "amount_per_100g": "89 mg (raw); 65 mg (lightly steamed)", "bioavailability_notes": "Water-soluble; significant loss with boiling; steaming or stir-frying preserves more"},
+    {"compound": "Folate", "amount_per_100g": "63 mcg (raw)", "bioavailability_notes": "Critical for DNA synthesis and methylation; heat-sensitive, prefer gentle cooking"},
+    {"compound": "Vitamin K1", "amount_per_100g": "102 mcg (raw)", "bioavailability_notes": "Fat-soluble; substantially enhanced by co-ingestion with olive oil"},
+    {"compound": "Indole-3-carbinol", "amount_per_100g": "~100 mg (raw)", "bioavailability_notes": "Supports estrogen metabolism and tumor suppressor pathways; bioavailability improved in acidic environment (stomach acid)"}
+  ],
+  "synergies": [
+    {"target_ingredient": "olive oil", "type": "synergy", "description": "Olive oil enhances absorption of fat-soluble vitamins K and A in broccoli; polyphenols complement anti-inflammatory effects of sulforaphane"},
+    {"target_ingredient": "garlic", "type": "synergy", "description": "Garlic's diallyl disulfide and broccoli's sulforaphane both activate Nrf2 and inhibit NF-κB; combination shows additive anti-cancer effects in vitro"},
+    {"target_ingredient": "sardines", "type": "complement", "description": "Sardine calcium and vitamin D pair well with broccoli's vitamin K2 for bone health in a complete longevity meal"},
+    {"target_ingredient": "lemon", "type": "synergy", "description": "Lemon's vitamin C enhances non-heme iron absorption from broccoli; acid also preserves chlorophyll color"}
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

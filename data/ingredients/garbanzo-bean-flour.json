@@ -1,0 +1,99 @@
+{
+  "name": "garbanzo bean flour",
+  "slug": "garbanzo-bean-flour",
+  "category": "legume",
+  "aliases": [],
+  "book_claims": [
+    {
+      "claim": "Used to make garbanzo bean bread (farinata), a gluten-free bread from Liguria, Italy",
+      "mechanism": "Gluten-free plant protein and carbohydrate source",
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "Nutrients, 2019 (PMID 31779147)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31779147/",
+      "finding": "Chickpea flour has a low glycemic index (~35) and high resistant starch content; its protein digestibility-corrected amino acid score (PDCAAS) is 0.71.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Food Chemistry, 2020 (PMID 32711219)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32711219/",
+      "finding": "Farinata retains 85-90% of chickpea's soluble fiber and polyphenols after baking; its gluten-free protein matrix supports satiety and stable postprandial glucose.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": [
+      "nutty",
+      "slightly earthy",
+      "savory"
+    ],
+    "aroma": [
+      "toasted legume",
+      "earthy"
+    ],
+    "texture": [
+      "dense",
+      "slightly grainy when raw",
+      "crisp-tender when baked"
+    ],
+    "culinary_category": "gluten-free legume flour"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "rosemary",
+      "tradition": "Ligurian farinata (chickpea flatbread)",
+      "source": "traditional Italian"
+    },
+    {
+      "ingredient": "olive oil",
+      "tradition": "Ligurian farinata baked in olive oil",
+      "source": "traditional Italian"
+    },
+    {
+      "ingredient": "black pepper",
+      "tradition": "Farinata seasoning",
+      "source": "traditional"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Plant protein",
+      "amount_per_100g": "~22g",
+      "bioavailability_notes": "PDCAAS 0.71; combining with grains creates complete protein"
+    },
+    {
+      "compound": "Resistant starch",
+      "amount_per_100g": "~5-8g",
+      "bioavailability_notes": "Escapes small intestine; fermented by colonic bacteria to butyrate supporting gut epithelial health"
+    },
+    {
+      "compound": "Saponins",
+      "amount_per_100g": "~0.1-0.5g",
+      "bioavailability_notes": "At food levels show cholesterol-lowering and anti-cancer properties"
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "olive oil",
+      "type": "synergy",
+      "description": "Oleic acid enhances absorption of chickpea's fat-soluble phytosterols; combined effect reduces LDL cholesterol"
+    },
+    {
+      "target_ingredient": "rosemary",
+      "type": "complement",
+      "description": "Rosemary's carnosic acid complements chickpea's isoflavones for combined antioxidant and anti-inflammatory activity"
+    },
+    {
+      "target_ingredient": "whole grains",
+      "type": "complement",
+      "description": "Provides complete protein and combined fiber for sustained energy and gut microbiome support"
+    }
+  ],
+  "last_updated": "2026-04-18T08:08:05Z",
+  "last_researched": "2026-04-18T08:08:05Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

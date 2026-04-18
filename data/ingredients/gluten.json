@@ -1,0 +1,97 @@
+{
+  "name": "gluten",
+  "slug": "gluten",
+  "category": "nutrient",
+  "aliases": [],
+  "book_claims": [
+    {
+      "claim": "Gluten-rich foods can trigger autoimmune reactions in susceptible individuals",
+      "mechanism": "Gliadin protein in gluten triggers inflammatory immune response in celiac patients",
+      "confidence": "medium"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "New England Journal of Medicine, 2018 (PMID 29949494)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29949494/",
+      "finding": "Celiac disease affects ~1% of the global population; gluten triggers intestinal permeability and systemic inflammation via gliadin-mediated zonulin release.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Nutrients, 2020 (PMID 32365666)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32365666/",
+      "finding": "Non-celiac gluten sensitivity in ~6% of population shows gut dysbiosis and low-grade inflammation; sourdough preparations reduce gluten immunogenicity.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": [
+      "neutral",
+      "slightly starchy"
+    ],
+    "aroma": [
+      "wheat-like",
+      "bready when cooked"
+    ],
+    "texture": [
+      "elastic",
+      "chewy"
+    ],
+    "culinary_category": "protein complex / grain component"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "olive oil",
+      "tradition": "Italian bread dipping",
+      "source": "traditional"
+    },
+    {
+      "ingredient": "legumes",
+      "tradition": "Mediterranean complete protein pairing",
+      "source": "traditional"
+    },
+    {
+      "ingredient": "vegetables",
+      "tradition": "whole-grain Mediterranean dishes",
+      "source": "traditional"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Gliadin + Glutenin",
+      "amount_per_100g": "~10-12g in wheat flour",
+      "bioavailability_notes": "Poorly digested in celiac/NCGS; sourdough fermentation partially hydrolyzes gliadin"
+    },
+    {
+      "compound": "Fiber (from whole grain matrix)",
+      "amount_per_100g": "~2-3g",
+      "bioavailability_notes": "Fermentable fiber in whole-grain gluten foods feeds beneficial gut bacteria"
+    },
+    {
+      "compound": "Zonulin (intestinal permeability regulator)",
+      "amount_per_100g": "N/A",
+      "bioavailability_notes": "Gliadin upregulates zonulin, increasing intestinal permeability in susceptible individuals"
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "legumes",
+      "type": "complement",
+      "description": "Combining gluten grains with legumes creates a complete amino acid profile while legume fiber moderates postprandial glucose"
+    },
+    {
+      "target_ingredient": "olive oil",
+      "type": "complement",
+      "description": "Polyphenols in olive oil reduce intestinal inflammation that may be triggered by gluten"
+    },
+    {
+      "target_ingredient": "fermented foods",
+      "type": "synergy",
+      "description": "Sourdough fermentation significantly reduces gliadin content and improves tolerance in NCGS"
+    }
+  ],
+  "last_updated": "2026-04-18T08:08:05Z",
+  "last_researched": "2026-04-18T08:08:05Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

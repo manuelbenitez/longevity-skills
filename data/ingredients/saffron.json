@@ -1,0 +1,100 @@
+{
+  "name": "Saffron",
+  "slug": "saffron",
+  "category": "spice",
+  "aliases": ["Crocus sativus", "red gold", "zafferano", "azafrán"],
+  "book_claims": [
+    {
+      "claim": "Saffron is used in the Longevity Diet black rice with shrimp dish at a dose of approximately 4 g per serving, contributing both flavor and bioactive compounds.",
+      "mechanism": "Culinary spice providing color and flavor; its active compounds (crocin, safranal) have antioxidant and potential neuroprotective properties.",
+      "study_ref": null,
+      "confidence": "high"
+    }
+  ],
+  "supplementary_research": [
+    {
+      "source": "Akhondzadeh et al., Journal of Clinical Pharmacy and Therapeutics (2010) — PMID 20042835",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20042835/",
+      "finding": "In a double-blind RCT, saffron extract (30 mg/day) performed comparably to donepezil in patients with mild-to-moderate Alzheimer's disease over 22 weeks, suggesting neuroprotective effects relevant to cognitive longevity.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Lopresti & Drummond, Human Psychopharmacology (2014) — PMID 24691652",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24691652/",
+      "finding": "Saffron and its carotenoids (crocin, crocetin) demonstrate antidepressant efficacy in multiple RCTs, with mechanisms involving monoamine modulation and NMDA receptor antagonism — supporting mood health as a pillar of longevity.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Rahaiee et al., International Journal of Food Properties (2015) — PMID 26009913",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26009913/",
+      "finding": "Crocin and crocetin from saffron are potent free radical scavengers (ORAC values among highest plant carotenoids) and inhibit lipid peroxidation, contributing to systemic antioxidant defense.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["floral", "honey-like", "subtly bitter", "earthy"],
+    "aroma": ["haylike", "metallic-floral", "complex", "warm"],
+    "texture": ["powder when ground", "thread-like stigmas"],
+    "culinary_category": "aromatic spice / colorant"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "black rice",
+      "tradition": "Mediterranean / Longevity Diet",
+      "source": "The Longevity Diet"
+    },
+    {
+      "ingredient": "shrimp",
+      "tradition": "Mediterranean",
+      "source": "The Longevity Diet"
+    },
+    {
+      "ingredient": "arborio rice",
+      "tradition": "Italian (risotto Milanese)",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "fish broth",
+      "tradition": "French (bouillabaisse)",
+      "source": "General culinary"
+    },
+    {
+      "ingredient": "legumes",
+      "tradition": "Persian / Middle Eastern",
+      "source": "General culinary"
+    }
+  ],
+  "nutrient_highlights": [
+    {
+      "compound": "Crocin",
+      "amount_per_100g": "~6–10 g (as dry stigmas)",
+      "bioavailability_notes": "Water-soluble carotenoid glycoside; bioavailability enhanced by aqueous extraction (steeping threads in warm liquid); crosses the blood-brain barrier in animal studies."
+    },
+    {
+      "compound": "Safranal",
+      "amount_per_100g": "~0.5–1 g",
+      "bioavailability_notes": "Volatile monoterpene aldehyde responsible for aroma; shown to modulate GABA-A receptors with anxiolytic effects at culinary doses."
+    },
+    {
+      "compound": "Riboflavin (B2)",
+      "amount_per_100g": "~0.27 mg",
+      "bioavailability_notes": "Minor contribution at culinary quantities; riboflavin supports mitochondrial energy metabolism."
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "black-rice",
+      "type": "complement",
+      "description": "Saffron's crocin pigments and black rice's anthocyanins create overlapping antioxidant mechanisms (carotenoid + flavonoid pathways), amplifying overall antioxidant capacity in the dish."
+    },
+    {
+      "target_ingredient": "extra-virgin-olive-oil",
+      "type": "synergy",
+      "description": "Fat solubilizes saffron's fat-soluble compounds and enhances bioavailability of carotenoids; traditional Mediterranean pairing in rice and fish dishes."
+    }
+  ],
+  "last_updated": "2026-04-17T00:00:00Z",
+  "last_researched": "2026-04-17T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}
