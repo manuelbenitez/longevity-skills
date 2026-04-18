@@ -8,7 +8,9 @@ Grounded in "The Path to Longevity" by Luigi Fontana.
 
 | Skill | What it does | Input | Output |
 |-------|-------------|-------|--------|
-| `/extract-book-knowledge` | Extract food claims from book chapters | `data/book-raw/*.txt` | `data/book-extracts/*.json` |
+| `/extract-book-knowledge` | Extract food claims from book chapters | `data/book-raw/*` (epub, PDF, or txt) | `data/book-extracts/*.json` |
+| `/expand-ingredient-groups` | Split category entries (e.g. "cruciferous vegetables") into individual members, inheriting parent claims | `data/book-extracts/ingredients-master.json` | updates same file in-place |
+| `/dedup-ingredients` | Compare extracted ingredients against an existing wiki to bucket them as existing / fuzzy / new | `ingredients-master.json` + wiki dir | `data/dedup/*-dedup-report.json` |
 | `/research-ingredient` | Enrich with web research (PubMed, Examine) | ingredient name | `data/ingredients/*.json` |
 | `/generate-wiki-entry` | Write readable wiki articles | ingredient JSON | `content/wiki/*.md` |
 | `/generate-recipe` | Create chef-quality recipes | 2-3 ingredient slugs | `content/recipes/*.md` |
@@ -50,17 +52,19 @@ Plain text files (`data/book-raw/chapter-*.txt`) also work as a fallback.
 
 ```bash
 # In Claude Code, inside your content project:
-/extract-book-knowledge        # Scan full book PDF, extract all ingredients
-/research-ingredient turmeric  # Enrich one ingredient
-/generate-recipe turmeric black-pepper chickpeas  # Create a recipe
+/extract-book-knowledge        # Scan full book, extract all ingredients + claims
+/expand-ingredient-groups      # Split "nuts", "leafy greens", etc. into members
+/dedup-ingredients             # Bucket against existing wiki: existing / fuzzy / new
+/research-ingredient turmeric  # Enrich one ingredient with web research
 /generate-wiki-entry turmeric  # Write the wiki article
+/generate-recipe turmeric black-pepper chickpeas  # Create a recipe
 ```
 
 ## Pipeline
 
 ```
-Book chapters (text) -> Extract -> Research -> Wiki entries
-                                           -> Recipes
+Book (epub/PDF/txt) -> Extract -> Expand groups -> Dedup -> Research -> Wiki entries
+                                                                    -> Recipes
 ```
 
 Each skill reads from the previous skill's output directory. See `CLAUDE.md` for the full data flow diagram.
@@ -72,6 +76,8 @@ By default, skills use the cheapest model that can handle the task well:
 | Skill | Default model | Why |
 |-------|--------------|-----|
 | `/extract-book-knowledge` | sonnet | Needs to catch subtle mechanisms and apply quality rubric |
+| `/expand-ingredient-groups` | (n/a — deterministic) | Taxonomy lookup + string matching, no inference needed |
+| `/dedup-ingredients` | (n/a — deterministic) | Slug/alias index lookup and fuzzy string match |
 | `/research-ingredient` | sonnet | Judges conflicting sources, spots `agrees_with_book` mismatches |
 | `/generate-wiki-entry` | haiku | Template-filling from structured JSON — Haiku is sufficient |
 | `/generate-recipe` | sonnet | Culinary voice + science integration benefits from a stronger model |
