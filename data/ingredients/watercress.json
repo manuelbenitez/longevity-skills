@@ -1,0 +1,119 @@
+{
+  "name": "watercress",
+  "slug": "watercress",
+  "category": "vegetable",
+  "aliases": [
+    "Nasturtium officinale",
+    "garden cress",
+    "water nasturtium"
+  ],
+  "book_claims": [],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17284750/",
+      "finding": "Randomized crossover trial (n=60 healthy adults, 85g raw watercress daily for 8 weeks): basal DNA damage in lymphocytes reduced by 17% (P=0.03) and oxidative purine DNA damage reduced by 23.9% (P=0.002); plasma lutein increased 100% and beta-carotene 33%. Protective effects more pronounced in smokers. Suggests cancer risk reduction via DNA protection and antioxidant elevation.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed – PMC8123986",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8123986/",
+      "finding": "Narrative review (PMID 34055006): watercress extract upregulates superoxide dismutase and catalase, reduces malondialdehyde; in hypercholesterolemic models, lowers LDL-C by 48–52%, triglycerides by 30–44%, raises HDL-C; hepatoprotective and renoprotective effects confirmed across multiple models; anti-cancer activity spans initiation, proliferation, and metastasis stages via PEITC-mediated apoptosis and cell cycle arrest.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed – PMC12299072",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12299072/",
+      "finding": "2025 narrative review classifies watercress as a functional food for non-communicable disease prevention; identifies glucosinolates and isothiocyanates (especially PEITC) as primary bioactive drivers of anti-inflammatory, antiproliferative, and metabolic regulatory effects relevant to cardiovascular disease, type 2 diabetes, and cancer risk reduction.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Examine.com / Healthline",
+      "url": "https://www.healthline.com/nutrition/watercress-benefits",
+      "finding": "Ranked #1 on the US CDC Powerhouse Fruits and Vegetables list; contains over 40 unique flavonoids; cruciferous vegetable family membership associated with 16% reduced risk of heart disease in epidemiological data; high vitamin K content (>100% RDI per cup) linked to 35% lower hip fracture risk.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": [
+      "peppery",
+      "pungent",
+      "slightly bitter",
+      "mildly astringent"
+    ],
+    "aroma": [
+      "fresh",
+      "grassy",
+      "sinapic (mustard-like)",
+      "faint celery-like"
+    ],
+    "texture": [
+      "tender",
+      "crisp stems",
+      "delicate leaves",
+      "succulent"
+    ],
+    "culinary_category": "leafy green"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "orange",
+      "tradition": "British",
+      "source": "Great British Chefs – classic watercress and orange salad"
+    },
+    {
+      "ingredient": "smoked salmon",
+      "tradition": "British / Nordic",
+      "source": "Food and Travel Magazine – smoked fish and watercress pairings"
+    },
+    {
+      "ingredient": "walnuts",
+      "tradition": "French",
+      "source": "Flavonomics – watercress, walnut and blue cheese salad tradition"
+    }
+  ],
+  "seasonality": "Spring and autumn peak; available year-round from aquatic farms",
+  "nutrient_highlights": [
+    {
+      "compound": "Vitamin K (phylloquinone)",
+      "amount_per_100g": "~250 µg (>200% RDI)",
+      "bioavailability_notes": "Fat-soluble; absorption improved with dietary fat. High intake may interact with warfarin anticoagulation therapy."
+    },
+    {
+      "compound": "Phenethyl isothiocyanate (PEITC)",
+      "amount_per_100g": "~10–20 mg (formed from gluconasturtiin hydrolysis)",
+      "bioavailability_notes": "Released by chewing or chopping; heat-sensitive – raw consumption preserves levels. Primary driver of anti-cancer and antioxidant effects."
+    },
+    {
+      "compound": "Lutein + zeaxanthin",
+      "amount_per_100g": "~1.6 mg lutein",
+      "bioavailability_notes": "Carotenoids absorbed with fat; clinical trial showed 100% plasma lutein increase after 8 weeks daily watercress consumption. Supports macular and cognitive health."
+    },
+    {
+      "compound": "Vitamin C (ascorbic acid)",
+      "amount_per_100g": "~43 mg (~48% RDI)",
+      "bioavailability_notes": "Water-soluble; destroyed by prolonged cooking. Raw or lightly wilted preparations preserve most content."
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "olive oil",
+      "type": "synergy",
+      "description": "Fat from olive oil enhances absorption of fat-soluble compounds in watercress (vitamin K, carotenoids, PEITC). A drizzle of olive oil in salads or wilted preparations maximises bioavailability."
+    },
+    {
+      "target_ingredient": "broccoli",
+      "type": "synergy",
+      "description": "Both are glucosinolate-rich cruciferous vegetables; combined intake broadens the spectrum of isothiocyanates (PEITC from watercress, sulforaphane from broccoli), potentially additive in Nrf2 pathway activation and phase II detoxification enzyme induction."
+    },
+    {
+      "target_ingredient": "citrus (lemon/orange)",
+      "type": "complement",
+      "description": "Vitamin C in citrus stabilises watercress carotenoids and enhances non-haem iron absorption from watercress. Lemon juice also brightens the peppery flavour and is a standard pairing in both raw salads and cooked applications."
+    }
+  ],
+  "last_updated": "2026-04-18T00:00:00Z",
+  "last_researched": "2026-04-18T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

@@ -1,0 +1,110 @@
+{
+  "name": "kohlrabi",
+  "slug": "kohlrabi",
+  "category": "vegetable",
+  "aliases": [
+    "German turnip",
+    "turnip cabbage",
+    "Brassica oleracea var. gongylodes"
+  ],
+  "book_claims": [],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28202866/",
+      "finding": "Glucosinolate hydrolysis products (isothiocyanates) from Brassica vegetables including kohlrabi activate Nrf2 antioxidant pathways and have demonstrated chemopreventive activity in multiple cancer models; PMID 28202866.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31960481/",
+      "finding": "Epidemiological meta-analysis (2020) found cruciferous vegetable intake inversely associated with all-cause mortality (HR 0.90 per serving/day) and cardiovascular mortality, supporting kohlrabi's role in a longevity-oriented diet; PMID 31960481.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Examine.com",
+      "url": "https://examine.com/food/kohlrabi/",
+      "finding": "Kohlrabi provides ~62 mg vitamin C per 100 g (raw), contributing to collagen synthesis, immune defence, and attenuation of oxidative stress — all mechanisms linked to healthy ageing.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": [
+      "mildly sweet",
+      "subtly peppery",
+      "faintly nutty"
+    ],
+    "aroma": [
+      "fresh",
+      "green",
+      "mild cruciferous"
+    ],
+    "texture": [
+      "crisp",
+      "juicy when raw",
+      "tender when cooked"
+    ],
+    "culinary_category": "root-like brassica vegetable"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "apple",
+      "tradition": "Central European",
+      "source": "Plenty by Yotam Ottolenghi"
+    },
+    {
+      "ingredient": "miso",
+      "tradition": "Japanese-fusion",
+      "source": "The Vegetarian Flavor Bible"
+    },
+    {
+      "ingredient": "lemon and olive oil",
+      "tradition": "Mediterranean",
+      "source": "Jerusalem by Yotam Ottolenghi"
+    }
+  ],
+  "seasonality": "Spring and autumn; available year-round in temperate climates",
+  "nutrient_highlights": [
+    {
+      "compound": "Vitamin C",
+      "amount_per_100g": "62 mg (raw)",
+      "bioavailability_notes": "Water-soluble; best preserved raw or lightly steamed. Provides ~69% of RDA per 100 g."
+    },
+    {
+      "compound": "Glucosinolates (sinigrin, gluconapin)",
+      "amount_per_100g": "~50–100 mg total glucosinolates",
+      "bioavailability_notes": "Hydrolysed by myrosinase (activated by chewing or chopping) to bioactive isothiocyanates. Heat destroys myrosinase — eat raw or add minced raw kohlrabi after cooking to preserve activity."
+    },
+    {
+      "compound": "Potassium",
+      "amount_per_100g": "350 mg",
+      "bioavailability_notes": "Supports blood-pressure regulation and cardiovascular health. Bioavailability is high across preparation methods."
+    },
+    {
+      "compound": "Dietary fibre",
+      "amount_per_100g": "3.6 g",
+      "bioavailability_notes": "Inulin-type fructans support gut microbiome diversity and short-chain fatty acid production, linked to reduced inflammation and metabolic health."
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "mustard seed",
+      "type": "synergy",
+      "description": "Mustard seed provides exogenous myrosinase. When combined with cooked kohlrabi (which has heat-inactivated myrosinase), it restores glucosinolate conversion to isothiocyanates, maximising chemopreventive potential."
+    },
+    {
+      "target_ingredient": "olive oil",
+      "type": "complement",
+      "description": "Fat-soluble carotenoids in kohlrabi leaves (lutein, beta-carotene) are significantly better absorbed with dietary fat; olive oil is the traditional pairing."
+    },
+    {
+      "target_ingredient": "fermented foods (kimchi, sauerkraut)",
+      "type": "synergy",
+      "description": "Kohlrabi is a traditional base for kimchi and Eastern European ferments; fermentation increases bioavailability of glucosinolate breakdown products and adds probiotic benefit aligned with gut-longevity research."
+    }
+  ],
+  "last_updated": "2026-04-18T00:00:00Z",
+  "last_researched": "2026-04-18T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

@@ -1,0 +1,129 @@
+{
+  "name": "Dandelion Greens",
+  "slug": "dandelion-greens",
+  "category": "vegetable",
+  "aliases": [
+    "Taraxacum officinale",
+    "hindbeh",
+    "cicoria selvatica",
+    "dent-de-lion",
+    "pissenlit"
+  ],
+  "book_claims": [],
+  "supplementary_research": [
+    {
+      "source": "PubMed / PMC",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9002813/",
+      "finding": "Dandelion leaf and root extracts improve lipid profiles (reduced total cholesterol and triglycerides), exert anti-hypertensive effects via antioxidant capacity and lipid peroxidation reduction, and inhibit platelet aggregation through suppression of arachidonic acid metabolism. Chicoric acid inhibits platelet surface receptor exposition. PMID: 35405963.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed / PMC",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12694484/",
+      "finding": "Dandelion phytochemicals (taraxasterol, luteolin, quercetin) activate autophagy via mTOR/4EBP1 inhibition, induce apoptosis through Bcl-2/caspase pathways, and arrest cell cycle via p21/p53 upregulation. Demonstrates anti-proliferative effects across breast, colorectal, gastric, and lung cancer cell lines. PMID: 41374059.",
+      "agrees_with_book": true
+    },
+    {
+      "source": "NCCIH / USDA",
+      "url": "https://www.nccih.nih.gov/health/dandelion",
+      "finding": "Dandelion greens are among the highest dietary sources of vitamin K (778 mcg/100g, ~649% DV) and contain significant vitamin A (508 mcg RAE), beta-carotene (5,854 mcg), and lutein+zeaxanthin (13,610 mcg per 100g), supporting vision health, bone density, and anti-inflammatory defense. Generally recognized as safe (GRAS) by FDA.",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": [
+      "bitter",
+      "earthy",
+      "slightly tangy",
+      "mildly herbaceous"
+    ],
+    "aroma": [
+      "fresh grassy",
+      "faintly vegetal",
+      "earthy"
+    ],
+    "texture": [
+      "tender when young",
+      "fibrous when mature",
+      "slightly chewy when cooked",
+      "crisp when raw"
+    ],
+    "culinary_category": "bitter leafy green"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "olive oil and garlic",
+      "tradition": "Italian (cicoria ripassata)",
+      "source": "Southern Italian cucina povera tradition"
+    },
+    {
+      "ingredient": "lemon juice and caramelized onions",
+      "tradition": "Middle Eastern (hindbeh bil zayt)",
+      "source": "Lebanese and Palestinian traditional cooking"
+    },
+    {
+      "ingredient": "eggs and pecorino romano",
+      "tradition": "Mediterranean",
+      "source": "Forager Chef / A Beautiful Plate"
+    },
+    {
+      "ingredient": "white beans and chili flakes",
+      "tradition": "Italian-American",
+      "source": "Running to the Kitchen"
+    }
+  ],
+  "seasonality": "Spring (peak March–May); available year-round from cultivated sources",
+  "nutrient_highlights": [
+    {
+      "compound": "Vitamin K1 (phylloquinone)",
+      "amount_per_100g": "778 mcg (649% DV)",
+      "bioavailability_notes": "Fat-soluble; absorption significantly enhanced when consumed with olive oil or other dietary fats. One of the richest food sources of vitamin K among common greens."
+    },
+    {
+      "compound": "Beta-carotene (pro-vitamin A)",
+      "amount_per_100g": "5,854 mcg",
+      "bioavailability_notes": "Conversion to retinol enhanced by co-consumption with fat. Also contains lutein + zeaxanthin at ~13,610 mcg/100g, supporting macular health."
+    },
+    {
+      "compound": "Luteolin (flavonoid)",
+      "amount_per_100g": "~8–12 mg (estimated)",
+      "bioavailability_notes": "A potent NF-κB inhibitor and mTOR modulator. Bioavailability enhanced by mild cooking; pairs well with quercetin from onions for additive anti-inflammatory effect."
+    },
+    {
+      "compound": "Inulin (prebiotic fiber)",
+      "amount_per_100g": "~0.5–1.5 g in leaves (higher in root)",
+      "bioavailability_notes": "Fermented by Bifidobacterium and Lactobacillus species in the colon; supports gut microbiome diversity linked to reduced systemic inflammation and healthy aging."
+    },
+    {
+      "compound": "Potassium",
+      "amount_per_100g": "397 mg",
+      "bioavailability_notes": "Bioavailable form; supports blood pressure regulation and cardiovascular health. Retained well in sautéed preparations."
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "olive oil",
+      "type": "synergy",
+      "description": "Fat-soluble carotenoids (beta-carotene, lutein) and vitamin K in dandelion greens require dietary fat for absorption. Extra-virgin olive oil also contributes oleocanthal (anti-inflammatory) and oleic acid, amplifying the overall anti-inflammatory and cardiovascular-protective effect of the pairing."
+    },
+    {
+      "target_ingredient": "lemon juice",
+      "type": "synergy",
+      "description": "Vitamin C in lemon juice (and dandelion itself) enhances non-heme iron absorption from dandelion greens (3.1 mg/100g). The acidity also balances bitterness and may improve polyphenol stability during cooking."
+    },
+    {
+      "target_ingredient": "garlic",
+      "type": "synergy",
+      "description": "Allicin and diallyl sulfides in garlic complement dandelion's flavonoids (luteolin, quercetin) with additive NF-κB and mTOR suppression. The combination appears across Italian and Middle Eastern longevity cuisines as a foundational bitter-green preparation."
+    },
+    {
+      "target_ingredient": "white beans",
+      "type": "complement",
+      "description": "Beans provide plant protein and resistant starch that buffer dandelion's bitterness; dandelion's inulin adds prebiotic fiber to the beans' fiber load, supporting a robust gut microbiome. Classic pairing in Italian cucina povera and Blue Zone-adjacent diets."
+    }
+  ],
+  "last_updated": "2026-04-18T00:00:00Z",
+  "last_researched": "2026-04-18T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}

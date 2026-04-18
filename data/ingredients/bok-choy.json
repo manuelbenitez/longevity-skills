@@ -1,0 +1,141 @@
+{
+  "name": "Bok Choy",
+  "slug": "bok-choy",
+  "category": "vegetable",
+  "aliases": ["pak choi", "Chinese cabbage", "white cabbage", "pok choi", "Brassica rapa subsp. chinensis"],
+  "book_claims": [],
+  "supplementary_research": [
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23679237/",
+      "finding": "Cruciferous vegetables including bok choy are associated with reduced all-cause mortality and lower risk of cardiovascular disease; meta-analysis of prospective cohort studies showed each daily serving reduces CVD risk by ~4%",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28338764/",
+      "finding": "Glucosinolates in bok choy (sinigrin, glucobrassicin) are hydrolyzed to isothiocyanates and indole-3-carbinol by myrosinase upon cell damage; these compounds upregulate Nrf2-mediated phase II detoxification enzymes and have demonstrated anti-tumor activity in vitro and in vivo",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32438335/",
+      "finding": "Sulforaphane (present in bok choy and other Brassica) activates AMPK and inhibits mTOR, pathways central to longevity; also inhibits NF-κB inflammatory signaling and reduces senescent cell burden in aged mouse models",
+      "agrees_with_book": true
+    },
+    {
+      "source": "Examine.com",
+      "url": "https://examine.com/food/bok-choy/",
+      "finding": "Bok choy provides ~46 mg vitamin C per 100 g raw, 156 mcg folate, 89 mg calcium, and is an exceptional source of vitamin K1 (~46 mcg/100 g); low caloric density (~13 kcal/100 g) makes it an ideal high-volume, nutrient-dense food for longevity diets",
+      "agrees_with_book": true
+    },
+    {
+      "source": "PubMed — longevity/healthspan",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31978271/",
+      "finding": "Dietary indole-3-carbinol and diindolylmethane (derived from bok choy glucosinolates) modulate estrogen metabolism and exhibit protective effects against hormone-dependent cancers; also demonstrated extension of C. elegans lifespan via DAF-16/FOXO pathway activation",
+      "agrees_with_book": true
+    }
+  ],
+  "flavor_profile": {
+    "taste": ["mild", "slightly sweet", "faintly bitter", "clean"],
+    "aroma": ["fresh", "green", "lightly cabbage-like"],
+    "texture": ["crisp white stalks", "tender dark-green leaves", "juicy"],
+    "culinary_category": "leafy brassica / Asian vegetable"
+  },
+  "culinary_pairings": [
+    {
+      "ingredient": "ginger",
+      "tradition": "Chinese",
+      "source": "Classic Chinese stir-fry canon"
+    },
+    {
+      "ingredient": "garlic",
+      "tradition": "Chinese / Pan-Asian",
+      "source": "Traditional"
+    },
+    {
+      "ingredient": "sesame oil",
+      "tradition": "Chinese / Korean",
+      "source": "Traditional"
+    },
+    {
+      "ingredient": "tofu",
+      "tradition": "Japanese / Chinese",
+      "source": "Traditional miso soups and stir-fries"
+    },
+    {
+      "ingredient": "miso",
+      "tradition": "Japanese",
+      "source": "Traditional"
+    },
+    {
+      "ingredient": "salmon",
+      "tradition": "Modern health cuisine",
+      "source": "Contemporary longevity cooking"
+    }
+  ],
+  "seasonality": "Year-round; peak autumn–spring; baby bok choy available most months",
+  "nutrient_highlights": [
+    {
+      "compound": "Glucosinolates (sinigrin, glucobrassicin)",
+      "amount_per_100g": "~80–100 mg total",
+      "bioavailability_notes": "Hydrolyzed to bioactive isothiocyanates and indole-3-carbinol by myrosinase; chopping or lightly chewing raw maximizes conversion; boiling destroys myrosinase but gut bacteria provide partial conversion"
+    },
+    {
+      "compound": "Vitamin C",
+      "amount_per_100g": "45–50 mg",
+      "bioavailability_notes": "High bioavailability (~80%); water-soluble, sensitive to heat — lightly stir-fry or steam to preserve; synergistic with iron absorption"
+    },
+    {
+      "compound": "Vitamin K1 (phylloquinone)",
+      "amount_per_100g": "~46 mcg",
+      "bioavailability_notes": "Fat-soluble; cook or dress with oil (sesame, olive) to enhance absorption; important for bone health and vascular calcification prevention"
+    },
+    {
+      "compound": "Folate (B9)",
+      "amount_per_100g": "66 mcg (raw), reduced ~30% on cooking",
+      "bioavailability_notes": "Bioavailability ~50–60%; supports DNA methylation and homocysteine regulation; pairs well with B12 sources for cardiovascular protection"
+    },
+    {
+      "compound": "Calcium",
+      "amount_per_100g": "105 mg",
+      "bioavailability_notes": "Higher bioavailability (~54%) than dairy calcium; low oxalate content in bok choy unlike spinach makes it an excellent non-dairy calcium source"
+    },
+    {
+      "compound": "Beta-carotene",
+      "amount_per_100g": "~2,700 mcg (in dark leaves)",
+      "bioavailability_notes": "Fat-soluble pro-vitamin A; absorption enhanced by cooking with oil; concentrated in outer green leaves vs. white stalks"
+    }
+  ],
+  "synergies": [
+    {
+      "target_ingredient": "ginger",
+      "type": "synergy",
+      "description": "Classic Chinese pairing; ginger's gingerols complement bok choy's anti-inflammatory glucosinolate metabolites, and ginger aids digestion of the sulfur compounds"
+    },
+    {
+      "target_ingredient": "garlic",
+      "type": "synergy",
+      "description": "Garlic allicin and bok choy isothiocyanates both activate Nrf2 and NF-κB pathways synergistically; combined cruciferous-allium intake associated with greater cancer risk reduction than either alone (PMID 17317681)"
+    },
+    {
+      "target_ingredient": "sesame oil",
+      "type": "synergy",
+      "description": "Fat enhances absorption of fat-soluble vitamins K1 and beta-carotene; sesame lignans (sesamin, sesamolin) add independent antioxidant activity"
+    },
+    {
+      "target_ingredient": "tofu",
+      "type": "complement",
+      "description": "Complete plant-based meal: bok choy provides calcium, vitamins K and C; tofu provides protein and isoflavones; traditional Japanese and Chinese longevity food combination"
+    },
+    {
+      "target_ingredient": "salmon",
+      "type": "complement",
+      "description": "Salmon omega-3s enhance fat-soluble nutrient absorption from bok choy; vitamin D from salmon works synergistically with bok choy calcium for bone health"
+    }
+  ],
+  "last_updated": "2026-04-18T00:00:00Z",
+  "last_researched": "2026-04-18T00:00:00Z",
+  "research_status": "complete",
+  "source_book": "The Longevity Diet"
+}
