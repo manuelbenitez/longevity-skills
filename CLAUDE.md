@@ -2,6 +2,25 @@
 
 A set of Claude Code skills for generating science-backed longevity food content. Grounded in "The Path to Longevity" by Luigi Fontana.
 
+## Copyright — what MUST stay local
+
+This repo is public. The source books are copyrighted. **Never commit, push, or
+otherwise publish book-derived content.** Doing so will break the project.
+
+**Never commit** (stays local only):
+- `data/book-raw/` — the book itself (epub, PDF, chapter text)
+- `data/book-extracts/` — extracted claims, quotes, references, page numbers
+- `data/dedup/` — dedup reports derived from book extracts
+
+**Safe to commit** (final outputs with cited references, not reproductions):
+- `data/ingredients/` — enriched ingredient profiles (web research + brief cited claims)
+- `content/wiki/` — wiki entries
+- `content/recipes/` — recipes
+
+The gitignore enforces this, but still verify before any `git add`. If a file
+contains verbatim book passages, long quotes, or chapter text, it does not belong
+in a commit — no matter which directory it lives in.
+
 ## Skill routing
 
 When the user's request matches an available skill, invoke it using the Skill tool

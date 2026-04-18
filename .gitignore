@@ -3,4 +3,6 @@
 .env
 .longevity-skills.json
 data/book-raw/
+data/book-extracts/
+data/dedup/
 .venv/
