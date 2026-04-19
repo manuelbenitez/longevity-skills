@@ -7,6 +7,7 @@ cook_time: 35 min
 difficulty: easy
 longevity_ingredients: [turmeric, black pepper, chickpeas, olive oil, ginger]
 tags: [stew, anti-inflammatory, one-pot, weeknight]
+meal_type: [lunch, dinner]
 ---
 
 # Golden Chickpea Stew with Turmeric and Black Pepper
