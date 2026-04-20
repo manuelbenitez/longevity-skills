@@ -31,7 +31,8 @@ as your FIRST action. Do NOT answer directly when a skill exists for the task.
 - "check duplicates", "compare ingredients", "what's new", "dedup" -> invoke dedup-ingredients
 - "research", "enrich", "look up ingredient", "studies" -> invoke research-ingredient
 - "wiki", "article", "entry", "write about" -> invoke generate-wiki-entry
-- "recipe", "cook", "meal", "dish" -> invoke generate-recipe
+- "recipe", "cook", "meal", "dish" -> invoke generate-recipe (single recipe, 2-3 slug input)
+- "batch recipes", "10 recipes", "expand recipe catalog", "close the recipe gap" -> invoke batch-recipes (orchestrates 10 drafts in one run)
 
 ## Pipeline order
 
@@ -63,11 +64,21 @@ data/dedup/*.json            (new / fuzzy / existing buckets)
 data/ingredients/*.json      (enriched profiles with web research)
        |                |
        v                v
-/generate-wiki-entry   /generate-recipe
-       |                |
-       v                v
-content/wiki/*.md      content/recipes/*.md
+/generate-wiki-entry   /generate-recipe   /batch-recipes
+       |                |                  |
+       v                v                  v
+content/wiki/*.md      content/recipes/*.md   content/recipes/en/_drafts/*.md
+                                                 |
+                                                 v (user: git mv keepers / rm rejects)
+                                               content/recipes/en/*.md
 ```
+
+Note on `/batch-recipes`: it runs from the **my-longevity-wiki** repo root, reads
+ingredient JSONs from this repo via `$LONGEVITY_SKILLS_DIR` (defaults to
+`~/Development/longevity-skills`), and writes drafts to a `_drafts/` subfolder
+inside the wiki's content tree. The wiki's data loader filters by
+`.endsWith(".md")` on `readdirSync`, so a `_drafts/` directory is invisible to the
+build — safe to leave drafts in place between sessions.
 
 ## Data directory conventions
 
@@ -79,6 +90,7 @@ Skills write output relative to the current working directory:
 - `data/ingredients/` -- ingredient profile JSON (output of /research-ingredient)
 - `content/wiki/` -- wiki entry Markdown (output of /generate-wiki-entry)
 - `content/recipes/` -- recipe Markdown (output of /generate-recipe)
+- `content/recipes/en/_drafts/` -- unreviewed drafts from /batch-recipes (lives in the my-longevity-wiki repo, not here; user promotes with `git mv`)
 
 ## Schemas
 
