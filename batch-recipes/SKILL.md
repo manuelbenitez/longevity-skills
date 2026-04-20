@@ -253,14 +253,30 @@ PARTNER_CATEGORY_WHITELIST = {
               "fresh herb", "aromatic", "spice",
               "cocoa", "chocolate", "coffee",
               "medicinal mushroom"],
+    "breakfast": ["yogurt", "fermented dairy", "dairy beverage", "milk",
+                  "stone fruit", "fresh fruit", "fresh tropical fruit",
+                  "dried fruit", "berry", "citrus",
+                  "breakfast grain", "whole grain", "grain staple",
+                  "oat", "cereal", "ancient grain", "pseudocereal",
+                  "preserve", "spread", "natural sweetener", "honey",
+                  "tree nut", "nut", "seed",
+                  "cocoa", "chocolate", "coffee",
+                  "egg"],
 }
 
-# Categories that should be rejected as drink partners even if they match
-# whitelist keywords. Prevents pesto ("Italian herb sauce / condiment") from
-# slipping in via "herb" when what we want is "fresh herb" alone.
+# Categories that should be rejected as partners even if they match whitelist
+# keywords. Prevents pesto ("Italian herb sauce / condiment") from slipping in
+# via "herb" when what we want is "fresh herb" alone. For breakfast, blocks
+# savory mains and sauces from pairing with yogurt/fruit anchors.
 PARTNER_CATEGORY_EXCLUDE = {
     "drink": ["sauce", "condiment", "dip", "dressing", "topping",
               "garnish", "hummus", "flatbread"],
+    "breakfast": ["sauce", "condiment", "dip", "dressing", "topping",
+                  "garnish", "hummus", "flatbread",
+                  "cooked legume", "legume", "pasta", "bread pasta",
+                  "main", "fish", "shellfish", "aged hard cheese",
+                  "cooking liquid", "base/liquid",
+                  "bell pepper", "cruciferous", "leafy green"],
 }
 
 def partner_ok(slug, meal_type):
