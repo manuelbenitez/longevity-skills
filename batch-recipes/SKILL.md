@@ -154,6 +154,16 @@ default bucket. Learned from batch 1: farro got force-fit into breakfast and
 produced a "pepper farro bowl" that the user rejected. The fix is to skip
 farro this batch instead, and let a future lunch/dinner batch pick it up.
 
+**Partner eligibility rule (target-specific whitelist):** the anchor's synergies
+and culinary_pairings include pairings across all meal types. A drink-anchor
+like milk legitimately pairs with cheese for a sauce but NOT for a drink. So
+when a meal type has a `PARTNER_CATEGORY_WHITELIST` entry, partners are
+filtered to categories appropriate for that meal type. Learned from batch 2:
+dispatch was aborted because the first-pass generated "Pasta + cooking wine",
+"Peas + black tea", and "Milk + almond milk + feta cheese" as drink combos.
+The fix is a per-meal-type partner whitelist so milk's partner options in a
+drink context are lemon/ginger/cocoa/honey, not cheese.
+
 ```bash
 TARGET_MEAL_TYPE="<user's answer>"  # single value, or comma-separated for "mix"
 
@@ -199,7 +209,8 @@ anchors = sorted(profiles.keys(), key=score_anchor)
 # NO target meal type are skipped for this batch — this prevents force-fitting
 # (e.g., farro into breakfast, salmon into snack).
 MEAL_TYPE_KEYWORDS = {
-    "drink": ["beverage", "milk", "tea", "drink", "liquid", "base/liquid"],
+    "drink": ["beverage", "milk", "tea", "drink", "base/liquid"],
+    # "liquid" removed — too loose, catches "cooking liquid" (wine, stock bases).
     "breakfast": ["breakfast", "yogurt", "fermented dairy", "dairy beverage",
                   "stone fruit", "fresh fruit", "fresh tropical fruit",
                   "dried fruit", "berry", "breakfast grain", "whole grain",
@@ -230,6 +241,39 @@ def eligible_meal_types(slugs):
                 eligible.add(mt)
     return eligible
 
+# Per-meal-type partner whitelist. When a target meal type has an entry here,
+# partners are filtered to categories appropriate for that meal type. Prevents
+# the "milk + feta cheese for a drink" class of failure where the anchor is
+# meal-type-appropriate but its pairings drag in wrong-context partners.
+PARTNER_CATEGORY_WHITELIST = {
+    "drink": ["beverage", "milk", "tea", "base/liquid",
+              "natural sweetener", "preserve", "honey",
+              "fresh fruit", "fresh tropical fruit", "stone fruit",
+              "berry", "dried fruit", "citrus",
+              "fresh herb", "aromatic", "spice",
+              "cocoa", "chocolate", "coffee",
+              "medicinal mushroom"],
+}
+
+# Categories that should be rejected as drink partners even if they match
+# whitelist keywords. Prevents pesto ("Italian herb sauce / condiment") from
+# slipping in via "herb" when what we want is "fresh herb" alone.
+PARTNER_CATEGORY_EXCLUDE = {
+    "drink": ["sauce", "condiment", "dip", "dressing", "topping",
+              "garnish", "hummus", "flatbread"],
+}
+
+def partner_ok(slug, meal_type):
+    """If the target meal type has a partner whitelist, partner's category must
+    match AND must not hit the exclusion list."""
+    wl = PARTNER_CATEGORY_WHITELIST.get(meal_type)
+    if not wl: return True
+    cat = ((profiles[slug].get("flavor_profile") or {}).get("culinary_category") or "").lower()
+    if not cat: return False
+    excl = PARTNER_CATEGORY_EXCLUDE.get(meal_type, [])
+    if any(k in cat for k in excl): return False
+    return any(k in cat for k in wl)
+
 def assign_meal_type(combo_slugs, target_meals, filled_counts, target_counts):
     """Pick the best target meal type that (a) the combo is eligible for and
     (b) still has an open slot. Returns None if no target meal type fits.
@@ -243,8 +287,9 @@ def assign_meal_type(combo_slugs, target_meals, filled_counts, target_counts):
     # Prefer the meal type with the most open slots remaining
     return max(candidates, key=lambda t: target_counts[t] - filled_counts[t])
 
-def pick_partners(anchor_slug, k=2):
-    """Return 1-2 partner slugs for this anchor, preferring synergy matches."""
+def pick_partners(anchor_slug, k=2, meal_type=None):
+    """Return 1-2 partner slugs for this anchor, preferring synergy matches.
+    If meal_type has a PARTNER_CATEGORY_WHITELIST entry, partners are filtered."""
     anchor = profiles[anchor_slug]
     partners = []
     # Synergies: target_ingredient is a slug
@@ -259,11 +304,12 @@ def pick_partners(anchor_slug, k=2):
             if slug == anchor_slug: continue
             if slug.replace("-", " ") == name or profiles[slug]["name"].lower() == name:
                 partners.append(slug)
-    # Deduplicate, prefer low-usage partners
+    # Deduplicate, apply meal-type partner filter, prefer low-usage partners
     seen, ranked = set(), []
     for p in partners:
         if p in seen: continue
         seen.add(p)
+        if meal_type and not partner_ok(p, meal_type): continue
         ranked.append((usage.get(p, 0), p))
     ranked.sort()
     return [p for _, p in ranked[:k]]
@@ -295,33 +341,40 @@ combos = []  # list of dicts: {slugs, meal_type, anchor_synergy}
 used_in_batch = set()
 rng = random.Random(42)
 
-# First pass: walk anchors in usage order, grab ones with real pairings
+# First pass: walk anchors in usage order. For each, decide the target meal type
+# (must be eligible, must still have an open slot), then pick partners filtered
+# for that meal type.
 for anchor in anchors:
     if len(combos) >= 10: break
     if anchor in used_in_batch: continue
-    partners = pick_partners(anchor, k=2)
-    if not partners: continue  # skip anchors with no pairing signal
-    combo = [anchor] + partners[:1 if rng.random() < 0.5 else 2]
-    # Dedup: reject if too similar to existing catalog OR already-picked combo
-    picked_sets = [set(c["slugs"]) for c in combos]
-    if too_similar(set(combo), existing_combos + picked_sets):
-        continue
-    # Assign a meal type the combo is actually eligible for
-    mt = assign_meal_type(combo, target_meals, filled_counts, target_counts)
-    if mt is None:
-        continue  # combo doesn't fit any target meal type — skip, don't force-fit
-    # Capture synergy note
-    anchor_syn = ""
-    for s in (profiles[anchor].get("synergies") or []):
-        if s.get("target_ingredient") in combo[1:]:
-            anchor_syn = s.get("description", "")
-            break
-    combos.append({"slugs": combo, "meal_type": mt, "anchor_synergy": anchor_syn})
-    used_in_batch.update(combo)
-    filled_counts[mt] += 1
+    # Which target meal types is THIS anchor eligible for, with open slots?
+    anchor_elig = eligible_meal_types([anchor]) & set(target_meals)
+    open_meals = [t for t in anchor_elig if filled_counts.get(t, 0) < target_counts[t]]
+    if not open_meals: continue
+    # Try meal types with the most open slots first (spread the batch)
+    open_meals.sort(key=lambda t: -(target_counts[t] - filled_counts[t]))
+    picked = False
+    for mt in open_meals:
+        partners = pick_partners(anchor, k=2, meal_type=mt)
+        if not partners: continue
+        combo = [anchor] + partners[:1 if rng.random() < 0.5 else 2]
+        picked_sets = [set(c["slugs"]) for c in combos]
+        if too_similar(set(combo), existing_combos + picked_sets):
+            continue
+        anchor_syn = ""
+        for s in (profiles[anchor].get("synergies") or []):
+            if s.get("target_ingredient") in combo[1:]:
+                anchor_syn = s.get("description", "")
+                break
+        combos.append({"slugs": combo, "meal_type": mt, "anchor_synergy": anchor_syn})
+        used_in_batch.update(combo)
+        filled_counts[mt] += 1
+        picked = True
+        break
 
-# Backfill if < 10: anchors with no synergies get a random thematic partner,
-# still respecting the dedup rule AND meal-type eligibility.
+# Backfill if < 10: anchors with no filtered-partner matches get a random
+# partner from the whitelist pool (if the meal type has one) or any pool
+# (if not). Still respects dedup AND meal-type eligibility.
 backfill_attempts = 0
 while len(combos) < 10 and backfill_attempts < 500:
     backfill_attempts += 1
@@ -329,14 +382,17 @@ while len(combos) < 10 and backfill_attempts < 500:
     for anchor in anchors:
         if len(combos) >= 10: break
         if anchor in used_in_batch: continue
-        pool = [s for s in profiles if s != anchor and s not in used_in_batch]
+        anchor_elig = eligible_meal_types([anchor]) & set(target_meals)
+        open_meals = [t for t in anchor_elig if filled_counts.get(t, 0) < target_counts[t]]
+        if not open_meals: continue
+        mt = max(open_meals, key=lambda t: target_counts[t] - filled_counts[t])
+        pool = [s for s in profiles
+                if s != anchor and s not in used_in_batch and partner_ok(s, mt)]
         if not pool: continue
         combo = [anchor, rng.choice(pool)]
         picked_sets = [set(c["slugs"]) for c in combos]
         if too_similar(set(combo), existing_combos + picked_sets):
             continue
-        mt = assign_meal_type(combo, target_meals, filled_counts, target_counts)
-        if mt is None: continue  # still enforce eligibility during backfill
         combos.append({"slugs": combo, "meal_type": mt, "anchor_synergy": ""})
         used_in_batch.update(combo)
         filled_counts[mt] += 1
