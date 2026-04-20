@@ -101,4 +101,37 @@ Use the Agent tool with:
 
 Write the sub-agent's output to `content/recipes/{recipe-slug}.md`.
 
-<!-- TODO: Add YAML frontmatter spec -->
+## YAML Frontmatter Spec
+
+Every recipe MUST include the following frontmatter fields. The downstream
+`my-longevity-wiki` consumer relies on all of them; missing fields (especially
+`meal_type`) break filtering and require manual backfill.
+
+```yaml
+---
+title: <Human Title Case — what appears on the card and page>
+slug: <kebab-case matches filename>
+servings: <integer>
+prep_time: <"N min" — allow "(+ Nh rest)" for recipes that need resting>
+cook_time: <"N min" — "0 min" for no-cook recipes>
+difficulty: <easy | medium | hard>
+longevity_ingredients: [<ingredient slugs from data/ingredients/>]
+tags: [<free-form keywords: cuisine, diet, technique — NOT meal type>]
+meal_type: [<1+ of: breakfast, lunch, dinner, snack, drink>]
+source_book: <book name when the recipe is book-derived; omit otherwise>
+---
+```
+
+**`meal_type` is mandatory and must be an array of 1+ values.** Pick from the
+closed vocabulary: `breakfast`, `lunch`, `dinner`, `snack`, `drink`. Most Mediterranean
+mains fit `[lunch, dinner]`. A smoothie is `[breakfast, drink]`. A crumble or farinata
+is `[snack]` (no `dessert` value exists — use `snack`). If the dish genuinely serves
+multiple roles, list them all; the `/recipes` filter surfaces it under every match.
+
+Do NOT put meal-type tokens into `tags`. `tags` is for free-form cuisine/diet/technique
+labels ("mediterranean", "anti-inflammatory", "one-pot"). `meal_type` is the structural
+field consumed by the UI filter.
+
+When dispatching to the sub-agent, include in the prompt: "Assign `meal_type` based
+on when this dish is typically eaten. Use the closed vocabulary; use an array if the
+dish fits more than one time of day."
