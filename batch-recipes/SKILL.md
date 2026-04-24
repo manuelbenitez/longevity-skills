@@ -71,7 +71,7 @@ recipes_dir = Path("content/recipes/en")
 skills_dir = Path(os.environ.get("LONGEVITY_SKILLS_DIR", os.path.expanduser("~/Development/longevity-skills")))
 ingredients_dir = skills_dir / "data" / "ingredients"
 
-meal_type_counts = {"breakfast": 0, "lunch": 0, "dinner": 0, "snack": 0, "drink": 0}
+meal_type_counts = {"breakfast": 0, "lunch": 0, "dinner": 0, "snack": 0, "drink": 0, "sauce": 0}
 ingredient_usage = {}
 
 for md in recipes_dir.glob("*.md"):
@@ -223,6 +223,10 @@ MEAL_TYPE_KEYWORDS = {
               "Italian flatbread", "flatbread", "bivalve", "shellfish",
               "small oily fish", "oily fish", "legume", "cooked legume",
               "hummus", "dip"],
+    "sauce": ["condiment", "dip", "spread", "paste", "sauce", "hummus",
+              "legume", "cooked legume", "nut", "tree nut", "seed",
+              "olive", "vegetable", "roasted vegetable", "fermented dairy",
+              "yogurt", "small oily fish", "fish"],
     "lunch": ["protein", "main", "vegetable", "legume", "grain",
               "fish", "shellfish", "oil", "dressing", "pasta", "bread"],
     "dinner": ["protein", "main", "vegetable", "legume", "grain",
@@ -262,6 +266,12 @@ PARTNER_CATEGORY_WHITELIST = {
                   "tree nut", "nut", "seed",
                   "cocoa", "chocolate", "coffee",
                   "egg"],
+    "sauce": ["legume", "cooked legume", "nut", "tree nut", "seed",
+              "olive", "vegetable", "roasted vegetable", "pepper",
+              "fermented dairy", "yogurt", "brined fresh cheese",
+              "small oily fish", "fish", "shellfish",
+              "fresh herb", "aromatic", "spice", "citrus",
+              "oil", "condiment", "preserve"],
 }
 
 # Categories that should be rejected as partners even if they match whitelist

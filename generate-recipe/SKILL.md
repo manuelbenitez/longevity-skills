@@ -117,16 +117,18 @@ cook_time: <"N min" — "0 min" for no-cook recipes>
 difficulty: <easy | medium | hard>
 longevity_ingredients: [<ingredient slugs from data/ingredients/>]
 tags: [<free-form keywords: cuisine, diet, technique — NOT meal type>]
-meal_type: [<1+ of: breakfast, lunch, dinner, snack, drink>]
+meal_type: [<1+ of: breakfast, lunch, dinner, snack, drink, sauce>]
 source_book: <book name when the recipe is book-derived; omit otherwise>
 ---
 ```
 
 **`meal_type` is mandatory and must be an array of 1+ values.** Pick from the
-closed vocabulary: `breakfast`, `lunch`, `dinner`, `snack`, `drink`. Most Mediterranean
+closed vocabulary: `breakfast`, `lunch`, `dinner`, `snack`, `drink`, `sauce`. Most Mediterranean
 mains fit `[lunch, dinner]`. A smoothie is `[breakfast, drink]`. A crumble or farinata
-is `[snack]` (no `dessert` value exists — use `snack`). If the dish genuinely serves
-multiple roles, list them all; the `/recipes` filter surfaces it under every match.
+is `[snack]` (no `dessert` value exists — use `snack`). Dips, spreads, pastes, and
+condiments (hummus, tapenade, pesto, baba ganoush, harissa, tzatziki, etc.) use `[sauce]`
+or `[sauce, snack]`. If the dish genuinely serves multiple roles, list them all; the
+`/recipes` filter surfaces it under every match.
 
 Do NOT put meal-type tokens into `tags`. `tags` is for free-form cuisine/diet/technique
 labels ("mediterranean", "anti-inflammatory", "one-pot"). `meal_type` is the structural
