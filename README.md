@@ -1,19 +1,28 @@
 # longevity-skills
 
-Claude Code skills for generating science-backed longevity food content. A content pipeline that turns book knowledge into structured ingredient profiles, wiki entries, and chef-quality recipes.
+Claude Code skills for generating science-backed longevity food content from
+peer-reviewed books. A content pipeline that turns multi-book knowledge into
+structured ingredient profiles, wiki entries, and chef-quality recipes.
 
-Grounded in "The Path to Longevity" by Luigi Fontana.
+**Multi-book aware.** Every claim is tagged with the book it came from. Two books
+talking about the same ingredient produce one merged profile with provenance
+preserved. Add a third book without touching the existing data.
+
+Books currently processed:
+- "The Path to Longevity" by Luigi Fontana
+- "The Longevity Diet" by Valter Longo
 
 ## Skills
 
 | Skill | What it does | Input | Output |
 |-------|-------------|-------|--------|
-| `/extract-book-knowledge` | Extract food claims from book chapters | `data/book-raw/*` (epub, PDF, or txt) | `data/book-extracts/*.json` |
-| `/expand-ingredient-groups` | Split category entries (e.g. "cruciferous vegetables") into individual members, inheriting parent claims | `data/book-extracts/ingredients-master.json` | updates same file in-place |
-| `/dedup-ingredients` | Compare extracted ingredients against an existing wiki to bucket them as existing / fuzzy / new | `ingredients-master.json` + wiki dir | `data/dedup/*-dedup-report.json` |
-| `/research-ingredient` | Enrich with web research (PubMed, Examine) | ingredient name | `data/ingredients/*.json` |
-| `/generate-wiki-entry` | Write readable wiki articles | ingredient JSON | `content/wiki/*.md` |
+| `/extract-book-knowledge` | Extract food claims from book chapters | `data/book-raw/<slug>/` | `data/book-extracts/<slug>/*.json` |
+| `/expand-ingredient-groups` | Split category entries into members | `data/book-extracts/<slug>/ingredients-master.json` | same path, in-place |
+| `/dedup-ingredients` | Bucket extract vs wiki: new / new-to-book / existing-same-book / fuzzy | per-book master + wiki ingredients | `data/dedup/<slug>-dedup-report.json` |
+| `/research-ingredient` | Enrich with web research (PubMed, Examine) | dedup report | `<wiki_data_dir>/ingredients/*.json` |
+| `/generate-wiki-entry` | Write readable wiki articles | ingredient profile | `content/wiki/*.md` |
 | `/generate-recipe` | Create chef-quality recipes | 2-3 ingredient slugs | `content/recipes/*.md` |
+| `/batch-recipes` | Generate 10 recipes targeting under-represented meal types | ingredients dir | `content/recipes/en/_drafts/*.md` |
 
 ## Installation
 
@@ -23,74 +32,73 @@ cd ~/.claude/skills/longevity-skills
 ./setup
 ```
 
-The setup script registers all skills with Claude Code. No dependencies required.
-
-## Usage
-
-### 1. Set up a content project
+For development (running tests, the migration script, etc.):
 
 ```bash
-mkdir my-longevity-wiki && cd my-longevity-wiki
-mkdir -p data/book-raw
+python3 -m venv .venv
+.venv/bin/pip install -r requirements-dev.txt
 ```
 
-### 2. Add the book
-
-Drop the epub (or PDF) into your project:
+## Adding a book
 
 ```bash
-cp ~/Downloads/the-path-to-longevity.epub data/book-raw/
+# 1. Pick a slug (kebab-case). For "Outlive" by Peter Attia → attia-outlive.
+mkdir -p data/book-raw/attia-outlive
+cat > data/book-raw/attia-outlive/_book.json <<EOF
+{"slug": "attia-outlive", "title": "Outlive", "author": "Peter Attia"}
+EOF
+
+# 2. Drop the source file in.
+cp ~/Downloads/outlive.epub data/book-raw/attia-outlive/
+
+# 3. Run the pipeline.
+/extract-book-knowledge attia-outlive
+/expand-ingredient-groups attia-outlive
+/dedup-ingredients attia-outlive
+/research-ingredient --book attia-outlive
 ```
 
-The skill reads the epub directly (each chapter is an HTML file inside the zip).
-It scans the table of contents, identifies food chapters, extracts claims,
-and pulls references from the bibliography. No copy-pasting needed.
+After that, ingredient profiles in `<wiki_data_dir>/ingredients/` will carry
+claims tagged with `attia-outlive` alongside whatever was there before.
 
-Plain text files (`data/book-raw/chapter-*.txt`) also work as a fallback.
+## Canonical claim shape
 
-### 3. Run the pipeline
+Every claim everywhere in the pipeline uses these field names:
 
-```bash
-# In Claude Code, inside your content project:
-/extract-book-knowledge        # Scan full book, extract all ingredients + claims
-/expand-ingredient-groups      # Split "nuts", "leafy greens", etc. into members
-/dedup-ingredients             # Bucket against existing wiki: existing / fuzzy / new
-/research-ingredient turmeric  # Enrich one ingredient with web research
-/generate-wiki-entry turmeric  # Write the wiki article
-/generate-recipe turmeric black-pepper chickpeas  # Create a recipe
-```
-
-## Pipeline
-
-```
-Book (epub/PDF/txt) -> Extract -> Expand groups -> Dedup -> Research -> Wiki entries
-                                                                    -> Recipes
-```
-
-Each skill reads from the previous skill's output directory. See `CLAUDE.md` for the full data flow diagram.
-
-## Model Configuration
-
-By default, skills use the cheapest model that can handle the task well:
-
-| Skill | Default model | Why |
-|-------|--------------|-----|
-| `/extract-book-knowledge` | sonnet | Needs to catch subtle mechanisms and apply quality rubric |
-| `/expand-ingredient-groups` | (n/a — deterministic) | Taxonomy lookup + string matching, no inference needed |
-| `/dedup-ingredients` | (n/a — deterministic) | Slug/alias index lookup and fuzzy string match |
-| `/research-ingredient` | sonnet | Judges conflicting sources, spots `agrees_with_book` mismatches |
-| `/generate-wiki-entry` | haiku | Template-filling from structured JSON — Haiku is sufficient |
-| `/generate-recipe` | sonnet | Culinary voice + science integration benefits from a stronger model |
-
-To override, copy the example config into your content project and edit:
-
-```bash
-cp ~/.claude/skills/longevity-skills/.longevity-skills.json.example .longevity-skills.json
-```
-
-`.longevity-skills.json`:
 ```json
 {
+  "text": "Walnuts lower LDL cholesterol in adults at risk.",
+  "mechanism": "Omega-3 ALA reduces hepatic VLDL output.",
+  "recommendation": "1 ounce daily",
+  "reference": "Estruch et al. 2018",
+  "confidence": "high",
+  "book_slug": "fontana"
+}
+```
+
+`book_slug` is required on ingredient-profile claims; on chapter extracts it's
+inferred from the top-level `book_slug` field. The validator at write time
+rejects any other shape — earlier versions silently renamed `claim`/`study_ref`
+on read, which masked drift across books. That's gone.
+
+## Validating your data
+
+```bash
+python3 scripts/lib.py validate book-extract data/book-extracts/longo/chapter-04.json
+python3 scripts/lib.py validate ingredient ~/Development/my-longevity-wiki/data/ingredients/walnuts.json
+python3 scripts/lib.py validate-all data/   # everything under the root
+```
+
+Invalid files are written to `data/.invalid/<slug>-<timestamp>.json` with the
+field diff appended.
+
+## Configuration
+
+`.longevity-skills.json` (gitignored, project-local):
+
+```json
+{
+  "wiki_data_dir": "~/Development/my-longevity-wiki/data",
   "models": {
     "extraction": "sonnet",
     "research": "sonnet",
@@ -100,11 +108,29 @@ cp ~/.claude/skills/longevity-skills/.longevity-skills.json.example .longevity-s
 }
 ```
 
-The file is gitignored — it stays local to each project. Valid values: `sonnet`, `haiku`, `opus`.
+Or set the env var `LONGEVITY_WIKI_DATA_DIR` to override the wiki dir explicitly.
+Valid model values: `sonnet`, `haiku`, `opus`.
+
+## Testing
+
+```bash
+pytest tests/ -v
+```
+
+47 tests covering slugify, schema validation, migration logic, and enrich merge
+semantics. The 5 IRON-RULE regressions encoded in the suite:
+
+1. Migration produces schema-valid output for every wiki profile.
+2. Migration is idempotent.
+3. Canonical shape flows end-to-end (no hidden `claim`/`study_ref` rename).
+4. Validator rejects the legacy singular `source_book` string.
+5. Second-book merge preserves first-book `supplementary_research` byte-identical.
+
+CI runs the suite on every push and PR (`.github/workflows/test.yml`).
 
 ## Examples
 
-The `examples/` directory contains realistic sample outputs for each skill, using turmeric as the reference ingredient.
+`examples/` contains realistic sample outputs for each step of the pipeline.
 
 ## License
 
