@@ -2,17 +2,44 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/longevity-skills/schemas/book-extract.schema.json",
   "title": "Book Extract",
-  "description": "Structured extraction of food/ingredient claims from a book chapter",
+  "description": "Structured extraction of food/ingredient claims from a book chapter. Multi-book aware: every chapter carries explicit book identity so downstream skills can attribute claims correctly across multiple source books.",
   "type": "object",
-  "required": ["chapter", "page_range", "ingredients"],
+  "required": ["book", "author", "book_slug", "chapter", "ingredients"],
   "properties": {
+    "book": {
+      "type": "string",
+      "description": "Book title, e.g. 'The Path to Longevity'"
+    },
+    "author": {
+      "type": "string",
+      "description": "Author full name, e.g. 'Luigi Fontana'"
+    },
+    "book_slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Stable kebab-case identifier from data/book-raw/<slug>/_book.json. Never re-derive; always read from the manifest."
+    },
     "chapter": {
       "type": "string",
       "description": "Chapter title"
     },
+    "chapter_number": {
+      "type": "integer",
+      "description": "Chapter number, optional"
+    },
     "page_range": {
       "type": "string",
       "description": "Page range covered, e.g. '45-72'"
+    },
+    "extracted_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When extraction was performed"
+    },
+    "extraction_status": {
+      "type": "string",
+      "enum": ["complete", "partial", "draft"],
+      "description": "Whether this extract is finished"
     },
     "ingredients": {
       "type": "array",
@@ -29,6 +56,11 @@
             "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
             "description": "URL-safe kebab-case identifier"
           },
+          "aliases": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Other names this ingredient is called in this book"
+          },
           "page_refs": {
             "type": "array",
             "items": { "type": "integer" },
@@ -39,19 +71,23 @@
             "minItems": 1,
             "items": {
               "type": "object",
-              "required": ["claim", "mechanism", "confidence"],
+              "required": ["text", "mechanism", "confidence"],
               "properties": {
-                "claim": {
+                "text": {
                   "type": "string",
-                  "description": "The specific health claim"
+                  "description": "The specific health claim, in the book's own framing"
                 },
                 "mechanism": {
                   "type": "string",
                   "description": "Biological mechanism of action"
                 },
-                "study_ref": {
+                "recommendation": {
+                  "type": ["string", "null"],
+                  "description": "Actionable dosing/preparation guidance attached to this claim, if any. Nullable for claims with no actionable component."
+                },
+                "reference": {
                   "type": "string",
-                  "description": "Study cited in book, or 'book-assertion' if none"
+                  "description": "Study, citation, or 'book-assertion' if the book offers no external source"
                 },
                 "confidence": {
                   "type": "string",
@@ -86,9 +122,9 @@
             "type": "array",
             "items": {
               "type": "object",
-              "required": ["target_ingredient", "type", "description"],
+              "required": ["with", "type"],
               "properties": {
-                "target_ingredient": {
+                "with": {
                   "type": "string",
                   "description": "Name of the related ingredient (natural name, normalized post-extraction)"
                 },
@@ -96,8 +132,9 @@
                   "type": "string",
                   "enum": ["synergy", "antagonism", "complement"]
                 },
-                "description": {
-                  "type": "string"
+                "note": {
+                  "type": "string",
+                  "description": "How this ingredient interacts with the target"
                 }
               }
             }
