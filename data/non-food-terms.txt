@@ -1,0 +1,30 @@
+# Non-food terms — filtered out of enrichment queue.
+# One term per line. Lines starting with # are comments.
+# Match is case-insensitive on full name.
+# Edits take effect on next /research-ingredient run.
+
+# Hormones, signaling molecules, cellular machinery
+igf-1
+igfbp1
+insulin
+stem cells
+mitochondria
+ketone bodies
+
+# Lab measurements / clinical markers
+blood pressure
+blood glucose
+c-reactive protein
+abdominal fat
+
+# Macronutrients / compound classes (these are nutrients, not ingredients)
+glycerol
+cholesterol
+sugar
+saturated fats
+healthy fats
+calories
+protein
+
+# Meal categories
+desserts
