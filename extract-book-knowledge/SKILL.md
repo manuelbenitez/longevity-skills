@@ -1,10 +1,11 @@
 ---
 name: extract-book-knowledge
-version: 0.3.0
+version: 0.4.0
 description: |
-  Extract structured food/ingredient claims from "The Path to Longevity" by Luigi Fontana.
-  Reads the book as an epub (or PDF), scans all chapters, extracts health claims,
-  mechanisms, consumption recommendations, ingredient relationships, and bibliography references.
+  Extract structured food/ingredient claims from a longevity/health book.
+  Reads an epub, PDF, or plain-text chapter files; identifies the book by manifest;
+  emits canonical-shape JSON tagged with the book's slug so multiple books can be
+  processed without collision.
   Use when asked to "extract", "process book", "book claims", "scan book", or "parse ingredients".
 allowed-tools:
   - Bash
@@ -16,7 +17,44 @@ allowed-tools:
 
 # Extract Book Knowledge
 
-Scan the full book and extract every food/ingredient claim into structured JSON.
+Scan a book and extract every food/ingredient claim into canonical-shape JSON.
+**Book identity is required.** Every chapter JSON carries `book`, `author`, and
+`book_slug` at the top level so downstream skills can attribute claims correctly
+when multiple books are in the dataset.
+
+## Step 0: Book identity (mandatory before any extraction)
+
+Every book gets a slug, declared once in a manifest file. The slug is the primary
+key that propagates through every downstream skill — never re-derive it.
+
+```bash
+ls data/book-raw/*/_book.json 2>/dev/null && echo "MANIFESTS_EXIST" || echo "NO_MANIFESTS"
+```
+
+If the user is extracting a new book, ask: book title and author. Then write the
+manifest before reading any chapter content:
+
+```bash
+SLUG=$(python3 scripts/lib.py slugify "BOOK TITLE")
+mkdir -p data/book-raw/$SLUG
+cat > data/book-raw/$SLUG/_book.json <<EOF
+{
+  "slug": "$SLUG",
+  "title": "BOOK TITLE",
+  "author": "AUTHOR FULL NAME"
+}
+EOF
+```
+
+After this, move the source file(s) into `data/book-raw/$SLUG/`. If a manifest
+already exists for this book, reuse the existing slug — never re-derive from
+typed title.
+
+To list known books:
+
+```bash
+python3 scripts/lib.py books
+```
 
 ## Model Config
 
@@ -25,197 +63,131 @@ _MODEL=$(python3 -c "import json; d=json.load(open('.longevity-skills.json')); p
 echo "MODEL: $_MODEL (extraction)"
 ```
 
-This skill runs on the main model. The `_MODEL` value is used if you spawn sub-agents
-(e.g., parallel chapter processing). Default: sonnet.
+## Inputs and outputs
 
-## Input
+Per-book layout. Substitute `<slug>` with the value from `_book.json`:
 
-An epub file at `data/book-raw/*.epub` in the current project directory.
-Also accepts PDF (`data/book-raw/*.pdf`) or plain text (`data/book-raw/chapter-*.txt`).
+- Inputs: `data/book-raw/<slug>/*.epub` (preferred), `*.pdf`, or `chapter-*.txt`
+- Outputs:
+  - `data/book-extracts/<slug>/chapter-NN.json` — one per chapter
+  - `data/book-extracts/<slug>/ingredients-master.json` — consolidated list
+  - `data/book-extracts/<slug>/references.json` — bibliography
+  - `data/book-extracts/<slug>/_scan-plan.json` — which chapters to process
 
-## Output
+All chapter and master JSONs MUST conform to `schemas/book-extract.schema.json`.
 
-- `data/book-extracts/ingredients-master.json` -- consolidated list of all ingredients found
-- `data/book-extracts/chapter-{NN}.json` -- per-chapter extraction files
-- `data/book-extracts/references.json` -- extracted bibliography references
-- `data/book-extracts/_scan-plan.json` -- which chapters to process and why
-- All JSON files conform to the Book Extract Schema at `schemas/book-extract.schema.json`
+## Canonical claim shape (CRITICAL)
 
-## Usage
+Every claim MUST use these exact field names — `text`/`reference`/`mechanism`/
+`recommendation`/`confidence`. Do NOT emit `claim` or `study_ref` (legacy).
+The validator at write-time will reject the legacy shape.
 
-```
-/extract-book-knowledge
-```
-
-The skill auto-detects the input format (epub, PDF, or text files).
-
-## How It Works
-
-### Step 1: Detect input and extract chapter list
-
-```bash
-EPUB=$(find data/book-raw -name "*.epub" -type f 2>/dev/null | head -1)
-PDF=$(find data/book-raw -name "*.pdf" -type f 2>/dev/null | head -1)
-TXT_COUNT=$(find data/book-raw -name "*.txt" -type f 2>/dev/null | wc -l | tr -d ' ')
-echo "EPUB: ${EPUB:-none}"
-echo "PDF: ${PDF:-none}"
-echo "TXT files: $TXT_COUNT"
-```
-
-If nothing found, stop: "No book input found. Place your epub at data/book-raw/"
-
-**For epub (preferred):** Extract the table of contents and chapter list:
-
-```bash
-python3 << 'PYEOF'
-import zipfile, re, json, sys
-
-epub_path = sys.argv[1] if len(sys.argv) > 1 else "EPUB_PATH"
-epub = zipfile.ZipFile(epub_path)
-
-# List all content files
-html_files = sorted([f for f in epub.namelist() if f.endswith(('.xhtml', '.html', '.htm'))])
-for f in html_files:
-    size = epub.getinfo(f).file_size
-    print(f"{f} ({size} bytes)")
-PYEOF
-```
-
-An epub is a zip of HTML files. Each chapter is a separate .xhtml file.
-No page-based reading needed. Read chapters directly by filename.
-
-### Step 2: Read the Table of Contents
-
-Extract the TOC from the epub to identify which chapters are about food/nutrition:
-
-```bash
-python3 << 'PYEOF'
-import zipfile, re, sys
-
-epub = zipfile.ZipFile("EPUB_PATH")
-toc_raw = epub.read("OEBPS/toc.xhtml").decode("utf-8", errors="replace")
-clean = re.sub(r'<[^>]+>', '\n', toc_raw)
-lines = [l.strip() for l in clean.split('\n') if l.strip()]
-for line in lines:
-    print(line)
-PYEOF
-```
-
-From the TOC, identify the food-focused chapters. For "The Path to Longevity," these are:
-
-**Primary food chapters (process in full):**
-- Chapter 4: The Science of Healthy Nutrition
-- Chapter 5: Longevity Effects of Restricting Calories and Fasting
-- Chapter 7: Diet Quality Matters (protein, fat, carbs, fibre)
-- Chapter 8: The Mediterranean Diet
-- Chapter 9: Move to the Modern Healthy Longevity Diet (the food pyramid, vegetables, herbs, spices, grains, legumes, nuts, seeds, fruit, fish, olive oil, drinks)
-- Chapter 10: Foods to Eliminate or Drastically Reduce
-
-**Secondary chapters (skim for ingredient mentions):**
-- Chapter 2: Healthy Centenarians (Okinawa, Sardinia diets)
-- Chapter 6: Healthy Children (nutrition in pregnancy/breastfeeding)
-- Chapter 17: Preventative Action (alcohol, vitamin D)
-
-**References:**
-- References/Bibliography section (chapter 32 in epub)
-
-Write the scan plan to `data/book-extracts/_scan-plan.json`.
-
-### Step 3: Extract chapters one at a time
-
-For each food-focused chapter, read the HTML content from the epub and extract text:
-
-```bash
-python3 << 'PYEOF'
-import zipfile, re, sys
-
-epub = zipfile.ZipFile("EPUB_PATH")
-chapter_file = "OEBPS/chapterNN.xhtml"  # substitute actual filename
-
-raw = epub.read(chapter_file).decode("utf-8", errors="replace")
-# Strip HTML tags, keep paragraph breaks
-text = re.sub(r'</(p|h[1-6]|div|li)>', '\n\n', raw)
-text = re.sub(r'<[^>]+>', '', text)
-text = re.sub(r'&[a-z]+;', ' ', text)
-text = re.sub(r'\n{3,}', '\n\n', text).strip()
-print(text)
-PYEOF
-```
-
-Read the extracted text. For each chapter:
-
-1. Identify every food, ingredient, nutrient, or compound mentioned
-2. For each ingredient, extract:
-   - **Claims:** specific health claims with biological mechanisms
-   - **Study references:** author names, journal, year if cited inline
-   - **Consumption recommendations:** amounts, frequency, preparation methods
-   - **Relationships:** synergies, antagonisms, complements with other ingredients
-   - **Confidence level:** high/medium/low based on evidence quality
-3. Write to `data/book-extracts/chapter-{NN}.json` matching the Book Extract Schema
-
-### Step 4: Extract bibliography/references
-
-The references section is in `OEBPS/chapter32.xhtml` and `OEBPS/chapter32a.xhtml`.
-
-Extract all references into `data/book-extracts/references.json`:
 ```json
 {
-  "references": [
-    {
-      "id": "string",
-      "authors": "string",
-      "title": "string",
-      "journal": "string",
-      "year": "number",
-      "doi": "string (if available)",
-      "chapter_cited_in": "string"
-    }
-  ]
+  "text": "Walnuts lower LDL cholesterol in adults at risk.",
+  "mechanism": "Omega-3 ALA reduces hepatic VLDL output.",
+  "recommendation": "1 ounce daily",
+  "reference": "Estruch et al. 2018",
+  "confidence": "high"
 }
 ```
 
-### Step 5: Consolidate into master ingredient list
+Every relationship MUST use `with`/`type`/`note`:
 
-After all chapters are processed:
+```json
+{ "with": "olive oil", "type": "synergy", "note": "ALA + MUFA pair well." }
+```
 
-1. Read all `chapter-*.json` files
-2. Merge duplicate ingredients across chapters (same ingredient in different chapters)
-3. Normalize names to slugs ("wild blueberries" and "blueberries" -> "blueberries")
-4. Cross-reference claims with full references from `references.json`
-5. Write `data/book-extracts/ingredients-master.json`
+Every chapter JSON must have top-level `book`, `author`, `book_slug`,
+`chapter`, `page_range`, `ingredients`. Validate before writing:
 
-The master file is the primary input for `/research-ingredient`.
+```bash
+python3 scripts/lib.py validate book-extract data/book-extracts/<slug>/chapter-04.json
+```
 
-### Step 6: Summary report
+Invalid files are written to `data/.invalid/` and the skill exits non-zero —
+fix the prompt or hand-edit before continuing.
 
-Print:
-- Total ingredients found
-- Total health claims extracted
-- Chapters processed
-- Top 10 most-referenced ingredients
-- Ingredients with low-confidence claims needing manual review
-- Any ambiguous references that couldn't be resolved
+## Step 1: Detect input
 
-## Quality Rubric
+```bash
+SLUG="<from_book.json>"
+EPUB=$(find data/book-raw/$SLUG -name "*.epub" -type f 2>/dev/null | head -1)
+PDF=$(find data/book-raw/$SLUG -name "*.pdf" -type f 2>/dev/null | head -1)
+TXT_COUNT=$(find data/book-raw/$SLUG -name "chapter-*.txt" -type f 2>/dev/null | wc -l | tr -d ' ')
+echo "EPUB: ${EPUB:-none}  PDF: ${PDF:-none}  TXT: $TXT_COUNT"
+```
 
-Every health claim must include:
-- **(a)** A specific mechanism of action (not "is good for you" but "inhibits NF-kB pathway, reducing chronic inflammation")
-- **(b)** At least one citation: chapter reference + study from bibliography if available
-- **(c)** Dosage/quantity if the book specifies one
-- **(d)** A confidence level:
-  - **high**: claim cites a specific study with clear mechanism
-  - **medium**: claim has mechanism but no specific study, or study is observational
-  - **low**: book assertion without mechanism or study. Include the raw quote for manual review.
+If nothing found, stop with a clear error.
 
-## Failure Modes
+## Step 2: Build the scan plan
 
-- **Epub cannot be read:** Check it's a valid zip. `python3 -c "import zipfile; zipfile.ZipFile('file.epub')"`
-- **Chapter has no food content:** Write empty ingredients array. Not an error.
-- **Ingredient name ambiguity:** Flag near-matches for manual review during consolidation.
-- **References section not found:** Skip Step 4, note in summary.
-- **DRM-encrypted epub:** The epub must be DRM-free. If content looks like binary garbage, the DRM hasn't been removed.
+Identify food-relevant chapters from the TOC. Write `data/book-extracts/<slug>/_scan-plan.json`:
 
-## Text File Fallback
+```json
+{
+  "book_slug": "<slug>",
+  "primary_chapters": [{"number": 4, "title": "...", "file": "OEBPS/chapter04.xhtml"}],
+  "secondary_chapters": [],
+  "references_file": "OEBPS/references.xhtml"
+}
+```
 
-If no epub or PDF found but `data/book-raw/chapter-*.txt` files exist, process each
-text file as a standalone chapter. Skip TOC scan and reference extraction.
+## Step 3: Extract each chapter
+
+For each chapter in the scan plan, read the text, identify every food/ingredient
+mentioned, and emit a canonical-shape chapter JSON. Every chapter object has these
+required top-level fields:
+
+```json
+{
+  "book": "<from manifest>",
+  "author": "<from manifest>",
+  "book_slug": "<slug>",
+  "chapter": "Chapter 4: The Science of Healthy Nutrition",
+  "chapter_number": 4,
+  "page_range": "estimated",
+  "ingredients": [ ... ]
+}
+```
+
+For each ingredient, populate `claims` (with canonical field names!), optionally
+`consumption` and `relationships`. Validate before writing.
+
+## Step 4: Extract references
+
+Bibliography goes to `data/book-extracts/<slug>/references.json`. This file isn't
+schema-validated (its shape is up to you).
+
+## Step 5: Consolidate to ingredients-master.json
+
+Walk every chapter JSON, merge duplicate ingredients (same name across chapters),
+inherit claims to the master. The master file itself conforms to the Book Extract
+schema (same `book`/`author`/`book_slug` headers, single `ingredients[]` array).
+
+```bash
+python3 scripts/lib.py validate book-extract data/book-extracts/<slug>/ingredients-master.json
+```
+
+## Step 6: Summary report
+
+Print total ingredients, total claims, chapters processed, top 10 most-cited
+ingredients, low-confidence claims needing review.
+
+## Failure modes
+
+- **Manifest missing:** Stop. Ask the user for book title+author, write the manifest.
+- **Validator rejects a chapter:** The chapter JSON went to `data/.invalid/`. Read
+  the error, fix the prompt or hand-edit, re-run.
+- **DRM-encrypted epub:** Content looks like binary garbage. Stop — the user
+  needs to strip DRM before this skill can read it.
+- **Chapter has no food content:** Write an empty `ingredients` array. Not an error.
+
+## Quality rubric
+
+Every claim must include:
+- A specific mechanism of action (not "is good for you" — "inhibits NF-kB pathway").
+- At least one reference (chapter+page or study citation or "book-assertion").
+- Recommendation field populated if the book specifies amount/frequency/preparation;
+  null if no actionable guidance attached to this specific claim.
+- A confidence level: high / medium / low.

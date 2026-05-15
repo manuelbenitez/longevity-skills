@@ -1,6 +1,6 @@
 ---
 name: batch-recipes
-version: 0.1.0
+version: 0.2.0
 description: |
   Batch-generate 10 chef-quality recipes in one invocation. Picks ingredient
   combinations deterministically using synergies, culinary pairings, and usage
@@ -40,8 +40,10 @@ than cost, because bad drafts waste your review time, not just tokens.
 
 The skill assumes it runs from the **my-longevity-wiki** repo root, because that
 is where `content/recipes/en/` lives. The ingredient JSON profiles live in the
-sibling repo at `~/Development/longevity-skills/data/ingredients/`. If that path
-has moved, set `LONGEVITY_SKILLS_DIR` in your shell:
+flat `<wiki_data_dir>/ingredients/` dir (the wiki repo's data). Each profile carries
+a top-level `source_books[]` array — when citing an ingredient in a recipe, prefer
+to mention all books that cite it rather than picking one. If the env var
+`LONGEVITY_SKILLS_DIR` is set, ingredient JSONs are read from there:
 
 ```bash
 LONGEVITY_SKILLS_DIR="${LONGEVITY_SKILLS_DIR:-$HOME/Development/longevity-skills}"

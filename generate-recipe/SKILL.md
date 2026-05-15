@@ -1,6 +1,6 @@
 ---
 name: generate-recipe
-version: 0.1.0
+version: 0.2.0
 description: |
   Generate chef-quality recipes combining longevity ingredients. Reads ingredient
   profiles, identifies synergies, and produces recipes with both scientific backing
@@ -35,7 +35,9 @@ review output quality carefully before publishing.
 ## Input
 
 2-3 ingredient slugs passed as arguments. The skill reads corresponding JSON profiles
-from `data/ingredients/`.
+from `<wiki_data_dir>/ingredients/` (resolved by `lib.wiki_data_dir()`). Profiles use
+the canonical claim shape — `text`, `mechanism`, `recommendation`, `reference`,
+`confidence`, `book_slug` — and carry a top-level `source_books[]` array.
 
 ## Output
 
@@ -70,13 +72,19 @@ After reading all ingredient JSONs, pre-extract just the data the agent needs:
 python3 << 'PYEOF'
 import json, sys
 
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from scripts import lib
+
 slugs = sys.argv[1:]
 context = {}
+ingredients_dir = lib.wiki_data_dir() / "ingredients"
 for slug in slugs:
-    with open(f"data/ingredients/{slug}.json") as f:
+    with open(ingredients_dir / f"{slug}.json") as f:
         d = json.load(f)
     context[slug] = {
         "name": d["name"],
+        "source_books": d.get("source_books", []),
         "flavor_profile": d.get("flavor_profile", {}),
         "culinary_pairings": d.get("culinary_pairings", []),
         "synergies": d.get("synergies", []),
@@ -118,7 +126,7 @@ difficulty: <easy | medium | hard>
 longevity_ingredients: [<ingredient slugs from data/ingredients/>]
 tags: [<free-form keywords: cuisine, diet, technique — NOT meal type>]
 meal_type: [<1+ of: breakfast, lunch, dinner, snack, drink, sauce>]
-source_book: <book name when the recipe is book-derived; omit otherwise>
+source_books: [<book slugs from ingredients' source_books; omit if recipe is original>
 ---
 ```
 

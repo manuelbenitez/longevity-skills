@@ -1,6 +1,6 @@
 ---
 name: generate-wiki-entry
-version: 0.1.0
+version: 0.2.0
 description: |
   Generate readable wiki entries from ingredient profiles. Transforms structured
   JSON ingredient data into compelling Markdown articles written for a general
@@ -35,11 +35,27 @@ This dispatches the writing work to the configured model, not the orchestrating 
 
 ## Input
 
-JSON file at `data/ingredients/{ingredient-slug}.json` (output of /research-ingredient).
+JSON file at `<wiki_data_dir>/ingredients/{ingredient-slug}.json` (output of /research-ingredient).
+Profiles carry per-claim `book_slug` and a denormalized `source_books[]` array —
+both books and individual claims are first-class.
 
 ## Output
 
 Markdown file at `content/wiki/{ingredient-slug}.md` with YAML frontmatter for the website.
+
+## Multi-book rendering
+
+When `source_books[]` contains more than one slug, surface that in the byline and
+group `book_claims` by `book_slug` in the references section. For each book, write
+a sub-section showing the claims that book asserts. If two claims have similar
+`text` but different `mechanism` (cross-book disagreement), surface them in a
+"What the books disagree on" callout below the main claims section.
+
+Look up each book_slug → human name via `data/book-raw/<slug>/_book.json`:
+
+```bash
+python3 scripts/lib.py books
+```
 
 ## Usage
 
