@@ -1,12 +1,12 @@
 ---
 name: expand-ingredient-groups
-version: 0.1.0
+version: 0.2.0
 description: |
   Expand grouped/category ingredients into individual members before dedup.
   Detects entries like "cruciferous vegetables", "oily fish", "nuts", "legumes",
   "berries", "leafy greens" and splits them into atomised ingredients.
-  Each child inherits the parent group's claims. The group entry is kept but
-  marked as a category so downstream skills know it's a container, not a leaf.
+  Each child inherits the parent group's claims (including book_slug). The group
+  entry is kept but marked as a container.
   Use when asked to "expand groups", "split categories", "atomise ingredients".
 allowed-tools:
   - Bash
@@ -16,16 +16,34 @@ allowed-tools:
 
 # Expand Ingredient Groups
 
-Detect category-level ingredients in the master extract and expand them into
-individual leaf ingredients before the dedup step.
+Detect category-level ingredients in a per-book master extract and expand them into
+individual leaf ingredients before the dedup step. Takes a `<book-slug>` argument
+to know which book's master to operate on.
+
+## Usage
+
+```
+/expand-ingredient-groups <book-slug>
+```
+
+If no slug is given, list manifests and ask the user to pick:
+
+```bash
+python3 scripts/lib.py books
+```
 
 ## Input
 
-`data/book-extracts/ingredients-master.json` — output of /extract-book-knowledge
+`data/book-extracts/<slug>/ingredients-master.json` — output of /extract-book-knowledge.
+Validate before reading:
+
+```bash
+python3 scripts/lib.py validate book-extract data/book-extracts/<slug>/ingredients-master.json
+```
 
 ## Output
 
-`data/book-extracts/ingredients-master.json` — updated in-place:
+`data/book-extracts/<slug>/ingredients-master.json` — updated in-place:
 - Group entries get `"is_group": true` and a `"members": [...]` list added
 - Each member is inserted as a new top-level ingredient with:
   - Its own slug
@@ -116,19 +134,26 @@ Before adding a member, check if it already exists in the extract as its own ent
 
 ### Step 4: Build inherited claims
 
-For each new member ingredient:
+For each new member ingredient, inherit the group's claims verbatim and add
+`inherited_from`. The book_slug is implicit in the source claims (set by
+extract-book-knowledge); preserve it in the copy.
 
 ```python
-def inherit_claims(member_name, group_claims):
+def inherit_claims(member_name, group_claims, group_slug):
     inherited = []
     for claim in group_claims:
         inherited.append({
-            **claim,
+            **claim,  # preserves text, mechanism, recommendation, reference, confidence
             "inherited_from": group_slug,
-            "text": claim["text"],  # keep original group claim text
-            "note": f"Claim applies to {member_name} as a member of '{group_name}'"
         })
     return inherited
+```
+
+Note: claim field names must stay canonical (`text`, `reference`, `mechanism`,
+`recommendation`, `confidence`). Do NOT rename. After the expansion, re-validate:
+
+```bash
+python3 scripts/lib.py validate book-extract data/book-extracts/<slug>/ingredients-master.json
 ```
 
 ### Step 5: Update the master file

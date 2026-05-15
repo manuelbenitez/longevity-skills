@@ -2,9 +2,9 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/longevity-skills/schemas/ingredient.schema.json",
   "title": "Ingredient Profile",
-  "description": "Enriched ingredient profile combining book claims with web research and culinary data",
+  "description": "Enriched ingredient profile combining per-book claims with web research and culinary data. One profile may aggregate claims from multiple source books. Each claim carries its book_slug so provenance is preserved.",
   "type": "object",
-  "required": ["name", "slug", "book_claims", "research_status"],
+  "required": ["name", "slug", "category", "book_claims", "source_books", "research_status"],
   "properties": {
     "name": {
       "type": "string",
@@ -15,18 +15,74 @@
       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
       "description": "URL-safe kebab-case identifier"
     },
+    "category": {
+      "type": "string",
+      "enum": [
+        "fish",
+        "vegetable",
+        "fruit",
+        "grain",
+        "legume",
+        "nut",
+        "seed",
+        "oil",
+        "dairy",
+        "egg",
+        "meat",
+        "supplement",
+        "nutrient",
+        "beverage",
+        "spice",
+        "herb",
+        "mushroom",
+        "shellfish",
+        "other"
+      ],
+      "description": "Single-word category. Must match the enum in research-ingredient/enrich.py."
+    },
+    "aliases": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Other names for this ingredient (different books may call it different things)"
+    },
+    "source_books": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      },
+      "description": "Denormalized list of book_slugs that cite this ingredient. Recomputed on every write from book_claims[].book_slug. Sorted and deduplicated."
+    },
     "book_claims": {
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["claim", "mechanism", "confidence"],
+        "required": ["text", "mechanism", "confidence", "book_slug"],
         "properties": {
-          "claim": { "type": "string" },
-          "mechanism": { "type": "string" },
-          "study_ref": { "type": "string" },
+          "text": {
+            "type": "string",
+            "description": "The health claim text"
+          },
+          "mechanism": {
+            "type": "string",
+            "description": "Biological mechanism of action"
+          },
+          "recommendation": {
+            "type": ["string", "null"],
+            "description": "Per-claim dosing/preparation guidance, if any. Nullable for legacy claims without this field."
+          },
+          "reference": {
+            "type": "string",
+            "description": "Study, citation, or 'book-assertion'"
+          },
           "confidence": {
             "type": "string",
             "enum": ["high", "medium", "low"]
+          },
+          "book_slug": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+            "description": "Which book this claim came from. Required — drives source_books[] derivation and conflict surfacing."
           }
         }
       }
@@ -49,7 +105,8 @@
             "type": "string"
           },
           "agrees_with_book": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Whether the web finding agrees with the book claim(s). When an ingredient is cited by multiple books, this reflects agreement with the dominant claim direction; cross-book disagreement is captured by claims with different book_slug and different mechanism."
           }
         }
       }
@@ -112,14 +169,14 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["target_ingredient", "type", "description"],
+        "required": ["with", "type"],
         "properties": {
-          "target_ingredient": { "type": "string" },
+          "with": { "type": "string" },
           "type": {
             "type": "string",
             "enum": ["synergy", "antagonism", "complement"]
           },
-          "description": { "type": "string" }
+          "note": { "type": "string" }
         }
       }
     },
@@ -135,6 +192,10 @@
     "research_status": {
       "type": "string",
       "enum": ["complete", "partial", "book-only"]
+    },
+    "migration_version": {
+      "type": "integer",
+      "description": "Set by scripts/migrate-multi-book.py when the profile is migrated from the legacy singular-source_book shape. Used as an idempotency marker."
     }
   }
 }

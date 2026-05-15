@@ -1,115 +1,90 @@
 {
-  "name": "Turmeric",
-  "slug": "turmeric",
+  "name": "Walnuts",
+  "slug": "walnuts",
+  "category": "nut",
+  "aliases": ["English walnut", "Juglans regia"],
+  "source_books": ["fontana", "longo"],
   "book_claims": [
     {
-      "claim": "Curcumin reduces chronic low-grade inflammation by inhibiting the NF-kB signaling pathway",
-      "mechanism": "Curcumin blocks IkB kinase, preventing NF-kB translocation to the nucleus and subsequent transcription of pro-inflammatory cytokines (TNF-alpha, IL-6, IL-1beta)",
-      "study_ref": "Aggarwal BB, Harikumar KB. Int J Biochem Cell Biol. 2009;41(1):40-59",
-      "confidence": "high"
+      "text": "Walnut consumption is associated with lower all-cause mortality in long-term prospective studies.",
+      "mechanism": "Walnuts are rich in alpha-linolenic acid (ALA), polyphenols, and L-arginine which reduce systemic inflammation, improve endothelial function, and modulate the gut microbiome.",
+      "recommendation": "30g (about 7 whole walnuts) daily",
+      "reference": "Bao et al. NEJM 2013 — Harvard prospective study",
+      "confidence": "high",
+      "book_slug": "fontana"
     },
     {
-      "claim": "Regular turmeric consumption is associated with lower rates of Alzheimer's disease in populations with high dietary intake",
-      "mechanism": "Curcumin crosses the blood-brain barrier and reduces amyloid-beta plaque accumulation",
-      "study_ref": "Mishra S, Palanivelu K. Ann Indian Acad Neurol. 2008;11(1):13-19",
-      "confidence": "medium"
-    },
-    {
-      "claim": "Curcumin bioavailability increases up to 2000% when consumed with piperine from black pepper",
-      "mechanism": "Piperine inhibits hepatic and intestinal glucuronidation of curcumin",
-      "study_ref": "Shoba G et al. Planta Med. 1998;64(4):353-356",
-      "confidence": "high"
+      "text": "Walnuts are recommended in the Longevity Diet as a primary plant source of healthy fats and protein for adults over 65.",
+      "mechanism": "ALA omega-3 fats and arginine-rich protein support cardiovascular health while keeping IGF-1 lower than animal-protein equivalents.",
+      "recommendation": "1 ounce (about 7 walnuts) daily, paired with olive oil and legumes",
+      "reference": "Longo, The Longevity Diet, Chapter 4",
+      "confidence": "high",
+      "book_slug": "longo"
     }
   ],
   "supplementary_research": [
     {
-      "source": "Examine",
-      "url": "https://examine.com/supplements/curcumin/",
-      "finding": "Curcumin has strong evidence for reducing inflammatory markers (CRP, IL-6) and moderate evidence for joint pain relief comparable to NSAIDs in some trials",
+      "source": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24269108/",
+      "finding": "PMID 24269108 — daily walnut consumption (28-43g) reduced all-cause mortality by 14% and cardiovascular mortality by 25% in 30-year Harvard cohort.",
       "agrees_with_book": true
     },
     {
-      "source": "PubMed",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/29065496/",
-      "finding": "Meta-analysis of 8 RCTs: curcumin supplementation significantly reduced serum CRP levels (weighted mean difference: -2.20 mg/L, 95% CI: -3.96 to -0.44)",
+      "source": "Examine.com",
+      "url": "https://examine.com/foods/walnuts/",
+      "finding": "Walnuts have the highest ALA content (~2.5g per 28g) among commonly consumed nuts; thermal degradation begins around 160°C.",
       "agrees_with_book": true
-    },
-    {
-      "source": "PubMed",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/31279955/",
-      "finding": "Systematic review found limited evidence for curcumin in Alzheimer's prevention in humans, despite promising animal studies. More large-scale RCTs needed.",
-      "agrees_with_book": false
     }
   ],
   "flavor_profile": {
-    "taste": ["bitter", "slightly peppery", "warm", "earthy"],
-    "aroma": ["musky", "slightly ginger-like", "peppery"],
-    "texture": ["powdery when ground", "fibrous when fresh"],
-    "culinary_category": "spice"
+    "taste": ["earthy", "slightly bitter", "buttery"],
+    "aroma": ["roasted nut", "subtle pine"],
+    "texture": ["firm", "crunchy", "slightly fibrous when whole"],
+    "culinary_category": "nut"
   },
   "culinary_pairings": [
     {
-      "ingredient": "black pepper",
-      "tradition": "Indian",
-      "source": "Traditional Ayurvedic combination (trikatu)"
+      "ingredient": "olive oil",
+      "tradition": "Mediterranean",
+      "source": "PREDIMED substudy + Niçoise tradition"
     },
     {
-      "ingredient": "coconut milk",
-      "tradition": "Southeast Asian",
-      "source": "Thai and Indonesian curry traditions"
+      "ingredient": "blue cheese",
+      "tradition": "French / Northern Italian",
+      "source": "classic salad-and-cheese pairing"
     },
     {
-      "ingredient": "chickpeas",
-      "tradition": "Indian",
-      "source": "Madhur Jaffrey, Indian Cooking"
-    },
-    {
-      "ingredient": "cauliflower",
-      "tradition": "Indian",
-      "source": "Aloo gobi tradition, Yotam Ottolenghi, Plenty"
-    },
-    {
-      "ingredient": "honey",
-      "tradition": "Ayurvedic",
-      "source": "Golden milk (haldi doodh) tradition"
+      "ingredient": "dark chocolate",
+      "tradition": "European baking",
+      "source": "polyphenol-rich dessert synergy"
     }
   ],
-  "seasonality": "Year-round (dried); fresh root peaks autumn through spring",
+  "seasonality": "harvested fall; storage stable raw if refrigerated",
   "nutrient_highlights": [
     {
-      "compound": "Curcumin (curcuminoids)",
-      "amount_per_100g": "~3.14g in turmeric powder",
-      "bioavailability_notes": "Poorly absorbed alone (<1%). Requires piperine (20x boost) and/or fat for meaningful absorption."
+      "compound": "alpha-linolenic acid (ALA)",
+      "amount_per_100g": "9g",
+      "bioavailability_notes": "ALA conversion to EPA/DHA is ~5%; pairs with vitamin E to prevent oxidation"
     },
     {
-      "compound": "Manganese",
-      "amount_per_100g": "19.8mg (860% DV)",
-      "bioavailability_notes": "Well absorbed from turmeric"
-    },
-    {
-      "compound": "Iron",
-      "amount_per_100g": "41.4mg (230% DV)",
-      "bioavailability_notes": "Non-heme iron; pair with vitamin C for better absorption"
+      "compound": "ellagic acid (polyphenol)",
+      "amount_per_100g": "~600mg",
+      "bioavailability_notes": "gut bacteria convert to urolithins; effect varies by microbiome"
     }
   ],
   "synergies": [
     {
-      "target_ingredient": "black pepper",
+      "with": "olive oil",
       "type": "synergy",
-      "description": "Piperine increases curcumin bioavailability by 2000% by inhibiting glucuronidation"
+      "note": "ALA + MUFA pairing produces stronger lipid-profile improvement than either alone."
     },
     {
-      "target_ingredient": "olive oil",
-      "type": "synergy",
-      "description": "Fat-soluble curcuminoids require dietary fat; olive oil provides its own anti-inflammatory oleocanthal"
-    },
-    {
-      "target_ingredient": "ginger",
-      "type": "complement",
-      "description": "Complementary anti-inflammatory mechanisms: ginger targets COX-2, turmeric targets NF-kB"
+      "with": "high-heat roasting",
+      "type": "antagonism",
+      "note": "Temperatures above 160°C degrade ALA. Use raw or lightly toasted only."
     }
   ],
-  "last_updated": "2026-04-12T00:00:00Z",
-  "last_researched": "2026-04-12T00:00:00Z",
+  "last_updated": "2026-05-15T12:00:00Z",
+  "last_researched": "2026-05-15T12:00:00Z",
   "research_status": "complete"
 }
