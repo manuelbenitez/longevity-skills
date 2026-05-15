@@ -5,4 +5,8 @@
 data/book-raw/
 data/book-extracts/
 data/dedup/
+data/.invalid/
 .venv/
+__pycache__/
+*.pyc
+.pytest_cache/
