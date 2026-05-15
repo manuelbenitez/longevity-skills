@@ -55,7 +55,24 @@ FUZZY_THRESHOLD = 0.85
 # ── Legacy → canonical field renames ──────────────────────────────────────────
 
 CLAIM_RENAMES = {"claim": "text", "study_ref": "reference"}
-RELATIONSHIP_RENAMES = {"target_ingredient": "with", "description": "note"}
+# Some legacy synergies use `ingredient` + `mechanism` instead of `target_ingredient`
+# + `description`. Map both aliases to canonical names.
+RELATIONSHIP_RENAMES = {
+    "target_ingredient": "with",
+    "ingredient": "with",
+    "target": "with",
+    "description": "note",
+    "mechanism": "note",
+}
+
+# Legacy category values that don't match the canonical enum.
+CATEGORY_COERCIONS = {
+    "fish_seafood": "fish",
+    "oil_condiment": "oil",
+    "plant-based milk": "beverage",
+    "animal_product": "other",
+    "harmful": "other",
+}
 
 
 def rename_claim(c: dict) -> dict:
@@ -67,22 +84,96 @@ def rename_claim(c: dict) -> dict:
         elif old in out and new in out:
             # Both present (mixed migration). Drop the legacy.
             out.pop(old)
+    # Schema requires `reference`, `confidence`, `mechanism`, `text` to be strings;
+    # legacy data sometimes has them as null, missing, or (for chapter extracts)
+    # structured citation dicts. Coerce.
+    ref = out.get("reference")
+    if ref is None:
+        out["reference"] = ""
+    elif isinstance(ref, dict):
+        # Old chapter format stored full citation objects. Flatten to a readable string.
+        parts = []
+        if ref.get("authors"):
+            parts.append(ref["authors"])
+        if ref.get("title"):
+            parts.append(f'"{ref["title"]}"')
+        if ref.get("journal"):
+            parts.append(ref["journal"])
+        if ref.get("year"):
+            parts.append(str(ref["year"]))
+        out["reference"] = ", ".join(parts) if parts else str(ref)
+    elif not isinstance(ref, str):
+        out["reference"] = str(ref)
+    if not out.get("confidence"):
+        out["confidence"] = "medium"
+    if out.get("mechanism") is None:
+        out["mechanism"] = ""
+    if out.get("text") is None:
+        out["text"] = ""
     if "recommendation" not in out:
         out["recommendation"] = None
     return out
 
 
-def rename_relationship(r: dict) -> dict:
+def rename_relationship(r: dict | str) -> dict:
+    """Canonicalize a relationship. Bare strings (legacy shorthand for "synergy with X")
+    are coerced into dict form."""
+    if isinstance(r, str):
+        return {"with": r, "type": "synergy"}
+    if not isinstance(r, dict):
+        # Unrecognized shape — preserve as a synthetic note so the human can see it.
+        return {"with": str(r), "type": "synergy", "note": "auto-coerced from non-dict"}
     out = dict(r)
     for old, new in RELATIONSHIP_RENAMES.items():
         if old in out and new not in out:
             out[new] = out.pop(old)
         elif old in out and new in out:
             out.pop(old)
+    # Schema requires `with` and `type` from a fixed enum. Default missing/unknown
+    # types to "synergy" (the most common form in legacy data).
+    VALID_TYPES = {"synergy", "antagonism", "complement"}
+    if out.get("type") not in VALID_TYPES:
+        if out.get("type"):
+            out["note"] = (out.get("note") or "") + f" [original type: {out['type']}]"
+        out["type"] = "synergy"
     return out
 
 
 # ── Master index: claim_text → set of book_slugs ──────────────────────────────
+
+
+def resolve_legacy_slug(
+    data: dict,
+    book_slugs: list[str],
+    title_to_slug: dict[str, str],
+    author_to_slug: dict[str, str],
+) -> str | None:
+    """Attribute a legacy file (master or chapter) to a manifest slug.
+
+    Tries explicit `book_slug`, then exact title/author match, then substring
+    match against the `source_book`/`title`/`book` fields after slugification.
+    Returns None if nothing matches.
+    """
+    candidates_list = [
+        data.get("book_slug"),
+        title_to_slug.get(lib.slugify(data.get("book", ""))),
+        title_to_slug.get(lib.slugify(data.get("title", ""))),
+        author_to_slug.get(lib.slugify(data.get("author", ""))),
+    ]
+    blob = lib.slugify(
+        (data.get("source_book") or "")
+        + " "
+        + (data.get("title") or "")
+        + " "
+        + (data.get("book") or "")
+    )
+    for t_slug, slug in title_to_slug.items():
+        if t_slug and t_slug in blob:
+            candidates_list.append(slug)
+    for a_slug, slug in author_to_slug.items():
+        if a_slug and a_slug in blob:
+            candidates_list.append(slug)
+    return next((c for c in candidates_list if c in book_slugs), None)
 
 
 def build_master_index(book_slugs: list[str]) -> dict[str, set[str]]:
@@ -102,7 +193,18 @@ def build_master_index(book_slugs: list[str]) -> dict[str, set[str]]:
     for slug in book_slugs:
         candidates.append((slug, REPO_ROOT / "data" / "book-extracts" / slug / "ingredients-master.json"))
 
-    # Legacy flats: try to attribute by reading the file's `book_slug` or slugified book/author.
+    # Legacy flats: read book_slug, or match by title/author against manifests.
+    # The legacy file's `book` field may slugify to a different value than the
+    # manifest slug (e.g., "The Longevity Diet" → "the-longevity-diet" vs slug "longo"),
+    # so we also build lookup tables from manifests.
+    title_to_slug: dict[str, str] = {}
+    author_to_slug: dict[str, str] = {}
+    for b in lib.list_books():
+        if b.get("title"):
+            title_to_slug[lib.slugify(b["title"])] = b["slug"]
+        if b.get("author"):
+            author_to_slug[lib.slugify(b["author"])] = b["slug"]
+
     for legacy in (
         REPO_ROOT / "data" / "book-extracts" / "ingredients-master.json",
         wiki_root / "book-extracts" / "ingredients-master.json",
@@ -114,15 +216,14 @@ def build_master_index(book_slugs: list[str]) -> dict[str, set[str]]:
                 data = json.load(f)
         except (OSError, json.JSONDecodeError):
             continue
-        legacy_slug = (
-            data.get("book_slug")
-            or lib.slugify(data.get("book", ""))
-            or lib.slugify(data.get("author", ""))
-        )
-        if legacy_slug in book_slugs:
+        legacy_slug = resolve_legacy_slug(data, book_slugs, title_to_slug, author_to_slug)
+        if legacy_slug:
             candidates.append((legacy_slug, legacy))
         else:
-            print(f"warn: legacy master at {legacy} has no matching manifest (slug={legacy_slug!r}); skipped", file=sys.stderr)
+            print(
+                f"warn: legacy master at {legacy} could not be attributed; skipped",
+                file=sys.stderr,
+            )
 
     for slug, master_path in candidates:
         if not master_path.exists():
@@ -165,14 +266,34 @@ def attribute_claim_text(text: str, index: dict[str, set[str]], fallback: str | 
 # ── Profile migration ─────────────────────────────────────────────────────────
 
 
-def migrate_profile(profile: dict, index: dict[str, set[str]]) -> tuple[dict, list[str]]:
-    """Return (migrated_profile, warnings). Idempotent: re-running returns input unchanged."""
+def migrate_profile(
+    profile: dict,
+    index: dict[str, set[str]],
+    legacy_name_to_slug: dict[str, str] | None = None,
+) -> tuple[dict, list[str]]:
+    """Return (migrated_profile, warnings). Idempotent: re-running returns input unchanged.
+
+    `legacy_name_to_slug` maps full-text legacy source_book strings (e.g. "The Longevity Diet")
+    to manifest slugs ("longo"). Used as the ultimate fallback when claim text doesn't
+    match any master.
+    """
     warnings: list[str] = []
     if profile.get("migration_version", 0) >= MIGRATION_VERSION:
         return profile, warnings
 
     out = dict(profile)
-    fallback_slug = lib.slugify(profile.get("source_book") or "") or None
+    legacy_book = profile.get("source_book") or ""
+    fallback_slug = None
+    if legacy_name_to_slug and legacy_book in legacy_name_to_slug:
+        fallback_slug = legacy_name_to_slug[legacy_book]
+    elif legacy_book:
+        # Try slugified match against manifests
+        slugged = lib.slugify(legacy_book)
+        if legacy_name_to_slug:
+            for full_text, slug in legacy_name_to_slug.items():
+                if lib.slugify(full_text) == slugged:
+                    fallback_slug = slug
+                    break
 
     new_claims: list[dict] = []
     for c in profile.get("book_claims", []):
@@ -211,10 +332,28 @@ def migrate_profile(profile: dict, index: dict[str, set[str]]) -> tuple[dict, li
     if "synergies" in out:
         out["synergies"] = [rename_relationship(s) for s in out["synergies"]]
 
-    # Ensure category present (schema requires it).
-    if not out.get("category"):
+    # Ensure category present and in canonical enum.
+    cat = out.get("category")
+    if not cat:
         out["category"] = "other"
         warnings.append(f"  missing category on {profile.get('slug')}; defaulted to 'other'")
+    elif cat in CATEGORY_COERCIONS:
+        out["category"] = CATEGORY_COERCIONS[cat]
+        warnings.append(f"  category coerced on {profile.get('slug')}: {cat!r} → {out['category']!r}")
+
+    # Drop empty-string book_slug claims (rare; happens when migrate_profile failed
+    # to attribute a claim AND there was no fallback). Surface via warning.
+    real_claims = []
+    for c in out["book_claims"]:
+        if not c.get("book_slug"):
+            warnings.append(
+                f"  dropping un-attributable claim on {profile.get('slug')}: "
+                f"{c.get('text', '')[:80]!r}"
+            )
+            continue
+        real_claims.append(c)
+    out["book_claims"] = real_claims
+    out["source_books"] = lib.derive_source_books(real_claims)
 
     out["migration_version"] = MIGRATION_VERSION
     return out, warnings
@@ -240,11 +379,27 @@ def migrate_chapter(chapter: dict, book_slug: str, title: str, author: str) -> d
     out.setdefault("author", author)
     out["book_slug"] = book_slug
 
+    real_ingredients = []
     for ing in out.get("ingredients", []):
+        # Derive slug from name if missing (legacy chapter-appendices had no slug field).
+        if not ing.get("slug") and ing.get("name"):
+            ing["slug"] = lib.slugify(ing["name"])
         if "claims" in ing:
             ing["claims"] = [rename_claim(c) for c in ing["claims"]]
         if "relationships" in ing:
-            ing["relationships"] = [rename_relationship(r) for r in ing["relationships"]]
+            # Drop relationships that can't be canonicalized (no target name available).
+            rels = []
+            for r in ing["relationships"]:
+                renamed = rename_relationship(r)
+                if renamed.get("with"):
+                    rels.append(renamed)
+            ing["relationships"] = rels
+        # Schema requires non-empty claims array. An ingredient with no claims is
+        # effectively a stub — drop it from the extract.
+        if not ing.get("claims"):
+            continue
+        real_ingredients.append(ing)
+    out["ingredients"] = real_ingredients
     out["migration_version"] = MIGRATION_VERSION
     return out
 
@@ -263,6 +418,14 @@ def migrate_all(dry_run: bool) -> int:
 
     index = build_master_index(book_slugs)
     print(f"Master claim-text index size: {len(index)} unique claims")
+
+    # Build a legacy-source-book-name → manifest-slug map for the orphan claim fallback.
+    # Walks every book's title and author and maps slugified variants to the canonical slug.
+    legacy_name_to_slug: dict[str, str] = {}
+    for b in books:
+        legacy_name_to_slug[b["title"]] = b["slug"]
+        legacy_name_to_slug[f"{b['title']} by {b['author']}"] = b["slug"]
+        legacy_name_to_slug[b["author"]] = b["slug"]
 
     wiki_data = lib.wiki_data_dir()
     print(f"Target wiki data dir: {wiki_data}")
@@ -284,7 +447,7 @@ def migrate_all(dry_run: bool) -> int:
         if profile.get("migration_version", 0) >= MIGRATION_VERSION:
             skipped_idempotent += 1
             continue
-        migrated, warnings = migrate_profile(profile, index)
+        migrated, warnings = migrate_profile(profile, index, legacy_name_to_slug)
         all_warnings.extend(warnings)
         staged.append((path, migrated, None))
     print(f"  to migrate: {len(staged)}; already migrated (idempotent skip): {skipped_idempotent}")
@@ -304,21 +467,13 @@ def migrate_all(dry_run: bool) -> int:
                     chap = json.load(f)
                 migrated = migrate_chapter(chap, slug, meta["title"], meta["author"])
                 staged.append((fp, migrated, None))
-        # Flat legacy files (need book-slug inference).
-        # Match either by book title or by author. Both lookups use independent slug guesses.
-        title_to_slug = {lib.slugify(b["title"]): b["slug"] for b in books}
-        author_to_slug = {lib.slugify(b["author"]): b["slug"] for b in books}
+        # Flat legacy files: use the shared resolve_legacy_slug helper.
+        title_to_slug_local = {lib.slugify(b["title"]): b["slug"] for b in books}
+        author_to_slug_local = {lib.slugify(b["author"]): b["slug"] for b in books}
         for fp in sorted(root.glob("chapter-*.json")) + sorted(root.glob("ingredients-master.json")):
             with open(fp) as f:
                 chap = json.load(f)
-            book_field = lib.slugify(chap.get("book", ""))
-            author_field = lib.slugify(chap.get("author", ""))
-            slug = (
-                chap.get("book_slug")
-                if chap.get("book_slug") in book_titles
-                else title_to_slug.get(book_field)
-                or author_to_slug.get(author_field)
-            )
+            slug = resolve_legacy_slug(chap, book_slugs, title_to_slug_local, author_to_slug_local)
             if not slug:
                 all_warnings.append(f"  flat file {fp} has no matching manifest; skipped")
                 continue

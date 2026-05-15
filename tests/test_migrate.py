@@ -69,6 +69,19 @@ def test_rename_relationship_legacy():
     assert "target_ingredient" not in out
 
 
+def test_rename_relationship_bare_string_coerced():
+    """Legacy data sometimes has relationships as bare strings ("calcium"); coerce to dict."""
+    out = migrate.rename_relationship("calcium")
+    assert out == {"with": "calcium", "type": "synergy"}
+
+
+def test_rename_relationship_non_dict_non_string_preserved():
+    """Truly unrecognized shape gets a note so humans see it."""
+    out = migrate.rename_relationship(123)
+    assert out["with"] == "123"
+    assert "auto-coerced" in out["note"]
+
+
 # ── attribute_claim_text ──────────────────────────────────────────────────────
 
 
@@ -158,13 +171,22 @@ def test_migrate_profile_dual_attribution_duplicates_claim():
 
 
 def test_migrate_profile_orphan_uses_fallback():
-    """Claim not in any master falls back to slugified source_book."""
+    """Claim not in any master falls back to the legacy-name-to-slug map."""
     index = {}
-    out, warnings = migrate.migrate_profile(_legacy_profile(), index)
-    # source_book "The Longevity Diet" → "the-longevity-diet"
-    assert out["book_claims"][0]["book_slug"] == "the-longevity-diet"
-    assert out["source_books"] == ["the-longevity-diet"]
-    assert any("fuzzy" in w or "orphan" in w or w for w in warnings) or True  # warnings optional here
+    legacy_map = {"The Longevity Diet": "longo"}
+    out, warnings = migrate.migrate_profile(_legacy_profile(), index, legacy_map)
+    assert out["book_claims"][0]["book_slug"] == "longo"
+    assert out["source_books"] == ["longo"]
+
+
+def test_migrate_profile_no_fallback_drops_un_attributable_claim():
+    """If neither index nor fallback can attribute, the claim is dropped with a warning."""
+    index = {}
+    out, warnings = migrate.migrate_profile(_legacy_profile(), index, legacy_name_to_slug=None)
+    # All claims dropped because nothing could attribute them
+    assert out["book_claims"] == []
+    assert out["source_books"] == []
+    assert any("un-attributable" in w for w in warnings)
 
 
 def test_migrate_profile_idempotent():
