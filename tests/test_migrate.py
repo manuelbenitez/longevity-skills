@@ -200,13 +200,14 @@ def test_migrate_chapter_adds_book_metadata():
 
 
 def test_migrate_chapter_idempotent_on_canonical_input():
-    """Migrating an already-canonical chapter should be a no-op."""
+    """Migrating an already-canonical chapter at the current version is a no-op."""
     canonical = {
         "book": "Test",
         "author": "Tester",
         "book_slug": "test",
         "chapter": "Ch1",
         "page_range": "1",
+        "migration_version": 1,
         "ingredients": [
             {
                 "name": "x",
@@ -225,3 +226,40 @@ def test_migrate_chapter_idempotent_on_canonical_input():
     }
     out = migrate.migrate_chapter(canonical, "test", "Test", "Tester")
     assert out == canonical
+
+
+def test_migrate_chapter_stamps_migration_version_on_first_run():
+    """First-time migration adds migration_version stamp."""
+    legacy = {
+        "chapter": "Ch1",
+        "page_range": "1",
+        "ingredients": [],
+    }
+    out = migrate.migrate_chapter(legacy, "test", "Test", "Tester")
+    assert out.get("migration_version") == 1
+    assert out["book_slug"] == "test"
+
+
+def test_master_file_validates_without_chapter():
+    """Consolidated master files don't have a chapter title; schema must allow that."""
+    master = {
+        "book": "Test",
+        "author": "Tester",
+        "book_slug": "test",
+        "ingredients": [
+            {
+                "name": "x",
+                "slug": "x",
+                "claims": [
+                    {
+                        "text": "a",
+                        "mechanism": "m",
+                        "reference": "r",
+                        "confidence": "high",
+                    }
+                ],
+            }
+        ],
+    }
+    # Must not raise — masters legitimately have no chapter field.
+    lib.validate_book_extract(master)

@@ -4,7 +4,7 @@
   "title": "Book Extract",
   "description": "Structured extraction of food/ingredient claims from a book chapter. Multi-book aware: every chapter carries explicit book identity so downstream skills can attribute claims correctly across multiple source books.",
   "type": "object",
-  "required": ["book", "author", "book_slug", "chapter", "ingredients"],
+  "required": ["book", "author", "book_slug", "ingredients"],
   "properties": {
     "book": {
       "type": "string",
@@ -21,7 +21,7 @@
     },
     "chapter": {
       "type": "string",
-      "description": "Chapter title"
+      "description": "Chapter title. Optional on consolidated master files (ingredients-master.json), required on individual chapter extracts."
     },
     "chapter_number": {
       "type": "integer",

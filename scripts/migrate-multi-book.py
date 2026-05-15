@@ -89,18 +89,48 @@ def build_master_index(book_slugs: list[str]) -> dict[str, set[str]]:
     """For each book, walk its master ingredients and index claim texts.
 
     Returns {normalized_claim_text: {book_slug, ...}}.
+
+    Searches three locations for masters:
+    1. Per-book subdir: data/book-extracts/<slug>/ingredients-master.json (canonical)
+    2. Legacy flat in skills repo: data/book-extracts/ingredients-master.json
+    3. Legacy flat in wiki repo: <wiki_data_dir>/book-extracts/ingredients-master.json
     """
     index: dict[str, set[str]] = {}
+    wiki_root = lib.wiki_data_dir()
+
+    candidates: list[tuple[str, Path]] = []
     for slug in book_slugs:
-        master_path = REPO_ROOT / "data" / "book-extracts" / slug / "ingredients-master.json"
+        candidates.append((slug, REPO_ROOT / "data" / "book-extracts" / slug / "ingredients-master.json"))
+
+    # Legacy flats: try to attribute by reading the file's `book_slug` or slugified book/author.
+    for legacy in (
+        REPO_ROOT / "data" / "book-extracts" / "ingredients-master.json",
+        wiki_root / "book-extracts" / "ingredients-master.json",
+    ):
+        if not legacy.exists():
+            continue
+        try:
+            with open(legacy) as f:
+                data = json.load(f)
+        except (OSError, json.JSONDecodeError):
+            continue
+        legacy_slug = (
+            data.get("book_slug")
+            or lib.slugify(data.get("book", ""))
+            or lib.slugify(data.get("author", ""))
+        )
+        if legacy_slug in book_slugs:
+            candidates.append((legacy_slug, legacy))
+        else:
+            print(f"warn: legacy master at {legacy} has no matching manifest (slug={legacy_slug!r}); skipped", file=sys.stderr)
+
+    for slug, master_path in candidates:
         if not master_path.exists():
-            # Some books may live only in the wiki repo's data tree. Skip silently.
             continue
         with open(master_path) as f:
             master = json.load(f)
         for ing in master.get("ingredients", []):
             for c in ing.get("claims", []):
-                # Apply rename before indexing so we match against canonical text.
                 rc = rename_claim(c)
                 text = (rc.get("text") or "").strip().lower()
                 if text:
@@ -194,17 +224,28 @@ def migrate_profile(profile: dict, index: dict[str, set[str]]) -> tuple[dict, li
 
 
 def migrate_chapter(chapter: dict, book_slug: str, title: str, author: str) -> dict:
-    """Rename claim+relationship field names. Stamp top-level book identity if missing."""
+    """Rename claim+relationship field names. Stamp top-level book identity if missing.
+
+    Idempotent: if already at MIGRATION_VERSION and book_slug already matches,
+    returns the input unchanged.
+    """
+    if (
+        chapter.get("migration_version", 0) >= MIGRATION_VERSION
+        and chapter.get("book_slug") == book_slug
+    ):
+        return chapter
+
     out = dict(chapter)
     out.setdefault("book", title)
     out.setdefault("author", author)
-    out["book_slug"] = book_slug  # Always trust the directory.
+    out["book_slug"] = book_slug
 
     for ing in out.get("ingredients", []):
         if "claims" in ing:
             ing["claims"] = [rename_claim(c) for c in ing["claims"]]
         if "relationships" in ing:
             ing["relationships"] = [rename_relationship(r) for r in ing["relationships"]]
+    out["migration_version"] = MIGRATION_VERSION
     return out
 
 
@@ -226,8 +267,10 @@ def migrate_all(dry_run: bool) -> int:
     wiki_data = lib.wiki_data_dir()
     print(f"Target wiki data dir: {wiki_data}")
 
-    # Stage writes in a temp dir; commit atomically if validation passes.
-    staged: list[tuple[Path, dict]] = []
+    # Stage writes; commit atomically (per-file) if validation passes.
+    # Every staged entry is (target_path, data, source_path_or_None).
+    # source_path is set when relocating a flat legacy file to its new home.
+    staged: list[tuple[Path, dict, Path | None]] = []
     all_warnings: list[str] = []
 
     # 1. Ingredient profiles.
@@ -243,7 +286,7 @@ def migrate_all(dry_run: bool) -> int:
             continue
         migrated, warnings = migrate_profile(profile, index)
         all_warnings.extend(warnings)
-        staged.append((path, migrated))
+        staged.append((path, migrated, None))
     print(f"  to migrate: {len(staged)}; already migrated (idempotent skip): {skipped_idempotent}")
 
     # 2. Chapter extracts in BOTH repos.
@@ -260,27 +303,29 @@ def migrate_all(dry_run: bool) -> int:
                 with open(fp) as f:
                     chap = json.load(f)
                 migrated = migrate_chapter(chap, slug, meta["title"], meta["author"])
-                staged.append((fp, migrated))
-        # Flat legacy files in wiki repo (need book-slug inference).
-        for fp in sorted(root.glob("chapter-*.json")):
-            # Heuristic: read author or book field, slugify to find match.
+                staged.append((fp, migrated, None))
+        # Flat legacy files (need book-slug inference).
+        # Match either by book title or by author. Both lookups use independent slug guesses.
+        title_to_slug = {lib.slugify(b["title"]): b["slug"] for b in books}
+        author_to_slug = {lib.slugify(b["author"]): b["slug"] for b in books}
+        for fp in sorted(root.glob("chapter-*.json")) + sorted(root.glob("ingredients-master.json")):
             with open(fp) as f:
                 chap = json.load(f)
-            slug_guess = lib.slugify(chap.get("book") or chap.get("author") or "")
-            if slug_guess in book_titles:
-                slug = slug_guess
-            else:
-                # Match against any author slug
-                author_to_slug = {lib.slugify(b["author"]): b["slug"] for b in books}
-                slug = author_to_slug.get(slug_guess)
+            book_field = lib.slugify(chap.get("book", ""))
+            author_field = lib.slugify(chap.get("author", ""))
+            slug = (
+                chap.get("book_slug")
+                if chap.get("book_slug") in book_titles
+                else title_to_slug.get(book_field)
+                or author_to_slug.get(author_field)
+            )
             if not slug:
-                all_warnings.append(f"  flat chapter file {fp} has no matching manifest; skipped")
+                all_warnings.append(f"  flat file {fp} has no matching manifest; skipped")
                 continue
             meta = book_titles[slug]
             migrated = migrate_chapter(chap, slug, meta["title"], meta["author"])
-            # Stage to its new location: under the slug subdir
             new_path = root / slug / fp.name
-            staged.append((new_path, migrated, fp))  # type: ignore
+            staged.append((new_path, migrated, fp))
 
     if all_warnings:
         print("\nWarnings:")
@@ -290,20 +335,16 @@ def migrate_all(dry_run: bool) -> int:
     # Validate every staged write.
     print(f"\nValidating {len(staged)} staged files...")
     validation_errors: list[str] = []
-    for item in staged:
-        path = item[0]
-        data = item[1]
+    for target, data, _source in staged:
         try:
-            if path.name == "ingredients-master.json" or path.parent.name in book_slugs:
-                if path.name.startswith("chapter-") or path.name == "ingredients-master.json":
-                    lib.validate_book_extract(data)
-                else:
-                    lib.validate_ingredient(data)
-            else:
-                # Path is in ingredients/.
+            # An ingredient profile lives under <root>/ingredients/<slug>.json.
+            # Anything else is a book extract (chapter or master).
+            if target.parent.name == "ingredients":
                 lib.validate_ingredient(data)
+            else:
+                lib.validate_book_extract(data)
         except lib.ValidationFailure as e:
-            validation_errors.append(f"{path}:\n{e}")
+            validation_errors.append(f"{target}:\n{e}")
 
     if validation_errors:
         print(f"\n{len(validation_errors)} validation failures. Aborting (no writes).", file=sys.stderr)
@@ -315,33 +356,30 @@ def migrate_all(dry_run: bool) -> int:
     print("  all valid.")
 
     if dry_run:
-        print("\n--dry-run: not writing. Sample diffs (first 2 profiles):")
-        for path, migrated in staged[:2]:
-            original_text = path.read_text() if path.exists() else "<new file>"
-            new_text = json.dumps(migrated, indent=2)
+        print("\n--dry-run: not writing. Sample diffs (first 2 entries):")
+        for target, data, _source in staged[:2]:
+            original_text = target.read_text() if target.exists() else "<new file>"
+            new_text = json.dumps(data, indent=2)
             diff = difflib.unified_diff(
                 original_text.splitlines(keepends=True),
                 new_text.splitlines(keepends=True),
-                fromfile=str(path),
-                tofile=str(path) + " (after)",
+                fromfile=str(target),
+                tofile=str(target) + " (after)",
                 n=2,
             )
             print("".join(diff))
         return 0
 
-    # Apply.
+    # Apply with per-file atomic write (write to tmp + rename).
     print(f"\nWriting {len(staged)} files...")
-    for item in staged:
-        target = item[0]
-        data = item[1]
+    for target, data, source in staged:
         target.parent.mkdir(parents=True, exist_ok=True)
-        with open(target, "w") as f:
+        tmp = target.with_suffix(target.suffix + ".tmp")
+        with open(tmp, "w") as f:
             json.dump(data, f, indent=2)
-        # Remove old flat-location source if relocating.
-        if len(item) == 3:
-            old_path = item[2]
-            if old_path.exists() and old_path != target:
-                old_path.unlink()
+        tmp.replace(target)
+        if source is not None and source.exists() and source != target:
+            source.unlink()
     print("Done.")
     return 0
 

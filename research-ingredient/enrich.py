@@ -25,6 +25,7 @@ from __future__ import annotations
 
 import argparse
 import glob
+import itertools
 import json
 import os
 import re
@@ -324,10 +325,8 @@ def merge_or_skip(
         existing["book_claims"] = merged_claims
         existing["source_books"] = lib.derive_source_books(merged_claims)
         existing["last_updated"] = utcnow_iso()
-        # If this was previously "book-only" and we just added new claims, leave research_status.
         lib.validate_ingredient(existing)
-        with open(target, "w") as f:
-            json.dump(existing, f, indent=2)
+        _atomic_write_json(target, existing)
         return ("appended-claims", target)
 
     # Fresh profile.
@@ -348,9 +347,16 @@ def merge_or_skip(
         "research_status": "complete" if enrichment else "book-only",
     }
     lib.validate_ingredient(profile)
-    with open(target, "w") as f:
-        json.dump(profile, f, indent=2)
+    _atomic_write_json(target, profile)
     return ("wrote-new", target)
+
+
+def _atomic_write_json(target: Path, data: dict) -> None:
+    """Write JSON via temp-file-and-rename so a mid-write crash doesn't corrupt the target."""
+    tmp = target.with_suffix(target.suffix + ".tmp")
+    with open(tmp, "w") as f:
+        json.dump(data, f, indent=2)
+    tmp.replace(target)
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
@@ -410,7 +416,27 @@ def main(argv: list[str] | None = None) -> int:
                 summary["invalid"] += len(batch)
                 continue
 
-            for ing, enrichment in zip(batch, enrichments):
+            if len(enrichments) != len(batch):
+                print(
+                    f"  ⚠ LLM returned {len(enrichments)} enrichments for batch of {len(batch)}; "
+                    f"missing slots will be trayed",
+                    file=sys.stderr,
+                )
+            # zip_longest with sentinel so trailing missing items are explicit, not silent drops.
+            sentinel = object()
+            for ing, enrichment in itertools.zip_longest(batch, enrichments, fillvalue=sentinel):
+                if ing is sentinel:
+                    # More enrichments than ingredients — shouldn't happen; ignore extras.
+                    continue
+                if enrichment is sentinel:
+                    invalid_path = lib.tray_invalid(
+                        {"ingredient": ing, "reason": "no enrichment returned for this slot"},
+                        "missing enrichment",
+                        ing["slug"],
+                    )
+                    summary["invalid"] += 1
+                    print(f"  ✗ {ing['slug']} → no enrichment, trayed at {invalid_path}", file=sys.stderr)
+                    continue
                 try:
                     action, _path = merge_or_skip(ing, enrichment or {}, book_slug, out_dir)
                     summary[action] += 1
