@@ -1,52 +1,38 @@
 {
-  "chapter": "Anti-Inflammatory Foods and Spices",
-  "page_range": "87-112",
+  "book": "The Path to Longevity",
+  "author": "Luigi Fontana",
+  "book_slug": "fontana",
+  "chapter": "Chapter 9: The Modern Healthy Longevity Diet",
+  "chapter_number": 9,
+  "page_range": "182-210",
+  "extracted_at": "2026-05-15T12:00:00Z",
+  "extraction_status": "complete",
   "ingredients": [
     {
-      "name": "Turmeric",
-      "slug": "turmeric",
-      "page_refs": [89, 91, 93, 95],
+      "name": "Walnuts",
+      "slug": "walnuts",
+      "aliases": ["English walnut", "Juglans regia"],
+      "page_refs": [189, 192],
       "claims": [
         {
-          "claim": "Curcumin reduces chronic low-grade inflammation by inhibiting the NF-kB signaling pathway",
-          "mechanism": "Curcumin blocks IkB kinase, preventing NF-kB translocation to the nucleus and subsequent transcription of pro-inflammatory cytokines (TNF-alpha, IL-6, IL-1beta)",
-          "study_ref": "Aggarwal BB, Harikumar KB. Int J Biochem Cell Biol. 2009;41(1):40-59",
-          "confidence": "high"
-        },
-        {
-          "claim": "Regular turmeric consumption is associated with lower rates of Alzheimer's disease in populations with high dietary intake",
-          "mechanism": "Curcumin crosses the blood-brain barrier and reduces amyloid-beta plaque accumulation through multiple pathways including anti-oxidant activity and metal chelation",
-          "study_ref": "Mishra S, Palanivelu K. Ann Indian Acad Neurol. 2008;11(1):13-19",
-          "confidence": "medium"
-        },
-        {
-          "claim": "Curcumin bioavailability increases up to 2000% when consumed with piperine from black pepper",
-          "mechanism": "Piperine inhibits hepatic and intestinal glucuronidation of curcumin, preventing rapid metabolic clearance",
-          "study_ref": "Shoba G et al. Planta Med. 1998;64(4):353-356",
+          "text": "Walnut consumption is associated with lower all-cause mortality in long-term prospective studies.",
+          "mechanism": "Walnuts are rich in alpha-linolenic acid (ALA), polyphenols, and L-arginine which reduce systemic inflammation, improve endothelial function, and modulate the gut microbiome.",
+          "recommendation": "30g (about 7 whole walnuts) daily, ideally as a snack or sprinkled on salads",
+          "reference": "Bao et al. NEJM 2013 — Harvard prospective study, n=118,962 over 30 years",
           "confidence": "high"
         }
       ],
       "consumption": {
-        "amount": "1-2 teaspoons ground turmeric daily, or a thumb-sized piece of fresh root",
+        "amount": "30g daily",
         "frequency": "daily",
-        "preparation": "Cook with fat (olive oil or coconut oil) and black pepper to maximize absorption. Heat activates certain curcuminoids.",
-        "reasoning": "Curcumin is fat-soluble and poorly absorbed on its own. Combining with fat and piperine addresses both bioavailability barriers."
+        "preparation": "raw, unsalted; never roasted at high heat (oxidizes ALA)",
+        "reasoning": "High heat destroys the heat-sensitive omega-3 fats that drive most of the cardiovascular benefit"
       },
       "relationships": [
         {
-          "target_ingredient": "black pepper",
+          "with": "olive oil",
           "type": "synergy",
-          "description": "Piperine in black pepper increases curcumin bioavailability by 2000% by inhibiting glucuronidation"
-        },
-        {
-          "target_ingredient": "olive oil",
-          "type": "synergy",
-          "description": "Fat-soluble curcuminoids require dietary fat for absorption; olive oil also provides its own anti-inflammatory oleocanthal"
-        },
-        {
-          "target_ingredient": "ginger",
-          "type": "complement",
-          "description": "Both are rhizomes with complementary anti-inflammatory mechanisms; ginger targets COX-2 while turmeric targets NF-kB"
+          "note": "ALA from walnuts and MUFA from olive oil together produce a stronger lipid-profile improvement than either alone (PREDIMED substudy)."
         }
       ]
     }
